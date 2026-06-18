@@ -1,10 +1,12 @@
 import type { ReactNode, SVGProps } from 'react'
 
-/** Shared stroke icons: 24×24 grid, 1.5px stroke — matches prototype tokens */
+/** Shared stroke icons — stroke width matches `design-tokens.css` `--coach-icon-stroke` */
+const SW = 1.25
+
 const strokeAttrs = {
   fill: 'none' as const,
   stroke: 'currentColor',
-  strokeWidth: 1.5,
+  strokeWidth: SW,
   strokeLinecap: 'round' as const,
   strokeLinejoin: 'round' as const,
 }
@@ -41,8 +43,8 @@ function IconFrame({
 export function IconSearch(props: CoachIconProps) {
   return (
     <IconFrame viewBox="0 0 24 24" {...props}>
-      <circle cx="11" cy="11" r="6" {...strokeAttrs} />
-      <path d="M15.5 15.5 20 20" {...strokeAttrs} />
+      <circle cx="10.5" cy="10.5" r="5.75" {...strokeAttrs} />
+      <path d="M15 15.5 20 20.5" {...strokeAttrs} />
     </IconFrame>
   )
 }
@@ -51,7 +53,7 @@ export function IconSearch(props: CoachIconProps) {
 export function IconClose(props: CoachIconProps) {
   return (
     <IconFrame viewBox="0 0 24 24" {...props}>
-      <path d="M6 6l12 12M18 6 6 18" {...strokeAttrs} />
+      <path d="M7 7l10 10M17 7 7 17" {...strokeAttrs} />
     </IconFrame>
   )
 }
@@ -83,7 +85,7 @@ export function IconBag({ count, className, ...rest }: CoachIconProps & { count:
         d="M4 9.5V20a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V9.5"
         fill="none"
         stroke="currentColor"
-        strokeWidth={1.5}
+        strokeWidth={SW}
         strokeLinecap="round"
         strokeLinejoin="round"
       />
@@ -91,7 +93,7 @@ export function IconBag({ count, className, ...rest }: CoachIconProps & { count:
         d="M8 9.5V7a3 3 0 0 1 6 0v2.5"
         fill="none"
         stroke="currentColor"
-        strokeWidth={1.5}
+        strokeWidth={SW}
         strokeLinecap="round"
         strokeLinejoin="round"
       />
@@ -112,26 +114,12 @@ export function IconBag({ count, className, ...rest }: CoachIconProps & { count:
   )
 }
 
-/** Accordion; rotates 45° when open */
-export function IconPlus({ open, className, ...rest }: CoachIconProps & { open?: boolean }) {
-  return (
-    <IconFrame
-      viewBox="0 0 24 24"
-      size="sm"
-      className={[open ? 'coach-icon--plus-open' : '', className].filter(Boolean).join(' ')}
-      {...rest}
-    >
-      <path d="M12 6v12M6 12h12" {...strokeAttrs} />
-    </IconFrame>
-  )
-}
-
 /** Footer: account */
 export function IconUser(props: CoachIconProps) {
   return (
     <IconFrame viewBox="0 0 24 24" {...props}>
-      <circle cx="12" cy="9" r="3.25" {...strokeAttrs} />
-      <path d="M6.5 20.5c0-3 2.75-5 5.5-5s5.5 2 5.5 5" {...strokeAttrs} />
+      <circle cx="12" cy="8.5" r="3" {...strokeAttrs} />
+      <path d="M6.5 20.5c.25-2.75 2.75-4.75 5.5-4.75s5.25 2 5.5 4.75" {...strokeAttrs} />
     </IconFrame>
   )
 }
@@ -140,9 +128,9 @@ export function IconUser(props: CoachIconProps) {
 export function IconPackage(props: CoachIconProps) {
   return (
     <IconFrame viewBox="0 0 24 24" {...props}>
-      <path d="M5.5 9 12 6l6.5 3v9L12 21l-6.5-3V9Z" {...strokeAttrs} />
+      <path d="M5.5 9 12 6l6.5 3v8.5L12 21l-6.5-3.5V9Z" {...strokeAttrs} />
       <path d="M5.5 9 12 12l6.5-3" {...strokeAttrs} />
-      <path d="M12 12v9" {...strokeAttrs} />
+      <path d="M12 12v8.75" {...strokeAttrs} />
     </IconFrame>
   )
 }
@@ -152,7 +140,7 @@ export function IconChat(props: CoachIconProps) {
   return (
     <IconFrame viewBox="0 0 24 24" {...props}>
       <path
-        d="M6.5 6.5h11A2.5 2.5 0 0 1 20 9v5.5A2.5 2.5 0 0 1 17.5 17H13l-4.5 3v-3h-2A2.5 2.5 0 0 1 4 14.5V9a2.5 2.5 0 0 1 2.5-2.5Z"
+        d="M7 7.5h10a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-4.2L8.5 19v-2.5H7a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2Z"
         {...strokeAttrs}
       />
     </IconFrame>

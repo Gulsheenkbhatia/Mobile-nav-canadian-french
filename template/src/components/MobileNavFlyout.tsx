@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react'
 import { coachNavMock, footerUtilityMock, type NavLinkItem } from '../data/coachNavMock'
-import { IconChat, IconClose, IconFlagUs, IconPackage, IconPlus, IconSearch, IconUser } from './icons'
+import { IconChat, IconClose, IconFlagUs, IconPackage, IconSearch, IconUser } from './icons'
 import './MobileNavFlyout.css'
 
 type Props = {
@@ -50,8 +50,8 @@ function NavRow({
     <div className="mnf-row mnf-row--accordion">
       <button type="button" className="mnf-row__trigger" aria-expanded={expanded} onClick={onToggle}>
         <span className="mnf-row__label">{item.label}</span>
-        <span className="mnf-row__chevron">
-          <IconPlus open={expanded} />
+        <span className={`mnf-row__plus ${expanded ? 'mnf-row__plus--open' : ''}`} aria-hidden>
+          +
         </span>
       </button>
       {expanded && item.children && (

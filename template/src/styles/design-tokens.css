@@ -4,10 +4,10 @@
  */
 
 :root {
-  /* —— Color —— */
+  /* —— Color —— (mobile nav flyout reference: charcoal header, pure black type) */
   --coach-color-neutral-dark-1: #161616;
-  --coach-color-neutral-dark-2: #1a1a1a;
-  --coach-color-ink-primary: #111111;
+  --coach-color-neutral-dark-2: #2d2d2d;
+  --coach-color-ink-primary: #000000;
   --coach-color-ink-secondary: #333333;
   --coach-color-ink-tertiary: #444444;
   --coach-color-ink-muted: #666666;
@@ -28,7 +28,8 @@
   --coach-color-nav-on-dark: #ffffff;
   --coach-color-nav-on-dark-muted: rgba(255, 255, 255, 0.92);
   --coach-color-nav-tab-active: #ffffff;
-  --coach-color-nav-tab-active-flyout: #e8e8e8;
+  /* Flyout active brand tab: white “folder” on charcoal (matches retail capture) */
+  --coach-color-nav-tab-active-flyout: #ffffff;
   --coach-color-overlay-press: rgba(255, 255, 255, 0.08);
   --coach-color-overlay-press-subtle: rgba(255, 255, 255, 0.06);
 
@@ -56,6 +57,7 @@
   --coach-font-size-xs: 11px;
   --coach-font-size-sm: 12px;
   --coach-font-size-md: 13px;
+  --coach-font-size-nav-pill: 14px;
   --coach-font-size-body: 15px;
   --coach-font-size-body-lg: 16px;
   --coach-font-size-title-sm: 0.9rem;
@@ -95,7 +97,8 @@
   --coach-radius-shell: 12px;
 
   /* —— Icon —— */
-  --coach-icon-stroke: 1.5;
+  /* Thin retail-style strokes (~1.25px at 24px artboard) */
+  --coach-icon-stroke: 1.25;
   --coach-icon-size-sm: 20px;
   --coach-icon-size-md: 22px;
   --coach-icon-size-lg: 24px;
