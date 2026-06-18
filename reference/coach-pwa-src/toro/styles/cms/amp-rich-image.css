@@ -1,0 +1,109 @@
+.amp-rich-image,
+.at-media-asset.mol-media {
+  min-height: 200px;
+}
+
+.amp-rich-image .img-wrapper {
+  text-align: center;
+}
+.amp-rich-image .img-container {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+}
+.amp-rich-image .img-container img {
+  width: 100%;
+  display: block;
+  max-width: 100%;
+}
+.amp-rich-image .img-container svg {
+  z-index: 2;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.amp-rich-image .img-container svg g polygon {
+  fill: transparent;
+  opacity: 1;
+  stroke-width: 3px;
+  stroke-dasharray: 15px;
+  stroke-linecap: round;
+  cursor: pointer;
+}
+.amp-rich-image [data-type='poi-hotspot'] {
+  font-size: 0;
+  background: 0 0;
+  border: none;
+  cursor: pointer;
+  z-index: 3;
+  width: 30px;
+  height: 30px;
+  margin-top: -15px;
+  margin-left: -15px;
+  text-align: center;
+  -webkit-transition: -webkit-transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
+}
+.amp-rich-image [data-type='poi-hotspot'].active {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.amp-rich-image .img-container svg g:hover polygon {
+  animation: square-anim 0.1s 1 ease-out;
+  animation-fill-mode: forwards;
+}
+.amp-rich-image polygon:focus {
+  outline: 0;
+}
+.amp-rich-image .aspect-ratio-4_5 {
+  aspect-ratio: 4/5;
+}
+.amp-rich-image .aspect-ratio-4_5 img {
+  width: 100%;
+  height: auto;
+}
+@supports not (aspect-ratio: auto) {
+  .amp-rich-image .aspect-ratio-box {
+    height: 0;
+    padding-top: calc(100% / (4 / 5));
+    overflow: hidden;
+    position: relative;
+  }
+  .amp-rich-image .aspect-ratio-box .aspect-ratio-img {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+  }
+  .amp-rich-image .aspect-ratio-box img {
+    height: 100%;
+  }
+}
+
+@media screen and (min-width: 544px) {
+  .amp-rich-image,
+  .at-media-asset.mol-media {
+    min-height: 300px;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .amp-rich-image,
+  .at-media-asset.mol-media {
+    min-height: 250px;
+  }
+}
+
+@media (min-width: 769px) {
+  .at-media-asset.mol-media,
+  .amp-rich-image {
+    min-height: 17.85714rem;
+  }
+}

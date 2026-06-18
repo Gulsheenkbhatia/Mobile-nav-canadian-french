@@ -1,0 +1,15 @@
+@media (min-width: 769px) {
+  .mol-lifestyle-carousel {
+    &.media-sixteen-nine {
+      .size-drawer {
+        .controls-btn-wrapper {
+          overflow-y: auto;
+          max-height: 280px;
+        }
+        .controls-btn-child {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

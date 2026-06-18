@@ -1,0 +1,88 @@
+.subbrand-coachtopia #passport-content {
+  .mol-content-card-container .mol-header-block {
+    max-width: 100%;
+    padding: 0 var(--spacing-4);
+  }
+  .mol-content-card-container .desk-stack-mob-carousel {
+    padding-bottom: var(--spacing-4);
+    &.desk-stack-4 .splide__slide {
+      padding: 0;
+    }
+    .product-tile-slider.mob-carousel-items {
+      .product-slide {
+        vertical-align: top;
+      }
+    }
+  }
+
+  .mol-content-card-container .content-card-text-block .links-container a {
+    margin-top: var(--spacing-4);
+  }
+
+  .btn {
+    font-family: var(--font-face1-medium);
+    font-size: var(--text-14);
+  }
+
+  .links-container .btn.btn-medium {
+    font-weight: 800;
+    font-family: var(--font-face1-extrabold);
+    font-size: var(--text-12);
+  }
+
+  @media (min-width: 769px) {
+    .p-lg-0 {
+      padding: 0 !important;
+    }
+    .mol-content-card-container {
+      padding: var(--spacing-12);
+      &.no-padding {
+        padding: 0;
+        min-height: auto;
+      }
+    }
+    .mol-banner-50-50 {
+      .mol-header-block-container {
+        padding: 0 var(--spacing-16);
+      }
+    }
+    .mol-content-card-container .desk-stack-mob-carousel .product-slide,
+    .mol-content-card-container .desk-stack-mob-carousel-thumbnail .product-slide {
+      margin-bottom: 0;
+    }
+  }
+
+  @media (max-width: 769px) {
+    .right-container {
+      &.p-0 {
+        padding: 0 !important; /* force to set padding O for this particular case  */
+      }
+      .at-media-asset {
+        position: relative;
+        height: 100vw;
+        top: 0;
+        div {
+          top: 0;
+        }
+      }
+    }
+    .mol-content-card-container {
+      padding-top: var(--spacing-6);
+      padding-bottom: var(--spacing-1);
+    }
+    .mol-content-card-container .desk-stack-mob-carousel {
+      padding-bottom: var(--spacing-10);
+    }
+    .mol-banner-50-50 {
+      .mol-header-block {
+        .at-headline-text,
+        .at-body-text {
+          text-align: left;
+        }
+      }
+      .mol-header-block-container {
+        padding: var(--spacing-4) 0 var(--spacing-12) 0;
+      }
+    }
+  }
+}

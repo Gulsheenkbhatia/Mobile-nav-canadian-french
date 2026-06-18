@@ -1,0 +1,121 @@
+.aspect-ratio-4_5 {
+  aspect-ratio: 4 / 5;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.amps-aspect-ratio-box,
+.amps-aspect-ratio-box-video {
+  aspect-ratio: var(--m-aspect-ratio);
+  position: relative;
+  width: 100%;
+  &.aspect-ratio-auto {
+    aspect-ratio: auto !important;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  .m-d-ratio-defined {
+    display: flex;
+  }
+}
+
+@supports not (aspect-ratio: auto) {
+  .aspect-ratio-box {
+    height: 0;
+    padding-top: calc(100% / (4 / 5));
+    overflow: hidden;
+    position: relative;
+
+    .aspect-ratio-img {
+      position: absolute;
+      width: 100%;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 0;
+    }
+
+    .img-caption {
+      position: absolute;
+      bottom: 0;
+    }
+
+    img {
+      height: 100%;
+    }
+  }
+
+  .amps-aspect-ratio-box {
+    .u-full-cover-element {
+      display: block;
+      padding-top: calc(100% / var(--m-aspect-ratio));
+      overflow: hidden;
+      position: relative;
+
+      &.m-d-ratio-defined img,
+      &.m-ratio-defined img,
+      &.d-ratio-defined img {
+        position: relative;
+      }
+    }
+  }
+
+  .amps-aspect-ratio-box-video {
+    padding-top: calc(100% / var(--m-aspect-ratio));
+    overflow: hidden;
+
+    .u-full-cover-element-video.m-d-ratio-defined,
+    .u-full-cover-element-video.m-ratio-defined,
+    .u-full-cover-element-video.d-ratio-defined {
+      position: relative;
+    }
+  }
+}
+
+@media (min-width: 769px) {
+  .amps-aspect-ratio-box,
+  .amps-aspect-ratio-box-video {
+    aspect-ratio: var(--d-aspect-ratio);
+  }
+
+  @supports not (aspect-ratio: auto) {
+    .amps-aspect-ratio-box {
+      .u-full-cover-element {
+        padding-top: calc(100% / var(--d-aspect-ratio));
+
+        &.m-ratio-defined img {
+          position: relative;
+        }
+        &.d-ratio-defined img {
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+    }
+
+    .amps-aspect-ratio-box-video {
+      padding-top: calc(100% / var(--d-aspect-ratio));
+    }
+
+    .amps-aspect-ratio-box-video .u-full-cover-element-video {
+      &.m-ratio-defined {
+        position: relative;
+      }
+
+      &.d-ratio-defined {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+}

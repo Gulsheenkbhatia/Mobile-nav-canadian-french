@@ -1,0 +1,27 @@
+body.drawerOpened {
+  overflow: hidden !important;
+  position: relative !important;
+  padding-left: 0px;
+  padding-top: 0px;
+  padding-right: 0px;
+  margin-left: 0;
+  margin-top: 0;
+  margin-right: 0px !important;
+}
+
+svg#icon-close-hamburger g {
+  fill: white;
+}
+
+svg#icon-storeV2 path,
+svg#icon-packageV2 path,
+svg#icon-feedback path,
+svg#icon-contact-usV2 path,
+svg#icon-chevron-leftV2 path {
+  fill: var(--scheme-text-color);
+}
+svg#icon-wishlistV2 path,
+svg#icon-closeV2 g,
+svg#icon-closeV2 path {
+  stroke: var(--scheme-text-color);
+}

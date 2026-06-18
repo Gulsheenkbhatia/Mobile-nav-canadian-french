@@ -1,0 +1,9 @@
+@font-face {
+  font-family: 'MonogramSymbolsCustom';
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: local('MonogramSymbolsCustom'),
+    url('https://api.images.drivecommerce.com/api/v1/image/coach/monogram-symbols.woff2')
+      format('woff2');
+}

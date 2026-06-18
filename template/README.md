@@ -12,7 +12,9 @@ npm run dev
 
 Open the URL Vite prints (usually `http://localhost:5173`).
 
-- The flyout opens **by default** so you see it immediately; close with **X**, reopen with the **menu + search** control in the demo header.
+- The flyout starts **closed**; open it with the **menu + search** icon in the demo header. Close with **X** or **Escape**.
+- **`src/styles/design-tokens.css`** — color, type, space, radius, motion, and icon tokens (aligned loosely with PWA-style names like `--coach-color-neutral-dark-1`).
+- **`src/components/icons.tsx`** — shared SVG marks (bag, menu+search combo, search, close, footer utilities, US flag, accordion plus).
 - Edit **`src/data/coachNavMock.ts`** for category labels and tree structure.
 - Edit **`src/components/MobileNavFlyout.tsx`** + **`MobileNavFlyout.css`** for layout and behavior.
 

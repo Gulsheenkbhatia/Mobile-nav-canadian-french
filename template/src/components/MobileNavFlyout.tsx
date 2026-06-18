@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from 'react'
 import { coachNavMock, footerUtilityMock, type NavLinkItem } from '../data/coachNavMock'
+import { IconChat, IconClose, IconFlagUs, IconPackage, IconPlus, IconSearch, IconUser } from './icons'
 import './MobileNavFlyout.css'
 
 type Props = {
@@ -7,70 +8,17 @@ type Props = {
   onClose: () => void
 }
 
-function IconSearch() {
-  return (
-    <svg className="mnf-icon" width="20" height="20" viewBox="0 0 24 24" aria-hidden>
-      <circle cx="10" cy="10" r="6.5" fill="none" stroke="currentColor" strokeWidth="1.75" />
-      <path d="M14.5 14.5L21 21" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" />
-    </svg>
-  )
-}
-
-function IconClose() {
-  return (
-    <svg className="mnf-icon" width="22" height="22" viewBox="0 0 24 24" aria-hidden>
-      <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" />
-    </svg>
-  )
-}
-
-function FooterIcon({ type }: { type: 'user' | 'flag' | 'box' | 'chat' }) {
+function FooterGlyph({ type }: { type: (typeof footerUtilityMock)[number]['icon'] }) {
+  const md = { size: 'md' as const }
   switch (type) {
     case 'user':
-      return (
-        <svg className="mnf-footerIcon" width="22" height="22" viewBox="0 0 24 24" aria-hidden>
-          <circle cx="12" cy="9" r="3.5" fill="none" stroke="currentColor" strokeWidth="1.5" />
-          <path
-            d="M6 20c0-3.5 2.5-5.5 6-5.5s6 2 6 5.5"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="1.5"
-            strokeLinecap="round"
-          />
-        </svg>
-      )
+      return <IconUser {...md} />
     case 'flag':
-      return (
-        <svg className="mnf-footerIcon" width="22" height="22" viewBox="0 0 24 24" aria-hidden>
-          <rect x="5" y="5" width="10" height="7" rx="1" fill="none" stroke="currentColor" strokeWidth="1.5" />
-          <path d="M5 12h14v7H5z" fill="none" stroke="currentColor" strokeWidth="1.5" />
-        </svg>
-      )
+      return <IconFlagUs />
     case 'box':
-      return (
-        <svg className="mnf-footerIcon" width="22" height="22" viewBox="0 0 24 24" aria-hidden>
-          <path
-            d="M5 8l7-3 7 3v9l-7 3-7-3V8z"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="1.5"
-            strokeLinejoin="round"
-          />
-          <path d="M5 8l7 3 7-3" fill="none" stroke="currentColor" strokeWidth="1.5" />
-        </svg>
-      )
+      return <IconPackage {...md} />
     case 'chat':
-      return (
-        <svg className="mnf-footerIcon" width="22" height="22" viewBox="0 0 24 24" aria-hidden>
-          <path
-            d="M6 6h12a2 2 0 012 2v6a2 2 0 01-2 2h-6l-4 3v-3H6a2 2 0 01-2-2V8a2 2 0 012-2z"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="1.5"
-            strokeLinejoin="round"
-          />
-        </svg>
-      )
+      return <IconChat {...md} />
   }
 }
 
@@ -102,8 +50,8 @@ function NavRow({
     <div className="mnf-row mnf-row--accordion">
       <button type="button" className="mnf-row__trigger" aria-expanded={expanded} onClick={onToggle}>
         <span className="mnf-row__label">{item.label}</span>
-        <span className={`mnf-row__plus ${expanded ? 'mnf-row__plus--open' : ''}`} aria-hidden>
-          +
+        <span className="mnf-row__chevron">
+          <IconPlus open={expanded} />
         </span>
       </button>
       {expanded && item.children && (
@@ -165,17 +113,21 @@ export function MobileNavFlyout({ isOpen, onClose }: Props) {
       <div className="mnf-panel" onClick={(e) => e.stopPropagation()}>
         <div className="mnf-topBar">
           <div className="mnf-brandTabs" role="tablist" aria-label="Brand">
-            <div className="mnf-brandTabs__tab mnf-brandTabs__tab--active">COACH</div>
-            <div className="mnf-brandTabs__tab">COACH OUTLET</div>
+            <div className="mnf-brandTabs__tab mnf-brandTabs__tab--active">
+              <span className="mnf-wordmark">COACH</span>
+            </div>
+            <div className="mnf-brandTabs__tab mnf-brandTabs__tab--outlet">
+              <span className="mnf-wordmark mnf-wordmark--inverse">COACH OUTLET</span>
+            </div>
           </div>
           <button type="button" className="mnf-close" onClick={onClose} aria-label="Close menu">
-            <IconClose />
+            <IconClose size="lg" />
           </button>
         </div>
 
         <div className="mnf-searchWrap">
           <label className="mnf-search">
-            <IconSearch />
+            <IconSearch size="md" />
             <input type="search" placeholder="Search" autoComplete="off" className="mnf-search__input" />
           </label>
         </div>
@@ -213,7 +165,7 @@ export function MobileNavFlyout({ isOpen, onClose }: Props) {
         <footer className="mnf-footer">
           {footerUtilityMock.map((u) => (
             <button key={u.id} type="button" className="mnf-footer__item">
-              <FooterIcon type={u.icon} />
+              <FooterGlyph type={u.icon} />
               <span className="mnf-footer__label">{u.label}</span>
             </button>
           ))}

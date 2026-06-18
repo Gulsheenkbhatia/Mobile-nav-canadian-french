@@ -1,0 +1,193 @@
+.storelocator > div > div > div:nth-child(1) > svg {
+  transform: scale(1);
+}
+
+.storelocator > div > div > div:nth-child(3) > svg {
+  transform: scale(1);
+}
+
+.storelocator div:nth-child(2) svg {
+  transform: scale(1);
+}
+
+.search_svg__icon-navigation-search svg {
+  transform: scale(2);
+}
+
+.upper-right-icons > div > div:nth-child(2) > div > svg {
+  transform: scale(1);
+}
+
+.upper-right-icons > div:nth-child(2) > a > div > div > svg {
+  transform: scale(1);
+}
+
+.upper-right-icons > div:nth-child(3) > a > div > div > svg {
+  transform: scale(1);
+}
+
+.bag_svg__icon-navigation-bag {
+  transform: scale(1);
+}
+
+.instagram_svg__icon-social-instagram {
+  transform: scale(1);
+}
+
+.facebook_svg__icon-social-facebook {
+  transform: scale(1);
+}
+
+.twitter_svg__icon-social-twitter {
+  transform: scale(1);
+}
+
+.tiktok_svg__icon-social-tiktok {
+  transform: scale(1);
+}
+
+.youtube_svg__icon-social-youtube {
+  transform: scale(1);
+}
+.wishlist-container .favorite_svg__icon-navigation-favorite,
+.wishlist-container .favorite-fill_svg__icon-navigation-favorite-fill {
+  transform: scale(1.5);
+  outline: none;
+  pointer-events: none;
+}
+
+.wishlist-container svg {
+  outline: none;
+}
+
+.lock_svg__icon-object-lock {
+  transform: scale(1.5);
+}
+
+.lock_svg__icon-object-lock path,
+.chevron-left_svg__icon-utility-chevron-left path,
+.chevron-right_svg__icon-utility-chevron-right path,
+.chevron-down_svg__icon-utility-chevron-down path,
+.chevron-up_svg__icon-utility-chevron-up path,
+.icon-utility-chevron-down path {
+  fill: currentColor;
+}
+
+svg > use[href='#icon-nav-chevron-down'] {
+  color: var(--color-black-base);
+}
+
+svg > use[href='#icon-form-error-outline'] {
+  color: var(--color-error-primary, #dd191f);
+}
+.error_svg__icon-form-error g {
+  fill: currentColor;
+}
+
+.brand-kate-spade svg > use[href='#icon-star'] {
+  /* this color is hardcoded in design system, so keep it as is. */
+  color: #333;
+}
+.brand-kate-spade .star_svg__icon-review-star path {
+  fill: currentColor;
+}
+
+.alert .alert-icon .icon {
+  width: 15px;
+  height: 15px;
+  margin-right: 0.75rem;
+}
+
+.alert.alert-danger {
+  height: auto;
+  padding: 0.75rem;
+  margin-top: 16px;
+  text-align: left;
+}
+
+svg > use[href='#icon-plus'] {
+  color: #060707;
+}
+
+.plus_svg__icon-utility-plus path {
+  fill: currentColor;
+}
+svg#icon-bagV2,
+svg#icon-menuSearchV2,
+svg#icon-accountV2,
+svg#icon-feedback,
+svg#icon-packageV2,
+svg#icon-packageV2 path,
+svg#icon-accountV2 path,
+svg#icon-menu-coachtopiaV2,
+svg#icon-menu-coachtopiaV2 g,
+svg#icon-searchV2,
+svg#icon-searchV2 path,
+svg#icon-searchV2 rect,
+svg#icon-bagV2 path,
+svg#icon-bagV2 rect,
+svg#icon-menuSearchV2 path,
+svg#icon-menuSearchV2 rect,
+svg#icon-menuV2 path,
+svg#icon-menuV2 rect svg#icon-feedback path,
+svg#icon-feedback rect {
+  fill: inherit;
+  stroke: inherit;
+}
+svg#icon-close-search-exposed g {
+  fill: var(--color-black-base);
+  stroke: var(--color-black-base);
+}
+
+svg#icon-addToBag path:first-of-type {
+  fill: transparent;
+}
+
+svg#icon-addToBag,
+svg#icon-addToBag path {
+  fill: inherit;
+}
+
+svg#icon-view-similar g {
+  stroke: inherit;
+}
+
+svg > use[href='#icon-additional-details'] {
+  fill: var(--color-black-base);
+}
+
+svg#icon-additional-details path {
+  fill: currentColor;
+}
+
+svg > use[href='#icon-caret-up'] {
+  fill: var(--color-black-base);
+}
+
+svg#icon-caret-up path {
+  fill: currentColor;
+}
+
+svg > use[href='#icon-caret-down'] {
+  fill: var(--color-black-base);
+}
+
+svg#icon-caret-down path {
+  fill: currentColor;
+}
+
+svg > use[href='#icon-checkmark'] {
+  stroke: var(--color-black-base);
+}
+
+svg#icon-checkmark path {
+  stroke: currentColor;
+}
+
+svg > use[href='#icon-shipping'] {
+  fill: var(--color-black-base);
+}
+
+svg#icon-shipping path {
+  fill: currentColor;
+}

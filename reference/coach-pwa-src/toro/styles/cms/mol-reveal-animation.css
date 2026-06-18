@@ -1,0 +1,386 @@
+/* Cloud Animation Component Styling */
+:root {
+  --mobile-cloud-width: 220px;
+  --desktop-cloud-width: 310px;
+  --mobile-header-height: 64px;
+  --desktop-header-height: 208px;
+}
+
+.mol-cloud-animation {
+  position: relative;
+  .animation-wrapper {
+    height: calc(100vh - var(--mobile-header-height));
+    overflow: hidden;
+  }
+  .animation {
+    &__clouds {
+      position: relative;
+      height: 100%;
+      width: 100%;
+      animation: fadeIn 500ms ease 0s normal forwards 1;
+      opacity: 0;
+      > picture {
+        position: absolute;
+        z-index: 1;
+        animation-duration: var(--animation-duration);
+        animation-delay: 500ms;
+        animation-fill-mode: forwards;
+      }
+      img {
+        max-width: fit-content;
+      }
+    }
+  }
+  #animation {
+    &__cloud-1 {
+      top: -110px;
+      left: calc(calc(100% - var(--mobile-cloud-width)) + 120px);
+      animation-name: cloudOneMove;
+    }
+    &__cloud-2 {
+      top: 9vh;
+      left: -160px;
+      animation-name: cloudTwoMove;
+    }
+    &__cloud-3 {
+      top: 38vh;
+      left: calc(calc(100% - var(--mobile-cloud-width)) + 145px);
+      animation-name: cloudThreeMove;
+    }
+    &__cloud-4 {
+      top: auto;
+      bottom: -60px;
+      left: -120px;
+      animation-name: cloudFourMove;
+    }
+  }
+  .content-wrapper {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    margin: 0 auto;
+    animation: fadeIn 1s ease 1s normal forwards 1;
+    opacity: 0;
+    z-index: 1;
+    .content {
+      &__media {
+        max-width: 50%;
+        margin: 0 auto;
+        position: relative;
+        font-size: 0;
+      }
+      &__media-fullscreen {
+        position: absolute;
+        bottom: var(--spacing-2);
+        left: var(--spacing-2);
+      }
+      &__header {
+        margin-bottom: var(--spacing-6);
+      }
+      &__cta {
+        margin-top: var(--spacing-6);
+      }
+    }
+    .right-controls {
+      width: var(--spacing-12);
+    }
+  }
+  .short-video-play-wrapper,
+  .icon-modal-close,
+  .modal-close-btn,
+  .media-scrim {
+    display: none;
+  }
+  .content {
+    &__media {
+      .media-tile-text-block,
+      .progress-bar-container {
+        display: none;
+      }
+      video {
+        width: 100%;
+      }
+      .ac-video-controls {
+        bottom: var(--spacing-2);
+        right: var(--spacing-2);
+        left: var(--spacing-2);
+      }
+      .at-media-tile {
+        padding: 0;
+      }
+      button.ac-toggle-sound {
+        margin-right: var(--spacing-2);
+      }
+    }
+    &__box {
+      &.flex-column-reverse {
+        .content__header {
+          margin-bottom: 0;
+          margin-top: var(--spacing-6);
+        }
+      }
+      .links-container {
+        margin-bottom: var(--spacing-2);
+      }
+    }
+    &__media,
+    &__media-fullscreen {
+      .icon {
+        width: var(--spacing-4);
+        height: var(--spacing-4);
+        min-width: var(--spacing-4);
+        min-height: var(--spacing-4);
+      }
+      button.ac-toggle-playback {
+        margin-right: var(--spacing-4);
+      }
+    }
+  }
+  .at-media-tile {
+    .video-play-pause-icons {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  .video-progress-filled {
+    background: var(--color-white-base);
+    position: absolute;
+    top: 0;
+    height: 2px;
+  }
+  .icon-black {
+    svg {
+      filter: invert(1);
+    }
+    .video-progress-filled {
+      background-color: var(--color-black-base);
+    }
+  }
+  .media-scrim {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+  }
+  &[autoplay='false'] {
+    .media-scrim {
+      display: block;
+    }
+  }
+  .amp-modal-wrapper {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background: var(--color-white-base);
+    z-index: 99;
+    .media-tile-text-block {
+      display: block;
+      bottom: var(--spacing-16);
+      width: auto;
+      position: absolute;
+      z-index: 1;
+      white-space: normal;
+    }
+    .at-media-tile {
+      font-size: 0;
+      padding: 0;
+    }
+    .ac-video-controls {
+      right: var(--spacing-4);
+      left: var(--spacing-4);
+      position: absolute;
+      bottom: 0;
+      z-index: 2;
+    }
+    video {
+      height: 100%;
+    }
+    .icon {
+      width: var(--spacing-6);
+      height: var(--spacing-6);
+    }
+    button.ac-toggle-sound {
+      margin-right: 0;
+    }
+    .short-video-modal-btn {
+      display: none;
+    }
+    .progress-bar-container {
+      position: relative;
+      opacity: 0.5;
+    }
+    .video-progress {
+      margin: var(--spacing-4) 0;
+      height: 2px;
+      transition: 0.1s;
+      background: var(--color-white-base);
+      opacity: 0.5;
+      display: flex;
+      width: 100%;
+      cursor: pointer;
+    }
+    .modal-close-btn {
+      top: var(--spacing-4);
+      right: var(--spacing-4);
+      display: block;
+      position: absolute;
+      z-index: 3;
+      filter: invert(1);
+      opacity: 1;
+    }
+    .at-body-text {
+      margin-bottom: 0;
+    }
+    .icon-black ~ .modal-close-btn {
+      filter: invert(0);
+    }
+  }
+
+  /* Mobile @keyframes */
+  @keyframes cloudOneMove {
+    from {
+      left: calc(calc(100% - var(--mobile-cloud-width)) + 120px);
+    }
+    to {
+      left: -110px;
+    }
+  }
+  @keyframes cloudTwoMove {
+    from {
+      left: -160px;
+    }
+    to {
+      left: calc(calc(100% - var(--mobile-cloud-width)) + 175px);
+    }
+  }
+  @keyframes cloudThreeMove {
+    from {
+      left: calc(calc(100% - var(--mobile-cloud-width)) + 145px);
+    }
+    to {
+      left: -140px;
+    }
+  }
+  @keyframes cloudFourMove {
+    from {
+      left: -120px;
+    }
+    to {
+      left: calc(calc(100% - var(--mobile-cloud-width)) + 170px);
+    }
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  /* Desktop View */
+  @media only screen and (min-width: 768px) {
+    .animation-wrapper {
+      height: calc(100vh - var(--desktop-header-height));
+      min-height: 640px;
+    }
+    #animation {
+      &__cloud-1 {
+        top: -110px;
+        left: calc(calc(100% - var(--desktop-cloud-width)) + 65px);
+      }
+      &__cloud-2 {
+        top: 4vh;
+        left: -50px;
+      }
+      &__cloud-3 {
+        top: auto;
+        bottom: 14vh;
+        left: calc(calc(100% - var(--desktop-cloud-width)) + 65px);
+      }
+      &__cloud-4 {
+        top: auto;
+        bottom: -90px;
+        left: -50px;
+      }
+    }
+    .content-wrapper {
+      width: 100%;
+      .content {
+        &__media {
+          width: 17%;
+          max-width: 235px;
+        }
+      }
+    }
+    .amp-modal-wrapper {
+      .short-video-modal-btn {
+        display: block;
+      }
+      .media-tile-text-block {
+        bottom: 0;
+      }
+      .mol-header-block {
+        padding: var(--spacing-6);
+      }
+      .at-body-text {
+        margin-top: var(--spacing-1);
+      }
+    }
+
+    /* Desktop @keyframes */
+    @keyframes cloudOneMove {
+      from {
+        left: calc(calc(100% - var(--desktop-cloud-width)) + 65px);
+      }
+      to {
+        left: -90px;
+      }
+    }
+    @keyframes cloudTwoMove {
+      from {
+        left: -50px;
+      }
+      to {
+        left: calc(calc(100% - var(--desktop-cloud-width)) + 60px);
+      }
+    }
+    @keyframes cloudThreeMove {
+      from {
+        left: calc(calc(100% - var(--desktop-cloud-width)) + 65px);
+      }
+      to {
+        left: -75px;
+      }
+    }
+    @keyframes cloudFourMove {
+      from {
+        left: -50px;
+      }
+      to {
+        left: calc(calc(100% - var(--desktop-cloud-width)) + 50px);
+      }
+    }
+  }
+
+  /* Mobile/Tab Landscape Mode View */
+  @media only screen and (max-width: 992px) and (orientation: landscape) {
+    .content-wrapper {
+      .content {
+        &__header {
+          margin-bottom: var(--spacing-4);
+        }
+        &__cta {
+          margin-top: var(--spacing-4);
+        }
+      }
+    }
+  }
+}

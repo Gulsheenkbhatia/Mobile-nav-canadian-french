@@ -1,0 +1,17 @@
+.subbrand-coachtopia {
+  @media (max-width: 769px) {
+    .mol-banner-50-50 {
+      .mol-header-block-container .mol-header-block {
+        padding: 0;
+      }
+      .left-container,
+      .right-container {
+        .mol-header-block-container {
+          padding: 0;
+          margin-top: var(--spacing-6);
+          margin-bottom: var(--spacing-8);
+        }
+      }
+    }
+  }
+}

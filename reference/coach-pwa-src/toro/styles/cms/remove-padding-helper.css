@@ -1,0 +1,26 @@
+@media (min-width: 769px) {
+  .mol-lifestyle-carousel,
+  .mol-2up-carousel,
+  .mol-product-4up-grid {
+    &.no-padding {
+      .left-container {
+        padding-left: 0;
+      }
+      .right-container {
+        padding-right: 0;
+      }
+    }
+  }
+  .mol-product-4up-grid {
+    &.no-padding {
+      padding: 0;
+    }
+  }
+  .mol-tabbed-content,
+  .mol-tabbed-slider,
+  .mol-shorts-video {
+    &.no-padding {
+      padding: 0;
+    }
+  }
+}

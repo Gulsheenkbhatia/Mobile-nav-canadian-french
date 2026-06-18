@@ -1,0 +1,23 @@
+.mol-product-image-selector {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  .product-details {
+    width: 100%;
+    &.no-name .product-tile__title,
+    &.no-price .product-tile__price {
+      display: none;
+    }
+  }
+  .product-tile {
+    &__title a {
+      white-space: break-spaces;
+    }
+  }
+  @media (min-width: 769px) {
+    .product-details {
+      max-width: var(--max-width);
+    }
+  }
+}

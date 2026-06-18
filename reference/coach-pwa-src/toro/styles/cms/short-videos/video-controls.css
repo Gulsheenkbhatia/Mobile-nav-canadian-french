@@ -1,0 +1,215 @@
+@media (max-width: 768px) {
+  .mol-shorts-video .media-tiles-container .short-video-play-wrapper {
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+  }
+  .mol-shorts-video .at-media-tile .ac-video-controls {
+    right: var(--spacing-4);
+    left: var(--spacing-4);
+    text-align: right;
+    &.top-right {
+      top: var(--spacing-4);
+      bottom: auto;
+    }
+    &.top-left {
+      top: var(--spacing-4);
+      bottom: auto;
+    }
+  }
+  .mol-shorts-video .at-media-tile .ac-video-controls {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+  }
+  .mol-shorts-video .at-media-asset .short-video-play-btn {
+    top: calc(50% - var(--spacing-4));
+    left: calc(50% - var(--spacing-4));
+    display: block;
+    position: absolute;
+    z-index: 1;
+  }
+  .mol-shorts-video .short-video-play-btn .icon {
+    width: unset;
+    height: unset;
+    &:not(.icon-black) {
+      filter: invert(1);
+    }
+  }
+}
+
+@media (min-width: 769px) {
+  .mol-shorts-video {
+    .at-media-tile {
+      .ac-video-controls {
+        left: var(--spacing-4);
+        right: var(--spacing-4);
+        text-align: right;
+        &.top-right {
+          top: var(--spacing-4);
+          bottom: auto;
+        }
+        &.top-left {
+          top: var(--spacing-4);
+          bottom: auto;
+        }
+      }
+    }
+    .at-media-asset {
+      .ac-video-controls {
+        display: none;
+      }
+      .short-video-play-btn {
+        top: calc(50% - 16px);
+        left: calc(50% - 16px);
+        display: none;
+      }
+    }
+    .video-progress-filled {
+      background: #fff;
+      position: absolute;
+      top: 0;
+      height: 2px;
+    }
+    .short-video-play-wrapper {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+    }
+    .media-tiles-container {
+      .short-video-play-wrapper {
+        z-index: 0;
+      }
+    }
+    .short-video-play-btn {
+      position: absolute;
+      z-index: 1;
+    }
+  }
+  .amp-coachtopia {
+    .at-media-tile {
+      .ac-video-controls {
+        position: absolute;
+        bottom: 0;
+        z-index: 2;
+      }
+      .video-play-pause-icons {
+        display: flex;
+        justify-content: space-between;
+      }
+      .video-progress {
+        display: flex;
+        width: 100%;
+        cursor: pointer;
+      }
+    }
+    .at-media-asset {
+      .video-play-pause-icons {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-grow: 1;
+      }
+      .ac-video-controls {
+        button.ac-toggle-playback {
+          margin: 0;
+        }
+      }
+      .ac-toggle-sound {
+        margin-right: var(--spacing-4) !important;
+      }
+      .progress-bar-container {
+        position: relative;
+        opacity: 0.5;
+      }
+      .video-progress {
+        height: 2px;
+        transition: 0.1s;
+        background: #fff;
+        opacity: 0.5;
+      }
+      .short-video-play-btn {
+        display: none;
+      }
+      .right-controls {
+        width: 64px;
+      }
+    }
+    .icon-play,
+    .icon-volumn,
+    .icon-modal-open,
+    .icon-modal-close {
+      width: var(--spacing-6);
+      height: var(--spacing-6);
+    }
+    .video-progress {
+      margin: var(--spacing-4) 0 var(--spacing-6) 0;
+    }
+    .video-progress-filled {
+      background: #fff;
+      position: absolute;
+      top: 0;
+      height: 2px;
+    }
+    .icon-modal-close {
+      display: none;
+    }
+  }
+
+  .ac-video-controls {
+    .video-play-pause-icons {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 8px;
+      flex-grow: 1;
+    }
+  }
+  .mol-shorts-video {
+    .at-media-asset {
+      .ac-video-controls {
+        #ac-toggle-playback,
+        .ac-toggle-playback {
+          margin-right: var(--spacing-8);
+        }
+        button:first-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+  .shorts-video-wrapper {
+    .ac-video-controls {
+      padding: 0 16px;
+    }
+  }
+  .icon-modal-close {
+    use {
+      display: none;
+    }
+  }
+  .short-video-modal-btn {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .right-controls {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 70px;
+  }
+  .controls-width {
+    padding: 0 36px 0 8px;
+    width: 100%;
+  }
+}
+
+.mol-shorts-video .at-media-asset .ac-video-controls .icon-black {
+  filter: invert(1);
+}

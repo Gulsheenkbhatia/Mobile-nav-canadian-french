@@ -1,0 +1,60 @@
+@media (max-width: 768px) {
+  .mol-shorts-video {
+    .carousel-view-infinite-hide {
+      display: none;
+    }
+    .amp-video-wrapper .media-scrim {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 1;
+    }
+    .media-tiles-container {
+      &.carousel-view {
+        overflow-x: scroll;
+        overflow-y: hidden;
+        white-space: nowrap;
+        font-size: 0;
+        scrollbar-width: none;
+        display: flex;
+        padding: 0 var(--spacing-4);
+      }
+
+      &.carousel-view-infinite,
+      &.carousel-view {
+        grid-gap: var(--spacing-1);
+        &.mob-carousel-items {
+          > div:first-child {
+            margin-left: 0;
+          }
+        }
+
+        .mob-carousel-items {
+          margin-left: var(--spacing-4);
+          grid-gap: var(--spacing-1);
+          & > .at-media-tile,
+          & > div,
+          & > div > div {
+            margin-right: 0;
+          }
+        }
+        .at-media-tile {
+          padding: var(--spacing-1);
+          width: 34vw !important;
+          padding: 0 5px 0 0;
+          margin-right: 0;
+          video {
+            height: 100%;
+          }
+          & > div > div,
+          & > div {
+            width: 34vw !important;
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+}

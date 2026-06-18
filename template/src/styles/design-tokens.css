@@ -1,0 +1,115 @@
+/**
+ * Prototype design tokens — Coach / Tapestry retail nav
+ * Aligned loosely with PWA scheme names (e.g. color-neutral-dark-1); values are local defaults.
+ */
+
+:root {
+  /* —— Color —— */
+  --coach-color-neutral-dark-1: #161616;
+  --coach-color-neutral-dark-2: #1a1a1a;
+  --coach-color-ink-primary: #111111;
+  --coach-color-ink-secondary: #333333;
+  --coach-color-ink-tertiary: #444444;
+  --coach-color-ink-muted: #666666;
+  --coach-color-ink-placeholder: #888888;
+
+  --coach-color-neutral-light: #ffffff;
+  --coach-color-neutral-light-1: #f7f7f7;
+  --coach-color-neutral-light-2: #f2f2f2;
+  --coach-color-neutral-light-3: #ebebeb;
+  --coach-color-neutral-light-4: #e8e8e8;
+  --coach-color-neutral-light-5: #eaeaea;
+
+  --coach-color-border-subtle: #dddddd;
+  --coach-color-border-default: #d8d8d8;
+  --coach-color-border-strong: #d0d0d0;
+  --coach-color-divider-list: #e4e4e4;
+
+  --coach-color-nav-on-dark: #ffffff;
+  --coach-color-nav-on-dark-muted: rgba(255, 255, 255, 0.92);
+  --coach-color-nav-tab-active: #ffffff;
+  --coach-color-nav-tab-active-flyout: #e8e8e8;
+  --coach-color-overlay-press: rgba(255, 255, 255, 0.08);
+  --coach-color-overlay-press-subtle: rgba(255, 255, 255, 0.06);
+
+  --coach-color-flag-red: #b22234;
+  --coach-color-flag-blue: #3c3b6e;
+  --coach-color-flag-border: #cccccc;
+
+  /* Homepage / marketing surfaces */
+  --coach-color-sand-100: #efe6dc;
+  --coach-color-sand-200: #e8dfd4;
+  --coach-color-sand-300: #dccfbf;
+  --coach-color-stage-900: #2a0a0a;
+  --coach-color-stage-700: #6b1010;
+  --coach-color-stage-500: #b01e1e;
+
+  --coach-color-scrim-app: #e8e8e8;
+  --coach-color-scrim-phone: rgba(0, 0, 0, 0.12);
+
+  /* —— Typography —— */
+  --coach-font-sans: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --coach-font-serif-display: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  --coach-font-script: 'Dancing Script', cursive;
+
+  --coach-font-size-2xs: 10px;
+  --coach-font-size-xs: 11px;
+  --coach-font-size-sm: 12px;
+  --coach-font-size-md: 13px;
+  --coach-font-size-body: 15px;
+  --coach-font-size-body-lg: 16px;
+  --coach-font-size-title-sm: 0.9rem;
+  --coach-font-size-title-md: 1.05rem;
+
+  --coach-font-weight-regular: 400;
+  --coach-font-weight-medium: 500;
+  --coach-font-weight-semibold: 600;
+  --coach-font-weight-bold: 700;
+
+  --coach-letter-spacing-caps: 0.04em;
+  --coach-letter-spacing-ui: 0.02em;
+
+  /* —— Space —— */
+  --coach-space-1: 4px;
+  --coach-space-2: 6px;
+  --coach-space-3: 8px;
+  --coach-space-4: 10px;
+  --coach-space-5: 12px;
+  --coach-space-6: 14px;
+  --coach-space-7: 16px;
+  --coach-space-8: 18px;
+  --coach-space-9: 20px;
+  --coach-space-10: 24px;
+  --coach-space-11: 28px;
+  --coach-space-12: 36px;
+  --coach-space-13: 48px;
+
+  /* —— Radius —— */
+  --coach-radius-sm: 2px;
+  --coach-radius-md: 6px;
+  --coach-radius-lg: 8px;
+  --coach-radius-xl: 10px;
+  --coach-radius-2xl: 12px;
+  --coach-radius-tab: 10px 10px 0 0;
+  --coach-radius-tab-flyout: 12px 12px 0 0;
+  --coach-radius-shell: 12px;
+
+  /* —— Icon —— */
+  --coach-icon-stroke: 1.5;
+  --coach-icon-size-sm: 20px;
+  --coach-icon-size-md: 22px;
+  --coach-icon-size-lg: 24px;
+
+  /* —— Motion (Coach Retail UI-scale, Gentle) —— */
+  --coach-motion-ease-gentle: cubic-bezier(0.49, 0, 0.47, 0.98);
+  --coach-motion-duration-fast: 150ms;
+  --coach-motion-duration-ui: 240ms;
+  --coach-motion-duration-slow: 360ms;
+
+  /* —— Elevation / chrome —— */
+  --coach-shadow-phone: 0 12px 40px var(--coach-color-scrim-phone);
+
+  /* —— Layout —— */
+  --coach-layout-phone-max: 430px;
+  --coach-z-flyout: 50;
+}

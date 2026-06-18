@@ -1,0 +1,36 @@
+@font-face {
+  font-family: MaisonNeueBook;
+  font-style: normal;
+  font-weight: normal;
+  font-stretch: normal;
+  font-display: swap;
+  src: local("Maison Neue Book"),
+     url("https://assets.katespade.com/na/fonts/MaisonNeueBook.woff2") format("woff2");
+}
+@font-face {
+  font-family: MaisonNeueMedium;
+  font-style: normal;
+  font-weight: normal;
+  font-stretch: normal;
+  font-display: swap;
+  src: local("Maison Neue Medium"),
+     url("https://assets.katespade.com/na/fonts/MaisonNeueMedium.woff2") format("woff2");
+}
+@font-face {
+  font-family: MaisonNeueLight;
+  font-style: normal;
+  font-weight: normal;
+  font-stretch: normal;
+  font-display: swap;
+  src: local("Maison Neue Light"),
+     url("https://assets.katespade.com/na/fonts/MaisonNeueLight.woff2") format("woff2");
+}
+@font-face {
+  font-family: KateSerifRegular;
+  font-style: normal;
+  font-weight: normal;
+  font-stretch: normal;
+  font-display: swap;
+  src: local("Kate Serif Regular"),
+     url("https://assets.katespade.com/na/fonts/KateSerifRegular.woff2") format("woff2");
+}

@@ -8,9 +8,10 @@ html,
 body {
   margin: 0;
   min-height: 100%;
-  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  font-family: var(--coach-font-sans);
+  color: var(--coach-color-ink-primary);
   -webkit-font-smoothing: antialiased;
-  background: #e8e8e8;
+  background: var(--coach-color-scrim-app);
 }
 
 #root {
@@ -25,4 +26,14 @@ button {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+/* Shared icon sizing hook */
+.coach-icon {
+  display: block;
+  flex-shrink: 0;
+}
+
+.coach-icon--bag .coach-icon__bagCount {
+  font-family: var(--coach-font-sans);
 }

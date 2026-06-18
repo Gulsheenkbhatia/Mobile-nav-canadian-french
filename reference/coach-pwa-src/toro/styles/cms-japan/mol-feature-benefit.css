@@ -1,0 +1,23 @@
+.brand-coach-outlet {
+  box-sizing: inherit;
+
+  .mol-feature-benefit {
+    box-sizing: inherit;
+
+    .feature-benefit-card {
+      box-sizing: inherit;
+
+      .mol-header-block .links-container a {
+        margin: 16px 6px 0 !important;
+        line-height: 1;
+      }
+    }
+  }
+}
+
+.mol-feature-benefit {
+  .links-container {
+    align-items: initial !important;
+    align-content: initial !important;
+  }
+}

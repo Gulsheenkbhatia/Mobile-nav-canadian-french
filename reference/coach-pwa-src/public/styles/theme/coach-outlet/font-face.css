@@ -1,0 +1,45 @@
+@font-face {
+  font-family: HelveticaLTPro-Roman;
+  font-style: normal;
+  font-weight: normal;
+  font-stretch: normal;
+  font-display: swap;
+  src: local("Helvetica LT Pro Roman"),
+     url("https://assets.coach.com/na/fonts/Helvetica-Roman.woff2") format("woff2");
+}
+@font-face {
+  font-family: HelveticaLTPro-Bold;
+  font-style: normal;
+  font-weight: normal;
+  font-stretch: normal;
+  font-display: swap;
+  src: local("Helvetica LT Pro Bold"),
+     url("https://assets.coach.com/na/fonts/Helvetica-Bold.woff2") format("woff2");
+}
+@font-face {
+  font-family: HelveticaNeue53ExtendedNormal;
+  font-style: normal;
+  font-weight: normal;
+  font-stretch: normal;
+  font-display: swap;
+  src: local("Helvetica Neue LT Pro 53 Extended"),
+     url("https://assets.coach.com/na/fonts/neue_helvetica_53_extended-v1.1.woff2") format("woff2");
+}
+@font-face {
+  font-family: HelveticaNeue73ExtendedBold;
+  font-style: normal;
+  font-weight: normal;
+  font-stretch: normal;
+  font-display: swap;
+  src: local("Helvetica Neue LT Pro 73 Bold Extended"),
+     url("https://assets.coach.com/na/fonts/neue_helvetica_73_extended_bold.woff2") format("woff2");
+}
+@font-face {
+  font-family: GaramondMTProRegular;
+  font-style: normal;
+  font-weight: normal;
+  font-stretch: normal;
+  font-display: swap;
+  src: local("Garamond MT Pro Regular"),
+     url("https://assets.coach.com/na/fonts/Garamond-Roman.woff2") format("woff2");
+}

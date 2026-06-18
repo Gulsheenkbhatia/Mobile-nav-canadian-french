@@ -1,0 +1,89 @@
+.text-cta-xs {
+  font-size: var(--text-10);
+  line-height: var(--line-height-115);
+  letter-spacing: var(--letter-spacing-xl);
+}
+
+.text-cta-sm {
+  font-size: var(--text-12);
+  line-height: var(--line-height-115);
+  letter-spacing: var(--letter-spacing-xl);
+}
+
+.text-cta-md {
+  font-size: var(--text-14);
+  line-height: var(--line-height-115);
+  letter-spacing: var(--letter-spacing-xl);
+}
+
+.nav-btn-label {
+  font-size: var(--text-14);
+  line-height: 1.1;
+  letter-spacing: var(--letter-spacing-xl);
+}
+
+.nav-btn-label-sm {
+  font-size: var(--text-12);
+  line-height: var(--line-height-115);
+  letter-spacing: var(--letter-spacing-l);
+}
+
+.small-badge-text {
+  font-size: var(--text-10);
+  line-height: 1.6;
+  letter-spacing: normal;
+}
+
+.text-label-m {
+  font-size: var(--text-12);
+  font-family: var(--font-face1-bold);
+  font-weight: bold;
+  line-height: var(--line-height-135);
+  letter-spacing: var(--letter-spacing-l);
+}
+
+.text-badge-xs {
+  font-size: var(--text-10);
+  font-family: var(--font-face1-bold);
+  font-weight: bold;
+  line-height: var(--line-height-xl);
+  letter-spacing: var(--letter-spacing-l);
+}
+
+.text-detail-md {
+  font-size: var(--text-16);
+  line-height: 1.3;
+  letter-spacing: var(--letter-spacing-xs);
+}
+
+.text-label1-m {
+  font-family: var(--font-face1-bold);
+  font-size: var(--text-12);
+  letter-spacing: var(--letter-spacing-l);
+  line-height: var(--line-height-l);
+  text-transform: uppercase;
+}
+
+.text-label1-xs {
+  font-family: var(--font-face1-bold);
+  font-size: var(--text-10);
+  letter-spacing: var(--letter-spacing-l);
+  line-height: var(--line-height-l);
+  text-transform: uppercase;
+}
+
+.text-badgel-xs {
+  font-family: var(--font-face1-bold);
+  font-size: var(--text-10);
+  letter-spacing: var(--letter-spacing-l);
+  line-height: var(--line-height-l);
+  text-transform: uppercase;
+}
+
+.text-plainbutton1-s {
+  font-family: var(--font-face1-normal);
+  font-size: var(--text-10);
+  letter-spacing: var(--letter-spacing-xl);
+  line-height: var(--line-height-135);
+  text-transform: uppercase;
+}

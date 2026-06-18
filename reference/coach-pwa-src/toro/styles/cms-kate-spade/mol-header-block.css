@@ -1,0 +1,32 @@
+.links-container {
+  .btn-primary {
+    color: var(--cta-color-mobile, var(--color-secondary));
+    background-color: var(--ctabg-color-mobile, var(--color-primary));
+    &:hover {
+      color: var(--color-secondary);
+      background-color: var(--color-primary);
+    }
+  }
+  .btn-primary.cta-color-inverse:hover {
+    color: var(--cta-color-hover, var(--color-primary));
+    background-color: var(--ctabg-color-hover, var(--color-secondary));
+  }
+  .btn-secondary {
+    color: var(--cta-color-mobile, var(--color-primary));
+    background-color: var(--ctabg-color-mobile, var(--color-secondary));
+    &:hover {
+      color: var(--cta-color-hover, var(--color-primary));
+      background-color: var(--ctabg-color-hover, var(--color-secondary));
+    }
+  }
+  @media (min-width: 769px) {
+    .btn-primary {
+      color: var(--cta-color-desktop, var(--color-secondary));
+      background-color: var(--ctabg-color-desktop, var(--color-primary));
+    }
+    .btn-secondary {
+      color: var(--cta-color-desktop, var(--color-primary));
+      background-color: var(--ctabg-color-desktop, var(--color-secondary));
+    }
+  }
+}

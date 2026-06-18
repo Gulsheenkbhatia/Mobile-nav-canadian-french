@@ -1,0 +1,12 @@
+.subbrand-coachtopia {
+  @media (min-width: 769px) {
+    .mol-content-card-container {
+      padding: var(--spacing-12);
+    }
+  }
+  @media (max-width: 769px) {
+    .mol-content-card-container .desk-stack-mob-carousel {
+      padding-bottom: 0;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+.mol-2up-carousel {
+  @media (min-width: 544px) {
+    .cards-slider {
+      background-color: var(--color-product-image-bg);
+    }
+  }
+  @media (min-width: 769px) {
+    .cards-slider {
+      background-color: transparent;
+    }
+    .splide {
+      &__slide {
+        background-color: var(--color-product-image-bg);
+      }
+    }
+  }
+}

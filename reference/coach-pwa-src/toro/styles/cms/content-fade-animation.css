@@ -1,0 +1,15 @@
+.fade-animate {
+  opacity: 0;
+  filter: blur(var(--fade-blur, 0px));
+  transform: var(--fade-transform, translate(0, 0));
+  transition:
+    opacity 0.6s cubic-bezier(0.6, 0, 0.25, 1) var(--fade-delay, 0s),
+    filter 0.6s cubic-bezier(0.6, 0, 0.25, 1) var(--fade-delay, 0s),
+    transform 0.6s cubic-bezier(0.6, 0, 0.25, 1) var(--fade-delay, 0s);
+}
+
+.fade-animate--visible {
+  opacity: 1;
+  filter: blur(0px);
+  transform: translate(0, 0);
+}

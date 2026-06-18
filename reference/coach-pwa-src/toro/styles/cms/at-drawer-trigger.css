@@ -1,0 +1,53 @@
+.drawer-trigger-wrapper {
+  position: absolute;
+  z-index: 10;
+  top: var(--drawer-trigger-top, 50%);
+  left: var(--drawer-trigger-left, 50%);
+  transform: translate(-50%, -50%);
+  pointer-events: auto;
+}
+
+.drawer-trigger-icon-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--spacing-8);
+  height: var(--spacing-8);
+  border-radius: 50%;
+  background-color: var(--color-white-base);
+  color: var(--color-black-base);
+  cursor: pointer;
+  padding: 0;
+  svg {
+    width: var(--spacing-4);
+    height: var(--spacing-4);
+    stroke: var(--color-black-base);
+  }
+}
+
+.drawer-trigger-cta {
+  button {
+    cursor: pointer;
+  }
+}
+
+[data-drawer-trigger] {
+  cursor: pointer;
+}
+
+.ticker {
+  position: relative;
+}
+
+.ticker .drawer-trigger-wrapper {
+  display: inline-flex;
+  position: relative;
+  transform: none;
+  vertical-align: middle;
+  margin-left: var(--spacing-2);
+  margin-bottom: 0;
+
+  .btn {
+    margin-bottom: 0;
+  }
+}

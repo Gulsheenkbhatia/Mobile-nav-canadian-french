@@ -1,0 +1,38 @@
+.forced-scroll-section {
+  position: relative;
+  background: transparent;
+}
+
+.forced-scroll-wrapper-horizontal {
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.forced-scroll-container-horizontal {
+  display: flex;
+  gap: var(--spacing-8);
+  padding: 0 var(--spacing-8);
+  will-change: transform;
+  transition: transform var(--transition-delay-quick) ease-out;
+}
+
+.forced-scroll-wrapper-zoom {
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.forced-scroll-container-zoom {
+  text-align: center;
+  will-change: transform, opacity;
+  transition: transform var(--transition-delay-quick) ease-out, opacity var(--transition-delay-quick) ease-out;
+}
+

@@ -1,0 +1,71 @@
+.eyebrow-text {
+  font-size: var(--text-12);
+  font-family: var(--font-face1-bold);
+  font-weight: bold;
+  line-height: var(--line-height-l);
+  letter-spacing: var(--letter-spacing-l);
+}
+
+.eyebrow-text-sm {
+  font-size: var(--text-10);
+  font-family: var(--font-face1-bold);
+  font-weight: bold;
+  line-height: var(--line-height-150);
+  letter-spacing: var(--letter-spacing-m);
+}
+
+.eyebrow-text-md {
+  font-size: var(--text-10);
+  line-height: var(--line-height-140);
+  letter-spacing: var(--letter-spacing-m);
+}
+
+.eyebrow-text-l {
+  font-size: var(--text-12);
+  line-height: var(--line-height-115);
+  letter-spacing: var(--letter-spacing-xl);
+}
+
+.eyebrow-text-xl {
+  font-size: 11px;
+  font-family: var(--font-face1-bold);
+  font-weight: bold;
+  letter-spacing: var(--letter-spacing-m);
+}
+
+.eyebrow-text-bold {
+  font-size: 11px;
+  font-family: var(--font-face1-bold);
+  font-weight: bold;
+  line-height: var(--line-height-140);
+  letter-spacing: var(--letter-spacing-m);
+}
+
+
+.stylized-eyebrow .at-eyebrow-text {
+  display: grid;
+  grid-gap: var(--spacing-3);
+  align-items: center;
+  grid-template-columns: 1fr auto 1fr;
+  & > * {
+    margin-bottom: 0;
+  }
+  &::before,
+  &::after {
+    content: '';
+    height: 1px;
+    width: auto;
+    background: var(--color-neutral-medium);
+  }
+
+  @media (min-width: 769px) {
+    margin-inline: auto;
+    width: calc(var(--stylized-eyebrow-width-desktop, 60) * 1%);
+  }
+
+  @media (max-width: 768px) {
+    margin-inline: auto;
+    width: calc(var(--stylized-eyebrow-width-mobile, 60) * 1%);
+  }
+}
+

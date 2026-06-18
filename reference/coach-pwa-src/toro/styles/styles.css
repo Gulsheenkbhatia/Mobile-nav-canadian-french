@@ -1,0 +1,10 @@
+@import 'design-tokens/variables.css';
+@import 'design-tokens/font-face.css';
+@import 'toro/components/Slider/styles.css';
+@import 'toro/styles/custom-scrollbar.css';
+@import 'toro/styles/toast.css';
+@import 'toro/styles/headroom.css';
+@import 'toro/styles/svg-icons.css';
+@import 'toro/styles/font-face.css';
+@import 'toro/styles/pdpv3.css';
+@import 'toro/styles/mobile-menu-drawer.css';

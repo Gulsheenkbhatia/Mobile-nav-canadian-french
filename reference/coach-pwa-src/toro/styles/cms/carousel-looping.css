@@ -1,0 +1,25 @@
+@media (max-width: 768px) {
+  .carousel-looping .col-split-carousel .mob-carousel-items {
+    grid-gap: 0;
+    margin-bottom: 0;
+  }
+  .carousel-looping .col-split-carousel .mob-carousel-items .col-spilt-card:nth-child(2) {
+    position: absolute;
+    min-width: 100%;
+    left: 0;
+  }
+  .carousel-looping .col-split-carousel .mob-carousel-items .col-spilt-card:nth-child(1) {
+    min-width: 100%;
+    margin-left: 0;
+    left: 0;
+  }
+  .carousel-looping .col-split-carousel .mob-carousel-items .col-spilt-card img {
+    height: 0;
+  }
+  .carousel-looping .col-split-carousel .mob-carousel-items .col-spilt-card:nth-child(1) img {
+    animation: switchimageone 2s linear infinite;
+  }
+  .carousel-looping .col-split-carousel .mob-carousel-items .col-spilt-card:nth-child(2) img {
+    animation: switchimagetwo 2s linear infinite;
+  }
+}

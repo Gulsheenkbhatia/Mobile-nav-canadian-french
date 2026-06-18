@@ -1,0 +1,14 @@
+    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        width="14px" height="14px" viewBox="-242 334 126 126">
+        <g>
+            <rect x="-220" y="350" class="st0" fill="#FFFFFF" width="83" height="97" />
+            <defs>
+               <linearGradient id="half_grad">
+                  <stop offset="50%" stop-color="#D31245"/>
+                  <stop offset="50%" stop-color="#E0E0E0" stop-opacity="1" />
+               </linearGradient>
+            </defs>
+            <path class="st1" fill="url(#half_grad)" d="M-128,334h-102c-6.6,0-12,5.4-12,12v102c0,6.6,5.4,12,12,12h102c6.6,0,12-5.4,12-12V346
+		C-116,339.4-121.4,334-128,334z M-143.7,370.4h-25.7v69.8h-18.9v-69.8h-25.6v-15.8h70.2C-143.7,354.6-143.7,370.4-143.7,370.4z"/>
+        </g>
+    </svg>

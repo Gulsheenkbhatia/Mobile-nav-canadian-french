@@ -1,0 +1,193 @@
+.slider-container {
+  background-color: var(--background-color);
+  .splide {
+    padding-inline: 0;
+    &__arrow {
+      &--next,
+      &--prev {
+        svg {
+          fill: var(--arrow-color, var(--color-white-base));
+          stroke: var(--arrow-color, var(--color-white-base));
+          filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.5));
+        }
+        &:disabled {
+          opacity: 0.5;
+        }
+      }
+      &--next {
+        right: var(--spacing-6);
+      }
+      &--prev {
+        left: var(--spacing-6);
+      }
+    }
+    &__pagination {
+      position: static;
+      padding: var(--spacing-4) 0;
+    }
+    .pagination-arrows {
+      max-height: var(--spacing-6);
+      z-index: 2;
+      .splide__arrow {
+        position: static;
+        transform: none;
+        svg {
+          fill: var(--pagination-arrow-color, var(--color-white-base));
+          stroke: var(--pagination-arrow-color, var(--color-white-base));
+          filter: none;
+        }
+      }
+      .splide__pagination-label {
+        font: 400 var(--text-14)/var(--line-height-140);
+        color: var(--pagination-label-color, var(--color-black-base));
+        letter-spacing: var(--letter-spacing-xs);
+        text-wrap: nowrap;
+        .splide__pagination-count {
+          margin-left: var(--spacing-2);
+        }
+      }
+    }
+    .pagination-label-container {
+      padding: 0 var(--spacing-4);
+    }
+  }
+
+  .product-tile .splide__arrow svg {
+    fill: unset;
+    stroke: unset;
+    filter: none;
+  }
+  
+  .component-block {
+    width: 100%;
+    picture[data-loading='lazy'] {
+      margin-inline: 1px;
+    }
+  }
+  .large {
+    &__arrows {
+      &--mobile {
+        .splide__arrow,
+        .splide__arrow svg {
+          filter: none;
+          width: var(--spacing-16);
+          height: var(--spacing-16);
+        }
+      }
+    }
+  }
+  .at-product-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  @media (min-width: 769px) {
+    .large {
+      &__arrows {
+        &--desktop {
+          .splide__arrow,
+          .splide__arrow svg {
+            filter: none;
+            width: 180px;
+            height: 180px;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 769px) {
+    .mol-header-block {
+      margin: 0 36px;
+    }
+    .splide {
+      .pagination-arrows {
+        &.header-block-pagination-desk,
+        &.cards-pagination-desk {
+          position: absolute;
+          bottom: var(--spacing-12);
+        }
+        &.cards-pagination-desk {
+          z-index: 1;
+        }
+        &.pagination-left-desk {
+          left: 5%;
+        }
+        &.pagination-center-desk {
+          left: 50%;
+          transform: translateX(-50%);
+        }
+        &.pagination-right-desk {
+          right: 5%;
+        }
+        &.no-pagination-label {
+          top: 50%;
+          transform: translate(-50%, -50%);
+          width: 100%;
+          justify-content: space-between;
+          padding: 0 var(--spacing-4);
+        }
+        &.pagination-full-desk {
+          width: 100%;
+          justify-content: space-between;
+          padding: 0 var(--spacing-4);
+        }
+      }
+      &.slider-position-right {
+        .pagination-arrows.header-block-pagination-desk {
+          &.pagination-left-desk {
+            left: -95%;
+          }
+          &.pagination-center-desk {
+            left: -50%;
+          }
+          &.pagination-right-desk {
+            right: 105%;
+          }
+        }
+      }
+      &.slider-position-left {
+        .pagination-arrows.header-block-pagination-desk {
+          &.pagination-left-desk {
+            left: 105%;
+          }
+          &.pagination-center-desk {
+            left: 150%;
+          }
+          &.pagination-right-desk {
+            right: -95%;
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .mol-header-block {
+      margin: var(--spacing-10) 0;
+    }
+    .splide {
+      .pagination-arrows {
+        padding: 0 var(--spacing-4);
+        width: 100%;
+        justify-content: space-between;
+        &.header-block-pagination-mob {
+          position: relative;
+          margin: var(--spacing-6) 0;
+          bottom: 0;
+        }
+        &.no-pagination-label {
+          position: absolute;
+          top: 50%;
+          margin: 0;
+          transform: translateY(-50%);
+        }
+        &.cards-pagination-mob {
+          position: absolute;
+          margin: 0;
+          bottom: var(--spacing-4);
+        }
+      }
+    }
+  }
+}

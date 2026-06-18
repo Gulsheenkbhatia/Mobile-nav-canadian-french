@@ -1,0 +1,81 @@
+.mol-header-block .links-container.justify-content-center a,
+.mol-header-block .links-container.justify-content-end a,
+.mol-header-block .links-container.justify-content-start a {
+  font-size: var(--text-14);
+  margin: var(--spacing-4) var(--spacing-3) 0;
+}
+
+.mol-banner .btn-primary.light,
+.mol-banner .btn-secondary.light,
+.mol-banner .btn-primary,
+.mol-banner .btn-secondary {
+  border-radius: 0;
+}
+
+.brand-coach .btn.btn-secondary,
+.brand-coach-outlet .btn.btn-secondary {
+  border: var(--border-width-s) solid var(--border-color-inactive);
+}
+
+.brand-coach .btn.btn-secondary:hover,
+.brand-coach-outlet .btn.btn-secondary:hover {
+  border: var(--border-width-s) solid transparent;
+}
+
+.brand-coach .btn.btn-secondary.light,
+.brand-coach-outlet .btn.btn-secondary.light {
+  border: var(--border-width-s) solid var(--border-color-secondary);
+}
+
+.brand-coach .btn.btn-secondary.light:hover,
+.brand-coach-outlet .btn.btn-secondary.light:hover {
+  border: var(--border-width-s) solid var(--border-color-secondary);
+}
+
+
+.brand-kate-spade .btn.btn-secondary {
+  border: var(--border-width-s) solid var(--border-color-inactive);
+}
+
+.brand-kate-spade .btn.btn-secondary:hover {
+  border: var(--border-width-s) solid var(--border-color-neutral-dark);
+}
+
+.brand-kate-spade .links-container {
+  .btn-primary {
+    color: var(--cta-color-mobile, var(--color-secondary));
+    background-color: var(--ctabg-color-mobile, var(--color-primary));
+
+    &:hover {
+      color: var(--color-secondary);
+      background-color: var(--color-primary);
+    }
+  }
+
+  .btn-primary.cta-color-inverse:hover {
+    color: var(--cta-color-hover, var(--color-primary));
+    background-color: var(--ctabg-color-hover, var(--color-secondary));
+  }
+
+  .btn-secondary {
+    color: var(--cta-color-mobile, var(--color-primary));
+    background-color: var(--ctabg-color-mobile, var(--color-secondary));
+
+    &:hover {
+      color: var(--cta-color-hover, var(--color-primary));
+      background-color: var(--ctabg-color-hover, var(--color-secondary));
+    }
+  }
+
+  @media (min-width: 769px) {
+    .btn-primary {
+      color: var(--cta-color-desktop, var(--color-secondary));
+      background-color: var(--ctabg-color-desktop, var(--color-primary));
+    }
+
+    .btn-secondary {
+      color: var(--cta-color-desktop, var(--color-primary));
+      background-color: var(--ctabg-color-desktop, var(--color-secondary));
+    }
+  }
+}

@@ -1,0 +1,78 @@
+.mol-banner {
+  &.inline {
+    &.header {
+      &-bottom {
+        .mol-header-block {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+.promo-tile-wrapper:has(.header-top),
+.promo-tile-wrapper:has(.header-bottom) {
+  overflow: auto;
+  max-height: none;
+}
+
+.promo-tile-wrapper.promo-tile-plpv2 {
+  .mol-banner {
+    &.inline {
+      &.header {
+        &-bottom,
+        &-top {
+          .mol-header-block {
+            margin: var(--spacing-3) auto;
+          }
+        }
+      }
+    }
+  }
+}
+.tarNode {
+  &:has(.promo-tile-up-1 .banner-container.solid-background) {
+    height: 100%;
+    div {
+      height: 100%;
+    }
+    .banner-container.solid-background {
+      div {
+        height: auto;
+      }
+    }
+  }
+
+  @media (min-width: 769px) {
+    &:has(.promo-tile-up-2 .banner-container.solid-background) {
+      height: 100%;
+      div {
+        height: 100%;
+      }
+      .banner-container.solid-background {
+        div {
+          height: auto;
+        }
+      }
+    }
+  }
+}
+
+#product-search-results {
+  .promo-tile-up-1,
+  .promo-tile-up-2 {
+    .banner-container.solid-background.col-12 {
+      height: auto;
+      aspect-ratio: unset;
+    }
+  }
+}
+
+.brand-kate-spade #product-search-results .tarNode .at-media-asset picture img {
+  object-fit: cover;
+}
+@media (max-width: 769px) {
+  .mol-banner .banner-container .at-media-asset video {
+    height: auto;
+  }
+}

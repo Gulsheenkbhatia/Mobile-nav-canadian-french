@@ -1,0 +1,346 @@
+@media (max-width: 768px) {
+  .mol-shorts-video {
+    #shortVideoModal {
+      .modal-body,
+      .at-media-tile {
+        padding: 0 0 5px 0;
+        &:last-child {
+          padding: 0;
+        }
+      }
+    }
+
+    .short-video-modal {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      background: var(--color-white-base);
+      z-index: 1000;
+      visibility: hidden;
+      opacity: 0;
+      .modal-body {
+        position: fixed;
+        height: 100%;
+        .product-tile-slider {
+          overflow: auto;
+          height: 100%;
+          .mob-carousel-items {
+            display: block;
+          }
+        }
+      }
+      .lg-modal {
+        display: none;
+      }
+      .mob-carousel-items {
+        & > div {
+          width: 100vw !important;
+          & > div {
+            width: 100vw !important;
+          }
+        }
+        flex-direction: column;
+        & > .at-media-tile {
+          width: 100vw;
+          margin: 0;
+          &.u-delay {
+            transition-delay: 1000ms;
+            transition-property: height;
+            transition-duration: 0s;
+          }
+        }
+      }
+      .amps-aspect-ratio-box-video {
+        aspect-ratio: var(--m-aspect-ratio);
+        position: relative;
+        width: 100%;
+      }
+      &.show {
+        visibility: visible;
+        opacity: 1;
+        transition: opacity 1s;
+        .shorts-video-wrapper,
+        .amp-video-wrapper {
+          max-width: 100vw !important;
+          position: relative;
+          height: 80%;
+          .at-media-asset {
+            width: 100vw;
+            height: 100%;
+            .amps-aspect-ratio-box-video {
+              height: 100%;
+            }
+          }
+          .media-scrim {
+            width: 100vw;
+            background: none;
+          }
+          .hide-video {
+            height: 0;
+          }
+        }
+        .short-video-modal-btn {
+          display: none;
+        }
+        .short-video-play-btn {
+          display: none;
+        }
+        .at-media-tile {
+          max-width: 100vw !important;
+          .at-media-asset {
+            width: 100vw;
+          }
+          .video-progress {
+            display: flex;
+            width: 100%;
+            cursor: pointer;
+          }
+          .modal-close-btn {
+            display: block;
+            position: absolute;
+            z-index: 1000;
+            top: 30px;
+            right: 10px;
+          }
+        }
+        .ac-toggle-sound {
+          margin-right: 0;
+        }
+        .amp-modal-wrapper .video-progress {
+          margin: var(--spacing-4) 0;
+        }
+        .at-media-asset {
+          position: relative;
+          display: block;
+          width: 100%;
+          overflow: hidden;
+          .video-progress {
+            height: 2px;
+            transition: 0.1s;
+            background: var(--color-white-50);
+            position: absolute;
+          }
+          .ac-video-controls {
+            display: block;
+            button {
+              float: right;
+            }
+            &:first-child {
+              margin-right: 0;
+            }
+          }
+        }
+        .mol-header-block {
+          margin-bottom: var(--spacing-20);
+        }
+      }
+      .video-progress-filled {
+        height: 2px;
+        background: var(--color-white-base);
+        position: absolute;
+        transition: 0.1s;
+      }
+      .video-play-pause-icons {
+        display: flex;
+        justify-content: space-between;
+        div {
+          height: 40px;
+        }
+      }
+      .progres-bar-container,
+      .progress-bar-container {
+        position: relative;
+        height: 2px;
+        padding-bottom: 16px;
+      }
+    }
+  }
+
+  .amp-coachtopia:not(.mol-shorts-video) .amp-modal-wrapper {
+    .at-headline-text,
+    .at-eyebrow-text,
+    .at-body-text,
+    .links-container a {
+      color: var(--color-secondary);
+    }
+  }
+}
+
+@media (min-width: 769px) {
+  .sm-modal {
+    display: none;
+  }
+  .modal-open {
+    opacity: 1 !important;
+  }
+  .mol-shorts-video {
+    .lg-modal {
+      .col-md {
+        flex-basis: initial;
+      }
+      .splide {
+        height: 100%;
+        padding-inline: 0;
+        &__arrow {
+          &:disabled {
+            display: none;
+          }
+
+          &--prev {
+            left: var(--spacing-8);
+          }
+          &--next {
+            right: var(--spacing-8);
+          }
+        }
+      }
+    }
+  }
+  .amp-coachtopia .amp-modal-wrapper {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background: var(--color-white-base);
+    z-index: 21;
+    opacity: 0;
+    transition: all 0.3s;
+    .at-text-block {
+      .at-headline-text,
+      .at-eyebrow-text,
+      .at-body-text {
+        color: var(--color-black-base);
+      }
+    }
+  }
+  .mol-shorts-video .modal-body .media-scrim {
+    background: none;
+  }
+  .amp-coachtopia .amp-modal-wrapper .modal-body {
+    height: 100%;
+  }
+  .amp-coachtopia .amp-modal-wrapper .modal-body,
+  .amp-coachtopia .amp-modal-wrapper .at-media-tile {
+    padding: 0;
+  }
+  .mol-shorts-video .modal-body,
+  .mol-shorts-video .product-tile-slider,
+  .mol-shorts-video .splide__track,
+  .mol-shorts-video .splide__slide > div {
+    height: 100%;
+  }
+  .mol-shorts-video #shortVideoModal .splide__list {
+    height: 100% !important;
+  }
+  .amp-coachtopia .amp-modal-wrapper .at-media-tile {
+    height: 100%;
+    cursor: auto;
+  }
+  .amp-coachtopia .amp-modal-wrapper .modal-body,
+  .amp-coachtopia .amp-modal-wrapper .at-media-tile {
+    padding: 0;
+  }
+  .mol-shorts-video .amp-video-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    object-fit: cover;
+    margin: 0 auto;
+  }
+  .mol-shorts-video .short-video-modal .at-media-tile {
+    max-width: 100%;
+  }
+  .mol-shorts-video .short-video-modal .amp-video-wrapper {
+    position: relative;
+  }
+  .amp-coachtopia .amp-video-wrapper {
+    height: 100%;
+  }
+  .amp-coachtopia .at-media-asset {
+    height: 100%;
+  }
+  .amp-coachtopia .amp-video-wrapper .amps-aspect-ratio-box-video,
+  .amp-coachtopia .amp-video-wrapper .amps-aspect-ratio-box {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .modal-body .amps-aspect-ratio-box-video {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+  }
+  .amp-coachtopia .amp-modal-wrapper .ac-video-container {
+    height: 100%;
+  }
+  .mol-shorts-video .at-media-asset img,
+  .mol-shorts-video .at-media-asset video {
+    width: auto;
+    height: 100%;
+  }
+
+  .mol-shorts-video .media-badge-text {
+    display: block;
+    position: absolute;
+    z-index: 2;
+  }
+  .mol-shorts-video .short-video-modal .media-badge-text {
+    display: block;
+  }
+  .mol-shorts-video .short-video-modal .media-badge-text {
+    top: 24px;
+    left: 24px;
+  }
+  .amp-coachtopia .amp-modal-wrapper .media-badge-text p,
+  .amp-coachtopia .amp-modal-wrapper .links-container a {
+    color: #000;
+  }
+  .amp-coachtopia .amp-modal-wrapper .modal-close-btn {
+    display: block;
+    position: absolute;
+    z-index: 3;
+  }
+  .amp-coachtopia .amp-modal-wrapper .modal-close-btn {
+    top: var(--spacing-6);
+    right: var(--spacing-8);
+  }
+  .amp-coachtopia .amp-modal-wrapper .at-media-tile .modal-close-btn {
+    filter: invert(0);
+  }
+  .mol-shorts-video .product-tile-slider .icon {
+    width: 32px;
+    height: 32px;
+  }
+  .amp-coachtopia .amp-modal-wrapper .media-tile-text-block {
+    bottom: 64px;
+    width: auto;
+  }
+  .amp-coachtopia .amp-modal-wrapper .media-tile-text-block {
+    bottom: 16px;
+  }
+  .amp-coachtopia .at-media-tile .ac-video-controls {
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+  }
+  .amp-coachtopia .at-media-asset .ac-video-controls {
+    right: 16px;
+    left: 16px;
+  }
+  .amp-coachtopia .amp-modal-wrapper .ac-video-controls {
+    margin-bottom: 0.5rem;
+  }
+}

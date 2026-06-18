@@ -1,0 +1,164 @@
+.at-text-block .d-text-display-xxl {
+  font-size: var(--text-30);
+  font-family: var(--font-face1-bold);
+  font-weight: bold;
+  line-height: var(--line-height-115);
+  letter-spacing: var(--letter-spacing-xs);
+}
+
+.at-text-block .d-text-display-lg {
+  font-size: var(--text-26);
+  font-family: var(--font-face1-bold);
+  font-weight: bold;
+  line-height: var(--line-height-115);
+  letter-spacing: var(--letter-spacing-xs);
+}
+
+.at-text-block .d-text-display-xl {
+  font-size: var(--text-30);
+  font-family: var(--font-face1-bold);
+  font-weight: bold;
+  line-height: var(--line-height-115);
+  letter-spacing: var(--letter-spacing-xs);
+}
+
+.at-text-block .at-body-text a,
+.at-text-block .at-headline-text a {
+  text-decoration: underline;
+  pointer-events: auto;
+}
+
+.at-text-block :is(.at-body-text, .at-headline-text) a:is(.btn-primary, .btn-secondary) {
+  text-decoration: none;
+}
+
+@media (min-width: 769px) {
+  .at-text-block .d-text-display-xs {
+    font-size: var(--text-16);
+    font-family: var(--font-face1-bold);
+    font-weight: bold;
+    line-height: var(--line-height-120);
+    letter-spacing: var(--letter-spacing-xs);
+  }
+
+  .at-text-block .d-text-display-sm {
+    font-size: var(--text-20);
+    font-family: var(--font-face1-bold);
+    font-weight: bold !important;
+    line-height: var(--line-height-120);
+    letter-spacing: var(--letter-spacing-xs);
+  }
+
+  .at-text-block .d-text-display-md {
+    font-size: var(--text-26);
+    font-family: var(--font-face1-bold);
+    font-weight: bold;
+    line-height: var(--line-height-115);
+    letter-spacing: var(--letter-spacing-xs);
+  }
+
+  .at-text-block .d-text-display-lg {
+    font-size: var(--text-30);
+  }
+
+  .at-text-block .d-text-display-xl {
+    font-size: var(--text-44);
+  }
+
+  .at-text-block .d-text-display-xxl {
+    font-size: var(--text-60);
+  }
+
+  .at-text-block .d-text-display-xs-secondary {
+    line-height: var(--line-height-120);
+    letter-spacing: var(--letter-spacing-xs);
+    font-size: var(--text-20);
+    font-family: var(--font-face2-normal);
+    letter-spacing: var(--letter-spacing-s);
+    font-weight: normal;
+  }
+
+  .at-text-block .d-text-display-sm-secondary {
+    line-height: var(--line-height-120);
+    letter-spacing: var(--letter-spacing-xs);
+    font-size: var(--text-24);
+    font-family: var(--font-face2-normal);
+    letter-spacing: var(--letter-spacing-s);
+    font-weight: normal;
+  }
+
+  .at-text-block .d-text-display-md-secondary {
+    line-height: var(--line-height-115);
+    letter-spacing: var(--letter-spacing-xs);
+    font-size: var(--text-28);
+    font-family: var(--font-face2-normal);
+    font-weight: normal;
+  }
+
+  .at-text-block .d-text-display-lg-secondary {
+    line-height: var(--line-height-115);
+    letter-spacing: var(--letter-spacing-xs);
+    font-size: var(--text-32);
+    font-family: var(--font-face2-normal);
+    font-weight: normal;
+  }
+
+  .at-text-block .d-text-display-xl-secondary {
+    line-height: var(--line-height-115);
+    letter-spacing: var(--letter-spacing-xs);
+    font-family: var(--font-face2-normal);
+    font-weight: normal;
+  }
+
+  .at-text-block .d-text-display-xxl-secondary {
+    line-height: var(--line-height-115);
+    letter-spacing: var(--letter-spacing-xs);
+    font-family: var(--font-face2-normal);
+    font-weight: normal;
+  }
+
+  .at-text-block .d-body-text-xs {
+    font-size: var(--text-8);
+    line-height: var(--line-height-150);
+    letter-spacing: var(--letter-spacing-s);
+  }
+
+  .at-text-block .d-body-text-sm {
+    font-size: var(--text-12);
+    line-height: var(--line-height-xl);
+    letter-spacing: var(--letter-spacing-xs);
+  }
+
+  .at-text-block .d-body-text-md {
+    font-size: var(--text-14);
+    line-height: var(--line-height-xl);
+    letter-spacing: var(--letter-spacing-xs);
+  }
+
+  .at-text-block .d-body-text-lg {
+    font-size: var(--text-16);
+    line-height: var(--line-height-135);
+    letter-spacing: var(--letter-spacing-xs);
+  }
+
+  .at-text-block .d-body-text-sm-secondary {
+    line-height: var(--line-height-xl);
+    letter-spacing: var(--letter-spacing-xs);
+    font-size: var(--text-14);
+    font-family: var(--font-face2-normal);
+  }
+
+  .at-text-block .d-body-text-md-secondary {
+    line-height: var(--line-height-xl);
+    letter-spacing: var(--letter-spacing-xs);
+    font-size: var(--text-16);
+    font-family: var(--font-face2-normal);
+  }
+
+  .at-text-block .d-body-text-lg-secondary {
+    letter-spacing: var(--letter-spacing-xs);
+    font-size: var(--text-20);
+    font-family: var(--font-face2-normal);
+    line-height: var(--line-height-xl);
+  }
+}

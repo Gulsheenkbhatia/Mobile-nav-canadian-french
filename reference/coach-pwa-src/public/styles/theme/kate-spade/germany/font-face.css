@@ -1,0 +1,36 @@
+@font-face {
+  font-family: FuturaNowTextRegular;
+  font-style: normal;
+  font-weight: normal;
+  font-stretch: normal;
+  font-display: swap;
+  src: local("Futura Now Var Regular"),
+     url("https://assets.katespade.com/de/fonts/FuturaNowTextRegular.woff2") format("woff2");
+}
+@font-face {
+  font-family: FuturaNowHeadlineMedium;
+  font-style: normal;
+  font-weight: normal;
+  font-stretch: normal;
+  font-display: swap;
+  src: local("Futura Now Var Headline Medium"),
+     url("https://assets.katespade.com/de/fonts/FuturaNowHeadlineMedium.woff2") format("woff2");
+}
+@font-face {
+  font-family: FuturaNowTextLight;
+  font-style: normal;
+  font-weight: normal;
+  font-stretch: normal;
+  font-display: swap;
+  src: local("Futura Now Text Light"),
+     url("https://assets.katespade.com/na/fonts/FuturaNowTextLight_v1.1.woff2") format("woff2");
+}
+@font-face {
+  font-family: ITCNewBaskervilleRoman;
+  font-style: normal;
+  font-weight: normal;
+  font-stretch: normal;
+  font-display: swap;
+  src: local("New Baskerville ITC Pro"),
+     url("https://assets.katespade.com/de/fonts/ITCNewBaskervilleRoman.woff2") format("woff2");
+}

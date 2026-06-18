@@ -1,0 +1,136 @@
+@font-face {
+  font-family: HelveticaNowMedium;
+  font-style: normal;
+  font-weight: normal;
+  font-stretch: normal;
+  font-display: swap;
+  src: local("Helvetica Now Medium"),
+     url("https://assets.coach.com/coachtopia/jp/fonts/HelveticaNowMedium.woff2") format("woff2");
+}
+@font-face {
+  font-family: HelveticaNeue53ExtendedNormal;
+  font-style: normal;
+  font-weight: normal;
+  font-stretch: normal;
+  font-display: swap;
+  src: local("Helvetica Neue LT Pro 53 Extended"),
+     url("https://assets.coach.com/na/fonts/neue_helvetica_53_extended-v1.1.woff2") format("woff2");
+}
+@font-face {
+  font-family: HelveticaNeue73ExtendedBold;
+  font-style: normal;
+  font-weight: normal;
+  font-stretch: normal;
+  font-display: swap;
+  src: local("Helvetica Neue LT Pro 73 Bold Extended"),
+     url("https://assets.coach.com/na/fonts/neue_helvetica_73_extended_bold.woff2") format("woff2");
+}
+@font-face {
+  font-family: HelveticaNowExtraBold;
+  font-style: normal;
+  font-weight: normal;
+  font-stretch: normal;
+  font-display: swap;
+  src: local("Helvetica Now Extra Bold"),
+     url("https://assets.coach.com/coachtopia/jp/fonts/HelveticaNowExtraBold.woff2") format("woff2");
+}
+@font-face {
+  font-family: Hiragino Kaku Gothic Pro W6;
+  font-style: normal;
+  font-weight: normal;
+  font-stretch: normal;
+  font-display: swap;
+  src: local("Hiragino Kaku Gothic Pro W6");
+}
+@font-face {
+  font-family: BIZ UDPGothic Regular;
+  font-style: normal;
+  font-weight: normal;
+  font-stretch: normal;
+  font-display: swap;
+  src: local("BIZ UDPGothic Regular");
+}
+@font-face {
+  font-family: BIZ UDPGothic Bold;
+  font-style: normal;
+  font-weight: normal;
+  font-stretch: normal;
+  font-display: swap;
+  src: local("BIZ UDPGothic Bold");
+}
+@font-face {
+  font-family: Meiryo Bold;
+  font-style: normal;
+  font-weight: normal;
+  font-stretch: normal;
+  font-display: swap;
+  src: local("Meiryo Bold");
+}
+@font-face {
+  font-family: Yu Gothic Regular;
+  font-style: normal;
+  font-weight: normal;
+  font-stretch: normal;
+  font-display: swap;
+  src: local("Yu Gothic Regular");
+}
+@font-face {
+  font-family: Hiragino Sans Normal;
+  font-style: normal;
+  font-weight: normal;
+  font-stretch: normal;
+  font-display: swap;
+  src: local("Hiragino Sans Normal");
+}
+@font-face {
+  font-family: Hiragino Sans Bold;
+  font-style: normal;
+  font-weight: normal;
+  font-stretch: normal;
+  font-display: swap;
+  src: local("Hiragino Sans Bold");
+}
+@font-face {
+  font-family: Hiragino Maru Gothic W4;
+  font-style: normal;
+  font-weight: normal;
+  font-stretch: normal;
+  font-display: swap;
+  src: local("Hiragino Maru Gothic W4");
+}
+@font-face {
+  font-family: Helvetica Neue LT Pro Bold Extended;
+  font-style: normal;
+  font-weight: normal;
+  font-stretch: normal;
+  font-display: swap;
+  src: local("NeueHelvetica73ExtendedBold"),
+     url("https://assets.coach.com/jp/fonts/NeueHelvetica73ExtendedBold.woff2") format("woff2");
+}
+@font-face {
+  font-family: Helvetica Neue LT Pro Extended;
+  font-style: normal;
+  font-weight: normal;
+  font-stretch: normal;
+  font-display: swap;
+  src: local("NeueHelvetica53ExtendedNormal"),
+     url("https://assets.coach.com/jp/fonts/neue_helvetica_53_extended-v1.1.woff2") format("woff2");
+}
+@font-face {
+  font-family: Tazugane Gothic Book;
+  font-style: normal;
+  font-weight: normal;
+  font-stretch: normal;
+  font-display: swap;
+  src: local("TazuganeGothicBook"),
+     url("https://assets.coach.com/jp/fonts/TazuganeGothicBook.woff2") format("woff2");
+}
+@font-face {
+  font-family: Tazugane Gothic Bold;
+  font-style: normal;
+  font-weight: normal;
+  font-stretch: normal;
+  font-display: swap;
+  src: local("TazuganeGothicBold"),
+     url("https://assets.coach.com/jp/fonts/TazuganeGothicBold.woff2") format("woff2");
+}

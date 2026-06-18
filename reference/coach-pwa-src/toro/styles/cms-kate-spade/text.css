@@ -1,0 +1,17 @@
+.brand-kate-spade {
+  .text-label1-m {
+    font-family: var(--font-face1-medium);
+    font-size: var(--text-12);
+    letter-spacing: var(--letter-spacing-l);
+    line-height: var(--line-height-l);
+    text-transform: uppercase;
+  }
+
+  .text-badge1-xs {
+    font-family: var(--font-face1-medium);
+    font-size: var(--text-10);
+    letter-spacing: var(--letter-spacing-l);
+    line-height: var(--line-height-l);
+    text-transform: uppercase;
+  }
+}

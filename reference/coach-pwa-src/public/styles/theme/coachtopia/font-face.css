@@ -1,0 +1,36 @@
+@font-face {
+  font-family: HelveticaNowMedium;
+  font-style: normal;
+  font-weight: normal;
+  font-stretch: normal;
+  font-display: swap;
+  src: local("Helvetica Now Medium"),
+     url("https://assets.coach.com/coachtopia/fonts/HelveticaNowMedium.woff2") format("woff2");
+}
+@font-face {
+  font-family: HelveticaNeue53ExtendedNormal;
+  font-style: normal;
+  font-weight: normal;
+  font-stretch: normal;
+  font-display: swap;
+  src: local("Helvetica Neue LT Pro 53 Extended"),
+     url("https://assets.coach.com/na/fonts/neue_helvetica_53_extended-v1.1.woff2") format("woff2");
+}
+@font-face {
+  font-family: HelveticaNeue73ExtendedBold;
+  font-style: normal;
+  font-weight: normal;
+  font-stretch: normal;
+  font-display: swap;
+  src: local("Helvetica Neue LT Pro 73 Bold Extended"),
+     url("https://assets.coach.com/na/fonts/neue_helvetica_73_extended_bold.woff2") format("woff2");
+}
+@font-face {
+  font-family: HelveticaNowExtraBold;
+  font-style: normal;
+  font-weight: normal;
+  font-stretch: normal;
+  font-display: swap;
+  src: local("Helvetica Now Extra Bold"),
+     url("https://assets.coach.com/coachtopia/fonts/HelveticaNowExtraBold.woff2") format("woff2");
+}

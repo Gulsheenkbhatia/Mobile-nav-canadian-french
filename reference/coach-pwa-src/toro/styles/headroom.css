@@ -1,0 +1,35 @@
+.headroom--unfixed > .transparentHeader {
+  background-color: transparent;
+  color: var(--color-white-base);
+}
+.headroom--unfixed > .transparentHeader svg path:not(.storelocator svg path) {
+  fill: var(--color-white-base);
+}
+.headroom--unfixed > .transparentHeader input::placeholder {
+  color: var(--color-white-base) !important;
+  opacity: 1;
+}
+.headroom--unfixed > .transparentHeader p {
+  color: var(--color-white-base);
+}
+.headroom--unfixed > .transparentHeader > div:nth-child(2) > div > div > div:nth-child(3) > div {
+  border-bottom-color: var(--color-white-base);
+}
+.bag-icon-container svg path {
+  fill: currentColor;
+}
+.bag-icon-container {
+  margin-top: 0;
+}
+.headroom--unfixed > .transparentHeader > div:nth-child(3) > div {
+  box-shadow: none;
+}
+.headroom-wrapper {
+  height: auto !important;
+}
+
+@media (min-width: 769px) {
+  .bag-icon-container {
+    margin-top: -2px;
+  }
+}

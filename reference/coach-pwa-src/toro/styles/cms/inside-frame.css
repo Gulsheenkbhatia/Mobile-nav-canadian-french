@@ -1,0 +1,49 @@
+.inside-frame {
+  position: absolute;
+  inset: var(--spacing-4);
+  border: 2px solid var(--border-color-black-base, var(--color-black-base));
+
+  &.frame-rounded-edges {
+    border-radius: var(--spacing-4);
+  }
+}
+.mol-banner,
+.inline-media-frame {
+  .inside-frame {
+    inset: var(--solid-frame-width-mobile,var(--spacing-4));
+  }
+  .inside-frame-bgfill {
+    border: 2px solid var(--border-color-black-base, var(--color-black-base));
+    margin: var(--solid-frame-width-mobile,var(--spacing-4));
+
+    &.frame-rounded-edges {
+      border-radius: var(--spacing-4);
+    }
+  }
+}
+.amp-page-acc > .inside-frame {
+  inset: var(--solid-frame-width-mobile,var(--spacing-4));
+}
+
+@media (min-width: 769px) {
+  .inside-frame {
+    inset: var(--spacing-4);
+  }
+  .amp-page-acc > .inside-frame {
+    inset: var(--solid-frame-width-desktop, var(--spacing-4));
+  }
+  .mol-banner,
+  .inline-media-frame {
+    .inside-frame {
+      inset: var(--solid-frame-width-desktop, var(--spacing-4));
+    }
+    .inside-frame-bgfill {
+      margin: var(--solid-frame-width-desktop, var(--spacing-4));
+    }
+  }
+}
+
+.mol-banner.banner-frame-image .inside-frame-bgfill,
+.mol-banner.banner-frame-image > .row {
+  margin: 0;
+}

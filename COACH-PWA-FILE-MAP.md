@@ -14,10 +14,12 @@ Most production code for mobile nav now lives under **`reference/coach-pwa-src/`
 - `toro/types/` (entire)
 - `toro/icons/` (entire)
 - `toro/cms/` (entire — includes `ContentSlot` used by mobile header)
-- `toro/constants/` (entire)
-- `components/common/PWAContext.js`
-- `toro/analytics/useAnalytics.js`, `toro/getColorSchemeVariables.ts` (+ spec)
-- `toro/lib/oneSite/config.ts`
+- `toro/styles/` (entire `src/toro/styles` — global CSS, CMS styles, `mobile-menu-drawer.css`, etc.)
+- `public/styles/` (theme `variables.css` + `font-face.css` per brand/region)
+- `components/assets/` (SVGs used by header icons and others)
+- `toro/components/SplideSlider/splide-default.css` (from `_app`)
+- `coach-pwa-resolve-alias.config.js` (copy of `resolve.alias.config.js` — shows `design-tokens` / `cms-styles` aliases)
+- `node_modules/@tapestry-inc/design-tokens/` **when present** in your `coach-pwa` install after `npm ci`, or use **`COPY-DESIGN-TOKENS-FROM-PWA.sh`**
 
 ## Not copied (still only in full `coach-pwa`)
 
@@ -25,7 +27,7 @@ Typical gaps when you try to compile this bundle alone:
 
 - **Next.js** — `pages/`, `next.config`, `_app`, routing.
 - **Root `src/hooks/`** (if any import uses `hooks/` without `toro/` prefix — uncommon in this slice).
-- **`package.json` / `node_modules`** — Chakra, Emotion, Jotai, lodash, Next, etc.
+- **`package.json` / most of `node_modules`** — Chakra, Emotion, Jotai, Next, etc. (**Exception:** `node_modules/@tapestry-inc/design-tokens` is copied when you run sync from a machine that has run `npm ci` in `coach-pwa`, or use `COPY-DESIGN-TOKENS-FROM-PWA.sh`.)
 - **API / SFCC** — live menu and search payloads.
 - **Other `src/` trees** — e.g. `components/` outside `toro`, test utils, unless you add them.
 

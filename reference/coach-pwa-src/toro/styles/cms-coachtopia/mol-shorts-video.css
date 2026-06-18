@@ -1,0 +1,11 @@
+.subbrand-coachtopia {
+  .mol-shorts-video .mol-header-block {
+    margin: 0 auto var(--spacing-8);
+  }
+
+  @media (min-width: 769px) {
+    .mol-shorts-video {
+      padding-bottom: var(--spacing-4);
+    }
+  }
+}

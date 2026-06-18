@@ -1,0 +1,192 @@
+@font-face {
+  font-family: Meiryo Medium;
+  font-style: normal;
+  font-weight: normal;
+  font-stretch: normal;
+  font-display: swap;
+  src: local("Meiryo Regular");
+}
+@font-face {
+  font-family: FuturaNowTextLight;
+  font-style: normal;
+  font-weight: normal;
+  font-stretch: normal;
+  font-display: swap;
+  src: local("Futura Now Text Light"),
+     url("https://assets.katespade.com/na/fonts/FuturaNowTextLight.woff2") format("woff2");
+}
+@font-face {
+  font-family: Meiryo Bold;
+  font-style: normal;
+  font-weight: normal;
+  font-stretch: normal;
+  font-display: swap;
+  src: local("Meiryo Bold");
+}
+@font-face {
+  font-family: Hiragino Kaku Gothic ProN Medium;
+  font-style: normal;
+  font-weight: normal;
+  font-stretch: normal;
+  font-display: swap;
+  src: local("Hiragino Kaku Gothic ProN W3");
+}
+@font-face {
+  font-family: Hiragino Kaku Gothic ProN Bold;
+  font-style: normal;
+  font-weight: normal;
+  font-stretch: normal;
+  font-display: swap;
+  src: local("Hiragino Kaku Gothic ProN W6");
+}
+@font-face {
+  font-family: Hiragino Sans Medium;
+  font-style: normal;
+  font-weight: normal;
+  font-stretch: normal;
+  font-display: swap;
+  src: local("Hiragino Sans W3");
+}
+@font-face {
+  font-family: Hiragino Sans Bold;
+  font-style: normal;
+  font-weight: normal;
+  font-stretch: normal;
+  font-display: swap;
+  src: local("Hiragino Sans W6");
+}
+@font-face {
+  font-family: BIZ UDPGothic Medium;
+  font-style: normal;
+  font-weight: normal;
+  font-stretch: normal;
+  font-display: swap;
+  src: local("BIZ UDPGothic Regular");
+}
+@font-face {
+  font-family: BIZ UDPGothic Bold;
+  font-style: normal;
+  font-weight: normal;
+  font-stretch: normal;
+  font-display: swap;
+  src: local("BIZ UDPGothic Bold");
+}
+@font-face {
+  font-family: Hiragino Mincho ProN Medium;
+  font-style: normal;
+  font-weight: normal;
+  font-stretch: normal;
+  font-display: swap;
+  src: local("Hiragino Mincho ProN W3");
+}
+@font-face {
+  font-family: Hiragino Mincho ProN Bold;
+  font-style: normal;
+  font-weight: normal;
+  font-stretch: normal;
+  font-display: swap;
+  src: local("Hiragino Mincho ProN W6");
+}
+@font-face {
+  font-family: Hiragino Mincho Pro Medium;
+  font-style: normal;
+  font-weight: normal;
+  font-stretch: normal;
+  font-display: swap;
+  src: local("Hiragino Mincho Pro W3");
+}
+@font-face {
+  font-family: Hiragino Mincho Pro Bold;
+  font-style: normal;
+  font-weight: normal;
+  font-stretch: normal;
+  font-display: swap;
+  src: local("Hiragino Mincho Pro W6");
+}
+@font-face {
+  font-family: Yu Mincho Medium;
+  font-style: normal;
+  font-weight: normal;
+  font-stretch: normal;
+  font-display: swap;
+  src: local("Yu Mincho Regular");
+}
+@font-face {
+  font-family: Yu Mincho Bold;
+  font-style: normal;
+  font-weight: normal;
+  font-stretch: normal;
+  font-display: swap;
+  src: local("Yu Mincho Demibold");
+}
+@font-face {
+  font-family: BIZ UDPMincho Medium;
+  font-style: normal;
+  font-weight: normal;
+  font-stretch: normal;
+  font-display: swap;
+  src: local("BIZ UDPMincho Regular");
+}
+@font-face {
+  font-family: ITCNewBaskervilleRoman;
+  font-style: normal;
+  font-weight: normal;
+  font-stretch: normal;
+  font-display: swap;
+  src: local("New Baskerville ITC Pro"),
+     url("https://assets.katespade.com/na/fonts/ITCNewBaskervilleRoman.woff2") format("woff2");
+}
+@font-face {
+  font-family: FuturaNowTextRegular;
+  font-style: normal;
+  font-weight: normal;
+  font-stretch: normal;
+  font-display: swap;
+  src: local("Futura Now Var Regular"),
+     url("https://assets.katespade.com/na/fonts/FuturaNowTextRegular.woff2") format("woff2");
+}
+@font-face {
+  font-family: MaisonNeueBook;
+  font-style: normal;
+  font-weight: normal;
+  font-stretch: normal;
+  font-display: swap;
+  src: local("Maison Neue Book"),
+     url("https://assets.katespade.com/na/fonts/MaisonNeueBook.woff2") format("woff2");
+}
+@font-face {
+  font-family: MaisonNeueMedium;
+  font-style: normal;
+  font-weight: normal;
+  font-stretch: normal;
+  font-display: swap;
+  src: local("Maison Neue Medium"),
+     url("https://assets.katespade.com/na/fonts/MaisonNeueMedium.woff2") format("woff2");
+}
+@font-face {
+  font-family: MaisonNeueLight;
+  font-style: normal;
+  font-weight: normal;
+  font-stretch: normal;
+  font-display: swap;
+  src: local("Maison Neue Light"),
+     url("https://assets.katespade.com/na/fonts/MaisonNeueLight.woff2") format("woff2");
+}
+@font-face {
+  font-family: KateSerifRegular;
+  font-style: normal;
+  font-weight: normal;
+  font-stretch: normal;
+  font-display: swap;
+  src: local("Kate Serif Regular"),
+     url("https://assets.katespade.com/na/fonts/KateSerifRegular.woff2") format("woff2");
+}
+@font-face {
+  font-family: KateSerifItalic;
+  font-style: normal;
+  font-weight: normal;
+  font-stretch: normal;
+  font-display: swap;
+  src: local("Kate Serif Italic"),
+     url("https://assets.katespade.com/na/fonts/KateSerifItalic.woff2") format("woff2");
+}

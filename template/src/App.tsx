@@ -1,40 +1,7 @@
 import { useCallback, useState } from 'react'
 import { MobileNavFlyout } from './components/MobileNavFlyout'
+import { IconBag, IconMenuSearchCombo } from './components/icons'
 import './App.css'
-
-function IconBag({ count }: { count: number }) {
-  return (
-    <svg className="demoChrome__bagSvg" width="22" height="24" viewBox="0 0 22 24" aria-hidden>
-      <path
-        d="M3 9V20a2 2 0 002 2h12a2 2 0 002-2V9"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.35"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      <path
-        d="M7 9V6a4 4 0 018 0v3"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.35"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      <text
-        x="11"
-        y="17.5"
-        textAnchor="middle"
-        className="demoChrome__bagCount"
-        fontSize="8.5"
-        fontWeight="600"
-        fill="currentColor"
-      >
-        {count}
-      </text>
-    </svg>
-  )
-}
 
 export default function App() {
   const [flyoutOpen, setFlyoutOpen] = useState(false)
@@ -45,8 +12,8 @@ export default function App() {
   return (
     <div className="app">
       <p className="app__hint">
-        Static prototype — no SFCC wiring. Nav data: <code>src/data/coachNavMock.ts</code>. Open the menu
-        with the control at top right.
+        Static prototype — no SFCC wiring. Nav data: <code>src/data/coachNavMock.ts</code>. Tokens:{' '}
+        <code>src/styles/design-tokens.css</code>. Icons: <code>src/components/icons.tsx</code>.
       </p>
 
       <div className="phone">
@@ -70,8 +37,7 @@ export default function App() {
               aria-expanded={flyoutOpen}
               onClick={openFlyout}
             >
-              <span className="demoChrome__burger" aria-hidden />
-              <span className="demoChrome__glass" aria-hidden />
+              <IconMenuSearchCombo size="lg" />
             </button>
           </div>
         </header>
@@ -102,7 +68,15 @@ export default function App() {
               </a>
             </article>
             <article className="demoCard demoCard--story">
-              <div className="demoCard__media demoCard__media--stage" role="img" aria-label="Campaign (placeholder)" />
+              <div className="demoCard__media demoCard__media--stage" role="img" aria-label="Campaign (placeholder)">
+                <span className="demoCard__pause" aria-hidden>
+                  <span className="demoCard__pauseBar" />
+                  <span className="demoCard__pauseBar" />
+                </span>
+                <span className="demoCard__fab" aria-hidden>
+                  +
+                </span>
+              </div>
               <div className="demoCard__storyMeta">
                 <p className="demoCard__script">Emotional Support</p>
                 <p className="demoCard__serifMark">&COACH</p>

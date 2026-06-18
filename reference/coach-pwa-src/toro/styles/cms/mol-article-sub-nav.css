@@ -1,0 +1,111 @@
+.component-block.component-block--sticky-sub-nav,
+.article-hub__section.component-block--sticky-sub-nav {
+  position: sticky;
+  overflow: visible;
+  z-index: 13;
+  transition: top 0.2s ease-in-out;
+  top: var(--sub-nav-top, 0px);
+}
+
+.mol-article-sub-nav {
+  background: var(--color-white-base);
+  transform: translate3d(0px, 0px, 0px);
+
+  .article-sub-nav__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 930px;
+    margin: 0 auto;
+    padding: var(--spacing-4);
+
+    @media (min-width: 769px) {
+      padding: var(--spacing-6) var(--spacing-3);
+    }
+  }
+
+  .article-sub-nav__border {
+    border-bottom: 1px solid var(--color-neutral-light-2);
+    max-width: 930px;
+    margin: 0 auto;
+  }
+
+  &.article-sub-nav--sticky .article-sub-nav__border {
+    max-width: 100%;
+  }
+
+  .article-sub-nav__home {
+    flex-shrink: 0;
+  }
+
+  .article-sub-nav__home-link {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-2);
+    color: inherit;
+    text-decoration: none;
+    &:hover,
+    &:active {
+      text-decoration: underline;
+    }
+  }
+
+  .article-sub-nav__home-icon {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  .article-sub-nav__home-text {
+    white-space: nowrap;
+  }
+
+  .article-sub-nav__articles {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-4);
+    margin-left: auto;
+  }
+
+  .article-sub-nav__prev-link,
+  .article-sub-nav__next-link {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-1);
+    color: inherit;
+    text-decoration: none;
+    white-space: nowrap;
+    &:hover,
+    &:active {
+      text-decoration: underline;
+    }
+  }
+
+  .article-sub-nav__arrow {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  .article-sub-nav__prev-text,
+  .article-sub-nav__next-text {
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  .article-sub-nav__separator {
+    width: 1px;
+    height: 16px;
+    background-color: var(--color-neutral-light-2);
+    flex-shrink: 0;
+  }
+}

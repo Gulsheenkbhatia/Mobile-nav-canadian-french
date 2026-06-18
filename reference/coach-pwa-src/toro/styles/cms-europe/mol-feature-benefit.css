@@ -1,0 +1,9 @@
+.mol-feature-benefit {
+  .feature-benefit-card {
+    .mol-header-block {
+      .links-container a {
+        line-height: var(--line-height-140) !important;
+      }
+    }
+  }
+}

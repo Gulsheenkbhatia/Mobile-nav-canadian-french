@@ -1,0 +1,31 @@
+.subbrand-coachtopia {
+  .mol-col-split-container {
+    .col-split-tiles {
+      &.p-mob-0 {
+        padding: 0 0 var(--spacing-6) 0;
+
+        &:last-child {
+          padding: 0;
+        }
+      }
+    }
+    @media (min-width: 769px) {
+      .col-split-tiles {
+        &.p-mob-0 {
+          padding: 0 var(--spacing-3);
+
+          &:last-child {
+            padding: 0 var(--spacing-3);
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 769px) {
+    .mol-col-split-container {
+      .col-split-stack {
+        margin: 0;
+      }
+    }
+  }
+}

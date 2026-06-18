@@ -1,0 +1,7 @@
+.cms-product-tile-3 .product-tile {
+  .price_container, .price-container {
+    .sales .value, .sales {
+      font-family: var(--font-face1-medium);
+    }
+  }
+}

@@ -1,0 +1,146 @@
+@media screen and (min-width: 769px) {
+  p.countdown-label.at-body-text.desk--body-text-sm-secondary-and-mob--body-text-md {
+    margin-bottom: 14px;
+    font-weight: normal;
+  }
+}
+
+@media (min-width: 769px) {
+  p.countdown-number.at-headline-text.text-display-md {
+    margin-bottom: 14px; /*value not present on design tokens*/
+  }
+  p.countdown-label.at-body-text.body-text-sm {
+    margin-bottom: var(--spacing-3);
+  }
+  .time-fields .countdown-label.at-body-text.body-text-md {
+    margin-bottom: 14px; /* value not present on design tokens */
+  }
+  div > .countdown-block {
+    margin-top: var(--spacing-8);
+  }
+  div > .countdown-block picture img {
+    margin: 0 auto var(--spacing-8);
+  }
+}
+
+.countdown-banner__home.js-countdown-banner {
+  overflow-x: hidden;
+}
+
+.mol-banner-50-50,
+.mol-2up-carousel,
+.mol-banner {
+  .countdown-block {
+    margin-top: var(--spacing-6);
+    .inline-img {
+      width: auto;
+      max-width: 100%;
+      margin: 0 auto var(--spacing-6);
+    }
+    .inline-video {
+      margin: 0 auto var(--spacing-6);
+    }
+    &.countdown-hide {
+      .inline-img {
+        margin: 0;
+      }
+      .inline-video {
+        margin: 0 auto;
+      }
+    }
+  }
+  .inline-img-wrapper {
+    picture {
+      display: flex;
+    }
+  }
+  .countdown-timer {
+    li {
+      list-style: none;
+    }
+    .countdown-separator {
+      opacity: 0;
+      display: flex;
+      align-items: center;
+      height: var(--countdown-number-height, var(--spacing-12));
+    }
+    &.theme-two {
+      .countdown-separator {
+        opacity: 1;
+      }
+      .countdown-number {
+        background-color: var(--clock-background-color, var(--color-black-base));
+        color: var(--clock-text-color, var(--color-white-base));
+        border-radius: var(--spacing-2);
+      }
+      .countdown-number {
+        background-color: var(--clock-background-color, var(--color-black-base));
+        color: var(--clock-text-color, var(--color-white-base));
+        border-radius: var(--spacing-2);
+      }
+    }
+    .countdown-number {
+      padding: var(--spacing-2);
+      margin: 0 var(--spacing-2) var(--spacing-2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: max-content;
+      min-height: var(--countdown-number-height, var(--spacing-12));
+      min-width: var(--countdown-number-width, var(--spacing-12));
+      color: var(--clock-text-color, var(--color-black-base));
+    }
+    .countdown-label {
+      color: var(--clock-text-color, var(--color-black-base));
+    }
+  }
+  .bottom-most {
+    .countdown-timer {
+      margin-bottom: var(--spacing-6);
+    }
+  }
+  .align-left {
+    .inline-img-wrapper picture {
+      justify-content: flex-start;
+    }
+  }
+  .align-center {
+    .inline-img-wrapper picture {
+      justify-content: center;
+    }
+  }
+  .align-right {
+    .inline-img-wrapper picture {
+      justify-content: flex-end;
+    }
+  }
+
+  @media (min-width: 769px) {
+    .bottom-most {
+      .countdown-timer {
+        margin-bottom: var(--spacing-8);
+      }
+    }
+    .countdown-block {
+      margin-top: var(--spacing-8);
+      .inline-img {
+        margin: 0 auto var(--spacing-8);
+      }
+      .inline-video {
+        margin: 0 auto var(--spacing-8);
+      }
+    }
+  }
+}
+.mol-banner-50-50,
+.mol-2up-carousel,
+.mol-banner {
+  .countdown-block {
+    .inline-img {
+      margin-inline: auto;
+    }
+    .inline-video {
+      margin-inline: auto;
+    }
+  }
+}

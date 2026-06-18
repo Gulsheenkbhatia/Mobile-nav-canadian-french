@@ -1,0 +1,50 @@
+.subbrand-coachtopia {
+  a.btn.btn-primary {
+    background-color: var(--ctabg-color-desktop, var(--color-primary));
+    color: var(--cta-color-desktop, var(--color-secondary));
+    &:hover {
+      background-color: var(--color-neutral-dark);
+    }
+  }
+
+  a.btn.btn-primary.light {
+    background-color: var(--ctabg-color-desktop, var(--color-secondary));
+    color: var(--cta-color-desktop, var(--color-primary));
+    &:hover {
+      background-color: var(--color-background-cta-disabled);
+    }
+  }
+
+  a.btn.btn-secondary {
+    color: var(--cta-color-desktop, var(--color-primary));
+    background-color: var(--ctabg-color-desktop, transparent);
+    border: 1px solid var(--color-black-base);
+    &:hover {
+      color: var(--color-secondary);
+      background-color: var(--color-primary);
+      border: 1px solid transparent;
+    }
+  }
+
+  a.btn.btn-secondary.light {
+    color: var(--cta-color-desktop, var(--color-secondary));
+    background-color: var(--ctabg-color-desktop);
+    border: 1px solid var(--color-secondary);
+    &:hover {
+      color: var(--color-primary);
+      background-color: var(--color-secondary);
+    }
+  }
+
+  a.btn.btn-link {
+    border-radius: 0;
+    background-color: transparent;
+    text-decoration: underline;
+    border: none;
+    padding: 0;
+    text-align: inherit;
+  }
+  .mob-recommend-items button {
+    position: initial;
+  }
+}

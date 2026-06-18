@@ -1,0 +1,126 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1050;
+  display: none;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  outline: 0;
+}
+
+.u-disclaimer-text-color {
+  color: var(--byline-text-color, var(--color-white-base));
+}
+
+.fade:not(.show) {
+  opacity: 0;
+}
+
+.fade {
+  transition: opacity 0.15s linear;
+}
+
+.modal .modal-dialog {
+  position: relative;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 100%;
+  margin: auto;
+  width: calc(100% - 64px);
+  max-width: 83%;
+  pointer-events: none;
+}
+
+.modal-open .modal {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.modal .modal-content {
+  position: relative;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  border-radius: 2px;
+  background-color: var(--color-white);
+  pointer-events: auto;
+  overflow: hidden;
+  overflow-y: auto;
+  outline: 0;
+  max-height: 80vh;
+  min-height: 300px;
+  padding: 16px;
+}
+
+.modal-backdrop.fade {
+  opacity: 0;
+}
+.modal-backdrop.show {
+  opacity: 0.8;
+}
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1040;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+}
+
+.show {
+  display: block;
+}
+
+.modal .modal-header {
+  padding-bottom: 16px;
+  z-index: 1050;
+}
+
+.close {
+  float: right;
+  font-size: var(--text-24);
+  font-weight: 700;
+  line-height: 1;
+  color: #000;
+  text-shadow: 0 1px 0 #fff;
+  opacity: 0.5;
+}
+
+.modal .modal-body {
+  margin-bottom: 32px;
+}
+
+p.disclaimer-text.sale-disclaimer {
+  margin-left: auto;
+  margin-right: auto;
+  font-size: var(--text-12);
+  line-height: var(--line-height-2xl);
+  letter-spacing: 0.2px;
+}
+
+.open-link {
+  cursor: pointer;
+}
+
+@media (min-width: 769px) {
+  .modal .modal-dialog,
+  .modal.modal-full-width .modal-dialog {
+    -ms-flex-align: center;
+    align-items: center;
+    width: 600px;
+    max-width: 600px;
+  }
+  .modal .modal-content,
+  .modal.modal-full-width .modal-content {
+    padding: 24px;
+  }
+  .modal .modal-body,
+  .modal.modal-full-width .modal-body {
+    margin: 0 48px 48px 48px;
+  }
+}

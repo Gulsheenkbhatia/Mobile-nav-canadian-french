@@ -1,0 +1,22 @@
+.at-category-card {
+  display: inline-block;
+  vertical-align: top;
+  width: calc(40% - 12px);
+}
+.at-category-card .category-card-img {
+  width: 100%;
+}
+.at-category-card .category-card-title {
+  font-weight: 400;
+  text-align: center;
+  word-break: break-word;
+  white-space: normal;
+}
+.at-category-card .category-card-link {
+  text-decoration: none;
+}
+@media screen and (min-width: 769px) {
+  .at-category-card {
+    width: 13.5%;
+  }
+}

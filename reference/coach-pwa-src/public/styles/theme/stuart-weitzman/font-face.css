@@ -1,0 +1,27 @@
+@font-face {
+  font-family: ITC Blair Bold;
+  font-style: normal;
+  font-weight: normal;
+  font-stretch: normal;
+  font-display: swap;
+  src: local("ITC Blair Bold"),
+     url("https://assets.stuartweitzman.com/na/fonts/itc-blair-bold.woff2") format("woff2");
+}
+@font-face {
+  font-family: Futura Now Text Regular;
+  font-style: normal;
+  font-weight: normal;
+  font-stretch: normal;
+  font-display: swap;
+  src: local("Futura Now Text Regular"),
+     url("https://assets.stuartweitzman.com/na/fonts/FuturaNowTextRegular.woff2") format("woff2");
+}
+@font-face {
+  font-family: Didot LT ST Roman Italic;
+  font-style: normal;
+  font-weight: normal;
+  font-stretch: normal;
+  font-display: swap;
+  src: local("Didot LT ST Roman Italic"),
+     url("https://assets.stuartweitzman.com/na/fonts/LinotypeDidotItalic.woff2") format("woff2");
+}

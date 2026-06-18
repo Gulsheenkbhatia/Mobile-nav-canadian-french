@@ -1,0 +1,38 @@
+.custom-scrollbar {
+  overflow-y: scroll;
+  mask-image: linear-gradient(to top, transparent, var(--color-black-base)),
+    linear-gradient(to left, transparent 17px, var(--color-black-base) 17px);
+}
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+.custom-scrollbar-x {
+  overflow-x: scroll;
+  mask-image: linear-gradient(to top, transparent 17px, var(--color-black-base) 17px),
+    linear-gradient(to top, transparent, var(--color-black-base));
+}
+.custom-scrollbar-x::-webkit-scrollbar {
+  height: 4px;
+}
+.custom-scrollbar,
+.custom-scrollbar-x {
+  mask-size: 101% 20000px;
+  mask-position: left bottom;
+}
+.custom-scrollbar:hover,
+.custom-scrollbar-x:hover,
+.custom-scrollbar.is-keyboard-scrolling,
+.custom-scrollbar-x.is-keyboard-scrolling {
+  mask-position: left top;
+}
+.custom-scrollbar::-webkit-scrollbar {
+  border-radius: 2px;
+}
+.custom-scrollbar::-webkit-scrollbar-track,
+.custom-scrollbar-x::-webkit-scrollbar-track {
+  background: none;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb,
+.custom-scrollbar-x::-webkit-scrollbar-thumb {
+  background-color: var(--color-inactive);
+}

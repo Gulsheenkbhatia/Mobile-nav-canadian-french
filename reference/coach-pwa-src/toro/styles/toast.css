@@ -1,0 +1,27 @@
+#chakra-toast-manager-top {
+  top: 106px !important;
+}
+.chakra-toast__inner {
+  max-width: 648px !important;
+}
+@media (min-width: 769px) {
+  #chakra-toast-manager-top {
+    top: 171px !important;
+  }
+  #chakra-toast-manager-top-right {
+    top: 30px !important;
+  }
+  #chakra-toast-manager-top-right .chakra-toast__inner {
+    max-width: 424px !important;
+  }
+  .chakra-toast__inner {
+    max-width: calc(50% - 12px) !important;
+    width: auto !important;
+  }
+}
+
+#chakra-toast-manager-bottom {
+  .chakra-toast__inner {
+    margin: 12px !important;
+  }
+}
