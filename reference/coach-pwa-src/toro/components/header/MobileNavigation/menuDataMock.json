@@ -1,0 +1,4650 @@
+{
+  "topCategories": [
+    "kss-daily-deals",
+    "kss-gifts",
+    "kss-view-all",
+    "kss-new-arrivals",
+    "kss-handbags",
+    "kss-wallets-wristlet-pouches",
+    "kss-jewelry",
+    "kss-shoes-all",
+    "kss-clothing-all",
+    "kss-accessories",
+    "kss-clearance-L1"
+  ],
+  "kss-daily-deals": {
+    "name": "HOLIDAY DEALS",
+    "cgid": "kss-daily-deals",
+    "url": "/shop/deals/todays-deal",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isEnableFitReviewLink": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/KN427_960",
+    "alternativeCategoryId": "kss-deal-of-the-day",
+    "alternativeUrl": {},
+    "enableVisuallySimilar": true,
+    "navFlyoutContentId": "kss-flyout-deals-content",
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [
+      "kss-deal-of-the-day",
+      "kss-deals-percent-off",
+      "kss-handbags-under-100",
+      "kss-deals-bundles",
+      "kss-clearance"
+    ],
+    "parentCategoryId": "root",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-daily-deals",
+        "name": "HOLIDAY DEALS"
+      }
+    ],
+    "flyoutContent": {
+      "href": "/shop/featured/percentoff",
+      "pictureHtml": "<picture data-loading=\"lazy\" class=\"primary-image \" data-class=\"aspect-ratio-img w-100\" data-iesrc=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?$poi$&w=640\" data-alt=\"Black Friday Preview\"> <source media=\"(min-width: 1200px)\" type=\"image/webp\" data-srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1920&fmt=webp&$qlt_med$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=2240&fmt=webp&$qlt_med$ 2x\" srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1920&fmt=webp&$qlt_med$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=2240&fmt=webp&$qlt_med$ 2x\"> <source media=\"(min-width: 1200px)\" type=\"image/jpeg\" data-srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1920&fmt=jpg&$qlt_med$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=2240&fmt=jpg&$qlt_med$ 2x\" srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1920&fmt=jpg&$qlt_med$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=2240&fmt=jpg&$qlt_med$ 2x\"> <source media=\"(min-width: 769px)\" type=\"image/webp\" data-srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1400&fmt=webp&$qlt_med$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1920&fmt=webp&$qlt_med$ 2x\" srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1400&fmt=webp&$qlt_med$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1920&fmt=webp&$qlt_med$ 2x\"> <source media=\"(min-width: 769px)\" type=\"image/jpeg\" data-srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1400&fmt=jpg&$qlt_med$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1920&fmt=jpg&$qlt_med$ 2x\" srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1400&fmt=jpg&$qlt_med$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1920&fmt=jpg&$qlt_med$ 2x\"> <source media=\"(max-width: 768px)\" type=\"image/webp\" data-srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=768&fmt=webp&$qlt_very_low$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1536&fmt=webp&$qlt_very_low$ 2x\" srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=768&fmt=webp&$qlt_very_low$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1536&fmt=webp&$qlt_very_low$ 2x\"> <source media=\"(max-width: 768px)\" type=\"image/jpeg\" data-srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=768&fmt=jpg&$qlt_very_low$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1536&fmt=jpg&$qlt_very_low$ 2x\" srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=768&fmt=jpg&$qlt_very_low$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1536&fmt=jpg&$qlt_very_low$ 2x\"> <img alt=\"Black Friday Preview\"></picture>",
+      "styles": null
+    }
+  },
+  "kss-deal-of-the-day": {
+    "name": "Holiday Deals",
+    "cgid": "kss-deal-of-the-day",
+    "url": "/shop/deals/todays-deal",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isComparablePriceEnabled": false,
+    "isEnableFitReviewLink": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/KN427_960",
+    "navFlyoutCategoryStyle": "color: #C7000A;",
+    "enableVisuallySimilar": true,
+    "enableFocusFilter": false,
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-daily-deals",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-daily-deals",
+        "name": "HOLIDAY DEALS"
+      },
+      {
+        "cgid": "kss-deal-of-the-day",
+        "name": "Holiday Deals"
+      }
+    ]
+  },
+  "kss-deals-percent-off": {
+    "name": "Up to 25% Off Styles",
+    "cgid": "kss-deals-percent-off",
+    "url": "/shop/featured/percentoff",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isComparablePriceEnabled": false,
+    "isEnableFitReviewLink": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/KC455_200",
+    "alternativeCategoryId": "kss-percent-off",
+    "alternativeUrl": {},
+    "calloutinfo": "Black Friday Preview!",
+    "enableVisuallySimilar": true,
+    "enableFocusFilter": false,
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-daily-deals",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-daily-deals",
+        "name": "HOLIDAY DEALS"
+      },
+      {
+        "cgid": "kss-deals-percent-off",
+        "name": "Up to 25% Off Styles"
+      }
+    ]
+  },
+  "kss-handbags-under-100": {
+    "name": "Handbags Under $100",
+    "cgid": "kss-handbags-under-100",
+    "url": "/shop/deals/handbags-under-100",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isComparablePriceEnabled": false,
+    "isEnableFitReviewLink": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/KK311_100",
+    "enableVisuallySimilar": true,
+    "enableFocusFilter": false,
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-daily-deals",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-daily-deals",
+        "name": "HOLIDAY DEALS"
+      },
+      {
+        "cgid": "kss-handbags-under-100",
+        "name": "Handbags Under $100"
+      }
+    ]
+  },
+  "kss-deals-bundles": {
+    "name": "Bundle & Save",
+    "cgid": "kss-deals-bundles",
+    "url": "/shop/bundle-save",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isComparablePriceEnabled": false,
+    "isEnableFitReviewLink": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/KD546_303",
+    "navImageUrl": "https://katespade.scene7.com/is/image/KateSpade/KL877_201_9_BUNDLE38",
+    "alternativeCategoryId": "kss-bundles",
+    "alternativeUrl": {},
+    "enableVisuallySimilar": true,
+    "enableFocusFilter": false,
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-daily-deals",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-daily-deals",
+        "name": "HOLIDAY DEALS"
+      },
+      {
+        "cgid": "kss-deals-bundles",
+        "name": "Bundle & Save"
+      }
+    ]
+  },
+  "kss-clearance": {
+    "name": "Clearance",
+    "cgid": "kss-clearance",
+    "url": "/shop/deals/clearance",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isComparablePriceEnabled": false,
+    "isEnableFitReviewLink": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/KM495_200",
+    "navFlyoutCategoryStyle": "color: #C7000A;",
+    "enableVisuallySimilar": true,
+    "enableFocusFilter": false,
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-daily-deals",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-daily-deals",
+        "name": "HOLIDAY DEALS"
+      },
+      {
+        "cgid": "kss-clearance",
+        "name": "Clearance"
+      }
+    ]
+  },
+  "kss-gifts": {
+    "name": "Gifts",
+    "cgid": "kss-gifts",
+    "url": "/shop/gifts/view-all",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isComparablePriceEnabled": false,
+    "isEnableFitReviewLink": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/KF369_100",
+    "alternativeCategoryId": "kss-gifts-view-all",
+    "alternativeUrl": {},
+    "enableVisuallySimilar": true,
+    "navFlyoutContentId": "kss-flyout-gifts-content",
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [
+      "kss-gifts-view-all",
+      "kss-gifts-top-picks",
+      "kss-gifts-under-25",
+      "kss-gifts-under-50",
+      "kss-gifts-under-100",
+      "kss-trending-gifts",
+      "kss-gifts-glitter-shop",
+      "kss-gifts-stocking-stuffers",
+      "kss-gifts-by-recipient",
+      "kss-gift-cards"
+    ],
+    "parentCategoryId": "root",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-gifts",
+        "name": "Gifts"
+      }
+    ],
+    "flyoutContent": {
+      "href": "/shop/featured/percentoff",
+      "pictureHtml": "<picture data-loading=\"lazy\" class=\"primary-image \" data-class=\"aspect-ratio-img w-100\" data-iesrc=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?$poi$&w=640\" data-alt=\"Black Friday Preview\"> <source media=\"(min-width: 1200px)\" type=\"image/webp\" data-srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1920&fmt=webp&$qlt_med$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=2240&fmt=webp&$qlt_med$ 2x\" srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1920&fmt=webp&$qlt_med$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=2240&fmt=webp&$qlt_med$ 2x\"> <source media=\"(min-width: 1200px)\" type=\"image/jpeg\" data-srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1920&fmt=jpg&$qlt_med$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=2240&fmt=jpg&$qlt_med$ 2x\" srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1920&fmt=jpg&$qlt_med$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=2240&fmt=jpg&$qlt_med$ 2x\"> <source media=\"(min-width: 769px)\" type=\"image/webp\" data-srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1400&fmt=webp&$qlt_med$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1920&fmt=webp&$qlt_med$ 2x\" srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1400&fmt=webp&$qlt_med$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1920&fmt=webp&$qlt_med$ 2x\"> <source media=\"(min-width: 769px)\" type=\"image/jpeg\" data-srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1400&fmt=jpg&$qlt_med$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1920&fmt=jpg&$qlt_med$ 2x\" srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1400&fmt=jpg&$qlt_med$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1920&fmt=jpg&$qlt_med$ 2x\"> <source media=\"(max-width: 768px)\" type=\"image/webp\" data-srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=768&fmt=webp&$qlt_very_low$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1536&fmt=webp&$qlt_very_low$ 2x\" srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=768&fmt=webp&$qlt_very_low$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1536&fmt=webp&$qlt_very_low$ 2x\"> <source media=\"(max-width: 768px)\" type=\"image/jpeg\" data-srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=768&fmt=jpg&$qlt_very_low$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1536&fmt=jpg&$qlt_very_low$ 2x\" srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=768&fmt=jpg&$qlt_very_low$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1536&fmt=jpg&$qlt_very_low$ 2x\"> <img alt=\"Black Friday Preview\"></picture>",
+      "styles": null
+    }
+  },
+  "kss-gifts-view-all": {
+    "name": "Holiday Gift Guide",
+    "cgid": "kss-gifts-view-all",
+    "url": "/shop/gifts/view-all",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isComparablePriceEnabled": false,
+    "isEnableFitReviewLink": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/KM472_200",
+    "enableVisuallySimilar": true,
+    "enableFocusFilter": false,
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-gifts",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-gifts",
+        "name": "Gifts"
+      },
+      {
+        "cgid": "kss-gifts-view-all",
+        "name": "Holiday Gift Guide"
+      }
+    ]
+  },
+  "kss-gifts-top-picks": {
+    "name": "Our Favorite Gifts",
+    "cgid": "kss-gifts-top-picks",
+    "url": "/shop/gifts/our-favorite-gifts",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isComparablePriceEnabled": false,
+    "isEnableFitReviewLink": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/KM151_600",
+    "enableVisuallySimilar": true,
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-gifts",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-gifts",
+        "name": "Gifts"
+      },
+      {
+        "cgid": "kss-gifts-top-picks",
+        "name": "Our Favorite Gifts"
+      }
+    ]
+  },
+  "kss-gifts-under-25": {
+    "name": "Gifts $25 and Under",
+    "cgid": "kss-gifts-under-25",
+    "url": "/shop/gifts/gifts-under-25",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isComparablePriceEnabled": false,
+    "isEnableFitReviewLink": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/KI371_250",
+    "enableVisuallySimilar": true,
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-gifts",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-gifts",
+        "name": "Gifts"
+      },
+      {
+        "cgid": "kss-gifts-under-25",
+        "name": "Gifts $25 and Under"
+      }
+    ]
+  },
+  "kss-gifts-under-50": {
+    "name": "Gifts $50 and Under",
+    "cgid": "kss-gifts-under-50",
+    "url": "/shop/gifts/gifts-under-50",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isComparablePriceEnabled": false,
+    "isEnableFitReviewLink": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/O0RU3143_711",
+    "enableVisuallySimilar": true,
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-gifts",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-gifts",
+        "name": "Gifts"
+      },
+      {
+        "cgid": "kss-gifts-under-50",
+        "name": "Gifts $50 and Under"
+      }
+    ]
+  },
+  "kss-gifts-under-100": {
+    "name": "Gifts $100 And Under",
+    "cgid": "kss-gifts-under-100",
+    "url": "/shop/gifts/gifts-under-100",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isComparablePriceEnabled": false,
+    "isEnableFitReviewLink": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/KM674_100",
+    "enableVisuallySimilar": true,
+    "enableFocusFilter": false,
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-gifts",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-gifts",
+        "name": "Gifts"
+      },
+      {
+        "cgid": "kss-gifts-under-100",
+        "name": "Gifts $100 And Under"
+      }
+    ]
+  },
+  "kss-trending-gifts": {
+    "name": "Trending Gifts",
+    "cgid": "kss-trending-gifts",
+    "url": "/shop/featured-shops/trending",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/KC455_200",
+    "alternativeCategoryId": "kss-featured-trending",
+    "alternativeUrl": {},
+    "enableVisuallySimilar": false,
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-gifts",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-gifts",
+        "name": "Gifts"
+      },
+      {
+        "cgid": "kss-trending-gifts",
+        "name": "Trending Gifts"
+      }
+    ]
+  },
+  "kss-gifts-glitter-shop": {
+    "name": "Metallic Shop",
+    "cgid": "kss-gifts-glitter-shop",
+    "url": "/shop/gifts/glitter-shop",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isComparablePriceEnabled": false,
+    "isEnableFitReviewLink": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/KO056_020",
+    "enableVisuallySimilar": true,
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-gifts",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-gifts",
+        "name": "Gifts"
+      },
+      {
+        "cgid": "kss-gifts-glitter-shop",
+        "name": "Metallic Shop"
+      }
+    ]
+  },
+  "kss-gifts-stocking-stuffers": {
+    "name": "Stocking Stuffers",
+    "cgid": "kss-gifts-stocking-stuffers",
+    "url": "/shop/gifts/stocking-stuffers",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isComparablePriceEnabled": false,
+    "isEnableFitReviewLink": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/KM722_001",
+    "enableVisuallySimilar": true,
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-gifts",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-gifts",
+        "name": "Gifts"
+      },
+      {
+        "cgid": "kss-gifts-stocking-stuffers",
+        "name": "Stocking Stuffers"
+      }
+    ]
+  },
+  "kss-gifts-by-recipient": {
+    "name": "Gifts By Recipient",
+    "cgid": "kss-gifts-by-recipient",
+    "url": "/shop/gifts/gifts-for-mom",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navImageUrl": "https://katespade.scene7.com/is/image/KateSpade/L897146_000",
+    "alternativeCategoryId": "kss-gifts-for-mom",
+    "alternativeUrl": {},
+    "enableVisuallySimilar": true,
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [
+      "kss-for-your-mom-L3",
+      "kss-for-your-daughter-l3",
+      "KSS-FOR-YOUR-FRIEND-L3",
+      "KSS-GIFTS-FOR-WIFE-L3",
+      "KSS-FOR-YOUR-PET-L3",
+      "KSS-FOR-YOUR-COWORKER-L3",
+      "KSS-GIFTS-FOR-SELF-L3"
+    ],
+    "parentCategoryId": "kss-gifts",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-gifts",
+        "name": "Gifts"
+      },
+      {
+        "cgid": "kss-gifts-by-recipient",
+        "name": "Gifts By Recipient"
+      }
+    ]
+  },
+  "kss-for-your-mom-L3": {
+    "name": "For Your Mom",
+    "cgid": "kss-for-your-mom-L3",
+    "url": "/shop/gifts/gifts-for-mom",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/KH759_200",
+    "navImageUrl": "https://katespade.scene7.com/is/image/KateSpade/KK046_001",
+    "alternativeCategoryId": "kss-gifts-for-mom",
+    "alternativeUrl": {},
+    "enableVisuallySimilar": true,
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-gifts-by-recipient",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-gifts",
+        "name": "Gifts"
+      },
+      {
+        "cgid": "kss-gifts-by-recipient",
+        "name": "Gifts By Recipient"
+      },
+      {
+        "cgid": "kss-for-your-mom-L3",
+        "name": "For Your Mom"
+      }
+    ]
+  },
+  "kss-for-your-daughter-l3": {
+    "name": "For Your Daughter",
+    "cgid": "kss-for-your-daughter-l3",
+    "url": "/shop/gifts/gifts-for-daughter",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/KH759_200",
+    "navImageUrl": "https://katespade.scene7.com/is/image/KateSpade/KI880_600",
+    "alternativeCategoryId": "kss-gifts-for-daughter",
+    "alternativeUrl": {},
+    "enableVisuallySimilar": true,
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-gifts-by-recipient",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-gifts",
+        "name": "Gifts"
+      },
+      {
+        "cgid": "kss-gifts-by-recipient",
+        "name": "Gifts By Recipient"
+      },
+      {
+        "cgid": "kss-for-your-daughter-l3",
+        "name": "For Your Daughter"
+      }
+    ]
+  },
+  "KSS-FOR-YOUR-FRIEND-L3": {
+    "name": "For Your Friend",
+    "cgid": "KSS-FOR-YOUR-FRIEND-L3",
+    "url": "/shop/gifts/gifts-for-friend",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/KH759_200",
+    "navImageUrl": "https://katespade.scene7.com/is/image/KateSpade/KJ016_600",
+    "alternativeCategoryId": "kss-gifts-for-friend",
+    "alternativeUrl": {},
+    "enableVisuallySimilar": true,
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-gifts-by-recipient",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-gifts",
+        "name": "Gifts"
+      },
+      {
+        "cgid": "kss-gifts-by-recipient",
+        "name": "Gifts By Recipient"
+      },
+      {
+        "cgid": "KSS-FOR-YOUR-FRIEND-L3",
+        "name": "For Your Friend"
+      }
+    ]
+  },
+  "KSS-GIFTS-FOR-WIFE-L3": {
+    "name": "For Your Wife",
+    "cgid": "KSS-GIFTS-FOR-WIFE-L3",
+    "url": "/shop/gifts/gifts-for-significant-other",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/KH759_200",
+    "navImageUrl": "https://katespade.scene7.com/is/image/KateSpade/KJ992_250",
+    "alternativeCategoryId": "kss-gifts-for-significant-other",
+    "alternativeUrl": {},
+    "enableVisuallySimilar": true,
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-gifts-by-recipient",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-gifts",
+        "name": "Gifts"
+      },
+      {
+        "cgid": "kss-gifts-by-recipient",
+        "name": "Gifts By Recipient"
+      },
+      {
+        "cgid": "KSS-GIFTS-FOR-WIFE-L3",
+        "name": "For Your Wife"
+      }
+    ]
+  },
+  "KSS-FOR-YOUR-PET-L3": {
+    "name": "For Your Pet",
+    "cgid": "KSS-FOR-YOUR-PET-L3",
+    "url": "/shop/accessories/pet-collection",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/KH759_200",
+    "navImageUrl": "https://katespade.scene7.com/is/image/KateSpade/K237349_001",
+    "alternativeCategoryId": "kss-accessories-pet",
+    "alternativeUrl": {},
+    "enableVisuallySimilar": true,
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-gifts-by-recipient",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-gifts",
+        "name": "Gifts"
+      },
+      {
+        "cgid": "kss-gifts-by-recipient",
+        "name": "Gifts By Recipient"
+      },
+      {
+        "cgid": "KSS-FOR-YOUR-PET-L3",
+        "name": "For Your Pet"
+      }
+    ]
+  },
+  "KSS-FOR-YOUR-COWORKER-L3": {
+    "name": "For Your Coworker",
+    "cgid": "KSS-FOR-YOUR-COWORKER-L3",
+    "url": "/shop/gifts/gifts-for-coworker",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/KH759_200",
+    "navImageUrl": "https://katespade.scene7.com/is/image/KateSpade/KI175_700",
+    "alternativeCategoryId": "kss-gifts-for-coworker",
+    "alternativeUrl": {},
+    "enableVisuallySimilar": true,
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-gifts-by-recipient",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-gifts",
+        "name": "Gifts"
+      },
+      {
+        "cgid": "kss-gifts-by-recipient",
+        "name": "Gifts By Recipient"
+      },
+      {
+        "cgid": "KSS-FOR-YOUR-COWORKER-L3",
+        "name": "For Your Coworker"
+      }
+    ]
+  },
+  "KSS-GIFTS-FOR-SELF-L3": {
+    "name": "For Yourself",
+    "cgid": "KSS-GIFTS-FOR-SELF-L3",
+    "url": "/shop/gifts/treat-yourself",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/KH759_200",
+    "navImageUrl": "https://katespade.scene7.com/is/image/KateSpade/KS1004264_001",
+    "alternativeCategoryId": "kss-gifts-treat-yourself",
+    "alternativeUrl": {},
+    "enableVisuallySimilar": true,
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-gifts-by-recipient",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-gifts",
+        "name": "Gifts"
+      },
+      {
+        "cgid": "kss-gifts-by-recipient",
+        "name": "Gifts By Recipient"
+      },
+      {
+        "cgid": "KSS-GIFTS-FOR-SELF-L3",
+        "name": "For Yourself"
+      }
+    ]
+  },
+  "kss-gift-cards": {
+    "name": "Gift Cards",
+    "cgid": "kss-gift-cards",
+    "url": "/shop/gifts/gift-cards",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/PFMU9995_001",
+    "enableVisuallySimilar": true,
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-gifts",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-gifts",
+        "name": "Gifts"
+      },
+      {
+        "cgid": "kss-gift-cards",
+        "name": "Gift Cards"
+      }
+    ]
+  },
+  "kss-view-all": {
+    "name": "VIEW ALL",
+    "cgid": "kss-view-all",
+    "url": "/shop/view-all",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isComparablePriceEnabled": false,
+    "isEnableFitReviewLink": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/KM471_960",
+    "enableVisuallySimilar": true,
+    "enableFocusFilter": false,
+    "navFlyoutContentId": "kss-flyout-view-all-content",
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "root",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-view-all",
+        "name": "VIEW ALL"
+      }
+    ],
+    "flyoutContent": {
+      "href": "/shop/featured/percentoff",
+      "pictureHtml": "<picture data-loading=\"lazy\" class=\"primary-image \" data-class=\"aspect-ratio-img w-100\" data-iesrc=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?$poi$&w=640\" data-alt=\"Black Friday Preview\"> <source media=\"(min-width: 1200px)\" type=\"image/webp\" data-srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1920&fmt=webp&$qlt_med$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=2240&fmt=webp&$qlt_med$ 2x\" srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1920&fmt=webp&$qlt_med$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=2240&fmt=webp&$qlt_med$ 2x\"> <source media=\"(min-width: 1200px)\" type=\"image/jpeg\" data-srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1920&fmt=jpg&$qlt_med$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=2240&fmt=jpg&$qlt_med$ 2x\" srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1920&fmt=jpg&$qlt_med$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=2240&fmt=jpg&$qlt_med$ 2x\"> <source media=\"(min-width: 769px)\" type=\"image/webp\" data-srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1400&fmt=webp&$qlt_med$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1920&fmt=webp&$qlt_med$ 2x\" srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1400&fmt=webp&$qlt_med$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1920&fmt=webp&$qlt_med$ 2x\"> <source media=\"(min-width: 769px)\" type=\"image/jpeg\" data-srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1400&fmt=jpg&$qlt_med$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1920&fmt=jpg&$qlt_med$ 2x\" srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1400&fmt=jpg&$qlt_med$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1920&fmt=jpg&$qlt_med$ 2x\"> <source media=\"(max-width: 768px)\" type=\"image/webp\" data-srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=768&fmt=webp&$qlt_very_low$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1536&fmt=webp&$qlt_very_low$ 2x\" srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=768&fmt=webp&$qlt_very_low$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1536&fmt=webp&$qlt_very_low$ 2x\"> <source media=\"(max-width: 768px)\" type=\"image/jpeg\" data-srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=768&fmt=jpg&$qlt_very_low$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1536&fmt=jpg&$qlt_very_low$ 2x\" srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=768&fmt=jpg&$qlt_very_low$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1536&fmt=jpg&$qlt_very_low$ 2x\"> <img alt=\"Black Friday Preview\"></picture>",
+      "styles": null
+    }
+  },
+  "kss-new-arrivals": {
+    "name": "New",
+    "cgid": "kss-new-arrivals",
+    "url": "/shop/new",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isComparablePriceEnabled": false,
+    "isEnableFitReviewLink": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/KN425_960",
+    "enableVisuallySimilar": true,
+    "enableFocusFilter": false,
+    "navFlyoutContentId": "kss-flyout-new-content",
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [
+      "kss-new-all",
+      "kss-new-handbags",
+      "kss-new-wallets",
+      "kss-new-jewelry",
+      "kss-new-fall-campaign"
+    ],
+    "parentCategoryId": "root",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-new-arrivals",
+        "name": "New"
+      }
+    ],
+    "flyoutContent": {
+      "href": "/shop/featured/percentoff",
+      "pictureHtml": "<picture data-loading=\"lazy\" class=\"primary-image \" data-class=\"aspect-ratio-img w-100\" data-iesrc=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?$poi$&w=640\" data-alt=\"Black Friday Preview\"> <source media=\"(min-width: 1200px)\" type=\"image/webp\" data-srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1920&fmt=webp&$qlt_med$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=2240&fmt=webp&$qlt_med$ 2x\" srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1920&fmt=webp&$qlt_med$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=2240&fmt=webp&$qlt_med$ 2x\"> <source media=\"(min-width: 1200px)\" type=\"image/jpeg\" data-srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1920&fmt=jpg&$qlt_med$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=2240&fmt=jpg&$qlt_med$ 2x\" srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1920&fmt=jpg&$qlt_med$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=2240&fmt=jpg&$qlt_med$ 2x\"> <source media=\"(min-width: 769px)\" type=\"image/webp\" data-srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1400&fmt=webp&$qlt_med$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1920&fmt=webp&$qlt_med$ 2x\" srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1400&fmt=webp&$qlt_med$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1920&fmt=webp&$qlt_med$ 2x\"> <source media=\"(min-width: 769px)\" type=\"image/jpeg\" data-srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1400&fmt=jpg&$qlt_med$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1920&fmt=jpg&$qlt_med$ 2x\" srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1400&fmt=jpg&$qlt_med$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1920&fmt=jpg&$qlt_med$ 2x\"> <source media=\"(max-width: 768px)\" type=\"image/webp\" data-srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=768&fmt=webp&$qlt_very_low$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1536&fmt=webp&$qlt_very_low$ 2x\" srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=768&fmt=webp&$qlt_very_low$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1536&fmt=webp&$qlt_very_low$ 2x\"> <source media=\"(max-width: 768px)\" type=\"image/jpeg\" data-srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=768&fmt=jpg&$qlt_very_low$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1536&fmt=jpg&$qlt_very_low$ 2x\" srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=768&fmt=jpg&$qlt_very_low$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1536&fmt=jpg&$qlt_very_low$ 2x\"> <img alt=\"Black Friday Preview\"></picture>",
+      "styles": null
+    }
+  },
+  "kss-new-all": {
+    "name": "All New",
+    "cgid": "kss-new-all",
+    "url": "/shop/new",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isComparablePriceEnabled": false,
+    "isEnableFitReviewLink": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/KE516_100",
+    "navImageUrl": "https://katespade.scene7.com/is/image/KateSpade/KI904_500",
+    "alternativeCategoryId": "kss-new-arrivals",
+    "alternativeUrl": {},
+    "enableVisuallySimilar": true,
+    "enableFocusFilter": false,
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-new-arrivals",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-new-arrivals",
+        "name": "New"
+      },
+      {
+        "cgid": "kss-new-all",
+        "name": "All New"
+      }
+    ]
+  },
+  "kss-new-handbags": {
+    "name": "New Handbags",
+    "cgid": "kss-new-handbags",
+    "url": "/shop/new/handbags",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isComparablePriceEnabled": false,
+    "isEnableFitReviewLink": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://images.katespade.com/is/image/KateSpade/KC740_960",
+    "navImageUrl": "https://katespade.scene7.com/is/image/KateSpade/KN246_200",
+    "enableVisuallySimilar": true,
+    "enableFocusFilter": false,
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-new-arrivals",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-new-arrivals",
+        "name": "New"
+      },
+      {
+        "cgid": "kss-new-handbags",
+        "name": "New Handbags"
+      }
+    ]
+  },
+  "kss-new-wallets": {
+    "name": "New Wallets",
+    "cgid": "kss-new-wallets",
+    "url": "/shop/new/wallets",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isComparablePriceEnabled": false,
+    "isEnableFitReviewLink": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://images.katespade.com/is/image/KateSpade/KC740_960",
+    "navImageUrl": "https://katespade.scene7.com/is/image/KateSpade/KM617_020",
+    "enableVisuallySimilar": true,
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-new-arrivals",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-new-arrivals",
+        "name": "New"
+      },
+      {
+        "cgid": "kss-new-wallets",
+        "name": "New Wallets"
+      }
+    ]
+  },
+  "kss-new-jewelry": {
+    "name": "New Jewelry",
+    "cgid": "kss-new-jewelry",
+    "url": "/shop/new/jewelry",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isComparablePriceEnabled": false,
+    "isEnableFitReviewLink": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://images.katespade.com/is/image/KateSpade/KC740_960",
+    "navImageUrl": "https://katespade.scene7.com/is/image/KateSpade/KN128_960",
+    "enableVisuallySimilar": true,
+    "enableFocusFilter": false,
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-new-arrivals",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-new-arrivals",
+        "name": "New"
+      },
+      {
+        "cgid": "kss-new-jewelry",
+        "name": "New Jewelry"
+      }
+    ]
+  },
+  "kss-new-fall-campaign": {
+    "name": "Shop The Campaign",
+    "cgid": "kss-new-fall-campaign",
+    "url": "/shop/fall-campaign",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/KM716_200",
+    "alternativeCategoryId": "kss-fall-campaign",
+    "alternativeUrl": {},
+    "enableVisuallySimilar": false,
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-new-arrivals",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-new-arrivals",
+        "name": "New"
+      },
+      {
+        "cgid": "kss-new-fall-campaign",
+        "name": "Shop The Campaign"
+      }
+    ]
+  },
+  "kss-handbags": {
+    "name": "Handbags",
+    "cgid": "kss-handbags",
+    "url": "/shop/handbags/view-all",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isComparablePriceEnabled": false,
+    "isEnableFitReviewLink": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/KF369_100",
+    "alternativeCategoryId": "kss-handbags-view-all",
+    "alternativeUrl": {},
+    "enableVisuallySimilar": true,
+    "sizeBodyText": "Measurements",
+    "sizeDefaultAsset": "_3",
+    "sizeHeadline": "Bag Size",
+    "spaceBodyText": "What Fits Inside",
+    "spaceDefaultAsset": "_4",
+    "spaceHeadline": "Bag Space",
+    "handlesBodyText": "Strap Details",
+    "handlesDefaultAsset": "_6, _8",
+    "handlesHeadline": "Handles",
+    "materialsBodyText": "Crafted With Care",
+    "materialsDefaultAsset": "_5",
+    "materialsHeadline": "Materials",
+    "navFlyoutContentId": "kss-flyout-handbags-content",
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [
+      "kss-handbags-view-all",
+      "kss-handbags-keychains",
+      "kss-handbags-crossbodies",
+      "kss-handbags-totes",
+      "kss-handbags-shoulder-bags",
+      "kss-handbags-satchels",
+      "kss-handbags-backpackss-travel-bags",
+      "kss-handbags-laptop-bags",
+      "kss-handbags-bucket-bags",
+      "kss-handbags-belt-bags",
+      "kss-handbags-shop",
+      "kss-handbags-collections"
+    ],
+    "parentCategoryId": "root",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-handbags",
+        "name": "Handbags"
+      }
+    ],
+    "flyoutContent": {
+      "href": "/shop/featured/percentoff",
+      "pictureHtml": "<picture data-loading=\"lazy\" class=\"primary-image \" data-class=\"aspect-ratio-img w-100\" data-iesrc=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?$poi$&w=640\" data-alt=\"Black Friday Preview\"> <source media=\"(min-width: 1200px)\" type=\"image/webp\" data-srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1920&fmt=webp&$qlt_med$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=2240&fmt=webp&$qlt_med$ 2x\" srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1920&fmt=webp&$qlt_med$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=2240&fmt=webp&$qlt_med$ 2x\"> <source media=\"(min-width: 1200px)\" type=\"image/jpeg\" data-srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1920&fmt=jpg&$qlt_med$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=2240&fmt=jpg&$qlt_med$ 2x\" srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1920&fmt=jpg&$qlt_med$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=2240&fmt=jpg&$qlt_med$ 2x\"> <source media=\"(min-width: 769px)\" type=\"image/webp\" data-srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1400&fmt=webp&$qlt_med$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1920&fmt=webp&$qlt_med$ 2x\" srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1400&fmt=webp&$qlt_med$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1920&fmt=webp&$qlt_med$ 2x\"> <source media=\"(min-width: 769px)\" type=\"image/jpeg\" data-srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1400&fmt=jpg&$qlt_med$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1920&fmt=jpg&$qlt_med$ 2x\" srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1400&fmt=jpg&$qlt_med$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1920&fmt=jpg&$qlt_med$ 2x\"> <source media=\"(max-width: 768px)\" type=\"image/webp\" data-srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=768&fmt=webp&$qlt_very_low$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1536&fmt=webp&$qlt_very_low$ 2x\" srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=768&fmt=webp&$qlt_very_low$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1536&fmt=webp&$qlt_very_low$ 2x\"> <source media=\"(max-width: 768px)\" type=\"image/jpeg\" data-srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=768&fmt=jpg&$qlt_very_low$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1536&fmt=jpg&$qlt_very_low$ 2x\" srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=768&fmt=jpg&$qlt_very_low$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1536&fmt=jpg&$qlt_very_low$ 2x\"> <img alt=\"Black Friday Preview\"></picture>",
+      "styles": null
+    }
+  },
+  "kss-handbags-view-all": {
+    "name": "All Handbags",
+    "cgid": "kss-handbags-view-all",
+    "url": "/shop/handbags/view-all",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isComparablePriceEnabled": false,
+    "isEnableFitReviewLink": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/KM563_001",
+    "enableVisuallySimilar": true,
+    "enableFocusFilter": false,
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-handbags",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-handbags",
+        "name": "Handbags"
+      },
+      {
+        "cgid": "kss-handbags-view-all",
+        "name": "All Handbags"
+      }
+    ]
+  },
+  "kss-handbags-keychains": {
+    "name": "Bag Charms, Coin Purses & Key Chains",
+    "cgid": "kss-handbags-keychains",
+    "url": "/shop/accessories/keychains",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navImageUrl": "https://katespade.scene7.com/is/image/KateSpade/KK974_960",
+    "alternativeCategoryId": "kss-accessories-keychains",
+    "alternativeUrl": {},
+    "enableVisuallySimilar": false,
+    "sizeBodyText": "Measurements",
+    "sizeDefaultAsset": 3,
+    "sizeHeadline": "Bag Size",
+    "spaceBodyText": "What Fits Inside",
+    "spaceDefaultAsset": 4,
+    "spaceHeadline": "Bag Space",
+    "handlesBodyText": "Strap Details",
+    "handlesDefaultAsset": "6,8",
+    "handlesHeadline": "Handles",
+    "materialsBodyText": "Crafted With Care",
+    "materialsDefaultAsset": 5,
+    "materialsHeadline": "Materials",
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-handbags",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-handbags",
+        "name": "Handbags"
+      },
+      {
+        "cgid": "kss-handbags-keychains",
+        "name": "Bag Charms, Coin Purses & Key Chains"
+      }
+    ]
+  },
+  "kss-handbags-crossbodies": {
+    "name": "Crossbody Bags",
+    "cgid": "kss-handbags-crossbodies",
+    "url": "/shop/handbags/crossbody-bags",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isComparablePriceEnabled": false,
+    "isEnableFitReviewLink": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/KN427_960",
+    "enableVisuallySimilar": true,
+    "enableFocusFilter": false,
+    "sizeBodyText": "Measurements",
+    "sizeDefaultAsset": 3,
+    "sizeHeadline": "Bag Size",
+    "spaceBodyText": "What Fits Inside",
+    "spaceDefaultAsset": 4,
+    "spaceHeadline": "Bag Space",
+    "handlesBodyText": "Strap Details",
+    "handlesDefaultAsset": "6,8",
+    "handlesHeadline": "Handles",
+    "materialsBodyText": "Crafted With Care",
+    "materialsDefaultAsset": 5,
+    "materialsHeadline": "Materials",
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-handbags",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-handbags",
+        "name": "Handbags"
+      },
+      {
+        "cgid": "kss-handbags-crossbodies",
+        "name": "Crossbody Bags"
+      }
+    ]
+  },
+  "kss-handbags-totes": {
+    "name": "Tote Bags",
+    "cgid": "kss-handbags-totes",
+    "url": "/shop/handbags/tote-bags",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isComparablePriceEnabled": false,
+    "isEnableFitReviewLink": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/KF369_100",
+    "enableVisuallySimilar": true,
+    "enableFocusFilter": false,
+    "sizeBodyText": "Measurements",
+    "sizeDefaultAsset": 3,
+    "sizeHeadline": "Bag Size",
+    "spaceBodyText": "What Fits Inside",
+    "spaceDefaultAsset": 4,
+    "spaceHeadline": "Bag Space",
+    "handlesBodyText": "Strap Details",
+    "handlesDefaultAsset": "6,8",
+    "handlesHeadline": "Handles",
+    "materialsBodyText": "Crafted With Care",
+    "materialsDefaultAsset": 5,
+    "materialsHeadline": "Materials",
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-handbags",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-handbags",
+        "name": "Handbags"
+      },
+      {
+        "cgid": "kss-handbags-totes",
+        "name": "Tote Bags"
+      }
+    ]
+  },
+  "kss-handbags-shoulder-bags": {
+    "name": "Shoulder Bags",
+    "cgid": "kss-handbags-shoulder-bags",
+    "url": "/shop/handbags/shoulder-bags",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isComparablePriceEnabled": false,
+    "isEnableFitReviewLink": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/KF530_300",
+    "enableVisuallySimilar": true,
+    "enableFocusFilter": false,
+    "sizeBodyText": "Measurements",
+    "sizeDefaultAsset": 3,
+    "sizeHeadline": "Bag Size",
+    "spaceBodyText": "What Fits Inside",
+    "spaceDefaultAsset": 4,
+    "spaceHeadline": "Bag Space",
+    "handlesBodyText": "Strap Details",
+    "handlesDefaultAsset": "6,8",
+    "handlesHeadline": "Handles",
+    "materialsBodyText": "Crafted With Care",
+    "materialsDefaultAsset": 5,
+    "materialsHeadline": "Materials",
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-handbags",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-handbags",
+        "name": "Handbags"
+      },
+      {
+        "cgid": "kss-handbags-shoulder-bags",
+        "name": "Shoulder Bags"
+      }
+    ]
+  },
+  "kss-handbags-satchels": {
+    "name": "Satchels",
+    "cgid": "kss-handbags-satchels",
+    "url": "/shop/handbags/satchels",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isComparablePriceEnabled": false,
+    "isEnableFitReviewLink": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/KM660_201",
+    "enableVisuallySimilar": true,
+    "enableFocusFilter": false,
+    "sizeBodyText": "Measurements",
+    "sizeDefaultAsset": 3,
+    "sizeHeadline": "Bag Size",
+    "spaceBodyText": "What Fits Inside",
+    "spaceDefaultAsset": 4,
+    "spaceHeadline": "Bag Space",
+    "handlesBodyText": "Strap Details",
+    "handlesDefaultAsset": "6,8",
+    "handlesHeadline": "Handles",
+    "materialsBodyText": "Crafted With Care",
+    "materialsDefaultAsset": 5,
+    "materialsHeadline": "Materials",
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-handbags",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-handbags",
+        "name": "Handbags"
+      },
+      {
+        "cgid": "kss-handbags-satchels",
+        "name": "Satchels"
+      }
+    ]
+  },
+  "kss-handbags-backpackss-travel-bags": {
+    "name": "Backpacks & Travel Bags",
+    "cgid": "kss-handbags-backpackss-travel-bags",
+    "url": "/shop/handbags/backpacks-travel-bags",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isComparablePriceEnabled": false,
+    "isEnableFitReviewLink": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/KL962_020",
+    "enableVisuallySimilar": true,
+    "enableFocusFilter": false,
+    "sizeBodyText": "Measurements",
+    "sizeDefaultAsset": 3,
+    "sizeHeadline": "Bag Size",
+    "spaceBodyText": "What Fits Inside",
+    "spaceDefaultAsset": 4,
+    "spaceHeadline": "Bag Space",
+    "handlesBodyText": "Strap Details",
+    "handlesDefaultAsset": "6,8",
+    "handlesHeadline": "Handles",
+    "materialsBodyText": "Crafted With Care",
+    "materialsDefaultAsset": 5,
+    "materialsHeadline": "Materials",
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-handbags",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-handbags",
+        "name": "Handbags"
+      },
+      {
+        "cgid": "kss-handbags-backpackss-travel-bags",
+        "name": "Backpacks & Travel Bags"
+      }
+    ]
+  },
+  "kss-handbags-laptop-bags": {
+    "name": "Laptop & Work Bags",
+    "cgid": "kss-handbags-laptop-bags",
+    "url": "/shop/handbags/laptop-bags",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isComparablePriceEnabled": false,
+    "isEnableFitReviewLink": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/KC434_001",
+    "enableVisuallySimilar": true,
+    "enableFocusFilter": false,
+    "sizeBodyText": "Measurements",
+    "sizeDefaultAsset": 3,
+    "sizeHeadline": "Bag Size",
+    "spaceBodyText": "What Fits Inside",
+    "spaceDefaultAsset": 4,
+    "spaceHeadline": "Bag Space",
+    "handlesBodyText": "Strap Details",
+    "handlesDefaultAsset": "6,8",
+    "handlesHeadline": "Handles",
+    "materialsBodyText": "Crafted With Care",
+    "materialsDefaultAsset": 5,
+    "materialsHeadline": "Materials",
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-handbags",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-handbags",
+        "name": "Handbags"
+      },
+      {
+        "cgid": "kss-handbags-laptop-bags",
+        "name": "Laptop & Work Bags"
+      }
+    ]
+  },
+  "kss-handbags-bucket-bags": {
+    "name": "Bucket Bags",
+    "cgid": "kss-handbags-bucket-bags",
+    "url": "/shop/handbags/bucket-bags",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isComparablePriceEnabled": false,
+    "isEnableFitReviewLink": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/KL049_403",
+    "enableVisuallySimilar": true,
+    "enableFocusFilter": false,
+    "sizeBodyText": "Measurements",
+    "sizeDefaultAsset": 3,
+    "sizeHeadline": "Bag Size",
+    "spaceBodyText": "What Fits Inside",
+    "spaceDefaultAsset": 4,
+    "spaceHeadline": "Bag Space",
+    "handlesBodyText": "Strap Details",
+    "handlesDefaultAsset": "6,8",
+    "handlesHeadline": "Handles",
+    "materialsBodyText": "Crafted With Care",
+    "materialsDefaultAsset": 5,
+    "materialsHeadline": "Materials",
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-handbags",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-handbags",
+        "name": "Handbags"
+      },
+      {
+        "cgid": "kss-handbags-bucket-bags",
+        "name": "Bucket Bags"
+      }
+    ]
+  },
+  "kss-handbags-belt-bags": {
+    "name": "Belt Bags",
+    "cgid": "kss-handbags-belt-bags",
+    "url": "/shop/handbags/belt-bags",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isComparablePriceEnabled": false,
+    "isEnableFitReviewLink": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/KM218_601",
+    "enableVisuallySimilar": true,
+    "enableFocusFilter": false,
+    "sizeBodyText": "Measurements",
+    "sizeDefaultAsset": 3,
+    "sizeHeadline": "Bag Size",
+    "spaceBodyText": "What Fits Inside",
+    "spaceDefaultAsset": 4,
+    "spaceHeadline": "Bag Space",
+    "handlesBodyText": "Strap Details",
+    "handlesDefaultAsset": "6,8",
+    "handlesHeadline": "Handles",
+    "materialsBodyText": "Crafted With Care",
+    "materialsDefaultAsset": 5,
+    "materialsHeadline": "Materials",
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-handbags",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-handbags",
+        "name": "Handbags"
+      },
+      {
+        "cgid": "kss-handbags-belt-bags",
+        "name": "Belt Bags"
+      }
+    ]
+  },
+  "kss-handbags-shop": {
+    "name": "Featured Shops",
+    "cgid": "kss-handbags-shop",
+    "url": "/shop/featured/the-novelty-shop",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isComparablePriceEnabled": false,
+    "isEnableFitReviewLink": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://images.katespade.com/is/image/KateSpade/KB698_960",
+    "navImageUrl": "https://katespade.scene7.com/is/image/KateSpade/KE577_650",
+    "alternativeCategoryId": "kss-featured-hidden-novelty",
+    "alternativeUrl": {},
+    "enableVisuallySimilar": true,
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [
+      "kss-handbags-back-to-school-shop",
+      "kss-handbags-minnie",
+      "kss-handbags-novelty",
+      "kss-handbags-trending",
+      "kss-handbags-travel",
+      "kss-handbags-winter-essentials",
+      "kss-handbags-top-rated",
+      "kss-handbags-featured-matching",
+      "kss-handbags-our-favorites",
+      "kss-handbags-gift-cards"
+    ],
+    "parentCategoryId": "kss-handbags",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-handbags",
+        "name": "Handbags"
+      },
+      {
+        "cgid": "kss-handbags-shop",
+        "name": "Featured Shops"
+      }
+    ]
+  },
+  "kss-handbags-back-to-school-shop": {
+    "name": "Back To School Shop",
+    "cgid": "kss-handbags-back-to-school-shop",
+    "url": "/shop/featured/back-to-school-shop",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://images.katespade.com/is/image/KateSpade/KC522_300",
+    "navImageUrl": "https://images.katespade.com/is/image/KateSpade/KC522_300",
+    "alternativeCategoryId": "kss-back-to-school-shop",
+    "alternativeUrl": {},
+    "enableVisuallySimilar": true,
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-handbags-shop",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-handbags",
+        "name": "Handbags"
+      },
+      {
+        "cgid": "kss-handbags-shop",
+        "name": "Featured Shops"
+      },
+      {
+        "cgid": "kss-handbags-back-to-school-shop",
+        "name": "Back To School Shop"
+      }
+    ]
+  },
+  "kss-handbags-minnie": {
+    "name": "Disney X Kate Spade New York",
+    "cgid": "kss-handbags-minnie",
+    "url": "/shop/featured/disney-x-kate-spade-new-york",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isEnableFitReviewLink": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://images.katespade.com/is/image/KateSpade/K4643_960",
+    "navImageUrl": "https://katespade.scene7.com/is/image/KateSpade/KG591_960",
+    "alternativeCategoryId": "kss-minnie",
+    "alternativeUrl": {},
+    "enableVisuallySimilar": true,
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-handbags-shop",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-handbags",
+        "name": "Handbags"
+      },
+      {
+        "cgid": "kss-handbags-shop",
+        "name": "Featured Shops"
+      },
+      {
+        "cgid": "kss-handbags-minnie",
+        "name": "Disney X Kate Spade New York"
+      }
+    ]
+  },
+  "kss-handbags-novelty": {
+    "name": "The Novelty Shop",
+    "cgid": "kss-handbags-novelty",
+    "url": "/shop/featured/the-novelty-shop",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isEnableFitReviewLink": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://images.katespade.com/is/image/KateSpade/KB698_960",
+    "navImageUrl": "https://katespade.scene7.com/is/image/KateSpade/KK989_960",
+    "alternativeCategoryId": "kss-featured-hidden-novelty",
+    "alternativeUrl": {},
+    "enableVisuallySimilar": true,
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-handbags-shop",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-handbags",
+        "name": "Handbags"
+      },
+      {
+        "cgid": "kss-handbags-shop",
+        "name": "Featured Shops"
+      },
+      {
+        "cgid": "kss-handbags-novelty",
+        "name": "The Novelty Shop"
+      }
+    ]
+  },
+  "kss-handbags-trending": {
+    "name": "The Trend Shop",
+    "cgid": "kss-handbags-trending",
+    "url": "/shop/featured-shops/trending",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navImageUrl": "https://katespade.scene7.com/is/image/KateSpade/KE404_650",
+    "alternativeCategoryId": "kss-featured-trending",
+    "alternativeUrl": {},
+    "enableVisuallySimilar": true,
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-handbags-shop",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-handbags",
+        "name": "Handbags"
+      },
+      {
+        "cgid": "kss-handbags-shop",
+        "name": "Featured Shops"
+      },
+      {
+        "cgid": "kss-handbags-trending",
+        "name": "The Trend Shop"
+      }
+    ]
+  },
+  "kss-handbags-travel": {
+    "name": "The Travel Shop",
+    "cgid": "kss-handbags-travel",
+    "url": "/shop/accessories/travel-accessories",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isEnableFitReviewLink": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://images.katespade.com/is/image/KateSpade/K6031_001",
+    "navImageUrl": "https://images.katespade.com/is/image/KateSpade/KB712_300",
+    "alternativeCategoryId": "kss-accessories-travel",
+    "alternativeUrl": {},
+    "enableVisuallySimilar": true,
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-handbags-shop",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-handbags",
+        "name": "Handbags"
+      },
+      {
+        "cgid": "kss-handbags-shop",
+        "name": "Featured Shops"
+      },
+      {
+        "cgid": "kss-handbags-travel",
+        "name": "The Travel Shop"
+      }
+    ]
+  },
+  "kss-handbags-winter-essentials": {
+    "name": "Winter Essentials",
+    "cgid": "kss-handbags-winter-essentials",
+    "url": "/shop/featured-shops/winter-essentials",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/KM546_001",
+    "alternativeCategoryId": "kss-featured-winter-essentials",
+    "alternativeUrl": {},
+    "enableVisuallySimilar": false,
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-handbags-shop",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-handbags",
+        "name": "Handbags"
+      },
+      {
+        "cgid": "kss-handbags-shop",
+        "name": "Featured Shops"
+      },
+      {
+        "cgid": "kss-handbags-winter-essentials",
+        "name": "Winter Essentials"
+      }
+    ]
+  },
+  "kss-handbags-top-rated": {
+    "name": "Top Rated",
+    "cgid": "kss-handbags-top-rated",
+    "url": "/shop/featured-shops/top-rated",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://images.katespade.com/is/image/KateSpade/K7340_100",
+    "navImageUrl": "https://katespade.scene7.com/is/image/KateSpade/K6057_601",
+    "alternativeCategoryId": "kss-featured-top-rated",
+    "alternativeUrl": {},
+    "enableVisuallySimilar": true,
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-handbags-shop",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-handbags",
+        "name": "Handbags"
+      },
+      {
+        "cgid": "kss-handbags-shop",
+        "name": "Featured Shops"
+      },
+      {
+        "cgid": "kss-handbags-top-rated",
+        "name": "Top Rated"
+      }
+    ]
+  },
+  "kss-handbags-featured-matching": {
+    "name": "Matching Sets",
+    "cgid": "kss-handbags-featured-matching",
+    "url": "/shop/featured-shops/matching-sets",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/KF863_403",
+    "navImageUrl": "https://katespade.scene7.com/is/image/KateSpade/KH757_001",
+    "alternativeCategoryId": "kso-featured-matching-sets",
+    "alternativeUrl": {},
+    "enableVisuallySimilar": true,
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-handbags-shop",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-handbags",
+        "name": "Handbags"
+      },
+      {
+        "cgid": "kss-handbags-shop",
+        "name": "Featured Shops"
+      },
+      {
+        "cgid": "kss-handbags-featured-matching",
+        "name": "Matching Sets"
+      }
+    ]
+  },
+  "kss-handbags-our-favorites": {
+    "name": "The Classics Shop",
+    "cgid": "kss-handbags-our-favorites",
+    "url": "/shop/featured/our-favorites",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/K8134_001",
+    "alternativeCategoryId": "kss-our-favorites",
+    "alternativeUrl": {},
+    "enableVisuallySimilar": true,
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-handbags-shop",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-handbags",
+        "name": "Handbags"
+      },
+      {
+        "cgid": "kss-handbags-shop",
+        "name": "Featured Shops"
+      },
+      {
+        "cgid": "kss-handbags-our-favorites",
+        "name": "The Classics Shop"
+      }
+    ]
+  },
+  "kss-handbags-gift-cards": {
+    "name": "Gift Cards",
+    "cgid": "kss-handbags-gift-cards",
+    "url": "/shop/gifts/gift-cards",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isEnableFitReviewLink": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/PFMU9995_001",
+    "alternativeCategoryId": "kss-gift-cards",
+    "alternativeUrl": {},
+    "enableVisuallySimilar": true,
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-handbags-shop",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-handbags",
+        "name": "Handbags"
+      },
+      {
+        "cgid": "kss-handbags-shop",
+        "name": "Featured Shops"
+      },
+      {
+        "cgid": "kss-handbags-gift-cards",
+        "name": "Gift Cards"
+      }
+    ]
+  },
+  "kss-handbags-collections": {
+    "name": "Collections",
+    "cgid": "kss-handbags-collections",
+    "url": "/shop/collections/madison",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isComparablePriceEnabled": false,
+    "isEnableFitReviewLink": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navImageUrl": "https://katespade.scene7.com/is/image/KateSpade/KH468_500",
+    "alternativeCategoryId": "kss-collections-madison",
+    "alternativeUrl": {},
+    "enableVisuallySimilar": true,
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [
+      "kss-handbags-454",
+      "kss-handbags-carter",
+      "kss-handbags-kayla",
+      "kss-handbags-kip",
+      "kss-handbags-signature-spade",
+      "kss-handbags-phoebe",
+      "kss-handbags-madison",
+      "kss-handbags-chelsea",
+      "kss-collections-emma"
+    ],
+    "parentCategoryId": "kss-handbags",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-handbags",
+        "name": "Handbags"
+      },
+      {
+        "cgid": "kss-handbags-collections",
+        "name": "Collections"
+      }
+    ]
+  },
+  "kss-handbags-454": {
+    "name": "454 Shop ",
+    "cgid": "kss-handbags-454",
+    "url": "/shop/collections/454-shop",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/KM472_200",
+    "alternativeCategoryId": "kss-collections-454",
+    "alternativeUrl": {},
+    "enableVisuallySimilar": false,
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-handbags-collections",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-handbags",
+        "name": "Handbags"
+      },
+      {
+        "cgid": "kss-handbags-collections",
+        "name": "Collections"
+      },
+      {
+        "cgid": "kss-handbags-454",
+        "name": "454 Shop "
+      }
+    ]
+  },
+  "kss-handbags-carter": {
+    "name": "Carter Shop",
+    "cgid": "kss-handbags-carter",
+    "url": "/shop/collections/carter",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/KL966_001",
+    "alternativeCategoryId": "kss-collections-carter",
+    "alternativeUrl": {},
+    "enableVisuallySimilar": false,
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-handbags-collections",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-handbags",
+        "name": "Handbags"
+      },
+      {
+        "cgid": "kss-handbags-collections",
+        "name": "Collections"
+      },
+      {
+        "cgid": "kss-handbags-carter",
+        "name": "Carter Shop"
+      }
+    ]
+  },
+  "kss-handbags-kayla": {
+    "name": "Kayla Shop",
+    "cgid": "kss-handbags-kayla",
+    "url": "/shop/collections/kayla",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/KL837_001",
+    "alternativeCategoryId": "kss-collections-kayla",
+    "alternativeUrl": {},
+    "enableVisuallySimilar": true,
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-handbags-collections",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-handbags",
+        "name": "Handbags"
+      },
+      {
+        "cgid": "kss-handbags-collections",
+        "name": "Collections"
+      },
+      {
+        "cgid": "kss-handbags-kayla",
+        "name": "Kayla Shop"
+      }
+    ]
+  },
+  "kss-handbags-kip": {
+    "name": "Kip Shop ",
+    "cgid": "kss-handbags-kip",
+    "url": "/shop/collections/kip",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/KG767_651",
+    "alternativeCategoryId": "kss-collections-kip",
+    "alternativeUrl": {},
+    "enableVisuallySimilar": true,
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-handbags-collections",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-handbags",
+        "name": "Handbags"
+      },
+      {
+        "cgid": "kss-handbags-collections",
+        "name": "Collections"
+      },
+      {
+        "cgid": "kss-handbags-kip",
+        "name": "Kip Shop "
+      }
+    ]
+  },
+  "kss-handbags-signature-spade": {
+    "name": "Signature Spade Shop",
+    "cgid": "kss-handbags-signature-spade",
+    "url": "/shop/collections/spade-flower",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/KG086_251",
+    "alternativeCategoryId": "kss-collections-sfj",
+    "alternativeUrl": {},
+    "enableVisuallySimilar": true,
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-handbags-collections",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-handbags",
+        "name": "Handbags"
+      },
+      {
+        "cgid": "kss-handbags-collections",
+        "name": "Collections"
+      },
+      {
+        "cgid": "kss-handbags-signature-spade",
+        "name": "Signature Spade Shop"
+      }
+    ]
+  },
+  "kss-handbags-phoebe": {
+    "name": "Phoebe Shop",
+    "cgid": "kss-handbags-phoebe",
+    "url": "/shop/collections/phoebe",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/KF553_001",
+    "alternativeCategoryId": "kss-collections-phoebe",
+    "alternativeUrl": {},
+    "enableVisuallySimilar": true,
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-handbags-collections",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-handbags",
+        "name": "Handbags"
+      },
+      {
+        "cgid": "kss-handbags-collections",
+        "name": "Collections"
+      },
+      {
+        "cgid": "kss-handbags-phoebe",
+        "name": "Phoebe Shop"
+      }
+    ]
+  },
+  "kss-handbags-madison": {
+    "name": "Madison Shop",
+    "cgid": "kss-handbags-madison",
+    "url": "/shop/collections/madison",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isComparablePriceEnabled": false,
+    "isEnableFitReviewLink": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/KK949_001",
+    "alternativeCategoryId": "kss-collections-madison",
+    "alternativeUrl": {},
+    "enableVisuallySimilar": true,
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-handbags-collections",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-handbags",
+        "name": "Handbags"
+      },
+      {
+        "cgid": "kss-handbags-collections",
+        "name": "Collections"
+      },
+      {
+        "cgid": "kss-handbags-madison",
+        "name": "Madison Shop"
+      }
+    ]
+  },
+  "kss-handbags-chelsea": {
+    "name": "Chelsea Shop",
+    "cgid": "kss-handbags-chelsea",
+    "url": "/shop/collections/chelsea",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/KE955_960",
+    "alternativeCategoryId": "kss-collections-chelsea",
+    "alternativeUrl": {},
+    "enableVisuallySimilar": true,
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-handbags-collections",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-handbags",
+        "name": "Handbags"
+      },
+      {
+        "cgid": "kss-handbags-collections",
+        "name": "Collections"
+      },
+      {
+        "cgid": "kss-handbags-chelsea",
+        "name": "Chelsea Shop"
+      }
+    ]
+  },
+  "kss-collections-emma": {
+    "name": "Emma Shop",
+    "cgid": "kss-collections-emma",
+    "url": "/shop/handbags/collections/emma",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/KK943_302",
+    "enableVisuallySimilar": true,
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-handbags-collections",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-handbags",
+        "name": "Handbags"
+      },
+      {
+        "cgid": "kss-handbags-collections",
+        "name": "Collections"
+      },
+      {
+        "cgid": "kss-collections-emma",
+        "name": "Emma Shop"
+      }
+    ]
+  },
+  "kss-wallets-wristlet-pouches": {
+    "name": "Wallets",
+    "cgid": "kss-wallets-wristlet-pouches",
+    "url": "/shop/wallets/view-all",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isComparablePriceEnabled": false,
+    "isEnableFitReviewLink": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/KK669_251",
+    "alternativeCategoryId": "kss-wallets-wristlets-view-all",
+    "alternativeUrl": {},
+    "enableVisuallySimilar": true,
+    "sizeBodyText": "Measurements",
+    "sizeDefaultAsset": "_3",
+    "sizeHeadline": "Wallet Size",
+    "materialsBodyText": "Materials",
+    "materialsDefaultAsset": "_5",
+    "navFlyoutContentId": "kss-flyout-wallets-content",
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [
+      "kss-wallets-wristlets-view-all",
+      "kss-wallets-wristlets-cardholders",
+      "kss-wallets-wristlets-large-wallets",
+      "kss-wallets-wristlets-medium-wallets",
+      "kss-wallets-shop",
+      "kss-wallets-collections"
+    ],
+    "parentCategoryId": "root",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-wallets-wristlet-pouches",
+        "name": "Wallets"
+      }
+    ],
+    "flyoutContent": {
+      "href": "/shop/featured/percentoff",
+      "pictureHtml": "<picture data-loading=\"lazy\" class=\"primary-image \" data-class=\"aspect-ratio-img w-100\" data-iesrc=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?$poi$&w=640\" data-alt=\"Black Friday Preview\"> <source media=\"(min-width: 1200px)\" type=\"image/webp\" data-srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1920&fmt=webp&$qlt_med$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=2240&fmt=webp&$qlt_med$ 2x\" srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1920&fmt=webp&$qlt_med$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=2240&fmt=webp&$qlt_med$ 2x\"> <source media=\"(min-width: 1200px)\" type=\"image/jpeg\" data-srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1920&fmt=jpg&$qlt_med$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=2240&fmt=jpg&$qlt_med$ 2x\" srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1920&fmt=jpg&$qlt_med$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=2240&fmt=jpg&$qlt_med$ 2x\"> <source media=\"(min-width: 769px)\" type=\"image/webp\" data-srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1400&fmt=webp&$qlt_med$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1920&fmt=webp&$qlt_med$ 2x\" srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1400&fmt=webp&$qlt_med$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1920&fmt=webp&$qlt_med$ 2x\"> <source media=\"(min-width: 769px)\" type=\"image/jpeg\" data-srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1400&fmt=jpg&$qlt_med$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1920&fmt=jpg&$qlt_med$ 2x\" srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1400&fmt=jpg&$qlt_med$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1920&fmt=jpg&$qlt_med$ 2x\"> <source media=\"(max-width: 768px)\" type=\"image/webp\" data-srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=768&fmt=webp&$qlt_very_low$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1536&fmt=webp&$qlt_very_low$ 2x\" srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=768&fmt=webp&$qlt_very_low$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1536&fmt=webp&$qlt_very_low$ 2x\"> <source media=\"(max-width: 768px)\" type=\"image/jpeg\" data-srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=768&fmt=jpg&$qlt_very_low$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1536&fmt=jpg&$qlt_very_low$ 2x\" srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=768&fmt=jpg&$qlt_very_low$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1536&fmt=jpg&$qlt_very_low$ 2x\"> <img alt=\"Black Friday Preview\"></picture>",
+      "styles": null
+    }
+  },
+  "kss-wallets-wristlets-view-all": {
+    "name": "All Wallets",
+    "cgid": "kss-wallets-wristlets-view-all",
+    "url": "/shop/wallets/view-all",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isComparablePriceEnabled": false,
+    "isEnableFitReviewLink": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/KN221_020",
+    "enableVisuallySimilar": true,
+    "enableFocusFilter": false,
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-wallets-wristlet-pouches",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-wallets-wristlet-pouches",
+        "name": "Wallets"
+      },
+      {
+        "cgid": "kss-wallets-wristlets-view-all",
+        "name": "All Wallets"
+      }
+    ]
+  },
+  "kss-wallets-wristlets-cardholders": {
+    "name": "Small Wallets & Card Holders",
+    "cgid": "kss-wallets-wristlets-cardholders",
+    "url": "/shop/wallets/card-holders",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isComparablePriceEnabled": false,
+    "isEnableFitReviewLink": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/KK045_001",
+    "enableVisuallySimilar": true,
+    "enableFocusFilter": false,
+    "sizeBodyText": "Measurements",
+    "sizeDefaultAsset": 3,
+    "sizeHeadline": "Wallet Size",
+    "materialsDefaultAsset": 5,
+    "materialsHeadline": "Materials",
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-wallets-wristlet-pouches",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-wallets-wristlet-pouches",
+        "name": "Wallets"
+      },
+      {
+        "cgid": "kss-wallets-wristlets-cardholders",
+        "name": "Small Wallets & Card Holders"
+      }
+    ]
+  },
+  "kss-wallets-wristlets-large-wallets": {
+    "name": "Large Wallets",
+    "cgid": "kss-wallets-wristlets-large-wallets",
+    "url": "/shop/wallets/large-wallets",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isComparablePriceEnabled": false,
+    "isEnableFitReviewLink": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/KH786_202",
+    "enableVisuallySimilar": true,
+    "sizeBodyText": "Measurements",
+    "sizeDefaultAsset": 3,
+    "sizeHeadline": "Wallet Size",
+    "materialsDefaultAsset": 5,
+    "materialsHeadline": "Materials",
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-wallets-wristlet-pouches",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-wallets-wristlet-pouches",
+        "name": "Wallets"
+      },
+      {
+        "cgid": "kss-wallets-wristlets-large-wallets",
+        "name": "Large Wallets"
+      }
+    ]
+  },
+  "kss-wallets-wristlets-medium-wallets": {
+    "name": "Medium Wallets",
+    "cgid": "kss-wallets-wristlets-medium-wallets",
+    "url": "/shop/wallets/medium-wallets",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isComparablePriceEnabled": false,
+    "isEnableFitReviewLink": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/KH787_001",
+    "enableVisuallySimilar": true,
+    "sizeBodyText": "Measurements",
+    "sizeDefaultAsset": 3,
+    "sizeHeadline": "Wallet Size",
+    "materialsDefaultAsset": 5,
+    "materialsHeadline": "Materials",
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-wallets-wristlet-pouches",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-wallets-wristlet-pouches",
+        "name": "Wallets"
+      },
+      {
+        "cgid": "kss-wallets-wristlets-medium-wallets",
+        "name": "Medium Wallets"
+      }
+    ]
+  },
+  "kss-wallets-shop": {
+    "name": "Featured Shops",
+    "cgid": "kss-wallets-shop",
+    "url": "/shop/featured/the-novelty-shop",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isComparablePriceEnabled": false,
+    "isEnableFitReviewLink": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://images.katespade.com/is/image/KateSpade/KA588_960",
+    "navImageUrl": "https://katespade.scene7.com/is/image/KateSpade/KH619_960",
+    "alternativeCategoryId": "kss-featured-hidden-novelty",
+    "alternativeUrl": {},
+    "enableVisuallySimilar": true,
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [
+      "kss-wallets-minnie",
+      "kss-wallets-novelty",
+      "kss-wallets-trending",
+      "kss-wallets-winter-essentials",
+      "kss-wallets-featured-matching",
+      "kss-wallets-our-favorites",
+      "kss-wallets-gift-cards"
+    ],
+    "parentCategoryId": "kss-wallets-wristlet-pouches",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-wallets-wristlet-pouches",
+        "name": "Wallets"
+      },
+      {
+        "cgid": "kss-wallets-shop",
+        "name": "Featured Shops"
+      }
+    ]
+  },
+  "kss-wallets-minnie": {
+    "name": "Disney X Kate Spade New York",
+    "cgid": "kss-wallets-minnie",
+    "url": "/shop/featured/disney-x-kate-spade-new-york",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://images.katespade.com/is/image/KateSpade/K4759_960",
+    "navImageUrl": "https://katespade.scene7.com/is/image/KateSpade/KG659_960",
+    "alternativeCategoryId": "kss-minnie",
+    "alternativeUrl": {},
+    "enableVisuallySimilar": true,
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-wallets-shop",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-wallets-wristlet-pouches",
+        "name": "Wallets"
+      },
+      {
+        "cgid": "kss-wallets-shop",
+        "name": "Featured Shops"
+      },
+      {
+        "cgid": "kss-wallets-minnie",
+        "name": "Disney X Kate Spade New York"
+      }
+    ]
+  },
+  "kss-wallets-novelty": {
+    "name": "The Novelty Shop",
+    "cgid": "kss-wallets-novelty",
+    "url": "/shop/featured/the-novelty-shop",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isEnableFitReviewLink": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://images.katespade.com/is/image/KateSpade/K4761_001",
+    "navImageUrl": "https://katespade.scene7.com/is/image/KateSpade/KK213_650",
+    "alternativeCategoryId": "kss-featured-hidden-novelty",
+    "alternativeUrl": {},
+    "enableVisuallySimilar": true,
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-wallets-shop",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-wallets-wristlet-pouches",
+        "name": "Wallets"
+      },
+      {
+        "cgid": "kss-wallets-shop",
+        "name": "Featured Shops"
+      },
+      {
+        "cgid": "kss-wallets-novelty",
+        "name": "The Novelty Shop"
+      }
+    ]
+  },
+  "kss-wallets-trending": {
+    "name": "The Trend Shop",
+    "cgid": "kss-wallets-trending",
+    "url": "/shop/featured-shops/trending",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/K6088_001",
+    "alternativeCategoryId": "kss-featured-trending",
+    "alternativeUrl": {},
+    "enableVisuallySimilar": true,
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-wallets-shop",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-wallets-wristlet-pouches",
+        "name": "Wallets"
+      },
+      {
+        "cgid": "kss-wallets-shop",
+        "name": "Featured Shops"
+      },
+      {
+        "cgid": "kss-wallets-trending",
+        "name": "The Trend Shop"
+      }
+    ]
+  },
+  "kss-wallets-winter-essentials": {
+    "name": "Winter Essentials",
+    "cgid": "kss-wallets-winter-essentials",
+    "url": "/shop/featured-shops/winter-essentials",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/KM546_001",
+    "alternativeCategoryId": "kss-featured-winter-essentials",
+    "alternativeUrl": {},
+    "enableVisuallySimilar": false,
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-wallets-shop",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-wallets-wristlet-pouches",
+        "name": "Wallets"
+      },
+      {
+        "cgid": "kss-wallets-shop",
+        "name": "Featured Shops"
+      },
+      {
+        "cgid": "kss-wallets-winter-essentials",
+        "name": "Winter Essentials"
+      }
+    ]
+  },
+  "kss-wallets-featured-matching": {
+    "name": "Matching Sets",
+    "cgid": "kss-wallets-featured-matching",
+    "url": "/shop/featured-shops/matching-sets",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/KF943_020",
+    "alternativeCategoryId": "kso-featured-matching-sets",
+    "alternativeUrl": {},
+    "enableVisuallySimilar": true,
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-wallets-shop",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-wallets-wristlet-pouches",
+        "name": "Wallets"
+      },
+      {
+        "cgid": "kss-wallets-shop",
+        "name": "Featured Shops"
+      },
+      {
+        "cgid": "kss-wallets-featured-matching",
+        "name": "Matching Sets"
+      }
+    ]
+  },
+  "kss-wallets-our-favorites": {
+    "name": "The Classics Shop",
+    "cgid": "kss-wallets-our-favorites",
+    "url": "/shop/featured/our-favorites",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/KG487_001",
+    "alternativeCategoryId": "kss-our-favorites",
+    "alternativeUrl": {},
+    "enableVisuallySimilar": true,
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-wallets-shop",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-wallets-wristlet-pouches",
+        "name": "Wallets"
+      },
+      {
+        "cgid": "kss-wallets-shop",
+        "name": "Featured Shops"
+      },
+      {
+        "cgid": "kss-wallets-our-favorites",
+        "name": "The Classics Shop"
+      }
+    ]
+  },
+  "kss-wallets-gift-cards": {
+    "name": "Gift Cards",
+    "cgid": "kss-wallets-gift-cards",
+    "url": "/shop/gifts/gift-cards",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isEnableFitReviewLink": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/PFMU9995_001",
+    "alternativeCategoryId": "kss-gift-cards",
+    "alternativeUrl": {},
+    "enableVisuallySimilar": true,
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-wallets-shop",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-wallets-wristlet-pouches",
+        "name": "Wallets"
+      },
+      {
+        "cgid": "kss-wallets-shop",
+        "name": "Featured Shops"
+      },
+      {
+        "cgid": "kss-wallets-gift-cards",
+        "name": "Gift Cards"
+      }
+    ]
+  },
+  "kss-wallets-collections": {
+    "name": "Collections",
+    "cgid": "kss-wallets-collections",
+    "url": "/shop/collections/madison",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isComparablePriceEnabled": false,
+    "isEnableFitReviewLink": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navImageUrl": "https://katespade.scene7.com/is/image/KateSpade/KG424_250",
+    "alternativeCategoryId": "kss-collections-madison",
+    "alternativeUrl": {},
+    "enableVisuallySimilar": true,
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [
+      "kss-wallets-signature-spade",
+      "kss-wallets-lena",
+      "kss-wallets-madison",
+      "kss-wallets-kayla",
+      "kss-wallets-leila",
+      "kss-wallets-chelsea"
+    ],
+    "parentCategoryId": "kss-wallets-wristlet-pouches",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-wallets-wristlet-pouches",
+        "name": "Wallets"
+      },
+      {
+        "cgid": "kss-wallets-collections",
+        "name": "Collections"
+      }
+    ]
+  },
+  "kss-wallets-signature-spade": {
+    "name": "Signature Spade Shop",
+    "cgid": "kss-wallets-signature-spade",
+    "url": "/shop/collections/spade-flower",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/KG488_250",
+    "alternativeCategoryId": "kss-collections-sfj",
+    "alternativeUrl": {},
+    "enableVisuallySimilar": true,
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-wallets-collections",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-wallets-wristlet-pouches",
+        "name": "Wallets"
+      },
+      {
+        "cgid": "kss-wallets-collections",
+        "name": "Collections"
+      },
+      {
+        "cgid": "kss-wallets-signature-spade",
+        "name": "Signature Spade Shop"
+      }
+    ]
+  },
+  "kss-wallets-lena": {
+    "name": "Lena Shop",
+    "cgid": "kss-wallets-lena",
+    "url": "/shop/collections/the-lena-shop",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/KH787_001",
+    "alternativeCategoryId": "kss-collections-lena",
+    "alternativeUrl": {},
+    "enableVisuallySimilar": true,
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-wallets-collections",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-wallets-wristlet-pouches",
+        "name": "Wallets"
+      },
+      {
+        "cgid": "kss-wallets-collections",
+        "name": "Collections"
+      },
+      {
+        "cgid": "kss-wallets-lena",
+        "name": "Lena Shop"
+      }
+    ]
+  },
+  "kss-wallets-madison": {
+    "name": "Madison Shop",
+    "cgid": "kss-wallets-madison",
+    "url": "/shop/collections/madison",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/KC580_306",
+    "alternativeCategoryId": "kss-collections-madison",
+    "alternativeUrl": {},
+    "enableVisuallySimilar": true,
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-wallets-collections",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-wallets-wristlet-pouches",
+        "name": "Wallets"
+      },
+      {
+        "cgid": "kss-wallets-collections",
+        "name": "Collections"
+      },
+      {
+        "cgid": "kss-wallets-madison",
+        "name": "Madison Shop"
+      }
+    ]
+  },
+  "kss-wallets-kayla": {
+    "name": "Kayla Shop",
+    "cgid": "kss-wallets-kayla",
+    "url": "/shop/collections/kayla",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/KI904_001",
+    "alternativeCategoryId": "kss-collections-kayla",
+    "alternativeUrl": {},
+    "enableVisuallySimilar": true,
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-wallets-collections",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-wallets-wristlet-pouches",
+        "name": "Wallets"
+      },
+      {
+        "cgid": "kss-wallets-collections",
+        "name": "Collections"
+      },
+      {
+        "cgid": "kss-wallets-kayla",
+        "name": "Kayla Shop"
+      }
+    ]
+  },
+  "kss-wallets-leila": {
+    "name": "Leila Shop",
+    "cgid": "kss-wallets-leila",
+    "url": "/shop/collections/leila",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/WLR00395_910",
+    "alternativeCategoryId": "kss-collections-leila",
+    "alternativeUrl": {},
+    "enableVisuallySimilar": true,
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-wallets-collections",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-wallets-wristlet-pouches",
+        "name": "Wallets"
+      },
+      {
+        "cgid": "kss-wallets-collections",
+        "name": "Collections"
+      },
+      {
+        "cgid": "kss-wallets-leila",
+        "name": "Leila Shop"
+      }
+    ]
+  },
+  "kss-wallets-chelsea": {
+    "name": "Chelsea Shop",
+    "cgid": "kss-wallets-chelsea",
+    "url": "/shop/collections/chelsea",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/KC633_001",
+    "alternativeCategoryId": "kss-collections-chelsea",
+    "alternativeUrl": {},
+    "enableVisuallySimilar": true,
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-wallets-collections",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-wallets-wristlet-pouches",
+        "name": "Wallets"
+      },
+      {
+        "cgid": "kss-wallets-collections",
+        "name": "Collections"
+      },
+      {
+        "cgid": "kss-wallets-chelsea",
+        "name": "Chelsea Shop"
+      }
+    ]
+  },
+  "kss-jewelry": {
+    "name": "Jewelry",
+    "cgid": "kss-jewelry",
+    "url": "/shop/jewelry/view-all",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isComparablePriceEnabled": false,
+    "isEnableFitReviewLink": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/O0RU3143_711",
+    "alternativeCategoryId": "kss-jewelry-view-all",
+    "alternativeUrl": {},
+    "enableVisuallySimilar": true,
+    "enableFocusFilter": false,
+    "navFlyoutContentId": "kss-flyout-jewelry-content",
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [
+      "kss-jewelry-view-all",
+      "kss-jewelry-earrings",
+      "kss-jewelry-bracelets",
+      "kss-jewelry-necklaces",
+      "kss-jewelry-rings",
+      "kss-jewelry-personalization",
+      "kss-jewelry-shop"
+    ],
+    "parentCategoryId": "root",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-jewelry",
+        "name": "Jewelry"
+      }
+    ],
+    "flyoutContent": {
+      "href": "/shop/featured/percentoff",
+      "pictureHtml": "<picture data-loading=\"lazy\" class=\"primary-image \" data-class=\"aspect-ratio-img w-100\" data-iesrc=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?$poi$&w=640\" data-alt=\"Black Friday Preview\"> <source media=\"(min-width: 1200px)\" type=\"image/webp\" data-srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1920&fmt=webp&$qlt_med$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=2240&fmt=webp&$qlt_med$ 2x\" srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1920&fmt=webp&$qlt_med$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=2240&fmt=webp&$qlt_med$ 2x\"> <source media=\"(min-width: 1200px)\" type=\"image/jpeg\" data-srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1920&fmt=jpg&$qlt_med$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=2240&fmt=jpg&$qlt_med$ 2x\" srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1920&fmt=jpg&$qlt_med$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=2240&fmt=jpg&$qlt_med$ 2x\"> <source media=\"(min-width: 769px)\" type=\"image/webp\" data-srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1400&fmt=webp&$qlt_med$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1920&fmt=webp&$qlt_med$ 2x\" srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1400&fmt=webp&$qlt_med$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1920&fmt=webp&$qlt_med$ 2x\"> <source media=\"(min-width: 769px)\" type=\"image/jpeg\" data-srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1400&fmt=jpg&$qlt_med$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1920&fmt=jpg&$qlt_med$ 2x\" srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1400&fmt=jpg&$qlt_med$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1920&fmt=jpg&$qlt_med$ 2x\"> <source media=\"(max-width: 768px)\" type=\"image/webp\" data-srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=768&fmt=webp&$qlt_very_low$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1536&fmt=webp&$qlt_very_low$ 2x\" srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=768&fmt=webp&$qlt_very_low$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1536&fmt=webp&$qlt_very_low$ 2x\"> <source media=\"(max-width: 768px)\" type=\"image/jpeg\" data-srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=768&fmt=jpg&$qlt_very_low$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1536&fmt=jpg&$qlt_very_low$ 2x\" srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=768&fmt=jpg&$qlt_very_low$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1536&fmt=jpg&$qlt_very_low$ 2x\"> <img alt=\"Black Friday Preview\"></picture>",
+      "styles": null
+    }
+  },
+  "kss-jewelry-view-all": {
+    "name": "All Jewelry",
+    "cgid": "kss-jewelry-view-all",
+    "url": "/shop/jewelry/view-all",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isComparablePriceEnabled": false,
+    "isEnableFitReviewLink": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/O0RU3143_711",
+    "enableVisuallySimilar": true,
+    "enableFocusFilter": false,
+    "navFlyoutContentId": "kss-flyout-jewelry-content",
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-jewelry",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-jewelry",
+        "name": "Jewelry"
+      },
+      {
+        "cgid": "kss-jewelry-view-all",
+        "name": "All Jewelry"
+      }
+    ]
+  },
+  "kss-jewelry-earrings": {
+    "name": "Earrings",
+    "cgid": "kss-jewelry-earrings",
+    "url": "/shop/jewelry/earrings",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isComparablePriceEnabled": false,
+    "isEnableFitReviewLink": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/O0RU3069_420",
+    "enableVisuallySimilar": true,
+    "sizeDefaultAsset": 2,
+    "sizeHeadline": "Measurements",
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-jewelry",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-jewelry",
+        "name": "Jewelry"
+      },
+      {
+        "cgid": "kss-jewelry-earrings",
+        "name": "Earrings"
+      }
+    ]
+  },
+  "kss-jewelry-bracelets": {
+    "name": "Bracelets & Watches",
+    "cgid": "kss-jewelry-bracelets",
+    "url": "/shop/jewelry/bracelets",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isComparablePriceEnabled": false,
+    "isEnableFitReviewLink": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/O0RU3145_143",
+    "enableVisuallySimilar": true,
+    "enableFocusFilter": false,
+    "sizeDefaultAsset": 2,
+    "sizeHeadline": "Measurements",
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-jewelry",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-jewelry",
+        "name": "Jewelry"
+      },
+      {
+        "cgid": "kss-jewelry-bracelets",
+        "name": "Bracelets & Watches"
+      }
+    ]
+  },
+  "kss-jewelry-necklaces": {
+    "name": "Necklaces",
+    "cgid": "kss-jewelry-necklaces",
+    "url": "/shop/jewelry/necklaces",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isComparablePriceEnabled": false,
+    "isEnableFitReviewLink": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/O0RU3124_921",
+    "enableVisuallySimilar": true,
+    "enableFocusFilter": false,
+    "sizeDefaultAsset": 2,
+    "sizeHeadline": "Measurements",
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-jewelry",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-jewelry",
+        "name": "Jewelry"
+      },
+      {
+        "cgid": "kss-jewelry-necklaces",
+        "name": "Necklaces"
+      }
+    ]
+  },
+  "kss-jewelry-rings": {
+    "name": "Rings",
+    "cgid": "kss-jewelry-rings",
+    "url": "/shop/jewelry/rings",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isComparablePriceEnabled": false,
+    "isEnableFitReviewLink": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/O0R00152_250",
+    "enableVisuallySimilar": true,
+    "sizeDefaultAsset": 2,
+    "sizeHeadline": "Measurements",
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-jewelry",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-jewelry",
+        "name": "Jewelry"
+      },
+      {
+        "cgid": "kss-jewelry-rings",
+        "name": "Rings"
+      }
+    ]
+  },
+  "kss-jewelry-personalization": {
+    "name": "Charms & Initial Jewelry",
+    "cgid": "kss-jewelry-personalization",
+    "url": "/shop/jewelry/personalization",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isComparablePriceEnabled": false,
+    "isEnableFitReviewLink": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/WBRU7653_711",
+    "enableVisuallySimilar": true,
+    "sizeDefaultAsset": 2,
+    "sizeHeadline": "Measurements",
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-jewelry",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-jewelry",
+        "name": "Jewelry"
+      },
+      {
+        "cgid": "kss-jewelry-personalization",
+        "name": "Charms & Initial Jewelry"
+      }
+    ]
+  },
+  "kss-jewelry-shop": {
+    "name": "Featured Shops",
+    "cgid": "kss-jewelry-shop",
+    "url": "/shop/featured/the-novelty-shop",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isComparablePriceEnabled": false,
+    "isEnableFitReviewLink": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://images.katespade.com/is/image/KateSpade/KC758_250",
+    "navImageUrl": "https://katespade.scene7.com/is/image/KateSpade/KH274_650",
+    "alternativeCategoryId": "kss-featured-hidden-novelty",
+    "alternativeUrl": {},
+    "enableVisuallySimilar": true,
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [
+      "kss-jewelry-minnie",
+      "kss-jewelry-novelty",
+      "kss-jewelry-trending",
+      "kss-jewelry-travel",
+      "kss-jewelry-top-rated",
+      "kss-jewelry-gift-cards"
+    ],
+    "parentCategoryId": "kss-jewelry",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-jewelry",
+        "name": "Jewelry"
+      },
+      {
+        "cgid": "kss-jewelry-shop",
+        "name": "Featured Shops"
+      }
+    ]
+  },
+  "kss-jewelry-minnie": {
+    "name": "Disney X Kate Spade New York",
+    "cgid": "kss-jewelry-minnie",
+    "url": "/shop/featured/disney-x-kate-spade-new-york",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://images.katespade.com/is/image/KateSpade/K9173_960",
+    "navImageUrl": "https://images.katespade.com/is/image/KateSpade/KD750_045",
+    "alternativeCategoryId": "kss-minnie",
+    "alternativeUrl": {},
+    "enableVisuallySimilar": true,
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-jewelry-shop",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-jewelry",
+        "name": "Jewelry"
+      },
+      {
+        "cgid": "kss-jewelry-shop",
+        "name": "Featured Shops"
+      },
+      {
+        "cgid": "kss-jewelry-minnie",
+        "name": "Disney X Kate Spade New York"
+      }
+    ]
+  },
+  "kss-jewelry-novelty": {
+    "name": "The Novelty Shop",
+    "cgid": "kss-jewelry-novelty",
+    "url": "/shop/featured/the-novelty-shop",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isEnableFitReviewLink": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://images.katespade.com/is/image/KateSpade/KB448_250",
+    "navImageUrl": "https://katespade.scene7.com/is/image/KateSpade/KK017_700_3",
+    "alternativeCategoryId": "kss-featured-hidden-novelty",
+    "alternativeUrl": {},
+    "enableVisuallySimilar": true,
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-jewelry-shop",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-jewelry",
+        "name": "Jewelry"
+      },
+      {
+        "cgid": "kss-jewelry-shop",
+        "name": "Featured Shops"
+      },
+      {
+        "cgid": "kss-jewelry-novelty",
+        "name": "The Novelty Shop"
+      }
+    ]
+  },
+  "kss-jewelry-trending": {
+    "name": "The Trend Shop",
+    "cgid": "kss-jewelry-trending",
+    "url": "/shop/featured-shops/trending",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/O0RU3110_143",
+    "alternativeCategoryId": "kss-featured-trending",
+    "alternativeUrl": {},
+    "enableVisuallySimilar": true,
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-jewelry-shop",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-jewelry",
+        "name": "Jewelry"
+      },
+      {
+        "cgid": "kss-jewelry-shop",
+        "name": "Featured Shops"
+      },
+      {
+        "cgid": "kss-jewelry-trending",
+        "name": "The Trend Shop"
+      }
+    ]
+  },
+  "kss-jewelry-travel": {
+    "name": "The Travel Shop",
+    "cgid": "kss-jewelry-travel",
+    "url": "/shop/accessories/travel-accessories",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isEnableFitReviewLink": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/O0RU0666_922",
+    "alternativeCategoryId": "kss-accessories-travel",
+    "alternativeUrl": {},
+    "enableVisuallySimilar": true,
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-jewelry-shop",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-jewelry",
+        "name": "Jewelry"
+      },
+      {
+        "cgid": "kss-jewelry-shop",
+        "name": "Featured Shops"
+      },
+      {
+        "cgid": "kss-jewelry-travel",
+        "name": "The Travel Shop"
+      }
+    ]
+  },
+  "kss-jewelry-top-rated": {
+    "name": "Top Rated",
+    "cgid": "kss-jewelry-top-rated",
+    "url": "/shop/featured-shops/top-rated",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/O0R00218_001",
+    "alternativeCategoryId": "kss-featured-top-rated",
+    "alternativeUrl": {},
+    "enableVisuallySimilar": true,
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-jewelry-shop",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-jewelry",
+        "name": "Jewelry"
+      },
+      {
+        "cgid": "kss-jewelry-shop",
+        "name": "Featured Shops"
+      },
+      {
+        "cgid": "kss-jewelry-top-rated",
+        "name": "Top Rated"
+      }
+    ]
+  },
+  "kss-jewelry-gift-cards": {
+    "name": "Gift Cards",
+    "cgid": "kss-jewelry-gift-cards",
+    "url": "/shop/gifts/gift-cards",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isEnableFitReviewLink": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/PFMU9995_001",
+    "alternativeCategoryId": "kss-gift-cards",
+    "alternativeUrl": {},
+    "enableVisuallySimilar": true,
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-jewelry-shop",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-jewelry",
+        "name": "Jewelry"
+      },
+      {
+        "cgid": "kss-jewelry-shop",
+        "name": "Featured Shops"
+      },
+      {
+        "cgid": "kss-jewelry-gift-cards",
+        "name": "Gift Cards"
+      }
+    ]
+  },
+  "kss-shoes-all": {
+    "name": "Shoes",
+    "cgid": "kss-shoes-all",
+    "url": "/shop/shoes/view-all",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isComparablePriceEnabled": false,
+    "isEnableFitReviewLink": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/KN181_300",
+    "alternativeCategoryId": "kss-shoes-view-all",
+    "alternativeUrl": {},
+    "enableVisuallySimilar": true,
+    "sizeBodyText": "Heel Height",
+    "sizeDefaultAsset": "_5, _3",
+    "sizeHeadline": "Measurements",
+    "materialsBodyText": "Materials",
+    "materialsDefaultAsset": "_6, _4",
+    "navFlyoutContentId": "kss-flyout-shoes-content",
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [
+      "kss-shoes-view-all",
+      "ks-shoes-boots",
+      "kss-shoes-sneakers",
+      "kss-shoes-flats",
+      "kss-shoes-heels",
+      "kss-shoes-sandals",
+      "kss-shoes-shop"
+    ],
+    "parentCategoryId": "root",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-shoes-all",
+        "name": "Shoes"
+      }
+    ],
+    "flyoutContent": {
+      "href": "/shop/featured/percentoff",
+      "pictureHtml": "<picture data-loading=\"lazy\" class=\"primary-image \" data-class=\"aspect-ratio-img w-100\" data-iesrc=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?$poi$&w=640\" data-alt=\"Black Friday Preview\"> <source media=\"(min-width: 1200px)\" type=\"image/webp\" data-srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1920&fmt=webp&$qlt_med$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=2240&fmt=webp&$qlt_med$ 2x\" srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1920&fmt=webp&$qlt_med$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=2240&fmt=webp&$qlt_med$ 2x\"> <source media=\"(min-width: 1200px)\" type=\"image/jpeg\" data-srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1920&fmt=jpg&$qlt_med$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=2240&fmt=jpg&$qlt_med$ 2x\" srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1920&fmt=jpg&$qlt_med$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=2240&fmt=jpg&$qlt_med$ 2x\"> <source media=\"(min-width: 769px)\" type=\"image/webp\" data-srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1400&fmt=webp&$qlt_med$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1920&fmt=webp&$qlt_med$ 2x\" srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1400&fmt=webp&$qlt_med$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1920&fmt=webp&$qlt_med$ 2x\"> <source media=\"(min-width: 769px)\" type=\"image/jpeg\" data-srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1400&fmt=jpg&$qlt_med$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1920&fmt=jpg&$qlt_med$ 2x\" srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1400&fmt=jpg&$qlt_med$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1920&fmt=jpg&$qlt_med$ 2x\"> <source media=\"(max-width: 768px)\" type=\"image/webp\" data-srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=768&fmt=webp&$qlt_very_low$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1536&fmt=webp&$qlt_very_low$ 2x\" srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=768&fmt=webp&$qlt_very_low$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1536&fmt=webp&$qlt_very_low$ 2x\"> <source media=\"(max-width: 768px)\" type=\"image/jpeg\" data-srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=768&fmt=jpg&$qlt_very_low$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1536&fmt=jpg&$qlt_very_low$ 2x\" srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=768&fmt=jpg&$qlt_very_low$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1536&fmt=jpg&$qlt_very_low$ 2x\"> <img alt=\"Black Friday Preview\"></picture>",
+      "styles": null
+    }
+  },
+  "kss-shoes-view-all": {
+    "name": "All Shoes",
+    "cgid": "kss-shoes-view-all",
+    "url": "/shop/shoes/view-all",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isComparablePriceEnabled": false,
+    "isEnableFitReviewLink": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/KN181_300",
+    "sizeChartID": "size-guide-shoes-content",
+    "enableVisuallySimilar": true,
+    "enableFocusFilter": false,
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-shoes-all",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-shoes-all",
+        "name": "Shoes"
+      },
+      {
+        "cgid": "kss-shoes-view-all",
+        "name": "All Shoes"
+      }
+    ]
+  },
+  "ks-shoes-boots": {
+    "name": "Boots",
+    "cgid": "ks-shoes-boots",
+    "url": "/shop/shoes/boots",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isComparablePriceEnabled": false,
+    "isEnableFitReviewLink": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/KM117_200",
+    "sizeChartID": "size-guide-shoes-content",
+    "enableVisuallySimilar": true,
+    "sizeBodyText": "Heel Height",
+    "sizeDefaultAsset": "5,3",
+    "sizeHeadline": "Measurements",
+    "materialsDefaultAsset": "6,4",
+    "materialsHeadline": "Materials",
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-shoes-all",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-shoes-all",
+        "name": "Shoes"
+      },
+      {
+        "cgid": "ks-shoes-boots",
+        "name": "Boots"
+      }
+    ]
+  },
+  "kss-shoes-sneakers": {
+    "name": "Sneakers",
+    "cgid": "kss-shoes-sneakers",
+    "url": "/shop/shoes/sneakers",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isComparablePriceEnabled": false,
+    "isEnableFitReviewLink": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/KN181_300",
+    "sizeChartID": "size-guide-shoes-content",
+    "enableVisuallySimilar": true,
+    "sizeBodyText": "Heel Height",
+    "sizeDefaultAsset": "5,3",
+    "sizeHeadline": "Measurements",
+    "materialsDefaultAsset": "6,4",
+    "materialsHeadline": "Materials",
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-shoes-all",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-shoes-all",
+        "name": "Shoes"
+      },
+      {
+        "cgid": "kss-shoes-sneakers",
+        "name": "Sneakers"
+      }
+    ]
+  },
+  "kss-shoes-flats": {
+    "name": "Flats",
+    "cgid": "kss-shoes-flats",
+    "url": "/shop/shoes/flats",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isComparablePriceEnabled": false,
+    "isEnableFitReviewLink": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/KN008_001",
+    "sizeChartID": "size-guide-shoes-content",
+    "enableVisuallySimilar": true,
+    "sizeBodyText": "Heel Height",
+    "sizeDefaultAsset": "5,3",
+    "sizeHeadline": "Measurements",
+    "materialsDefaultAsset": "6,4",
+    "materialsHeadline": "Materials",
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-shoes-all",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-shoes-all",
+        "name": "Shoes"
+      },
+      {
+        "cgid": "kss-shoes-flats",
+        "name": "Flats"
+      }
+    ]
+  },
+  "kss-shoes-heels": {
+    "name": "Heels",
+    "cgid": "kss-shoes-heels",
+    "url": "/shop/shoes/heels",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isComparablePriceEnabled": false,
+    "isEnableFitReviewLink": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/KM115_600",
+    "sizeChartID": "size-guide-shoes-content",
+    "enableVisuallySimilar": true,
+    "sizeBodyText": "Heel Height",
+    "sizeDefaultAsset": "5,3",
+    "sizeHeadline": "Measurements",
+    "materialsDefaultAsset": "6,4",
+    "materialsHeadline": "Materials",
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-shoes-all",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-shoes-all",
+        "name": "Shoes"
+      },
+      {
+        "cgid": "kss-shoes-heels",
+        "name": "Heels"
+      }
+    ]
+  },
+  "kss-shoes-sandals": {
+    "name": "Sandals",
+    "cgid": "kss-shoes-sandals",
+    "url": "/shop/shoes/sandals",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isComparablePriceEnabled": false,
+    "isEnableFitReviewLink": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/KL213_001",
+    "sizeChartID": "size-guide-shoes-content",
+    "enableVisuallySimilar": true,
+    "enableFocusFilter": false,
+    "sizeBodyText": "Heel Height",
+    "sizeDefaultAsset": "5,3",
+    "sizeHeadline": "Measurements",
+    "materialsDefaultAsset": "6,4",
+    "materialsHeadline": "Materials",
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-shoes-all",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-shoes-all",
+        "name": "Shoes"
+      },
+      {
+        "cgid": "kss-shoes-sandals",
+        "name": "Sandals"
+      }
+    ]
+  },
+  "kss-shoes-shop": {
+    "name": "Featured Shops",
+    "cgid": "kss-shoes-shop",
+    "url": "/shop/featured/the-novelty-shop",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isComparablePriceEnabled": false,
+    "isEnableFitReviewLink": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://images.katespade.com/is/image/KateSpade/WKR00556_001",
+    "navImageUrl": "https://katespade.scene7.com/is/image/KateSpade/KJ771_001",
+    "alternativeCategoryId": "kss-featured-hidden-novelty",
+    "alternativeUrl": {},
+    "enableVisuallySimilar": true,
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [
+      "kss-shoes-novelty",
+      "kss-shoes-trending",
+      "kss-shoes-travel",
+      "kss-shoes-essentials",
+      "kss-shoes-top-rated",
+      "kss-shoes-gift-cards"
+    ],
+    "parentCategoryId": "kss-shoes-all",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-shoes-all",
+        "name": "Shoes"
+      },
+      {
+        "cgid": "kss-shoes-shop",
+        "name": "Featured Shops"
+      }
+    ]
+  },
+  "kss-shoes-novelty": {
+    "name": "The Novelty Shop",
+    "cgid": "kss-shoes-novelty",
+    "url": "/shop/featured/the-novelty-shop",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isEnableFitReviewLink": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/K4075_001",
+    "navImageUrl": "https://katespade.scene7.com/is/image/KateSpade/KH118_960",
+    "alternativeCategoryId": "kss-featured-hidden-novelty",
+    "alternativeUrl": {},
+    "sizeChartID": "size-guide-shoes-content",
+    "enableVisuallySimilar": true,
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-shoes-shop",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-shoes-all",
+        "name": "Shoes"
+      },
+      {
+        "cgid": "kss-shoes-shop",
+        "name": "Featured Shops"
+      },
+      {
+        "cgid": "kss-shoes-novelty",
+        "name": "The Novelty Shop"
+      }
+    ]
+  },
+  "kss-shoes-trending": {
+    "name": "The Trend Shop",
+    "cgid": "kss-shoes-trending",
+    "url": "/shop/featured-shops/trending",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navImageUrl": "https://katespade.scene7.com/is/image/KateSpade/KD357_700",
+    "alternativeCategoryId": "kss-featured-trending",
+    "alternativeUrl": {},
+    "enableVisuallySimilar": true,
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-shoes-shop",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-shoes-all",
+        "name": "Shoes"
+      },
+      {
+        "cgid": "kss-shoes-shop",
+        "name": "Featured Shops"
+      },
+      {
+        "cgid": "kss-shoes-trending",
+        "name": "The Trend Shop"
+      }
+    ]
+  },
+  "kss-shoes-travel": {
+    "name": "The Travel Shop",
+    "cgid": "kss-shoes-travel",
+    "url": "/shop/accessories/travel-accessories",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isEnableFitReviewLink": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/KB415_001",
+    "alternativeCategoryId": "kss-accessories-travel",
+    "alternativeUrl": {},
+    "enableVisuallySimilar": true,
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-shoes-shop",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-shoes-all",
+        "name": "Shoes"
+      },
+      {
+        "cgid": "kss-shoes-shop",
+        "name": "Featured Shops"
+      },
+      {
+        "cgid": "kss-shoes-travel",
+        "name": "The Travel Shop"
+      }
+    ]
+  },
+  "kss-shoes-essentials": {
+    "name": "Winter Essentials",
+    "cgid": "kss-shoes-essentials",
+    "url": "/shop/featured-shops/winter-essentials",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isComparablePriceEnabled": false,
+    "isEnableFitReviewLink": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://images.katespade.com/is/image/KateSpade/KA154_020",
+    "navImageUrl": "https://katespade.scene7.com/is/image/KateSpade/KD717_200",
+    "alternativeCategoryId": "kss-featured-winter-essentials",
+    "alternativeUrl": {},
+    "sizeChartID": "size-guide-shoes-content",
+    "enableVisuallySimilar": true,
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-shoes-shop",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-shoes-all",
+        "name": "Shoes"
+      },
+      {
+        "cgid": "kss-shoes-shop",
+        "name": "Featured Shops"
+      },
+      {
+        "cgid": "kss-shoes-essentials",
+        "name": "Winter Essentials"
+      }
+    ]
+  },
+  "kss-shoes-top-rated": {
+    "name": "Top Rated",
+    "cgid": "kss-shoes-top-rated",
+    "url": "/shop/featured-shops/top-rated",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/K4075_001",
+    "alternativeCategoryId": "kss-featured-top-rated",
+    "alternativeUrl": {},
+    "enableVisuallySimilar": true,
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-shoes-shop",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-shoes-all",
+        "name": "Shoes"
+      },
+      {
+        "cgid": "kss-shoes-shop",
+        "name": "Featured Shops"
+      },
+      {
+        "cgid": "kss-shoes-top-rated",
+        "name": "Top Rated"
+      }
+    ]
+  },
+  "kss-shoes-gift-cards": {
+    "name": "Gift Cards",
+    "cgid": "kss-shoes-gift-cards",
+    "url": "/shop/gifts/gift-cards",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isEnableFitReviewLink": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/PFMU9995_001",
+    "alternativeCategoryId": "kss-gift-cards",
+    "alternativeUrl": {},
+    "enableVisuallySimilar": true,
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-shoes-shop",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-shoes-all",
+        "name": "Shoes"
+      },
+      {
+        "cgid": "kss-shoes-shop",
+        "name": "Featured Shops"
+      },
+      {
+        "cgid": "kss-shoes-gift-cards",
+        "name": "Gift Cards"
+      }
+    ]
+  },
+  "kss-clothing-all": {
+    "name": "Clothing",
+    "cgid": "kss-clothing-all",
+    "url": "/shop/clothing/view-all",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isEnableFitReviewLink": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/KN402_100",
+    "alternativeCategoryId": "kss-clothing-view-all",
+    "alternativeUrl": {},
+    "enableVisuallySimilar": true,
+    "sizeBodyText": "See How It Fits",
+    "sizeDefaultAsset": "_1",
+    "sizeHeadline": "Measurements",
+    "materialsBodyText": "Materials",
+    "materialsDefaultAsset": "_2",
+    "navFlyoutContentId": "kss-flyout-clothing-content",
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [
+      "kss-clothing-view-all",
+      "kss-clothing-jackets-coats",
+      "kss-clothing-matching-sets",
+      "kss-clothing-sweaters",
+      "kss-clothing-pajamas",
+      "kss-clothing-dresses-jumpsuits",
+      "kss-clothing-tops-blouses",
+      "kss-clothing-bottoms",
+      "kss-clothing-shop"
+    ],
+    "parentCategoryId": "root",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-clothing-all",
+        "name": "Clothing"
+      }
+    ],
+    "flyoutContent": {
+      "href": "/shop/featured/percentoff",
+      "pictureHtml": "<picture data-loading=\"lazy\" class=\"primary-image \" data-class=\"aspect-ratio-img w-100\" data-iesrc=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?$poi$&w=640\" data-alt=\"Black Friday Preview\"> <source media=\"(min-width: 1200px)\" type=\"image/webp\" data-srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1920&fmt=webp&$qlt_med$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=2240&fmt=webp&$qlt_med$ 2x\" srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1920&fmt=webp&$qlt_med$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=2240&fmt=webp&$qlt_med$ 2x\"> <source media=\"(min-width: 1200px)\" type=\"image/jpeg\" data-srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1920&fmt=jpg&$qlt_med$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=2240&fmt=jpg&$qlt_med$ 2x\" srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1920&fmt=jpg&$qlt_med$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=2240&fmt=jpg&$qlt_med$ 2x\"> <source media=\"(min-width: 769px)\" type=\"image/webp\" data-srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1400&fmt=webp&$qlt_med$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1920&fmt=webp&$qlt_med$ 2x\" srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1400&fmt=webp&$qlt_med$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1920&fmt=webp&$qlt_med$ 2x\"> <source media=\"(min-width: 769px)\" type=\"image/jpeg\" data-srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1400&fmt=jpg&$qlt_med$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1920&fmt=jpg&$qlt_med$ 2x\" srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1400&fmt=jpg&$qlt_med$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1920&fmt=jpg&$qlt_med$ 2x\"> <source media=\"(max-width: 768px)\" type=\"image/webp\" data-srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=768&fmt=webp&$qlt_very_low$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1536&fmt=webp&$qlt_very_low$ 2x\" srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=768&fmt=webp&$qlt_very_low$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1536&fmt=webp&$qlt_very_low$ 2x\"> <source media=\"(max-width: 768px)\" type=\"image/jpeg\" data-srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=768&fmt=jpg&$qlt_very_low$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1536&fmt=jpg&$qlt_very_low$ 2x\" srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=768&fmt=jpg&$qlt_very_low$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1536&fmt=jpg&$qlt_very_low$ 2x\"> <img alt=\"Black Friday Preview\"></picture>",
+      "styles": null
+    }
+  },
+  "kss-clothing-view-all": {
+    "name": "All Clothing",
+    "cgid": "kss-clothing-view-all",
+    "url": "/shop/clothing/view-all",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isComparablePriceEnabled": false,
+    "isEnableFitReviewLink": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/KN402_100",
+    "sizeChartID": "size-guide-clothing-content",
+    "enableVisuallySimilar": true,
+    "enableFocusFilter": false,
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-clothing-all",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-clothing-all",
+        "name": "Clothing"
+      },
+      {
+        "cgid": "kss-clothing-view-all",
+        "name": "All Clothing"
+      }
+    ]
+  },
+  "kss-clothing-jackets-coats": {
+    "name": "Jackets & Coats",
+    "cgid": "kss-clothing-jackets-coats",
+    "url": "/shop/clothing/jackets-coats",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/K25700U_106_2",
+    "sizeChartID": "size-guide-clothing-content",
+    "enableVisuallySimilar": true,
+    "sizeBodyText": "See How It Fits",
+    "sizeDefaultAsset": 1,
+    "sizeHeadline": "Measurements",
+    "materialsDefaultAsset": 2,
+    "materialsHeadline": "Materials",
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-clothing-all",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-clothing-all",
+        "name": "Clothing"
+      },
+      {
+        "cgid": "kss-clothing-jackets-coats",
+        "name": "Jackets & Coats"
+      }
+    ]
+  },
+  "kss-clothing-matching-sets": {
+    "name": "Matching Sets",
+    "cgid": "kss-clothing-matching-sets",
+    "url": "/shop/clothing/matching-sets",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/KM085_002",
+    "enableVisuallySimilar": false,
+    "sizeBodyText": "See How It Fits",
+    "sizeDefaultAsset": 1,
+    "sizeHeadline": "Measurements",
+    "materialsDefaultAsset": 2,
+    "materialsHeadline": "Materials",
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-clothing-all",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-clothing-all",
+        "name": "Clothing"
+      },
+      {
+        "cgid": "kss-clothing-matching-sets",
+        "name": "Matching Sets"
+      }
+    ]
+  },
+  "kss-clothing-sweaters": {
+    "name": "Sweaters & Sweatshirts",
+    "cgid": "kss-clothing-sweaters",
+    "url": "/shop/clothing/sweaters-cardigans",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/KJ645_001",
+    "sizeChartID": "size-guide-clothing-content",
+    "enableVisuallySimilar": true,
+    "sizeBodyText": "See How It Fits",
+    "sizeDefaultAsset": 1,
+    "sizeHeadline": "Measurements",
+    "materialsDefaultAsset": 2,
+    "materialsHeadline": "Materials",
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-clothing-all",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-clothing-all",
+        "name": "Clothing"
+      },
+      {
+        "cgid": "kss-clothing-sweaters",
+        "name": "Sweaters & Sweatshirts"
+      }
+    ]
+  },
+  "kss-clothing-pajamas": {
+    "name": "Pajamas",
+    "cgid": "kss-clothing-pajamas",
+    "url": "/shop/clothing/pajamas",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/KS92066F_202",
+    "sizeChartID": "size-guide-clothing-content",
+    "enableVisuallySimilar": true,
+    "sizeBodyText": "See How It Fits",
+    "sizeDefaultAsset": 1,
+    "sizeHeadline": "Measurements",
+    "materialsDefaultAsset": 2,
+    "materialsHeadline": "Materials",
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-clothing-all",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-clothing-all",
+        "name": "Clothing"
+      },
+      {
+        "cgid": "kss-clothing-pajamas",
+        "name": "Pajamas"
+      }
+    ]
+  },
+  "kss-clothing-dresses-jumpsuits": {
+    "name": "Dresses",
+    "cgid": "kss-clothing-dresses-jumpsuits",
+    "url": "/shop/clothing/dresses",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isComparablePriceEnabled": false,
+    "isEnableFitReviewLink": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/KL745_403",
+    "sizeChartID": "size-guide-clothing-content",
+    "enableVisuallySimilar": true,
+    "enableFocusFilter": false,
+    "sizeBodyText": "See How It Fits",
+    "sizeDefaultAsset": 1,
+    "sizeHeadline": "Measurements",
+    "materialsDefaultAsset": 2,
+    "materialsHeadline": "Materials",
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-clothing-all",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-clothing-all",
+        "name": "Clothing"
+      },
+      {
+        "cgid": "kss-clothing-dresses-jumpsuits",
+        "name": "Dresses"
+      }
+    ]
+  },
+  "kss-clothing-tops-blouses": {
+    "name": "Tops",
+    "cgid": "kss-clothing-tops-blouses",
+    "url": "/shop/clothing/tops-blouses",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/KG979_020",
+    "sizeChartID": "size-guide-clothing-content",
+    "enableVisuallySimilar": true,
+    "sizeBodyText": "See How It Fits",
+    "sizeDefaultAsset": 1,
+    "sizeHeadline": "Measurements",
+    "materialsDefaultAsset": 2,
+    "materialsHeadline": "Materials",
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-clothing-all",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-clothing-all",
+        "name": "Clothing"
+      },
+      {
+        "cgid": "kss-clothing-tops-blouses",
+        "name": "Tops"
+      }
+    ]
+  },
+  "kss-clothing-bottoms": {
+    "name": "Bottoms",
+    "cgid": "kss-clothing-bottoms",
+    "url": "/shop/clothing/skirts-pants",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/KM092_403",
+    "sizeChartID": "size-guide-clothing-content",
+    "enableVisuallySimilar": true,
+    "sizeBodyText": "See How It Fits",
+    "sizeDefaultAsset": 1,
+    "sizeHeadline": "Measurements",
+    "materialsDefaultAsset": 2,
+    "materialsHeadline": "Materials",
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-clothing-all",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-clothing-all",
+        "name": "Clothing"
+      },
+      {
+        "cgid": "kss-clothing-bottoms",
+        "name": "Bottoms"
+      }
+    ]
+  },
+  "kss-clothing-shop": {
+    "name": "Featured Shops",
+    "cgid": "kss-clothing-shop",
+    "url": "/shop/featured/the-novelty-shop",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isComparablePriceEnabled": false,
+    "isEnableFitReviewLink": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://images.katespade.com/is/image/KateSpade/KC384_100",
+    "navImageUrl": "https://katespade.scene7.com/is/image/KateSpade/KJ218_403_2",
+    "alternativeCategoryId": "kss-featured-hidden-novelty",
+    "alternativeUrl": {},
+    "enableVisuallySimilar": true,
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [
+      "kss-clothing-minnie",
+      "kss-clothing-novelty",
+      "kss-clothing-trending",
+      "kss-clothing-travel-shop",
+      "kss-clothing-top-rated",
+      "kss-clothing-gift-cards"
+    ],
+    "parentCategoryId": "kss-clothing-all",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-clothing-all",
+        "name": "Clothing"
+      },
+      {
+        "cgid": "kss-clothing-shop",
+        "name": "Featured Shops"
+      }
+    ]
+  },
+  "kss-clothing-minnie": {
+    "name": "Disney X Kate Spade New York",
+    "cgid": "kss-clothing-minnie",
+    "url": "/shop/featured/disney-x-kate-spade-new-york",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isEnableFitReviewLink": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/KS42465F_600",
+    "alternativeCategoryId": "kss-minnie",
+    "alternativeUrl": {},
+    "sizeChartID": "size-guide-clothing-content",
+    "enableVisuallySimilar": true,
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-clothing-shop",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-clothing-all",
+        "name": "Clothing"
+      },
+      {
+        "cgid": "kss-clothing-shop",
+        "name": "Featured Shops"
+      },
+      {
+        "cgid": "kss-clothing-minnie",
+        "name": "Disney X Kate Spade New York"
+      }
+    ]
+  },
+  "kss-clothing-novelty": {
+    "name": "The Novelty Shop",
+    "cgid": "kss-clothing-novelty",
+    "url": "/shop/featured/the-novelty-shop",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isEnableFitReviewLink": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://images.katespade.com/is/image/KateSpade/K7662_100",
+    "navImageUrl": "https://katespade.scene7.com/is/image/KateSpade/KG969_403_2",
+    "alternativeCategoryId": "kss-featured-hidden-novelty",
+    "alternativeUrl": {},
+    "sizeChartID": "size-guide-clothing-content",
+    "enableVisuallySimilar": true,
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-clothing-shop",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-clothing-all",
+        "name": "Clothing"
+      },
+      {
+        "cgid": "kss-clothing-shop",
+        "name": "Featured Shops"
+      },
+      {
+        "cgid": "kss-clothing-novelty",
+        "name": "The Novelty Shop"
+      }
+    ]
+  },
+  "kss-clothing-trending": {
+    "name": "The Trend Shop",
+    "cgid": "kss-clothing-trending",
+    "url": "/shop/featured-shops/trending",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/K9847_001",
+    "alternativeCategoryId": "kss-featured-trending",
+    "alternativeUrl": {},
+    "enableVisuallySimilar": true,
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-clothing-shop",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-clothing-all",
+        "name": "Clothing"
+      },
+      {
+        "cgid": "kss-clothing-shop",
+        "name": "Featured Shops"
+      },
+      {
+        "cgid": "kss-clothing-trending",
+        "name": "The Trend Shop"
+      }
+    ]
+  },
+  "kss-clothing-travel-shop": {
+    "name": "The Travel Shop",
+    "cgid": "kss-clothing-travel-shop",
+    "url": "/shop/accessories/travel-accessories",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "alternativeCategoryId": "kss-accessories-travel",
+    "alternativeUrl": {},
+    "sizeChartID": "size-guide-clothing-content",
+    "enableVisuallySimilar": true,
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-clothing-shop",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-clothing-all",
+        "name": "Clothing"
+      },
+      {
+        "cgid": "kss-clothing-shop",
+        "name": "Featured Shops"
+      },
+      {
+        "cgid": "kss-clothing-travel-shop",
+        "name": "The Travel Shop"
+      }
+    ]
+  },
+  "kss-clothing-top-rated": {
+    "name": "Top Rated",
+    "cgid": "kss-clothing-top-rated",
+    "url": "/shop/featured-shops/top-rated",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/OUM00067_429",
+    "alternativeCategoryId": "kss-featured-top-rated",
+    "alternativeUrl": {},
+    "enableVisuallySimilar": true,
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-clothing-shop",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-clothing-all",
+        "name": "Clothing"
+      },
+      {
+        "cgid": "kss-clothing-shop",
+        "name": "Featured Shops"
+      },
+      {
+        "cgid": "kss-clothing-top-rated",
+        "name": "Top Rated"
+      }
+    ]
+  },
+  "kss-clothing-gift-cards": {
+    "name": "Gift Cards",
+    "cgid": "kss-clothing-gift-cards",
+    "url": "/shop/gifts/gift-cards",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isEnableFitReviewLink": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/PFMU9995_001",
+    "alternativeCategoryId": "kss-gift-cards",
+    "alternativeUrl": {},
+    "enableVisuallySimilar": true,
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-clothing-shop",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-clothing-all",
+        "name": "Clothing"
+      },
+      {
+        "cgid": "kss-clothing-shop",
+        "name": "Featured Shops"
+      },
+      {
+        "cgid": "kss-clothing-gift-cards",
+        "name": "Gift Cards"
+      }
+    ]
+  },
+  "kss-accessories": {
+    "name": "Accessories",
+    "cgid": "kss-accessories",
+    "url": "/shop/accessories/view-all",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isEnableFitReviewLink": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/KM719_600",
+    "alternativeCategoryId": "kss-accessories-view-all",
+    "alternativeUrl": {},
+    "enableVisuallySimilar": true,
+    "sizeBodyText": "Measurements",
+    "sizeDefaultAsset": "_2",
+    "navFlyoutContentId": "kss-flyout-accessories-content",
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [
+      "kss-accessories-view-all",
+      "kss-accessories-keychains",
+      "kss-accessories-makeup-bags",
+      "kss-accessories-tech",
+      "kss-accessories-scarves",
+      "kss-accessories-sunglasses",
+      "kss-accessories-home",
+      "kss-accessories-pet",
+      "kss-accessories-fragrance",
+      "kss-accessories-shop"
+    ],
+    "parentCategoryId": "root",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-accessories",
+        "name": "Accessories"
+      }
+    ],
+    "flyoutContent": {
+      "href": "/shop/featured/percentoff",
+      "pictureHtml": "<picture data-loading=\"lazy\" class=\"primary-image \" data-class=\"aspect-ratio-img w-100\" data-iesrc=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?$poi$&w=640\" data-alt=\"Black Friday Preview\"> <source media=\"(min-width: 1200px)\" type=\"image/webp\" data-srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1920&fmt=webp&$qlt_med$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=2240&fmt=webp&$qlt_med$ 2x\" srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1920&fmt=webp&$qlt_med$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=2240&fmt=webp&$qlt_med$ 2x\"> <source media=\"(min-width: 1200px)\" type=\"image/jpeg\" data-srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1920&fmt=jpg&$qlt_med$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=2240&fmt=jpg&$qlt_med$ 2x\" srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1920&fmt=jpg&$qlt_med$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=2240&fmt=jpg&$qlt_med$ 2x\"> <source media=\"(min-width: 769px)\" type=\"image/webp\" data-srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1400&fmt=webp&$qlt_med$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1920&fmt=webp&$qlt_med$ 2x\" srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1400&fmt=webp&$qlt_med$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1920&fmt=webp&$qlt_med$ 2x\"> <source media=\"(min-width: 769px)\" type=\"image/jpeg\" data-srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1400&fmt=jpg&$qlt_med$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1920&fmt=jpg&$qlt_med$ 2x\" srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1400&fmt=jpg&$qlt_med$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1920&fmt=jpg&$qlt_med$ 2x\"> <source media=\"(max-width: 768px)\" type=\"image/webp\" data-srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=768&fmt=webp&$qlt_very_low$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1536&fmt=webp&$qlt_very_low$ 2x\" srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=768&fmt=webp&$qlt_very_low$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1536&fmt=webp&$qlt_very_low$ 2x\"> <source media=\"(max-width: 768px)\" type=\"image/jpeg\" data-srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=768&fmt=jpg&$qlt_very_low$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1536&fmt=jpg&$qlt_very_low$ 2x\" srcset=\"https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=768&fmt=jpg&$qlt_very_low$ 1x, https://cms-surprise.katespade.com/i/katespadesp/NOV2025_Flyout_Black-Friday-Preview?&w=1536&fmt=jpg&$qlt_very_low$ 2x\"> <img alt=\"Black Friday Preview\"></picture>",
+      "styles": null
+    }
+  },
+  "kss-accessories-view-all": {
+    "name": "All Accessories",
+    "cgid": "kss-accessories-view-all",
+    "url": "/shop/accessories/view-all",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isComparablePriceEnabled": false,
+    "isEnableFitReviewLink": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/KM719_600",
+    "enableVisuallySimilar": true,
+    "enableFocusFilter": false,
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-accessories",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-accessories",
+        "name": "Accessories"
+      },
+      {
+        "cgid": "kss-accessories-view-all",
+        "name": "All Accessories"
+      }
+    ]
+  },
+  "kss-accessories-keychains": {
+    "name": "Bag Charms, Coin Purses & Key Chains",
+    "cgid": "kss-accessories-keychains",
+    "url": "/shop/accessories/keychains",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isComparablePriceEnabled": false,
+    "isEnableFitReviewLink": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/KN234_601",
+    "enableVisuallySimilar": true,
+    "enableFocusFilter": false,
+    "sizeDefaultAsset": 2,
+    "sizeHeadline": "Measurements",
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-accessories",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-accessories",
+        "name": "Accessories"
+      },
+      {
+        "cgid": "kss-accessories-keychains",
+        "name": "Bag Charms, Coin Purses & Key Chains"
+      }
+    ]
+  },
+  "kss-accessories-makeup-bags": {
+    "name": "Makeup Bags & Pouches",
+    "cgid": "kss-accessories-makeup-bags",
+    "url": "/shop/accessories/makeup-bags-pouches",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/KL875_001",
+    "enableVisuallySimilar": true,
+    "sizeDefaultAsset": 2,
+    "sizeHeadline": "Measurements",
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-accessories",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-accessories",
+        "name": "Accessories"
+      },
+      {
+        "cgid": "kss-accessories-makeup-bags",
+        "name": "Makeup Bags & Pouches"
+      }
+    ]
+  },
+  "kss-accessories-tech": {
+    "name": "Travel & Tech Accessories",
+    "cgid": "kss-accessories-tech",
+    "url": "/shop/accessories/tech-accessories",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/KL875_001",
+    "enableVisuallySimilar": true,
+    "sizeDefaultAsset": 2,
+    "sizeHeadline": "Measurements",
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-accessories",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-accessories",
+        "name": "Accessories"
+      },
+      {
+        "cgid": "kss-accessories-tech",
+        "name": "Travel & Tech Accessories"
+      }
+    ]
+  },
+  "kss-accessories-scarves": {
+    "name": "Hats, Scarves & Gloves",
+    "cgid": "kss-accessories-scarves",
+    "url": "/shop/accessories/scarves",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isComparablePriceEnabled": false,
+    "isEnableFitReviewLink": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/KS1004529_153",
+    "enableVisuallySimilar": true,
+    "sizeDefaultAsset": 2,
+    "sizeHeadline": "Measurements",
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-accessories",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-accessories",
+        "name": "Accessories"
+      },
+      {
+        "cgid": "kss-accessories-scarves",
+        "name": "Hats, Scarves & Gloves"
+      }
+    ]
+  },
+  "kss-accessories-sunglasses": {
+    "name": "Sunglasses & Reading Glasses",
+    "cgid": "kss-accessories-sunglasses",
+    "url": "/shop/accessories/sunglasses-eyeglasses",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/MATERAOS_001",
+    "enableVisuallySimilar": true,
+    "sizeDefaultAsset": 2,
+    "sizeHeadline": "Measurements",
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-accessories",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-accessories",
+        "name": "Accessories"
+      },
+      {
+        "cgid": "kss-accessories-sunglasses",
+        "name": "Sunglasses & Reading Glasses"
+      }
+    ]
+  },
+  "kss-accessories-home": {
+    "name": "Home & Stationery",
+    "cgid": "kss-accessories-home",
+    "url": "/shop/accessories/home",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isEnableFitReviewLink": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/K256026_650",
+    "enableVisuallySimilar": true,
+    "sizeDefaultAsset": 2,
+    "sizeHeadline": "Measurements",
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-accessories",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-accessories",
+        "name": "Accessories"
+      },
+      {
+        "cgid": "kss-accessories-home",
+        "name": "Home & Stationery"
+      }
+    ]
+  },
+  "kss-accessories-pet": {
+    "name": "Pet Shop",
+    "cgid": "kss-accessories-pet",
+    "url": "/shop/accessories/pet-collection",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isComparablePriceEnabled": false,
+    "isEnableFitReviewLink": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navImageUrl": "https://images.katespade.com/is/image/KateSpade/K238248_974_1",
+    "sizeChartID": "size-guide-pet-content",
+    "enableVisuallySimilar": true,
+    "sizeDefaultAsset": 2,
+    "sizeHeadline": "Measurements",
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-accessories",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-accessories",
+        "name": "Accessories"
+      },
+      {
+        "cgid": "kss-accessories-pet",
+        "name": "Pet Shop"
+      }
+    ]
+  },
+  "kss-accessories-fragrance": {
+    "name": "Fragrance",
+    "cgid": "kss-accessories-fragrance",
+    "url": "/shop/accessories/fragrance",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isComparablePriceEnabled": false,
+    "isEnableFitReviewLink": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/KS001A03_000",
+    "enableVisuallySimilar": true,
+    "enableFocusFilter": false,
+    "sizeDefaultAsset": 2,
+    "sizeHeadline": "Measurements",
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-accessories",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-accessories",
+        "name": "Accessories"
+      },
+      {
+        "cgid": "kss-accessories-fragrance",
+        "name": "Fragrance"
+      }
+    ]
+  },
+  "kss-accessories-shop": {
+    "name": "Featured Shops",
+    "cgid": "kss-accessories-shop",
+    "url": "/shop/featured/the-novelty-shop",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isComparablePriceEnabled": false,
+    "isEnableFitReviewLink": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://images.katespade.com/is/image/KateSpade/KS1003970_430",
+    "navImageUrl": "https://katespade.scene7.com/is/image/KateSpade/KS1004271_683_2",
+    "alternativeCategoryId": "kss-featured-hidden-novelty",
+    "alternativeUrl": {},
+    "enableVisuallySimilar": true,
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [
+      "kss-accessories-minnie",
+      "kss-accessories-novelty",
+      "kss-accessories-top-rated",
+      "kss-accessories-gift-cards"
+    ],
+    "parentCategoryId": "kss-accessories",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-accessories",
+        "name": "Accessories"
+      },
+      {
+        "cgid": "kss-accessories-shop",
+        "name": "Featured Shops"
+      }
+    ]
+  },
+  "kss-accessories-minnie": {
+    "name": "Disney X Kate Spade New York",
+    "cgid": "kss-accessories-minnie",
+    "url": "/shop/featured/disney-x-kate-spade-new-york",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isEnableFitReviewLink": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://images.katespade.com/is/image/KateSpade/WLR00617_001",
+    "navImageUrl": "https://katespade.scene7.com/is/image/KateSpade/KG657_960",
+    "alternativeCategoryId": "kss-minnie",
+    "alternativeUrl": {},
+    "enableVisuallySimilar": true,
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-accessories-shop",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-accessories",
+        "name": "Accessories"
+      },
+      {
+        "cgid": "kss-accessories-shop",
+        "name": "Featured Shops"
+      },
+      {
+        "cgid": "kss-accessories-minnie",
+        "name": "Disney X Kate Spade New York"
+      }
+    ]
+  },
+  "kss-accessories-novelty": {
+    "name": "The Novelty Shop",
+    "cgid": "kss-accessories-novelty",
+    "url": "/shop/featured/the-novelty-shop",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isEnableFitReviewLink": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://images.katespade.com/is/image/KateSpade/KS1003975_652",
+    "navImageUrl": "https://katespade.scene7.com/is/image/KateSpade/KS1004357_992",
+    "alternativeCategoryId": "kss-featured-hidden-novelty",
+    "alternativeUrl": {},
+    "enableVisuallySimilar": true,
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-accessories-shop",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-accessories",
+        "name": "Accessories"
+      },
+      {
+        "cgid": "kss-accessories-shop",
+        "name": "Featured Shops"
+      },
+      {
+        "cgid": "kss-accessories-novelty",
+        "name": "The Novelty Shop"
+      }
+    ]
+  },
+  "kss-accessories-top-rated": {
+    "name": "Top Rated",
+    "cgid": "kss-accessories-top-rated",
+    "url": "/shop/featured-shops/top-rated",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/ALVIGSM_651_1",
+    "alternativeCategoryId": "kss-featured-top-rated",
+    "alternativeUrl": {},
+    "enableVisuallySimilar": true,
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-accessories-shop",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-accessories",
+        "name": "Accessories"
+      },
+      {
+        "cgid": "kss-accessories-shop",
+        "name": "Featured Shops"
+      },
+      {
+        "cgid": "kss-accessories-top-rated",
+        "name": "Top Rated"
+      }
+    ]
+  },
+  "kss-accessories-gift-cards": {
+    "name": "Gift Cards",
+    "cgid": "kss-accessories-gift-cards",
+    "url": "/shop/gifts/gift-cards",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isEnableFitReviewLink": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/PFMU9995_001",
+    "alternativeCategoryId": "kss-gift-cards",
+    "alternativeUrl": {},
+    "enableVisuallySimilar": true,
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "kss-accessories-shop",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-accessories",
+        "name": "Accessories"
+      },
+      {
+        "cgid": "kss-accessories-shop",
+        "name": "Featured Shops"
+      },
+      {
+        "cgid": "kss-accessories-gift-cards",
+        "name": "Gift Cards"
+      }
+    ]
+  },
+  "kss-clearance-L1": {
+    "name": "Clearance",
+    "cgid": "kss-clearance-L1",
+    "url": "/shop/deals/clearance",
+    "isOutletSubCategory": false,
+    "thredUpFlag": false,
+    "isComparablePriceEnabled": false,
+    "isEnableFitReviewLink": false,
+    "isSaleCategory": false,
+    "isSourceCodedSaleCategory": false,
+    "navFlyoutImage": "https://katespade.scene7.com/is/image/KateSpade/KF369_100",
+    "alternativeCategoryId": "kss-clearance",
+    "alternativeUrl": {},
+    "enableVisuallySimilar": true,
+    "showDesktopTier3Image": true,
+    "scheduledCustomerGroups": [],
+    "subCategories": [],
+    "parentCategoryId": "root",
+    "parentCategoryTree": [
+      {
+        "cgid": "kss-clearance-L1",
+        "name": "Clearance"
+      }
+    ]
+  },
+  "length": 143
+}

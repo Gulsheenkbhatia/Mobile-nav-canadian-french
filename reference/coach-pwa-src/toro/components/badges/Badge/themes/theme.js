@@ -1,0 +1,231 @@
+const allSelector = '& *'
+const plpBadgesStyles = {
+  textVariant: 'eyebrow-primary',
+  textSize: 'md',
+  [allSelector]: {
+    textTransform: 'uppercase',
+    letterSpacing: 1,
+    fontStretch: 'normal',
+    fontSize: 'xxs',
+  },
+  '.onlineExclusiveBadge': {
+    fontFamily: 'HelveticaLTPro-Bold,Arial,sans-serif',
+    mb: '3px',
+    fontSize: '10px',
+    fontWeight: 'normal',
+    backgroundColor: '#f0f0f0',
+    lineHeight: 1.4,
+    letterSpacing: '0.2px',
+    p: '3px 4px 1px',
+    borderRadius: '2px',
+  },
+}
+
+export default {
+  baseStyle: {
+    customBadge: ({ marketingContentBadge }) => ({
+      '&.custom-badge>div': {
+        fontFamily: 'HelveticaLTPro-Roman,Arial,sans-serif',
+        marginRight: !marketingContentBadge && '5px',
+        fontSize: 'var(--text-14)',
+        color: marketingContentBadge && 'var(--color-neutral-medium)',
+        fontWeight: 'var(--chakra-fontWeights-normal)',
+      },
+      '&.custom-badge label a:hover': {
+        textDecoration: 'underline',
+      },
+      '&.custom-badge label': {
+        display: 'inline-block',
+        marginBottom: 0,
+        backgroundColor: marketingContentBadge && 'initial',
+      },
+      '&.custom-badge a': {
+        textTransform: 'uppercase',
+      },
+      '&.custom-badge': {
+        div: {
+          fontWeight: 'var(--chakra-fontWeights-normal)',
+        },
+      },
+      '&.custom-badge label::after, &.custom-badge p::after': {
+        content: marketingContentBadge && '"|"',
+        color: 'var(--color-neutral-medium)',
+        opacity: '0.5',
+        paddingLeft: 'var(--spacing-2)',
+      },
+      '&.custom-badge:last-of-type label::after, &.custom-badge:last-of-type p::after': {
+        display: marketingContentBadge && 'none',
+      },
+    }),
+  },
+  size: {
+    sm: ({ theme }) => ({
+      position: 'absolute',
+      display: 'inline-block',
+      top: 'lg',
+      left: 'lg',
+      zIndex: '100',
+      lineHeight: theme.space.xl,
+      '& label, & a': {
+        margin: 's',
+        fontSize: 'xs',
+        letterSpacing: 1.25,
+        textTransform: 'uppercase',
+        fontFamily: theme.fontFamily.primaryNormal,
+        color: theme.colors.main.black,
+      },
+    }),
+  },
+  variants: {
+    onImagePLP: () => ({
+      paddingLeft: 0,
+      ...plpBadgesStyles,
+    }),
+    onImagePLPv3: ({ theme }) => ({
+      paddingLeft: 0,
+      ...plpBadgesStyles,
+      '&:has(.mw-custom-badge)': {
+        margin: '0!important',
+        padding: '0',
+        backgroundColor: 'transparent',
+      },
+      '& .mw-custom-badge': {
+        padding: '6px var(--spacing-3)',
+        borderRadius: '25px',
+        border: '1px solid rgba(0, 0, 0, 0.05)',
+        backgroundColor: 'rgba(255, 255, 255, 0.6)',
+        justifyContent: 'center',
+        flexDirection: 'column',
+        alignItems: 'center',
+        boxSizing: 'border-box',
+        position: 'relative',
+        lineHeight: '11px',
+        fontSize: '11px',
+        fontWeight: 'normal',
+        fontFamily: 'var(--font-face1-normal)',
+        display: 'flex!important',
+        textTransform: 'none',
+        [`@media (min-width: ${theme.breakpoints.md})`]: {
+          fontSize: '12px',
+          lineHeight: '17px',
+          padding: '5px var(--spacing-3)',
+          backgroundColor: 'rgba(255, 255, 255, 0.9)',
+        },
+      },
+      '& label.mw-custom-badge::after': {
+        content: '"▼"',
+        position: 'absolute',
+        height: '10px',
+        top: '20px',
+        color: 'rgba(255, 255, 255)!important',
+        textShadow: '0px 1px 0px rgba(0, 0, 0, 0.05)',
+        transform: 'scaleX(1.2) scaleY(0.7)',
+        padding: '0px!important',
+        [`@media (min-width: ${theme.breakpoints.md})`]: {
+          top: '22px',
+          opacity: '0.9',
+        },
+      },
+    }),
+    upperPlacementPLP: () => ({
+      paddingLeft: 0,
+      ...plpBadgesStyles,
+      [allSelector]: {
+        ...plpBadgesStyles[allSelector],
+        fontWeight: 'bold',
+      },
+    }),
+    lowerPlacementPLP: () => ({
+      ...plpBadgesStyles,
+    }),
+    onImagePDP: ({ theme }) => ({
+      paddingLeft: 0,
+      textVariant: 'eyebrow-primary',
+      top: 's',
+      zIndex: '10',
+      lineHeight: theme.space.xl,
+      '& label': {
+        margin: 's',
+        marginRight: 'var(--spacing-0)',
+        fontSize: {
+          base: theme.fontSizes.xxs,
+          md: theme.fontSizes.xs,
+        },
+        letterSpacing: 1,
+        textTransform: 'uppercase',
+        fontFamily: theme.fontFamily.primaryNormal,
+        color: theme.colors.main.black,
+      },
+    }),
+    onImageQV: ({ theme }) => ({
+      top: 's',
+      left: 'lg',
+      zIndex: '10',
+      lineHeight: theme.space.l,
+      '& label': {
+        margin: 'm',
+        marginRight: 0,
+        fontSize: 10,
+        letterSpacing: 1.25,
+        textTransform: 'uppercase',
+        fontFamily: theme.fontFamily.primaryNormal,
+        color: theme.colors.main.black,
+      },
+    }),
+    marketingContentPdp: ({ theme }) => ({
+      textVariant: 'eyebrow-primary',
+      textTransform: 'uppercase',
+      fontSize: 'xs',
+      textSize: 'md',
+      lineHeight: 'xl',
+      letterSpacing: 1,
+      mt: theme.space.s1,
+      mb: theme.space.s,
+      '& label': {
+        backgroundColor: theme.colors.main.inactive,
+        px: theme.space.s,
+        borderRadius: theme.borderRadius.default,
+      },
+    }),
+    inventoryStatus: ({ theme }) => ({
+      mb: 'mar',
+      fontSize: theme.fontSizes.xs,
+      lineHeight: 'xl',
+      letterSpacing: 0.2,
+      color: theme.colors.main.darkGray,
+    }),
+    promotionAndSale: ({ theme }) => ({
+      textVariant: 'body-text-secondary',
+      textSize: 'sm',
+      color: theme.colors.error.primary,
+      fontFamily: theme.fontFamily.secondaryNormal,
+      lineHeight: theme.lineHeights.xl,
+      fontSize: theme.fontSizes.sm,
+      fontWeight: '400',
+    }),
+    miniCart: ({ theme }) => ({
+      textVariant: 'body-primary',
+      textSize: 'sm',
+      color: theme.colors.error.primary,
+      lineHeight: theme.lineHeights.xl,
+    }),
+    marketingContentPdpV5: {
+      paddingInlineStart: 0,
+      paddingInlineEnd: 0,
+      background: 'transparent',
+      textTransform: 'none',
+      '& label': {
+        background: 'transparent',
+        padding: 0,
+        fontFamily: 'var(--font-face1-normal)',
+        fontWeight: '400',
+        fontSize: 'var(--text-12)',
+        lineHeight: 'var(--line-height-100)',
+        letterSpacing: 'var(--letter-spacing-xs)',
+        color: 'var(--color-neutral-medium)',
+      },
+    },
+  },
+  // The default size and variant values
+  defaultProps: {},
+}

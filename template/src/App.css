@@ -1,0 +1,139 @@
+.app {
+  padding: 12px 16px 24px;
+}
+
+.app__hint {
+  margin: 0 auto 16px;
+  max-width: 430px;
+  font-size: 13px;
+  line-height: 1.45;
+  color: #444;
+}
+
+.app__hint code {
+  font-size: 12px;
+  background: #ddd;
+  padding: 1px 6px;
+  border-radius: 4px;
+}
+
+.phone {
+  position: relative;
+  max-width: 430px;
+  min-height: min(100vh, 780px);
+  margin: 0 auto;
+  background: #fff;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.demoChrome {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  min-height: 52px;
+  padding: 8px 12px 10px;
+  background: #222;
+  color: #fff;
+}
+
+.demoChrome__tabs {
+  display: flex;
+  align-items: flex-end;
+  gap: 0;
+}
+
+.demoChrome__tab {
+  padding: 8px 14px 10px;
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  font-weight: 600;
+  border-radius: 10px 10px 0 0;
+}
+
+.demoChrome__tab--active {
+  background: #fff;
+  color: #111;
+}
+
+.demoChrome__tab--muted {
+  color: rgba(255, 255, 255, 0.85);
+  padding-bottom: 8px;
+}
+
+.demoChrome__actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.demoChrome__bag {
+  font-size: 11px;
+  font-weight: 600;
+  opacity: 0.9;
+}
+
+.demoChrome__menuSearch {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 36px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: #fff;
+  position: relative;
+}
+
+.demoChrome__burger {
+  position: absolute;
+  left: 4px;
+  width: 18px;
+  height: 2px;
+  background: currentColor;
+  border-radius: 1px;
+  box-shadow:
+    0 6px 0 currentColor,
+    0 12px 0 currentColor;
+}
+
+.demoChrome__glass {
+  position: absolute;
+  right: 2px;
+  bottom: 6px;
+  width: 14px;
+  height: 14px;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+}
+
+.demoChrome__glass::after {
+  content: '';
+  position: absolute;
+  right: -3px;
+  bottom: -3px;
+  width: 6px;
+  height: 2px;
+  background: currentColor;
+  transform: rotate(45deg);
+  border-radius: 1px;
+}
+
+.demoPage {
+  padding: 24px 20px 120px;
+}
+
+.demoPage__title {
+  margin: 0 0 12px;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.demoPage__body {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #333;
+}

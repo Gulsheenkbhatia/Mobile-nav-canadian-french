@@ -1,0 +1,54 @@
+const MutedIcon = ({
+  width = 40,
+  height = 40,
+  bgColor = 'white',
+  strokeColor = 'black',
+  fillColor = 'black',
+}: {
+  width?: number
+  height?: number
+  bgColor?: string
+  strokeColor?: string
+  fillColor?: string
+}) => {
+  return (
+    <svg
+      width={width}
+      height={height}
+      viewBox="0 0 40 40"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M0 20C0 8.95431 8.95431 0 20 0C31.0457 0 40 8.95431 40 20C40 31.0457 31.0457 40 20 40C8.95431 40 0 31.0457 0 20Z"
+        fill={bgColor}
+      />
+      <path
+        d="M16.8333 21.4H14.6V18.6H16.8333C17.0713 18.6 17.3029 18.5228 17.4933 18.38L17.1333 17.9L17.4933 18.38L20.4 16.2V23.8L17.4933 21.62L17.1333 22.1L17.4933 21.62C17.3029 21.4772 17.0713 21.4 16.8333 21.4Z"
+        stroke={strokeColor}
+        stroke-width="1.2"
+        stroke-linejoin="round"
+      />
+      <rect
+        x="25.9142"
+        y="17.8787"
+        width="1"
+        height="5"
+        rx="0.5"
+        transform="rotate(45 25.9142 17.8787)"
+        fill={fillColor}
+      />
+      <rect
+        x="26.6213"
+        y="21.4142"
+        width="1"
+        height="5"
+        rx="0.5"
+        transform="rotate(135 26.6213 21.4142)"
+        fill={fillColor}
+      />
+    </svg>
+  )
+}
+
+export default MutedIcon

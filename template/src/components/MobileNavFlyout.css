@@ -1,0 +1,269 @@
+/* Mobile nav flyout — Coach-style monochrome template */
+
+.mnf-root {
+  position: absolute;
+  inset: 0;
+  z-index: 50;
+  background: rgba(0, 0, 0, 0.35);
+  animation: mnf-fade-in 0.2s ease-out;
+}
+
+@keyframes mnf-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.mnf-panel {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  color: #111;
+  animation: mnf-slide-in 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+  box-shadow: -8px 0 32px rgba(0, 0, 0, 0.12);
+}
+
+@keyframes mnf-slide-in {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.mnf-topBar {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  background: #222;
+  color: #fff;
+  padding: 0 0 0 8px;
+  min-height: 56px;
+}
+
+.mnf-brandTabs {
+  display: flex;
+  align-items: flex-end;
+  gap: 0;
+}
+
+.mnf-brandTabs__tab {
+  padding: 10px 16px 12px;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+  border-radius: 12px 12px 0 0;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.mnf-brandTabs__tab--active {
+  background: #fff;
+  color: #111;
+}
+
+.mnf-close {
+  align-self: center;
+  margin: 0 10px 8px 8px;
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  color: #fff;
+}
+
+.mnf-close:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+.mnf-icon {
+  display: block;
+}
+
+.mnf-searchWrap {
+  padding: 14px 16px 10px;
+  background: #fff;
+}
+
+.mnf-search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: #fff;
+  border: 1px solid #ddd;
+  color: #666;
+}
+
+.mnf-search__input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  font-size: 16px;
+  min-width: 0;
+}
+
+.mnf-search__input:focus {
+  outline: none;
+}
+
+.mnf-tier1Wrap {
+  border-bottom: 1px solid #e5e5e5;
+  background: #fff;
+}
+
+.mnf-tier1 {
+  display: flex;
+  gap: 4px;
+  overflow-x: auto;
+  padding: 4px 12px 0;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.mnf-tier1::-webkit-scrollbar {
+  display: none;
+}
+
+.mnf-tier1__chip {
+  flex: 0 0 auto;
+  border: none;
+  background: transparent;
+  padding: 12px 12px 14px;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: #333;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -1px;
+}
+
+.mnf-tier1__chip--active {
+  font-weight: 700;
+  color: #000;
+  border-bottom-color: #000;
+}
+
+.mnf-tier1__chip:focus-visible {
+  outline: 2px solid #111;
+  outline-offset: 2px;
+  border-radius: 4px 4px 0 0;
+}
+
+.mnf-scroll {
+  flex: 1;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.mnf-tier2 {
+  padding: 4px 0 96px;
+}
+
+.mnf-row {
+  border-bottom: 1px solid #eee;
+}
+
+.mnf-row--link {
+  display: block;
+  padding: 18px 20px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.mnf-row--link:hover {
+  background: #fafafa;
+}
+
+.mnf-row__trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 18px 20px;
+  border: none;
+  background: #fff;
+  text-align: left;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.mnf-row__trigger:hover {
+  background: #fafafa;
+}
+
+.mnf-row__plus {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1;
+  transition: transform 0.2s ease;
+  color: #444;
+}
+
+.mnf-row__plus--open {
+  transform: rotate(45deg);
+}
+
+.mnf-subList {
+  list-style: none;
+  margin: 0;
+  padding: 0 12px 12px 28px;
+}
+
+.mnf-subLink {
+  display: block;
+  padding: 10px 8px;
+  font-size: 14px;
+  color: #333;
+  border-radius: 6px;
+}
+
+.mnf-subLink:hover {
+  background: #f4f4f4;
+}
+
+.mnf-footer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  padding: 10px 4px calc(10px + env(safe-area-inset-bottom, 0));
+  border-top: 1px solid #ddd;
+  background: #fff;
+}
+
+.mnf-footer__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 4px;
+  border: none;
+  background: transparent;
+  font-size: 10px;
+  letter-spacing: 0.02em;
+  color: #111;
+}
+
+.mnf-footer__item:hover {
+  opacity: 0.75;
+}
+
+.mnf-footerIcon {
+  color: #111;
+}
+
+.mnf-footer__label {
+  text-align: center;
+  line-height: 1.2;
+}

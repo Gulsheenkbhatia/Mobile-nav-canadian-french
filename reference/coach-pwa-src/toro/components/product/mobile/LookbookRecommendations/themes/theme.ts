@@ -1,0 +1,126 @@
+export default {
+  baseStyle: ({ theme }) => ({
+    rootWrapper: {
+      padding: 'var(--spacing-6) var(--spacing-3)',
+      backgroundColor: 'var(--color-neutral-light-1)',
+    },
+    sectionTitle: {
+      marginBottom: 'var(--spacing-6)',
+      ...theme.typography['text-display4-s'],
+      color: 'var(--color-primary)',
+    },
+    itemList: {
+      paddingLeft: 0,
+      marginTop: 0,
+      marginBottom: 'var(--spacing-4)',
+    },
+    itemListItem: {
+      listStyleType: 'none',
+      '&:not(:last-child)': {
+        marginBottom: 'var(--spacing-4)',
+      },
+    },
+    expandableButton: {
+      display: 'flex',
+      alignItems: 'center',
+      gap: '6px',
+      marginX: 'auto',
+      padding: '10px var(--spacing-3) 10px 14px',
+      height: '28px',
+      fontFamily: 'var(--font-face1-normal)',
+      fontSize: 'var(--text-10)',
+      lineHeight: '1.6',
+      letterSpacing: 'var(--letter-spacing-xs)',
+      fontWeight: '400',
+      textTransform: 'none',
+      textAlign: 'center',
+      color: 'var(--color-white-base)',
+      backgroundColor: 'var(--color-black-base)',
+      borderRadius: '130px',
+      '& svg': {
+        width: '19px',
+        height: '19px',
+      },
+      '&:hover:not(:disabled), &:active, &[disabled], &[disabled]:hover': {
+        backgroundColor: 'var(--color-black-base)',
+      },
+    },
+    itemRootWrapper: {
+      overflow: 'hidden',
+      display: 'block',
+      border: '1px solid var(--color-neutral-light-2)',
+      borderRadius: 'var(--border-radius-xl)',
+      boxShadow:
+        '0 251px 70px 0 rgba(0, 0, 0, 0.00), 0 161px 64px 0 rgba(0, 0, 0, 0.00), 0 90px 54px 0 rgba(0, 0, 0, 0.02), 0 40px 40px 0 rgba(0, 0, 0, 0.03), 0 10px 22px 0 rgba(0, 0, 0, 0.03)',
+    },
+    itemImageWrapper: {
+      display: 'flex',
+      flexDirection: 'row-reverse',
+      justifyContent: 'center',
+      backgroundColor: 'var(--color-neutral-light-1)',
+    },
+    itemImage: {
+      width: 'calc(50vw - var(--spacing-3))',
+      objectFit: 'cover',
+      aspectRatio: '4/5',
+    },
+    itemDetailsWrapper: {
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      padding: 'var(--spacing-4)',
+      backgroundColor: 'var(--color-neutral-light)',
+    },
+    itemTitle: {
+      maxWidth: '100%',
+      marginBottom: '5px',
+      overflow: 'hidden',
+      ...theme.typography['text-display4-xxs'],
+      color: 'var(--color-neutral-dark-1)',
+      textAlign: 'center',
+      textOverflow: 'ellipsis',
+      whiteSpace: 'nowrap',
+    },
+    tilePriceContainer: {
+      display: 'flex',
+      gap: '3px',
+      alignItems: 'baseline',
+    },
+    tilePriceText: {
+      order: 0,
+      ...theme.typography['text-display4-xxs'],
+      fontFamily: 'var(--font-face1-extended-normal)',
+      fontSize: 'var(--text-14)',
+      letterSpacing: 'var(--letter-spacing-xs)',
+      color: '#000003',
+    },
+    tileStrikeoffPrice: {
+      order: 1,
+      ...theme.typography['text-title1-m'],
+      fontFamily: 'var(--font-face1-extended-normal)',
+      textDecoration: 'line-through',
+      color: 'var(--color-neutral-1)',
+    },
+    tileDiscount: {
+      order: 2,
+      ...theme.typography['text-title1-m'],
+      fontFamily: 'var(--font-face1-extended-normal)',
+      color: 'var(--color-green-500)',
+    },
+    tilePriceWrapper: {
+      display: 'flex',
+      alignItems: 'baseline',
+      gap: '3px',
+    },
+    tileComparablePriceWrapper: {
+      order: 1,
+      display: 'flex',
+      gap: '3px',
+      '& p': {
+        ...theme.typography['text-title1-xs'],
+        fontFamily: 'var(--font-face1-extended-normal)',
+        color: 'var(--color-neutral-dark)',
+      },
+    },
+  }),
+}

@@ -1,0 +1,267 @@
+<svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="105"
+        height="90"
+        viewBox="0 0 105 90"
+        overflow="visible"
+>
+    <style>
+        #heart-main {
+        animation: main 800ms forwards;
+        -webkit-animation: main 800ms forwards;
+        }
+        #heart-fill {
+        animation: fill 800ms forwards;
+        transform-origin: 50% 50%;
+        animation-timing-function: cubic-bezier(0.83, 0, 0.17, 1);
+        -webkit-animation: fill 800ms forwards;
+        -webkit-transform-origin: 50% 50%;
+        -webkit-animation-timing-function: cubic-bezier(0.83, 0, 0.17, 1);
+        }
+        #heart-sm-group {
+        animation: group 100ms forwards;
+        transform-origin: 50% 50%;
+        animation-delay: 450ms;
+        -webkit-animation: group 100ms forwards;
+        -webkit-transform-origin: 50% 50%;
+        -webkit-animation-delay: 450ms;
+        }
+        #heart-sm-1 {
+        animation: heart-sm-1 1.5s forwards;
+        animation-delay: 350ms;
+        -webkit-animation: heart-sm-1 1.5s forwards;
+        -webkit-animation-delay: 350ms;
+        }
+        #heart-sm-2 {
+        animation: heart-sm-2 1.2s forwards;
+        animation-delay: 300ms;
+        -webkit-animation: heart-sm-2 1.2s forwards;
+        -webkit-animation-delay: 300ms;
+        }
+        #heart-sm-3 {
+        animation: heart-sm-3 1.2s forwards;
+        animation-delay: 300ms;
+        -webkit-animation: heart-sm-3 1.2s forwards;
+        -webkit-animation-delay: 300ms;
+        }
+        #heart-sm-4 {
+        animation: heart-sm-4 1.2s forwards;
+        animation-delay: 300ms;
+        -webkit-animation: heart-sm-4 1.2s forwards;
+        -webkit-animation-delay: 300ms;
+        }
+        #heart-sm-5 {
+        animation: heart-sm-5 1.2s forwards;
+        animation-delay: 300ms;
+        -webkit-animation: heart-sm-5 1.2s forwards;
+        -webkit-animation-delay: 300ms;
+        }
+        #heart-sm-6 {
+        animation: heart-sm-6 1.2s forwards;
+        animation-delay: 300ms;
+        -webkit-animation: heart-sm-6 1.2s forwards;
+        -webkit-animation-delay: 300ms;
+        }
+        #heart-sm-7 {
+        animation: heart-sm-7 1.2s forwards;
+        animation-delay: 300ms;
+        -webkit-animation: heart-sm-7 1.2s forwards;
+        -webkit-animation-delay: 300ms;
+        }
+        @keyframes main {
+        0% {
+        fill: '#000000';
+        }
+        100% {
+        fill: currentColor;
+        }
+        }
+        @keyframes fill {
+        0% {
+        transform: scale(0);
+        -webkit-transform: scale(0);
+        }
+        80% {
+        transform: scale(1.2);
+        -webkit-transform: scale(1.2);
+        }
+        100% {
+        transform: scale(1);
+        -webkit-transform: scale(1);
+        }
+        }
+        @keyframes group {
+        0% {
+        opacity: 0;
+        }
+        100% {
+        opacity: 0.8;
+        }
+        }
+        @keyframes heart-sm-1 {
+        0% {
+        transform: translate(0) scale(1);
+        -webkit-transform: translate(0) scale(1);
+        }
+        50% {
+        transform: translate(40px, -45px) scale(1);
+        -webkit-transform: translate(40px, -45px) scale(1);
+        }
+        80% {
+        transform: translate(110px, -60px) scale(0);
+        -webkit-transform: translate(110px, -60px) scale(0);
+        }
+        100% {
+        transform: translate(110px, -60px) scale(0);
+        -webkit-transform: translate(110px, -60px) scale(0);
+        }
+        }
+        @keyframes heart-sm-2 {
+        0% {
+        transform: translate(0) scale(1);
+        -webkit-transform: translate(0) scale(1);
+        }
+        50% {
+        transform: translate(40px, 15px) scale(1);
+        -webkit-transform: translate(40px, 15px) scale(1);
+        }
+        85% {
+        transform: translate(140px, -10px) scale(0);
+        -webkit-transform: translate(140px, -10px) scale(0);
+        }
+        100% {
+        transform: translate(140px, -10px) scale(0);
+        -webkit-transform: translate(140px, -10px) scale(0);
+        }
+        }
+        @keyframes heart-sm-3 {
+        0% {
+        transform: translate(0) scale(1);
+        -webkit-transform: translate(0) scale(1);
+        }
+        50% {
+        transform: translate(20px, 45px) scale(1);
+        -webkit-transform: translate(20px, 45px) scale(1);
+        }
+        100% {
+        transform: translate(130px, 65px) scale(0);
+        -webkit-transform: translate(130px, 65px) scale(0);
+        }
+        }
+        @keyframes heart-sm-4 {
+        0% {
+        transform: translate(0) scale(1);
+        -webkit-transform: translate(0) scale(1);
+        }
+        50% {
+        transform: translate(-20px, 55px) scale(1);
+        -webkit-transform: translate(-20px, 55px) scale(1);
+        }
+        85% {
+        transform: translate(-10px, 65px) scale(0);
+        -webkit-transform: translate(-10px, 65px) scale(0);
+        }
+        100% {
+        transform: translate(-10px, 65px) scale(0);
+        -webkit-transform: translate(-10px, 65px) scale(0);
+        }
+        }
+        @keyframes heart-sm-5 {
+        0% {
+        transform: translate(0) scale(1);
+        -webkit-transform: translate(0) scale(1);
+        }
+        50% {
+        transform: translate(-50px, 40px) scale(1);
+        -webkit-transform: translate(-50px, 40px) scale(1);
+        }
+        95% {
+        transform: translate(-50px, 5px) scale(0);
+        -webkit-transform: translate(-50px, 5px) scale(0);
+        }
+        100% {
+        transform: translate(-50px, 5px) scale(0);
+        -webkit-transform: translate(-50px, 5px) scale(0);
+        }
+        }
+        @keyframes heart-sm-6 {
+        0% {
+        transform: translate(0) scale(1);
+        -webkit-transform: translate(0) scale(1);
+        }
+        50% {
+        transform: translate(-45px, 0) scale(1);
+        -webkit-transform: translate(-45px, 0) scale(1);
+        }
+        85% {
+        transform: translate(-15px, -50px) scale(0);
+        -webkit-transform: translate(-15px, -50px) scale(0);
+        }
+        100% {
+        transform: translate(-15px, -50px) scale(0);
+        -webkit-transform: translate(-15px, -50px) scale(0);
+        }
+        }
+        @keyframes heart-sm-7 {
+        0% {
+        transform: translate(0) scale(1);
+        -webkit-transform: translate(0) scale(1);
+        }
+        50% {
+        transform: translate(-10px, -45px) scale(1);
+        -webkit-transform: translate(-10px, -45px) scale(1);
+        }
+        95% {
+        transform: translate(40px, -70px) scale(0);
+        -webkit-transform: translate(40px, -70px) scale(0);
+        }
+        100% {
+        transform: translate(40px, -70px) scale(0);
+        -webkit-transform: translate(40px, -70px) scale(0);
+        }
+        }
+    </style>
+    <g opacity="0" fill="currentColor" id="heart-sm-group">
+        <path
+                d="M72.6771 21.5652C71.2724 21.5652 69.9928 22.1016 69.0315 22.9803C68.0702 22.1016 66.7906 21.5652 65.3859 21.5652C62.4002 21.5652 59.9805 23.9849 59.9805 26.9706C59.9805 28.6904 60.5786 30.1151 61.7099 31.4669C62.8411 32.8186 69.0283 37.6356 69.0283 37.6356C69.0283 37.6356 75.2531 32.8395 76.3595 31.4348C77.4234 30.0838 78.0825 28.7008 78.0825 26.9706C78.0825 23.9849 75.6628 21.5652 72.6771 21.5652Z"
+                id="heart-sm-1"
+        />
+        <path
+                d="M74.2317 46.8813C72.8271 46.8813 71.5475 47.4177 70.5862 48.2964C69.6249 47.4177 68.3453 46.8813 66.9406 46.8813C63.9549 46.8813 61.5352 49.301 61.5352 52.2868C61.5352 54.0065 62.1333 55.4313 63.2645 56.783C64.3958 58.1348 70.583 62.9517 70.583 62.9517C70.583 62.9517 76.8078 58.1556 77.9142 56.751C78.9781 55.4 79.6372 54.017 79.6372 52.2868C79.6372 49.301 77.2175 46.8813 74.2317 46.8813Z"
+                id="heart-sm-2"
+        />
+        <path
+                d="M65.7903 61.7605C64.3857 61.7605 63.1061 62.2969 62.1448 63.1756C61.1835 62.2969 59.9039 61.7605 58.4992 61.7605C55.5134 61.7605 53.0938 64.1802 53.0938 67.1659C53.0938 68.8857 53.6919 70.3104 54.8231 71.6622C55.9544 73.0139 62.1416 77.8309 62.1416 77.8309C62.1416 77.8309 68.3664 73.0348 69.4728 71.6301C70.5367 70.2791 71.1958 68.8961 71.1958 67.1659C71.1958 64.1802 68.7761 61.7605 65.7903 61.7605Z"
+                id="heart-sm-3"
+        />
+        <path
+                d="M46.0267 65.0916C44.622 65.0916 43.3424 65.6279 42.3811 66.5067C41.4198 65.6279 40.1402 65.0916 38.7355 65.0916C35.7498 65.0916 33.3301 67.5112 33.3301 70.497C33.3301 72.2167 33.9282 73.6415 35.0595 74.9932C36.1907 76.345 42.3779 81.1619 42.3779 81.1619C42.3779 81.1619 48.6027 76.3658 49.7091 74.9612C50.7731 73.6102 51.4321 72.2272 51.4321 70.497C51.4321 67.5112 49.0124 65.0916 46.0267 65.0916Z"
+                id="heart-sm-4"
+        />
+        <path
+                d="M34.1478 52.4331C32.7431 52.4331 31.4635 52.9695 30.5022 53.8482C29.5409 52.9695 28.2613 52.4331 26.8566 52.4331C23.8709 52.4331 21.4512 54.8528 21.4512 57.8385C21.4512 59.5583 22.0493 60.983 23.1806 62.3348C24.3118 63.6865 30.499 68.5035 30.499 68.5035C30.499 68.5035 36.7238 63.7074 37.8302 62.3027C38.8941 60.9518 39.5532 59.5687 39.5532 57.8385C39.5532 54.8528 37.1335 52.4331 34.1478 52.4331Z"
+                id="heart-sm-5"
+        />
+        <path
+                d="M34.7005 34.0015C33.2958 34.0015 32.0162 34.5378 31.0549 35.4166C30.0936 34.5378 28.814 34.0015 27.4093 34.0015C24.4236 34.0015 22.0039 36.4212 22.0039 39.4069C22.0039 41.1267 22.602 42.5514 23.7333 43.9031C24.8646 45.2549 31.0517 50.0718 31.0517 50.0718C31.0517 50.0718 37.2765 45.2757 38.383 43.8711C39.4469 42.5201 40.1059 41.1371 40.1059 39.4069C40.1059 36.4212 37.6862 34.0015 34.7005 34.0015Z"
+                id="heart-sm-6"
+        />
+        <path
+                d="M48.6907 17.7898C47.2861 17.7898 46.0065 18.3262 45.0452 19.2049C44.0838 18.3262 42.8042 17.7898 41.3996 17.7898C38.4138 17.7898 35.9941 20.2095 35.9941 23.1952C35.9941 24.915 36.5922 26.3397 37.7235 27.6915C38.8548 29.0432 45.0419 33.8602 45.0419 33.8602C45.0419 33.8602 51.2668 29.0641 52.3732 27.6594C53.4371 26.3084 54.0962 24.9254 54.0962 23.1952C54.0962 20.2095 51.6765 17.7898 48.6907 17.7898Z"
+                id="heart-sm-7"
+        />
+    </g>
+    <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M93.1489 6.54565C81.4445 -3.3175 63.196 -1.81681 52 9.58158C40.804 -1.81681 22.5555 -3.31751 10.8511 6.54563C-4.3731 19.3608 -2.14674 40.257 8.70864 51.3346L44.2219 87.5142C46.2458 89.5826 49.122 90.7328 52 90.7328C54.878 90.7328 57.7542 89.5826 59.7781 87.5143L95.2914 51.3346C106.147 40.2571 108.373 19.3608 93.1489 6.54565ZM52 90.7328C52.0024 90.7329 52.0051 90.7326 52.0073 90.7326C52.0175 90.7328 52.0227 90.7328 52 90.7328C51.9774 90.7328 51.9824 90.7328 51.9926 90.7326C51.995 90.7326 51.9973 90.7329 52 90.7328ZM52 90.7316C51.9722 90.732 51.9861 90.7326 52 90.7328C52.0137 90.7326 52.0274 90.732 52 90.7316ZM58.6566 79.0362C56.92 80.6743 54.4694 81.5845 52 81.5845C49.5306 81.5845 47.08 80.6743 45.3434 79.0362L15.3343 50.3821C6.01986 41.6087 2.27117 22.6937 15.3342 12.5441C25.3771 4.73257 42.3933 8.8664 52 17.8939C61.6067 8.8664 78.6229 4.73259 88.6658 12.5441C101.729 22.6937 97.9801 41.6087 88.6658 50.3821L58.6566 79.0362Z"
+            fill="#000000"
+            id="heart-main"
+            transform="translate(0.5, 1)"
+    />
+    <path
+            d="M52.3515 10.5735C63.5525 -0.824869 81.63 -2.30089 93.3344 7.53757C108.578 20.3725 106.312 41.2687 95.4769 52.3413L59.9636 88.5309C57.9397 90.5894 55.2493 91.7248 52.3515 91.7248C49.4736 91.7248 46.7634 90.5746 44.7395 88.5062L9.22622 52.3265C-1.62916 41.249 -3.85552 20.3527 11.3687 7.53757C23.0731 -2.32557 41.1556 -0.824869 52.3515 10.5735Z"
+            fill="currentColor"
+            id="heart-fill"
+    />
+</svg>

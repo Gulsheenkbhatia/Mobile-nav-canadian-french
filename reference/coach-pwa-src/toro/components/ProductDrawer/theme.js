@@ -1,0 +1,65 @@
+export default {
+  parts: [
+    'overlay',
+    'content',
+    'closeButtonContainer',
+    'closeButton',
+    'loadingContainer',
+    'notFoundContainer',
+  ],
+  baseStyle: ({ theme }) => ({
+    overlay: {
+      bg: 'none',
+      backdropFilter: 'blur(4px)',
+    },
+    content: {
+      position: 'relative',
+      display: 'flex',
+      flexDirection: 'column',
+      backgroundColor: 'var(--color-white-base)',
+      width: '100%',
+      maxWidth: '100%',
+      minHeight: '25vh',
+      maxHeight: '75vh',
+      borderTopRadius: 'var(--border-radius-m)',
+      [`@media (min-width: ${theme.breakpoints.md})`]: {
+        width: '33.333333vw',
+        maxWidth: '33.333333vw',
+        height: 'auto',
+        maxHeight: '100vh',
+        borderTopRadius: '0',
+      },
+    },
+    closeButtonContainer: {
+      zIndex: theme.zIndex.popover,
+      width: 'fit-content',
+      position: 'fixed',
+      left: '50%',
+      top: 'auto',
+      bottom: '16px',
+      transform: 'translateX(-50%)',
+      [`@media (min-width: ${theme.breakpoints.md})`]: {
+        position: 'absolute',
+        left: '-64px',
+        top: '50%',
+        bottom: 'auto',
+        transform: 'translateY(-50%)',
+      },
+    },
+    closeButton: {
+      width: '48px',
+      height: '48px',
+      borderRadius: 'var(--border-radius-full)',
+      backgroundColor: 'var(--color-white-base)',
+      color: 'var(--color-black-base)',
+    },
+    loadingContainer: {
+      textAlign: 'center',
+      py: theme.space.l,
+    },
+    notFoundContainer: {
+      textAlign: 'center',
+      py: theme.space.xl,
+    },
+  }),
+}

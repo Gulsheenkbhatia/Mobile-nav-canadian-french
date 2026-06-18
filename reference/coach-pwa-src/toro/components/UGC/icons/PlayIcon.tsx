@@ -1,0 +1,35 @@
+const PlayIcon = ({
+  width = 40,
+  height = 40,
+  bgColor = 'white',
+  strokeColor = 'black',
+}: {
+  width?: number
+  height?: number
+  bgColor?: string
+  strokeColor?: string
+}) => {
+  return (
+    <svg
+      width={width}
+      height={height}
+      viewBox="0 0 40 40"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M0 20C0 8.95431 8.95431 0 20 0C31.0457 0 40 8.95431 40 20C40 31.0457 31.0457 40 20 40C8.95431 40 0 31.0457 0 20Z"
+        fill={bgColor}
+      />
+      <path
+        d="M16.65 23.7398V15.8317C16.65 15.5548 16.9563 15.3875 17.1893 15.5373L23.34 19.4913C23.5543 19.6291 23.5543 19.9424 23.34 20.0801L17.1893 24.0342C16.9563 24.1839 16.65 24.0167 16.65 23.7398Z"
+        stroke={strokeColor}
+        stroke-width="1.3"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+  )
+}
+
+export default PlayIcon

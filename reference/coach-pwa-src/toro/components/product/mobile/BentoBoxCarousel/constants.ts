@@ -1,0 +1,1 @@
+export const MIN_MEDIA_ITEMS_REQUIRED = 3

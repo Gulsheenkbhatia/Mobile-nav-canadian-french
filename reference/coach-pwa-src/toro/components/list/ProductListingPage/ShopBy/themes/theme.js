@@ -1,0 +1,616 @@
+export default {
+  parts: [
+    'rootContainer',
+    'headerContainer',
+    'headerText',
+    'totalText',
+    'sortFilterContainer',
+    'seoContainer',
+    'topActionsContainer',
+    'filterContainer',
+    'listingContainer',
+    'productListingContainer',
+    'bottomContentSlotWrapper',
+    'topBannerContainer',
+    'contentContainer',
+  ],
+  baseStyle: ({ theme, hasContentAsset, shouldRenderIcons, hasExposedFilters }) => ({
+    rootContainer: {
+      backgroundColor: 'var(--color-neutral-light-1)',
+    },
+    topBannerContainer: {
+      paddingTop: 'var(--spacing-3)',
+    },
+    contentContainer: {
+      [`@media (min-width: ${theme.breakpoints.md})`]: {
+        mx: 'auto',
+        maxWidth: '1344px',
+        width: '100%',
+      },
+    },
+    headerContainer: {
+      width: '100%',
+      backgroundColor: 'var(--color-neutral-light-1)',
+      justifyContent: 'space-between',
+      alignItems: 'center',
+      py: 'var(--spacing-4)',
+      px: 'var(--spacing-3)',
+      [`@media (min-width: ${theme.breakpoints.md})`]: {
+        justifyContent: 'flex-start',
+        gap: 'var(--spacing-3)',
+        p: 'var(--spacing-10) 0 0 0',
+        alignItems: 'baseline',
+      },
+    },
+    headerText: {
+      ...theme.typography['text-display4-xxs'],
+      fontWeight: '400',
+      [`@media (min-width: ${theme.breakpoints.md})`]: {
+        ...theme.typography['text-display4-s'],
+        fontWeight: 700,
+      },
+    },
+    topActionsContainer: {
+      justifyContent: 'center',
+      [`@media (min-width: ${theme.breakpoints.md})`]: {
+        justifyContent: 'flex-start',
+        width: '100%',
+        gap: 'var(--spacing-4)',
+        margin: 'var(--spacing-6) 0',
+      },
+    },
+    filterContainer: {
+      flex: 1,
+      minWidth: 0,
+      display: 'flex',
+      flexDirection: 'column',
+    },
+    totalText: {
+      ...theme.typography['text-body1-s'],
+      color: 'var(--color-neutral-medium)',
+      fontWeight: '400',
+      [`@media (min-width: ${theme.breakpoints.md})`]: {
+        ...theme.typography['text-display3-xxs'],
+        lineHeight: 'var(--line-height-120)',
+        letterSpacing: 'var(--letter-spacing-s)',
+      },
+    },
+    listingContainer: {
+      [`@media (min-width: ${theme.breakpoints.md})`]: {
+        width: '100%',
+      },
+    },
+    sortFilterContainer: {
+      position: hasExposedFilters ? 'sticky' : 'relative',
+      top: hasExposedFilters ? '0px' : 'unset',
+      zIndex: 'sticky',
+      backgroundColor: 'var(--color-neutral-light-1)',
+      py: 'var(--spacing-4)',
+    },
+    recommendedCategoriesWrapper: {
+      paddingTop: 'var(--spacing-3)',
+      backgroundColor: 'var(--color-neutral-light-1)',
+      '#recommended-categories-plp': {
+        marginTop: 0,
+      },
+    },
+    mobileBreadcrumbContainer: {
+      mt: 'var(--spacing-1)',
+      overflowX: 'auto',
+      width: '100%',
+      [`@media (min-width: ${theme.breakpoints.md})`]: {
+        marginTop: 0,
+      },
+    },
+    mobileBreadcrumbText: {
+      fontSize: '12px',
+      [`@media (min-width: ${theme.breakpoints.md})`]: {
+        display: 'flex',
+        justifyContent: 'center',
+        '.breadcrumb-link': {
+          whiteSpace: 'nowrap',
+        },
+      },
+    },
+    mobileBottomBreadcrumbWrapper: {
+      px: 'var(--spacing-3)',
+      pb: 'var(--spacing-8)',
+      position: 'relative',
+      backgroundColor: 'var(--color-neutral-light-1)',
+      '& > ::before': {
+        content: "''",
+        width: '100%',
+        display: 'block',
+        borderTop: '1px solid var(--color-neutral-light-2)',
+        pt: 'var(--spacing-8)',
+        px: 'var(--spacing-3)',
+        [`@media (min-width: ${theme.breakpoints.md})`]: {
+          display: 'none',
+        },
+      },
+      '& > ::after': {
+        content: "''",
+        width: '100%',
+        zIndex: '-1',
+        position: 'absolute',
+        height: '60px',
+        backgroundColor: 'var(--color-neutral-light-1)',
+        left: 0,
+        top: '-60px',
+        [`@media (min-width: ${theme.breakpoints.md})`]: {
+          display: 'none',
+        },
+      },
+      [`@media (min-width: ${theme.breakpoints.md})`]: {
+        pb: '20px',
+      },
+    },
+    toggleContainerWrapper: {
+      backgroundColor: 'var(--color-neutral-light-1)',
+      padding: 'var(--spacing-3)',
+      width: '100%',
+      [`@media (min-width: ${theme.breakpoints.md})`]: {
+        padding: '0',
+        width: 'auto',
+      },
+    },
+    toggleContainer: {
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      fontSize: 'var(--text-14)',
+      padding: '3px var(--spacing-1) var(--spacing-1) var(--spacing-1)',
+      borderRadius: '51px',
+      background: 'var(--color-white-base)',
+      border: '1px solid var(--color-neutral-light-2)',
+      width: '100%',
+      gap: 'var(--spacing-1)',
+      [`@media (min-width: ${theme.breakpoints.md})`]: {
+        height: '48px',
+        whiteSpace: 'nowrap',
+        padding: '3px',
+        justifyContent: 'center',
+        alignItems: 'center',
+        gap: 0,
+      },
+    },
+    circularProgressContainer: {
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      marginLeft: 'var(--spacing-2)',
+    },
+    toggleLink: {
+      ...theme.typography['text-link2-s'],
+      width: '100%',
+      fontWeight: 'normal',
+      textDecoration: 'none',
+      padding: '7px 17.5px 6px 18px',
+      fontSize: 'var(--text-12)',
+      letterSpacing: '0.2px',
+      fontFeatureSettings: '"liga" off, "clig" off',
+      lineHeight: '15px',
+      color: 'var(--color-neutral-dark)',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      alignSelf: 'stretch',
+      textAlign: 'center',
+      [`@media (min-width: ${theme.breakpoints.md})`]: {
+        padding: 'var(--spacing-4) var(--spacing-6) 13px var(--spacing-6)',
+        lineHeight: 'var(--line-height-140)',
+      },
+      '&.active': {
+        lineHeight: '15px',
+        borderRadius: '52px',
+        backgroundColor: 'var(--color-neutral-dark)',
+        color: 'var(--color-white-base)',
+        [`@media (min-width: ${theme.breakpoints.md})`]: {
+          height: 'auto',
+          padding: 'var(--spacing-4) var(--spacing-6) 14px var(--spacing-6)',
+          fontSize: 'var(--text-14)',
+          lineHeight: 'var(--line-height-100)',
+          letterSpacing: 'var(--letter-spacing-xs)',
+        },
+      },
+    },
+    activeFiltersV2Wrapper: {
+      margin: 'var(--spacing-3)',
+    },
+    seoContainer: {
+      width: '100%',
+      backgroundColor: 'var(--color-neutral-light-1)',
+    },
+    filterOption: {
+      fontSize: '12px',
+    },
+    mobileFilterButton: {
+      borderRadius: '130px',
+      border: '1px solid rgba(0, 0, 0, 0.08)',
+      position: 'relative',
+      ml: 'var(--spacing-3)',
+      background: theme.colors.main.white,
+      p: '10px 14px',
+      '> svg path': {
+        strokeWidth: '0.75px',
+      },
+    },
+    filterButtonText: {
+      ...theme.typography['text-body1-m'],
+      fontWeight: '400',
+      ml: 'var(--spacing-2)',
+      color: theme.colors.main.primary,
+      textTransform: 'none',
+      fontSize: 'var(--text-10)',
+    },
+    categorySection: {
+      backgroundColor: 'var(--color-neutral-light-1)',
+      paddingY: 'var(--spacing-3)',
+      [`@media (min-width: ${theme.breakpoints.md})`]: {
+        padding: 'var(--spacing-12) 0 60px 0',
+      },
+    },
+    sectionTitle: {
+      ...theme.typography['text-display4-xxs'],
+      fontWeight: 700,
+      mb: hasContentAsset ? 'var(--spacing-2)' : 'var(--spacing-4)',
+      paddingX: 'var(--spacing-3)',
+      [`@media (min-width: ${theme.breakpoints.md})`]: {
+        ...theme.typography['text-display4-s'],
+        fontWeight: '700',
+        paddingX: 0,
+        mb: 'var(--spacing-6)',
+      },
+    },
+    viewMoreContainer: {
+      px: 'var(--spacing-3)',
+    },
+    viewMoreButton: {
+      display: 'flex',
+      flexDirection: 'row',
+      backgroundColor: 'var(--color-white-base)',
+      alignItems: 'center',
+      justifyContent: 'center',
+      gap: 'var(--spacing-2)',
+      p: '10px 20px',
+      borderRadius: '130px',
+      border: '1px solid var(--color-neutral-light-2)',
+      textTransform: 'none',
+      width: '100%',
+      cursor: 'pointer',
+      'svg use': {
+        color: 'var(--color-black-base)',
+      },
+      '&:hover:not(:disabled), &:active': {
+        backgroundColor: 'var(--color-white-base)',
+      },
+      '&[disabled], &[disabled]:hover': {
+        backgroundColor: 'var(--color-primary)',
+        span: {
+          color: 'var(--color-white-base)',
+        },
+        'svg use': {
+          color: 'var(--color-white-base)',
+        },
+      },
+      [`@media (min-width: ${theme.breakpoints.md})`]: {
+        width: 'fit-content',
+        padding: 'var(--spacing-2) var(--spacing-6)',
+        backgroundColor: 'var(--color-neutral-light-1)',
+        margin: '0 auto',
+        borderRadius: '800px',
+        border: '1px solid var(--color-border-filter-pill-default)',
+        background: 'var(--color-background-filter-pill-default)',
+        'svg use': {
+          color: 'var(--color-black-base)',
+        },
+        '&:hover:not(:disabled), &:active, &[disabled], &[disabled]:hover': {
+          backgroundColor: 'var(--color-primary)',
+          span: {
+            color: 'var(--color-white-base)',
+          },
+          'svg use': {
+            color: 'var(--color-white-base)',
+          },
+        },
+      },
+    },
+    viewMoreText: {
+      ...theme.typography['text-cta2-xs'],
+      fontWeight: '400',
+      [`@media (min-width: ${theme.breakpoints.md})`]: {
+        ...theme.typography['text-cta2-xs'],
+      },
+    },
+    filterItemText: {
+      fontSize: 'var(--text-10)',
+    },
+    horizontalFilterButton: {
+      ...theme.typography['text-body1-m'],
+      backgroundColor: 'var(--color-background-filter-pill-default, #FFFFFF)',
+      padding: 'var(--spacing-2) var(--spacing-4)',
+      color: 'var(--color-text-filter-pill-default, #333333)',
+      textTransform: 'capitalize',
+      borderRadius: '800px',
+      border: 'var(--border-width-s) solid var(--color-border-filter-pill-default, #E1E1E1)',
+      minWidth: 'auto',
+      gap: '3px',
+      '&:hover:not(:disabled)': {
+        paddingLeft: '15px',
+        paddingRight: '9px',
+        borderWidth: 'var(--border-width-m)',
+        backgroundColor: 'var(--color-background-filter-pill-hover, #FFFFFF)',
+        borderColor: 'var(--color-border-filter-pill-hover, #000000)',
+        color: 'var(--color-text-filter-pill-hover, #000000)',
+      },
+      '&:focus-visible': {
+        paddingLeft: '15px',
+        paddingRight: '9px',
+        backgroundColor: 'var(--color-background-filter-pill-focus, #FFFFFF)',
+        borderColor: 'var(--color-border-filter-pill-focus, #EE0011)',
+        color: 'var(--color-text-filter-pill-label-focus, #000000)',
+        borderWidth: 'var(--border-width-m)',
+        boxShadow: 'none',
+      },
+      '&:disabled': {
+        backgroundColor: 'var(--color-background-filter-pill-disabled, #D8D8D8)',
+        borderColor: 'var(--color-border-filter-pill-disabled, #D8D8D8)',
+        color: 'var(--color-text-filter-pill-disabled, #949494)',
+        opacity: '1',
+
+        '&:hover': {
+          backgroundColor: 'var(--color-background-filter-pill-disabled, #D8D8D8)',
+        },
+      },
+    },
+    activeFilterButton: {
+      paddingLeft: '15px',
+      paddingRight: '9px',
+      borderWidth: 'var(--border-width-m)',
+      borderColor: 'var(--color-border-filter-pill-selected, #000000)',
+      color: 'var(--color-text-filter-pill-selected, #000000)',
+    },
+    iconSize: {
+      width: '24px',
+      height: '24px',
+    },
+    activeFilterCount: {
+      ...theme.typography['text-body1-s'],
+      fontFamily: 'var(--font-face1-bold)',
+      backgroundColor: 'var(--color-background-filter-pill-counter, #000000)',
+      paddingTop: '5px',
+      paddingBottm: 'var(--spacing-1)',
+      width: 'var(--spacing-6)',
+      height: 'var(--spacing-6)',
+      marginRight: '6px',
+      color: 'var(--color-text-filter-pill-counter, #FFFFFF)',
+      borderRadius: 'var(--border-radius-full)',
+    },
+    filterPopup: {
+      position: 'absolute',
+      zIndex: '20',
+      backgroundColor: 'var(--color-white-base)',
+      paddingY: '36px',
+      marginTop: 'var(--spacing-2)',
+      borderRadius: 'var(--border-radius-m)',
+      boxShadow: '0 0 33px 5px var(--color-black-10)',
+    },
+    filterPopupContent: {
+      height: '100%',
+      maxHeight: '360px',
+      overflowY: 'scroll',
+      paddingX: 'var(--spacing-6) var(--spacing-4)',
+      paddingLeft: 'var(--spacing-6)',
+      paddingRight: 'var(--spacing-4)',
+      marginRight: 'var(--spacing-1)',
+      '::-webkit-scrollbar': {
+        width: 'var(--spacing-1)',
+      },
+      '::-webkit-scrollbar-thumb': {
+        borderRadius: '2px',
+        backgroundColor: 'var(--color-neutral-light-3)',
+      },
+    },
+    closePopupButton: {
+      padding: '0',
+      position: 'absolute',
+      top: 'var(--spacing-2)',
+      right: 'var(--spacing-2)',
+    },
+    filterColorButtonWrapper: {
+      gap: 'var(--spacing-4)',
+      display: 'grid',
+      gridTemplateColumns: '1fr 1fr',
+      '& a': {
+        ...theme.typography['text-body1-m'],
+        minWidth: '113px',
+        padding: 'var(--spacing-2) var(--spacing-3)',
+        height: 'var(--spacing-12)',
+        borderColor: 'var(--color-neutral-light-2)',
+        borderRadius: '800px',
+        color: 'var(--color-neutral-dark)',
+        backgroundColor: 'var(--color-white-base)',
+        justifyContent: 'left',
+        gap: 'var(--spacing-2)',
+        textTransform: 'capitalize',
+        '& div': {
+          position: 'unset',
+          width: 'var(--spacing-6)',
+          height: 'var(--spacing-6)',
+          border: '1px solid var(--color-neutral-light-3)',
+          borderRadius: 'var(--border-radius-full)',
+        },
+        '&:hover:not(:disabled)': {
+          borderWidth: '2px',
+          borderColor: 'var(--color-black-base)',
+          padding: '7px 11px',
+          '& div': {
+            width: 'var(--spacing-6)',
+            height: 'var(--spacing-6)',
+          },
+        },
+        '&.selected': {
+          borderColor: 'var(--color-black-base)',
+          borderWidth: '2px',
+          backgroundColor: 'var(--color-white-base)',
+          padding: '7px 11px',
+          '& div': {
+            width: 'var(--spacing-6)',
+            height: 'var(--spacing-6)',
+          },
+        },
+      },
+    },
+    FilterButtonsWrapper: {
+      gap: 'var(--spacing-4)',
+      '&.sizes': {
+        a: {
+          minWidth: '83px',
+          padding: 'var(--spacing-3) var(--spacing-6)',
+          justifyContent: 'center',
+          color: 'var(--color-black-base)',
+          borderColor: 'var(--color-neutral-inactive)',
+          '& > div': {
+            display: 'none',
+          },
+          '&:hover': {
+            padding: '11px 23px',
+            borderColor: 'var(--color-black-base)',
+          },
+          '&.selected': {
+            padding: '11px 23px',
+            borderColor: 'var(--color-black-base)',
+          },
+          '&[disabled]': {
+            color: 'var(--color-neutral-base)',
+            borderColor: '#E6E6E6',
+            '&::after': {
+              background:
+                'linear-gradient(to right bottom, transparent calc(50% - 1px), #E6E6E6, transparent calc(50% + 1px))',
+            },
+          },
+        },
+      },
+    },
+    FilterButtons: {
+      minWidth: '220px',
+      padding: 'var(--spacing-2) var(--spacing-4)',
+      paddingLeft: 'var(--spacing-3)',
+      height: 'var(--spacing-12)',
+      borderColor: 'var(--color-neutral-light-2)',
+      borderRadius: '800px',
+      color: 'var(--color-neutral-dark)',
+      lineHeight: 'var(--line-height-140)',
+      backgroundColor: 'var(--color-white-base)',
+      justifyContent: 'left',
+      gap: 'var(--spacing-2)',
+      svg: { color: 'var(--color-white-base)' },
+      '&:focus': {
+        borderColor: 'var(--color-neutral-light-2)',
+      },
+      '&:hover': {
+        borderWidth: '2px',
+        borderColor: 'var(--color-black-base)',
+        padding: '7px 15px',
+        paddingLeft: '11px',
+        div: {
+          backgroundColor: 'var(--color-neutral-light-3)',
+          borderColor: 'var(--color-neutral-light-3)',
+        },
+      },
+      '&.selected': {
+        borderColor: 'var(--color-black-base)',
+        borderWidth: '2px',
+        backgroundColor: 'var(--color-white-base)',
+        padding: '7px 15px',
+        paddingLeft: '11px',
+        div: {
+          backgroundColor: 'var(--color-black-base)',
+          borderColor: 'var(--color-black-base)',
+        },
+        '&:focus': {
+          borderColor: 'var(--color-black-base)',
+        },
+      },
+      '&[disabled]': {
+        color: 'var(--color-neutral-base)',
+        opacity: 1,
+        pointerEvents: 'none',
+        '&::after': {
+          content: '""',
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          borderRadius: '800px',
+          background:
+            'linear-gradient(to right bottom, transparent calc(50% - 1px), var(--color-neutral-light-2), transparent calc(50% + 1px))',
+        },
+      },
+    },
+    topCarouselWrapper: {
+      overflowX: 'auto',
+      width: '100%',
+      backgroundColor: 'var(--color-neutral-light-1)',
+      msOverflowStyle: 'none',
+      scrollbarWidth: 'none',
+      '&::-webkit-scrollbar': {
+        display: 'none',
+      },
+      padding: shouldRenderIcons
+        ? 'var(--spacing-3)'
+        : 'var(--spacing-4) var(--spacing-3) var(--spacing-2)',
+      gap: shouldRenderIcons ? 'var(--spacing-3)' : '18px',
+      borderBottom: shouldRenderIcons ? 'unset' : '1px solid var(--color-black-10)',
+      [`@media (min-width: ${theme.breakpoints.md})`]: {
+        gap: '40px',
+        padding: 0,
+      },
+    },
+    topCarouselItem: {
+      width: shouldRenderIcons ? '27%' : 'auto',
+      flexShrink: 0,
+      '& img': {
+        aspectRatio: '0.8',
+        objectFit: 'cover',
+      },
+      '& p': {
+        ...theme.typography['text-body1-s'],
+        color: 'var(--color-black-base)',
+        textAlign: 'center',
+        marginTop: 'var(--spacing-1)',
+      },
+      [`@media (min-width: ${theme.breakpoints.md})`]: {
+        width: '120px',
+        '& p': {
+          mt: '5px',
+          fontSize: '15px',
+          lineHeight: 'var(--line-height-140)',
+          letterSpacing: '0.25px',
+        },
+        '& img': {
+          display: 'flex',
+          width: '75px',
+          flexDirection: 'column',
+          alignItems: 'flex-start',
+        },
+      },
+    },
+    productListingContainer: {
+      width: '100%',
+      gridTemplateColumns: 'repeat(2, minmax(0, 1fr))',
+      [`@media (min-width: ${theme.breakpoints.md})`]: {
+        gridTemplateColumns: 'repeat(4, minmax(0, 1fr))',
+        columnGap: 'var(--spacing-4)',
+        rowGap: 'var(--spacing-6)',
+      },
+    },
+    bottomContentSlotWrapper: {
+      [`@media (min-width: ${theme.breakpoints.md})`]: {
+        margin: 'unset',
+        maxWidth: 'none',
+      },
+    },
+  }),
+}

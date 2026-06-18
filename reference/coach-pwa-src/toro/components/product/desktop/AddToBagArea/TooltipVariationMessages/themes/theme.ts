@@ -1,0 +1,62 @@
+export default {
+  baseStyle: ({ theme }) => ({
+    variationMessagesContainer: {
+      position: 'absolute',
+      width: '335px',
+      right: '1px',
+      bottom: '34px',
+      justifyContent: 'center',
+      transform: 'translate(50%)',
+      pointerEvents: 'none',
+    },
+    ErrorMessageContainer: () => ({
+      display: 'inline-flex',
+      padding: '14px 28px 14px 20px',
+      width: 'auto',
+      maxWidth: '335px',
+      justifyContent: 'center',
+      alignItems: 'center',
+      borderRadius: '800px',
+      background: 'var(--color-white-base)',
+      boxShadow: '0px 12px 20px 0px rgba(0, 0, 0, 0.05)',
+      flexBasis: 'auto',
+      '&:empty': {
+        display: 'none',
+      },
+      '&:after': {
+        position: 'absolute',
+        content: '""',
+        display: 'block',
+        width: '15.566px',
+        height: '15.566px',
+        borderRadius: '4px',
+        bottom: '-6px',
+        background: 'var(--color-white-base)',
+        transform: 'rotate(45deg)',
+      },
+      '& .product-info-message-alert, & .product-info-message-inventory-badge': {
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        m: 0,
+        p: 0,
+        background: 'var(--color-white-base)',
+        '& > div': {
+          display: 'inline-flex',
+          flexGrow: 1,
+          justifyContent: 'center',
+          alignItems: 'center',
+          gap: 'var(--spacing-1)',
+          '& .chakra-text': {
+            m: 0,
+            ...theme.typography['text-body1-s'],
+            fontFamily: 'var(--font-face1-normal)',
+          },
+          '& svg': {
+            mr: '2px',
+          },
+        },
+      },
+    }),
+  }),
+}

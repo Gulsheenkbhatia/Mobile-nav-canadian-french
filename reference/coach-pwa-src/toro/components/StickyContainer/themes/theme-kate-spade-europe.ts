@@ -1,0 +1,52 @@
+export default {
+  baseStyle: ({ theme }) => ({
+    stickyOuterContainer: {
+      h: 0,
+      w: '100%',
+    },
+    overlayContainer: {
+      position: 'fixed',
+      width: '100%',
+      height: '100%',
+      top: 0,
+      left: 0,
+      right: 0,
+      bottom: 0,
+      bg: 'var(--color-scrim-dark)',
+      cursor: 'pointer',
+      zIndex: 200,
+      [`@media (max-width: ${theme.breakpoints.sm})`]: {
+        bg: 'var(--color-black-50)',
+      },
+    },
+    overlayContainerHidden: {
+      width: 0,
+      height: 0,
+      zIndex: 200,
+    },
+    stickyContainer: (stickyAddToCartPriceEnabled, isFlyoutOpen) => ({
+      position: 'fixed',
+      bg: theme.colors.main.white,
+      zIndex: 200,
+      bottom: '20px',
+      w: isFlyoutOpen ? '470px' : stickyAddToCartPriceEnabled ? '321px' : '250px',
+      right: '69px',
+      p: `${theme.space.mar} ${theme.space.mar} ${theme.space.mar} 22.5px`,
+      boxShadow: '0px 4px 4px 0px rgba(0, 0, 0, 0.25)',
+      borderRadius: 'var(--border-radius-xs)',
+      [`@media (max-width: ${theme.breakpoints.sm})`]: {
+        bottom: 0,
+        w: '100%',
+        left: 0,
+        background: 'var(--color-white-80)',
+        boxShadow: '0px 0px 20px 0px rgba(0, 0, 0, 0.10)',
+        backdropFilter: 'blur(26px)',
+        p: theme.space.mar,
+        animationName: 'sticky-blur-jump',
+        animationTimingFunction: 'cubic-bezier(var(--transition-easing-gentle))',
+        animationDuration: 'var(--transition-duration-quick)',
+        animationFillMode: 'forwards',
+      },
+    }),
+  }),
+}
