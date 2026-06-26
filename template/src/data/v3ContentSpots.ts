@@ -1,6 +1,6 @@
-/** V3 content spots — L1/L2 configurable image layouts. */
-
 import type { BrandId } from '../components/nav/NavSearchExposed'
+
+/** V3 content spots — L1/L2 configurable image layouts. */
 
 /** L1 tile count layouts — up to 3 images. */
 export type V3L1ContentSpotsLayout = 'l1-1' | 'l1-2' | 'l1-3'
@@ -42,6 +42,8 @@ export type V3L1ContentSpotsConfig = {
   layout: V3L1ContentSpotsLayout
   /** 1–3 image links shown at L1. */
   tiles: V3L1ContentSpotTile[]
+  /** Tile aspect ratio — defaults to 16:9 when omitted. */
+  tileAspectRatio?: V3L1ContentSpotAspectRatio
 }
 
 export type V3L2ContentSpotTile = {
@@ -50,6 +52,8 @@ export type V3L2ContentSpotTile = {
 }
 
 export type V3L2ContentSpotAspectRatio = '16:9' | '4:5'
+
+export type V3L1ContentSpotAspectRatio = V3L2ContentSpotAspectRatio
 
 export type V3L2ContentSpotsConfig = {
   layout: V3L2ContentSpotsLayout
@@ -163,8 +167,6 @@ const l2ContentSpotsByCategoryId: Record<string, V3L2ContentSpotsConfig> = {
   },
 }
 
-const OUTLET_CLEARANCE_L1_ID = 'outlet-clearance'
-
 const l1ContentSpotsByBrand: Record<BrandId, V3L1ContentSpotsConfig> = {
   coach: {
     placement: { mode: 'above-categories' },
@@ -176,12 +178,12 @@ const l1ContentSpotsByBrand: Record<BrandId, V3L1ContentSpotsConfig> = {
     ],
   },
   outlet: {
-    placement: { mode: 'after-category', categoryId: OUTLET_CLEARANCE_L1_ID },
-    layout: 'l1-3',
+    placement: { mode: 'above-categories' },
+    layout: 'l1-2',
+    tileAspectRatio: '4:5',
     tiles: [
       { label: 'Outlet New Arrivals' },
       { label: 'Clearance' },
-      { label: 'Bags' },
     ],
   },
 }

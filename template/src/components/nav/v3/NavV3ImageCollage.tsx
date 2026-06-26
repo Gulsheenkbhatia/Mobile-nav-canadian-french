@@ -101,14 +101,16 @@ function L1ContentSpots({
   animDirection: NavAnimDirection
   enterKey: number
 }) {
-  const { layout, tiles } = config
+  const { layout, tiles, tileAspectRatio } = config
+  const ratioClass =
+    tileAspectRatio === '4:5' ? ' v3-content-spots--tile-ratio-4-5' : ''
 
   return (
     <NavEnterGroup
       key={animMountKey(animDirection, enterKey)}
       {...NAV_CONTENT_SPOTS_L1_ENTER}
       direction={animDirection}
-      className={`v3-content-spots v3-content-spots--${layout}`}
+      className={`v3-content-spots v3-content-spots--${layout}${ratioClass}`.trim()}
     >
       {tiles.map((tile, index) => (
         <ContentSpotTile
