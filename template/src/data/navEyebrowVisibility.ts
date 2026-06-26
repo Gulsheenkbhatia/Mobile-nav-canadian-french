@@ -1,7 +1,5 @@
 import type { MenuLinkSection, MenuSubCategorySection } from './mobileMenuData'
 
-export const GENERIC_SECTION_EYEBROW = 'Shop by Category'
-
 export type NavEyebrowSection = Pick<
   MenuLinkSection | MenuSubCategorySection,
   'eyebrow' | 'showEyebrow'
@@ -13,37 +11,32 @@ export type NavEyebrowContext = {
   sectionCount: number
 }
 
-function normalizeLabel(value: string): string {
-  return value.trim().toLowerCase()
-}
-
 function hasEyebrowText(section: NavEyebrowSection): boolean {
   return Boolean(section.eyebrow?.trim())
 }
 
 /**
- * Whether to render a section eyebrow label on L2/L3 link lists.
+ * Whether to render a section eyebrow on L2/L3 drill link lists.
  *
- * L1 content spots use a separate content-spot eyebrow system — not this helper.
+ * Prototype rule: multiple sections → show group eyebrows; a single section is
+ * a flat list with no eyebrow. L1 content spots use a separate eyebrow system.
+ *
+ * Production can override per section via `showEyebrow` from CMS/sync.
  */
 export function shouldShowSectionEyebrow(
   section: NavEyebrowSection,
   ctx: NavEyebrowContext,
 ): boolean {
-  if (ctx.depth === 'l3') return false
-
   if (section.showEyebrow === false) return false
-
-  if (section.showEyebrow === true) return hasEyebrowText(section)
-
-  if (ctx.sectionCount > 1) return hasEyebrowText(section)
-
-  const eyebrow = section.eyebrow?.trim() ?? ''
-  if (!eyebrow) return false
-  if (normalizeLabel(eyebrow) === normalizeLabel(ctx.screenTitle)) return false
-  if (normalizeLabel(eyebrow) === normalizeLabel(GENERIC_SECTION_EYEBROW)) {
-    return false
-  }
-
+  if (!hasEyebrowText(section)) return false
+  if (ctx.sectionCount <= 1) return false
   return true
+}
+
+/** L2 content-spot eyebrow injected above the first sub-category section. */
+export function shouldShowDrillLeadingEyebrow(
+  ctx: NavEyebrowContext,
+  leadingEyebrow?: string,
+): boolean {
+  return ctx.sectionCount > 1 && Boolean(leadingEyebrow?.trim())
 }

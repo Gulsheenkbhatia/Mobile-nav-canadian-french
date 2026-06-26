@@ -66,9 +66,9 @@ const womenShoulderImage = '/assets/figma/v2-women-shoulder.png'
 
 const bagsTanImage = '/assets/figma/v3-bags-tan.png'
 const bagsBlackImage = '/assets/figma/v3-bags-black.png'
-const campaignImage = '/assets/figma/v3-campaign.png'
 const menMobileImage = '/assets/figma/v3-men-mobile.png'
 const newWomensArrivalsImage = '/assets/figma/v3-new-womens-arrivals.png'
+const coachtopiaBrooklynImage = '/assets/figma/v3-coachtopia-brooklyn.png'
 
 /** coach-nav.vercel.app Wp — l2-6 grid under Women headline. */
 const womenContentSpotImages = [
@@ -153,7 +153,7 @@ const l2ContentSpotsByCategoryId: Record<string, V3L2ContentSpotsConfig> = {
   },
   coachtopia: {
     layout: 'l2-1',
-    tiles: [{ label: 'The World of Coachtopia', image: campaignImage }],
+    tiles: [{ label: 'The New Brooklyn', image: coachtopiaBrooklynImage }],
     eyebrow: '',
   },
 }

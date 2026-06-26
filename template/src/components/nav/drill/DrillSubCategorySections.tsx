@@ -1,6 +1,7 @@
 import type { MenuSubCategorySection } from '../../../data/mobileMenuData'
 import {
   shouldShowSectionEyebrow,
+  shouldShowDrillLeadingEyebrow,
   type NavEyebrowContext,
 } from '../../../data/navEyebrowVisibility'
 import { getV3L2LinkLabel } from '../../../data/v3ContentSpots'
@@ -53,7 +54,9 @@ export function DrillSubCategorySections({
       const showSectionEyebrow =
         shouldShowSectionEyebrow(section, ctx) && section.eyebrow
       const leading =
-        sectionIndex === 0 && leadingEyebrow && !showSectionEyebrow
+        sectionIndex === 0 &&
+        shouldShowDrillLeadingEyebrow(ctx, leadingEyebrow) &&
+        !showSectionEyebrow
           ? leadingEyebrow
           : null
       const eyebrowLabel =

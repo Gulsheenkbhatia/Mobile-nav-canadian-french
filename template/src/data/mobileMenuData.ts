@@ -22,8 +22,8 @@ export type MenuLink = {
  * - L2 sub-category lists (chevron rows) do not render section eyebrows.
  * - L3 never renders section eyebrows; the drill header is the title.
  *
- * Visibility is resolved by `shouldShowSectionEyebrow` in navEyebrowVisibility.ts.
- * Sync may set `showEyebrow` explicitly; otherwise UI applies default L2 rules.
+ * Visibility is resolved by `shouldShowSectionEyebrow` in navEyebrowVisibility.ts
+ * (prototype: eyebrows only when a drill screen has multiple sections).
  */
 export type MenuLinkSection = {
   id: string
