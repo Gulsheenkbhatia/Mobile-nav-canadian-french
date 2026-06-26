@@ -28,6 +28,7 @@ import {
 import type { BrandId } from '../NavSearchExposed'
 import {
   NavEnterGroup,
+  NAV_IMAGE_ENTER,
   NAV_LINK_ENTER,
   NAV_LINK_ENTER_DRILL_DELAY,
   NAV_LINK_ENTER_L1_DELAY,
@@ -42,13 +43,6 @@ import { filterDuplicateNavLinks } from '../../../utils/navLinkDedup'
 const FOOTER_LINKS = ['Track Order', 'Help', '$USD', 'Login'] as const
 
 const OUTLET_HOLIDAY_L1_ID = 'outlet_qa_auto_category'
-
-/** L1/L2 collage tiles — vercel V3 Fd variant (fade-up + stagger). */
-const COLLAGE_ENTER = {
-  delay: 0.2,
-  stagger: 0.1,
-  variant: 'fade-up' as const,
-}
 
 function animMountKey(direction: NavAnimDirection, enterKey: number): string {
   if (direction === 'idle') return 'idle'
@@ -126,7 +120,7 @@ function L1Collage({
   return (
     <NavEnterGroup
       key={animMountKey(animDirection, enterKey)}
-      {...COLLAGE_ENTER}
+      {...NAV_IMAGE_ENTER}
       direction={animDirection}
       className="v3-collage v3-collage--l1-stagger"
     >
@@ -264,7 +258,7 @@ function L2CollageGrid({
   return (
     <NavEnterGroup
       key={animMountKey(animDirection, enterKey)}
-      {...COLLAGE_ENTER}
+      {...NAV_IMAGE_ENTER}
       direction={animDirection}
       className="v3-collage v3-collage--grid v3-collage--l2-under-headline grid w-full grid-cols-2 gap-px"
     >
@@ -338,7 +332,7 @@ function LinkSections({
         {rows.map((row) => {
           if (row.type === 'eyebrow') {
             return (
-              <li key={row.key} className="v3-l2__eyebrow-item">
+              <li key={row.key} className="v3-l2__eyebrow-item nav-enter-group__item--static">
                 <p className="v3-l2__eyebrow">{toNavHeadlineCase(row.label)}</p>
               </li>
             )
@@ -449,7 +443,7 @@ function L2Screen({
             }
           >
             {collage?.eyebrow && (
-              <li className="v3-l2__eyebrow-item">
+              <li className="v3-l2__eyebrow-item nav-enter-group__item--static">
                 <p className="v3-l2__eyebrow">
                   {toNavHeadlineCase(collage.eyebrow)}
                 </p>

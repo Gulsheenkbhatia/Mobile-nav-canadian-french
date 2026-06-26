@@ -350,6 +350,11 @@ body.drawerOpened {
   width: 100%;
 }
 
+/* Outlet collage sits inside link list — inner tiles own fade-down stagger. */
+.v3-l1__collage-list-item.nav-enter-group__item {
+  animation: none;
+}
+
 .v3-l1__categories {
   padding: var(--spacing-4) var(--spacing-4) 0;
 }

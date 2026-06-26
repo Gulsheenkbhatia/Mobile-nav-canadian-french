@@ -22,12 +22,19 @@ export const NAV_LINK_ENTER_L1_DELAY = 0.15
 /** L2/L3 link lists — after drill panel is visible. */
 export const NAV_LINK_ENTER_DRILL_DELAY = 0.4
 
+/** V3 image collage load-in — coach-nav.vercel.app Fd variant. */
+export const NAV_IMAGE_ENTER = {
+  variant: 'fade-down' as const,
+  stagger: 0.1,
+  delay: 0.2,
+} as const
+
 type NavEnterGroupProps = {
   /** Seconds before first child animates (vercel delayChildren). */
   delay?: number
   /** Seconds between each child (vercel staggerChildren). */
   stagger?: number
-  variant?: 'fade-up' | 'slide-in'
+  variant?: 'fade-down' | 'slide-in'
   direction?: NavAnimDirection
   className?: string
   /** Render as ul/ol without extra wrapper divs around list items. */
@@ -118,7 +125,7 @@ export function NavEnterGroup({
 }
 
 type NavEnterItemProps = {
-  variant?: 'fade-up' | 'slide-in'
+  variant?: 'fade-down' | 'slide-in'
   direction?: NavAnimDirection
   delay?: number
   className?: string
