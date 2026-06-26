@@ -1,6 +1,6 @@
-/* V3 image collage — full-bleed tiles, 1px gutters, 16:9 aspect ratio */
+/* V3 content spots — full-bleed tiles, 1px gutters, 16:9 aspect ratio */
 
-.v3-collage {
+.v3-content-spots {
   width: 100%;
   margin-left: 0;
   margin-right: 0;
@@ -9,38 +9,56 @@
   min-width: 0;
 }
 
-.v3-l1__collage-wrap .v3-collage,
-.v3-l1__collage-list-item .v3-collage {
+.v3-l1__content-spots-wrap .v3-content-spots,
+.v3-l1__content-spots-list-item .v3-content-spots {
   width: calc(100% + (2 * var(--spacing-4)));
   margin-left: calc(-1 * var(--spacing-4));
   margin-right: calc(-1 * var(--spacing-4));
 }
 
-/* L1 hero + 2-up — same staggered enter as L2 grid (NavEnterGroup items) */
-.v3-collage--l1-stagger {
+/* L1 layouts — 1–3 tiles (placement is separate; see v3ContentSpots) */
+.v3-content-spots--l1-1 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1px;
+  width: 100%;
+}
+
+.v3-content-spots--l1-2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1px;
   width: 100%;
 }
 
-.v3-collage--l1-stagger .nav-enter-group__item {
+.v3-content-spots--l1-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  width: 100%;
+}
+
+.v3-content-spots--l1-3 .nav-enter-group__item {
   min-width: 0;
 }
 
-.v3-collage--l1-stagger .nav-enter-group__item:first-child {
+.v3-content-spots--l1-3 .nav-enter-group__item:first-child {
   grid-column: 1 / -1;
 }
 
-.v3-collage--grid {
+/* L2 layouts — l2-6: 2×3 grid (future: l2-1, l2-2, l2-3, l2-4) */
+.v3-content-spots--l2-6 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
   width: calc(100% + (2 * var(--spacing-4)));
   margin-left: calc(-1 * var(--spacing-4));
   margin-right: calc(-1 * var(--spacing-4));
   margin-top: var(--spacing-3);
 }
 
-/* L2: full-bleed grid flush under drill header */
-.v3-collage--l2-under-headline {
+/* L2: full-bleed content spots flush under drill header */
+.v3-content-spots--l2-under-headline {
   margin-top: 0;
 }
 
@@ -55,7 +73,7 @@
   margin-top: 0;
 }
 
-.v3-collage__tile {
+.v3-content-spots__tile {
   position: relative;
   display: block;
   width: 100%;
@@ -68,7 +86,7 @@
 }
 
 /* PWA: --linear-gradient-scrim-bottom — bottom 30% of tile */
-.v3-collage__tile::after {
+.v3-content-spots__tile::after {
   content: '';
   position: absolute;
   left: 0;
@@ -80,11 +98,11 @@
   z-index: 1;
 }
 
-.v3-collage__tile--hero img {
+.v3-content-spots__tile--hero img {
   object-position: top center;
 }
 
-.v3-collage__tile img {
+.v3-content-spots__tile img {
   display: block;
   width: 100%;
   height: 100%;
@@ -92,7 +110,7 @@
   object-position: center;
 }
 
-.v3-collage__label {
+.v3-content-spots__label {
   position: absolute;
   left: var(--spacing-4);
   right: auto;
@@ -104,7 +122,7 @@
   line-height: 1.35;
 }
 
-.v3-collage__label-text {
+.v3-content-spots__label-text {
   font-family: var(--font-face1-extended);
   font-size: var(--text-12);
   font-weight: 400;
@@ -113,20 +131,20 @@
   color: var(--color-white);
 }
 
-.v3-collage__duo {
+.v3-content-spots__duo {
   display: flex;
   width: 100%;
   gap: 1px;
   min-width: 0;
 }
 
-.v3-collage__duo-cell {
+.v3-content-spots__duo-cell {
   flex: 1;
   min-width: 0;
 }
 
-/* Remove legacy content-spot padding when V3 collage is active */
-.v1-prototype .invoked-menu .v3-collage .content-spot__duo,
+/* Remove legacy V1 content-spot padding when V3 content spots are active */
+.v1-prototype .invoked-menu .v3-content-spots .content-spot__duo,
 .v1-prototype .invoked-menu .v1-menu__spots {
   padding: 0;
   margin: 0;

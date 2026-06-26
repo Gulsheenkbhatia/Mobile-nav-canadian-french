@@ -1,12 +1,20 @@
+import { formatPrototypeBuildTimestamp, PROTOTYPE_BUILD_TIME } from '../../utils/prototypeBuildMeta'
+
 /** Nav prototype — replaces live homepage content. */
 export function PrototypeHomePlaceholder() {
   return (
-    <main className="flex flex-1 flex-col bg-coach-white px-coach-m py-coach-xl">
-      <p className="max-w-[343px] font-extended text-[16px] leading-[1.5] tracking-[0.4px] text-coach-black">
-        This is a prototype to demonstrate Nav Redesign Phase 1. For best experience
-        resize this browser to view in mobile. Bonus points if you view this on
-        your mobile device. — Wendy
-      </p>
+    <main className="prototype-intro flex flex-1 flex-col bg-coach-white px-coach-m py-coach-xl">
+      <div className="prototype-intro__body w-full min-w-0">
+        <p className="font-extended text-[16px] leading-[1.5] tracking-[0.4px] text-coach-black">
+          This is a demo of Mobile Navigation redesign, it has the latest UI
+          refinements, interaction patterns and UI styles. For best experience
+          view on a mobile device or resize your browser.
+        </p>
+
+        <p className="mt-coach-xl font-extended text-[12px] leading-[1.35] tracking-[0.2px] text-coach-grey-60">
+          Last updated {formatPrototypeBuildTimestamp(PROTOTYPE_BUILD_TIME)}.
+        </p>
+      </div>
     </main>
   )
 }

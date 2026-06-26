@@ -39,7 +39,7 @@ const coachBagsV3Detail: MenuCategoryDetail = {
   ],
 }
 
-/** coach-nav.vercel.app V3 Outlet Bags L2 — flat sections + collage. */
+/** coach-nav.vercel.app V3 Outlet Bags L2 — flat sections + content spots. */
 const outletBagsV3Detail: MenuCategoryDetail = {
   id: 'outlet-bags-bags',
   label: 'Bags',
@@ -172,9 +172,41 @@ const coachV3CategoryFixtures: Record<string, MenuCategoryDetail> = {
   gifts: coachGiftsV3Detail,
 }
 
+const outletBestSellersV3Detail: MenuCategoryDetail = {
+  id: 'outlet-bags-bestselling-bags',
+  label: 'Best Sellers',
+  sections: [
+    {
+      id: 'shop',
+      eyebrow: 'Bestsellers',
+      links: [
+        {
+          id: 'outlet-bags-bestselling-bags',
+          label: 'Shop All Best Sellers',
+          href: '/shop/outlet/shop-all/bestsellers',
+        },
+      ],
+    },
+  ],
+}
+
+const outletClearanceV3Detail: MenuCategoryDetail = {
+  id: 'outlet-clearance',
+  label: 'Clearance',
+  sections: [
+    {
+      id: 'shop',
+      eyebrow: 'Clearance',
+      links: [{ id: 'outlet-clearance-view-all', label: 'Shop All Clearance' }],
+    },
+  ],
+}
+
 const outletV3CategoryFixtures: Record<string, MenuCategoryDetail> = {
   'outlet-bags-bags': outletBagsV3Detail,
+  'outlet-bags-bestselling-bags': outletBestSellersV3Detail,
   'outlet-whats-new': outletNewV3Detail,
+  'outlet-clearance': outletClearanceV3Detail,
 }
 
 export function getV3CategoryDetail(

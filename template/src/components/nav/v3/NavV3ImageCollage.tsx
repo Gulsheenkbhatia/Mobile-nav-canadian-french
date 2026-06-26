@@ -9,40 +9,36 @@ import {
   resolveV3CategoryDetail,
   resolveV3SubCategory,
 } from '../../../data/v3CategoryFixtures'
-import {
-  type MenuCategoryDetail,
-  type MenuLinkSection,
-  type MenuSubCategory,
-} from '../../../data/mobileMenuData'
+import { DrillLinkSections } from '../drill/DrillLinkSections'
+import { DrillSubCategorySections } from '../drill/DrillSubCategorySections'
+import { resolveNavDrillL2Body } from '../../../data/navDrillSections'
 import { getV3L1Categories } from '../../../data/v3L1Categories'
-import type { MenuCategory } from '../../../data/mobileMenuData'
+import type { MenuCategory, MenuCategoryDetail, MenuSubCategory } from '../../../data/mobileMenuData'
 import {
-  getV3L2Collage,
-  getV3L2LinkLabel,
-  getV3L1CollageLabels,
-} from '../../../data/v3L2Collage'
-import {
-  shouldShowSectionEyebrow,
-  type NavEyebrowContext,
-} from '../../../data/navEyebrowVisibility'
+  getV3L2ContentSpots,
+  getV3L1ContentSpots,
+  getL1ContentSpotsAnchorCategoryId,
+  isL1ContentSpotsInline,
+  type V3L1ContentSpotsConfig,
+  type V3L2ContentSpotsLayout,
+} from '../../../data/v3ContentSpots'
 import type { BrandId } from '../NavSearchExposed'
 import {
   NavEnterGroup,
-  NAV_IMAGE_ENTER,
+  NAV_CONTENT_SPOTS_ENTER,
   NAV_LINK_ENTER,
-  NAV_LINK_ENTER_DRILL_DELAY,
   NAV_LINK_ENTER_L1_DELAY,
   type NavAnimDirection,
 } from './NavEnter'
+import { CoachIconMask } from '../../CoachIconMask'
 import { CoachtopiaLogo, isCoachtopiaCategory } from '../CoachLogos'
 import { toNavHeadlineCase } from '../../../utils/toNavHeadlineCase'
 import { formatDrillTitle } from '../../../utils/navDrillTitle'
-import { isViewAllNavLink, shouldShowNavLinkChevron, shouldDrillNavLink } from '../../../utils/navLinkChevron'
-import { filterDuplicateNavLinks } from '../../../utils/navLinkDedup'
+import { shouldShowNavLinkChevron } from '../../../utils/navLinkChevron'
 
 const FOOTER_LINKS = ['Track Order', 'Help', '$USD', 'Login'] as const
 
-const OUTLET_HOLIDAY_L1_ID = 'outlet_qa_auto_category'
+const CHEVRON_RIGHT = '/assets/icons/chevron-right.svg'
 
 function animMountKey(direction: NavAnimDirection, enterKey: number): string {
   return `${direction}-${enterKey}`
@@ -69,7 +65,7 @@ function ArrowBack() {
   )
 }
 
-function CollageImage({
+function ContentSpotTile({
   src = campaignImage,
   hero = false,
   label = 'Copy Goes Here',
@@ -82,11 +78,11 @@ function CollageImage({
     <a
       href="#"
       onClick={(e) => e.preventDefault()}
-      className={`v3-collage__tile ${hero ? 'v3-collage__tile--hero' : ''}`}
+      className={`v3-content-spots__tile ${hero ? 'v3-content-spots__tile--hero' : ''}`}
     >
       <img src={src} alt="" loading="lazy" />
-      <div className="v3-collage__label">
-        <span className="v3-collage__label-text">
+      <div className="v3-content-spots__label">
+        <span className="v3-content-spots__label-text">
           {toNavHeadlineCase(label)}
         </span>
       </div>
@@ -94,38 +90,32 @@ function CollageImage({
   )
 }
 
-function ChevronRight() {
-  return (
-    <img
-      src="/assets/figma/v2-ic-chevron.svg"
-      alt=""
-      aria-hidden
-      className="ml-coach-m h-3 w-[6px] shrink-0"
-    />
-  )
-}
-
-function L1Collage({
+function L1ContentSpots({
+  config,
   animDirection,
   enterKey,
-  menuBrand,
 }: {
+  config: V3L1ContentSpotsConfig
   animDirection: NavAnimDirection
   enterKey: number
-  menuBrand: BrandId
 }) {
-  const [heroLabel, tileLabel, tileLabel2] = getV3L1CollageLabels(menuBrand)
+  const { layout, tiles } = config
 
   return (
     <NavEnterGroup
       key={animMountKey(animDirection, enterKey)}
-      {...NAV_IMAGE_ENTER}
+      {...NAV_CONTENT_SPOTS_ENTER}
       direction={animDirection}
-      className="v3-collage v3-collage--l1-stagger"
+      className={`v3-content-spots v3-content-spots--${layout}`}
     >
-      <CollageImage hero label={heroLabel} />
-      <CollageImage label={tileLabel} />
-      <CollageImage label={tileLabel2} />
+      {tiles.map((tile, index) => (
+        <ContentSpotTile
+          key={`${tile.label}-${index}`}
+          src={tile.image}
+          hero={layout === 'l1-3' && index === 0}
+          label={tile.label}
+        />
+      ))}
     </NavEnterGroup>
   )
 }
@@ -155,7 +145,9 @@ function L1CategoryRow({
             {toNavHeadlineCase(cat.label)}
           </span>
         )}
-        {shouldShowNavLinkChevron(cat.label, cat.id) && <ChevronRight />}
+        {shouldShowNavLinkChevron(cat.label, cat.id) && (
+          <CoachIconMask src={CHEVRON_RIGHT} size={16} />
+        )}
       </button>
     </li>
   )
@@ -173,11 +165,13 @@ function L1Screen({
   staggerReady: boolean
 }) {
   const categories = getV3L1Categories(menuBrand)
-  const collageAfterHoliday = menuBrand === 'outlet'
-  const categoryRowCount = categories.length + (collageAfterHoliday ? 1 : 0)
+  const l1ContentSpots = getV3L1ContentSpots(menuBrand)
+  const inlineAfterCategoryId = getL1ContentSpotsAnchorCategoryId(l1ContentSpots.placement)
+  const showAboveCategories = !isL1ContentSpotsInline(l1ContentSpots.placement)
+  const categoryRowCount = categories.length + (inlineAfterCategoryId ? 1 : 0)
   const utilityDelay =
     NAV_LINK_ENTER_L1_DELAY + categoryRowCount * NAV_LINK_ENTER.stagger
-  const collageAnimDirection: NavAnimDirection = staggerReady ? 'enter' : 'idle'
+  const contentSpotsAnimDirection: NavAnimDirection = staggerReady ? 'enter' : 'idle'
   const listMountKey = `l1-${enterKey}`
 
   return (
@@ -197,12 +191,12 @@ function L1Screen({
         </label>
       </div>
 
-      {!collageAfterHoliday && (
-        <div className="v3-l1__collage-wrap">
-          <L1Collage
-            animDirection={collageAnimDirection}
+      {showAboveCategories && (
+        <div className="v3-l1__content-spots-wrap">
+          <L1ContentSpots
+            config={l1ContentSpots}
+            animDirection={contentSpotsAnimDirection}
             enterKey={enterKey}
-            menuBrand={menuBrand}
           />
         </div>
       )}
@@ -223,17 +217,17 @@ function L1Screen({
                 <L1CategoryRow key={cat.id} cat={cat} onSelect={onSelect} />
               )
 
-              if (collageAfterHoliday && cat.id === OUTLET_HOLIDAY_L1_ID) {
+              if (inlineAfterCategoryId && cat.id === inlineAfterCategoryId) {
                 return [
                   row,
                   <li
-                    key={`${listMountKey}-collage`}
-                    className="v3-l1__collage-list-item"
+                    key={`${listMountKey}-content-spots`}
+                    className="v3-l1__content-spots-list-item"
                   >
-                    <L1Collage
-                      animDirection={collageAnimDirection}
+                    <L1ContentSpots
+                      config={l1ContentSpots}
+                      animDirection={contentSpotsAnimDirection}
                       enterKey={enterKey}
-                      menuBrand={menuBrand}
                     />
                   </li>,
                 ]
@@ -273,11 +267,13 @@ function L1Screen({
   )
 }
 
-function L2CollageGrid({
+function L2ContentSpots({
+  layout,
   images,
   animDirection,
   enterKey,
 }: {
+  layout: V3L2ContentSpotsLayout
   images: string[]
   animDirection: NavAnimDirection
   enterKey: number
@@ -285,114 +281,14 @@ function L2CollageGrid({
   return (
     <NavEnterGroup
       key={animMountKey(animDirection, enterKey)}
-      {...NAV_IMAGE_ENTER}
+      {...NAV_CONTENT_SPOTS_ENTER}
       direction={animDirection}
-      className="v3-collage v3-collage--grid v3-collage--l2-under-headline grid w-full grid-cols-2 gap-px"
+      className={`v3-content-spots v3-content-spots--${layout} v3-content-spots--l2-under-headline`}
     >
       {images.map((src, i) => (
-        <CollageImage key={i} src={src} />
+        <ContentSpotTile key={i} src={src} />
       ))}
     </NavEnterGroup>
-  )
-}
-
-function LinkSections({
-  sections,
-  className = 'v3-l2__sections',
-  depth,
-  screenTitle,
-  animDirection,
-  enterKey,
-}: {
-  sections: MenuLinkSection[]
-  className?: string
-  depth: NavEyebrowContext['depth']
-  screenTitle: string
-  animDirection: NavAnimDirection
-  enterKey: number
-}) {
-  const ctx: NavEyebrowContext = {
-    depth,
-    screenTitle,
-    sectionCount: sections.length,
-  }
-
-  const rows = sections.flatMap((section) => {
-    const showEyebrow =
-      shouldShowSectionEyebrow(section, ctx) && section.eyebrow
-    const visibleLinks = filterDuplicateNavLinks(section.links, screenTitle)
-    if (visibleLinks.length === 0) return []
-
-    const sectionRows: Array<
-      | { type: 'eyebrow'; key: string; label: string }
-      | { type: 'link'; key: string; link: (typeof visibleLinks)[number] }
-    > = []
-
-    if (showEyebrow && section.eyebrow) {
-      sectionRows.push({
-        type: 'eyebrow',
-        key: `eyebrow-${section.id}`,
-        label: section.eyebrow,
-      })
-    }
-
-    visibleLinks.forEach((link) => {
-      sectionRows.push({ type: 'link', key: link.id, link })
-    })
-
-    return sectionRows
-  })
-
-  if (rows.length === 0) return null
-
-  return (
-    <div className={className}>
-      <NavEnterGroup
-        key={animMountKey(animDirection, enterKey)}
-        as="ul"
-        list
-        delay={NAV_LINK_ENTER_DRILL_DELAY}
-        {...NAV_LINK_ENTER}
-        direction={animDirection}
-        className="v3-l2__links"
-      >
-        {rows.map((row) => {
-          if (row.type === 'eyebrow') {
-            return (
-              <li key={row.key} className="v3-l2__eyebrow-item nav-enter-group__item--static">
-                <p className="v3-l2__eyebrow">{toNavHeadlineCase(row.label)}</p>
-              </li>
-            )
-          }
-
-          const showChevron =
-            depth !== 'l3' && shouldShowNavLinkChevron(row.link.label, row.link.id)
-
-          return (
-            <li key={row.key}>
-              <button
-                type="button"
-                onClick={(e) => {
-                  if (row.link.href || isViewAllNavLink(row.link.label, row.link.id)) {
-                    e.preventDefault()
-                    return
-                  }
-                  e.preventDefault()
-                }}
-                className={`v1-nav-link text-left font-extended text-[20px] leading-[1.2] tracking-[0.4px] text-coach-black ${
-                  showChevron
-                    ? 'flex w-full items-center justify-between'
-                    : 'block w-full'
-                }`.trim()}
-              >
-                <span>{toNavHeadlineCase(row.link.label)}</span>
-                {showChevron && <ChevronRight />}
-              </button>
-            </li>
-          )
-        })}
-      </NavEnterGroup>
-    </div>
   )
 }
 
@@ -438,85 +334,49 @@ function L2Screen({
   enterKey: number
   animDirection: NavAnimDirection
 }) {
-  const subCategories = detail.subCategories
-  const collage = getV3L2Collage(detail.id)
+  const contentSpots = getV3L2ContentSpots(detail.id)
+  const drillBody = resolveNavDrillL2Body(detail)
   const mountKey = animMountKey(animDirection, enterKey)
+  const sectionsClassName = contentSpots
+    ? 'v3-l2__sections v3-l2__sections--after-content-spots'
+    : 'v3-l2__sections'
 
   return (
-    <div className={`v3-l2${collage ? ' v3-l2--with-collage' : ''}`.trim()}>
+    <div className={`v3-l2${contentSpots ? ' v3-l2--with-content-spots' : ''}`.trim()}>
       <DrillHeader title={screenTitle} onBack={onBack} />
 
-      {collage && (
-        <L2CollageGrid
-          images={collage.images}
+      {contentSpots && (
+        <L2ContentSpots
+          layout={contentSpots.layout}
+          images={contentSpots.images}
           animDirection={animDirection}
           enterKey={enterKey}
         />
       )}
 
-      {subCategories ? (
-        <div className={collage ? 'v3-l2__category-block' : undefined}>
-          <NavEnterGroup
-            key={`${mountKey}-subs`}
-            as="ul"
-            list
-            delay={NAV_LINK_ENTER_DRILL_DELAY}
-            {...NAV_LINK_ENTER}
-            direction={animDirection}
-            className={
-              collage
-                ? 'v3-l2__sub-list v3-l2__sub-list--after-eyebrow'
-                : 'v3-l2__sub-list'
-            }
-          >
-            {collage?.eyebrow && (
-              <li className="v3-l2__eyebrow-item nav-enter-group__item--static">
-                <p className="v3-l2__eyebrow">
-                  {toNavHeadlineCase(collage.eyebrow)}
-                </p>
-              </li>
-            )}
-            {subCategories.map((sub) => {
-              const rowLabel = getV3L2LinkLabel(sub.id, sub.label)
-
-              return (
-                <li key={sub.id}>
-                  <button
-                    type="button"
-                    onClick={() => {
-                      if (shouldDrillNavLink(sub.label, sub.id)) {
-                        onSelectSub(sub.id, rowLabel)
-                      }
-                    }}
-                    className="v1-nav-link flex w-full items-center justify-between text-left"
-                  >
-                    <span className="font-extended text-[20px] leading-[1.2] tracking-[0.4px] text-coach-black">
-                      {toNavHeadlineCase(rowLabel)}
-                    </span>
-                    {shouldShowNavLinkChevron(sub.label, sub.id) && (
-                      <ChevronRight />
-                    )}
-                  </button>
-                </li>
-              )
-            })}
-          </NavEnterGroup>
-        </div>
-      ) : (
-        detail.sections && (
-          <LinkSections
-            sections={detail.sections}
-            className={
-              collage
-                ? 'v3-l2__sections v3-l2__sections--after-collage'
-                : 'v3-l2__sections'
-            }
-            depth="l2"
+      {drillBody?.kind === 'sub-category-sections' && (
+        <div className={contentSpots ? 'v3-l2__category-block' : undefined}>
+          <DrillSubCategorySections
+            sections={drillBody.sections}
+            className={sectionsClassName}
             screenTitle={screenTitle}
+            leadingEyebrow={contentSpots?.eyebrow}
             animDirection={animDirection}
-            enterKey={enterKey}
+            mountKey={mountKey}
+            onSelectSub={onSelectSub}
           />
-        )
+        </div>
+      )}
+
+      {drillBody?.kind === 'flat-sections' && (
+        <DrillLinkSections
+          sections={drillBody.sections}
+          className={sectionsClassName}
+          depth="l2"
+          screenTitle={screenTitle}
+          animDirection={animDirection}
+          mountKey={mountKey}
+        />
       )}
     </div>
   )
@@ -535,16 +395,18 @@ function L3Screen({
   enterKey: number
   animDirection: NavAnimDirection
 }) {
+  const mountKey = animMountKey(animDirection, enterKey)
+
   return (
     <div className="v3-l3">
       <DrillHeader title={screenTitle} onBack={onBack} />
-      <LinkSections
+      <DrillLinkSections
         sections={sub.sections}
         className="v3-l3__sections"
         depth="l3"
         screenTitle={screenTitle}
         animDirection={animDirection}
-        enterKey={enterKey}
+        mountKey={mountKey}
       />
     </div>
   )
@@ -802,7 +664,7 @@ function DrilldownBody({
   )
 }
 
-/** MVP V3 — Nav + image collage (matches coach-nav.vercel.app V3). */
+/** MVP V3 — Nav + L1/L2 content spots (matches coach-nav.vercel.app V3). */
 export function NavV3ImageCollage({ open, onClose }: NavV3ImageCollageProps) {
   return (
     <InvokedMenuShell open={open} onClose={onClose} aria-label="Shop navigation">

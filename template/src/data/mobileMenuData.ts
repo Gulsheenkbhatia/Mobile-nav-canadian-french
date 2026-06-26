@@ -15,7 +15,10 @@ export type MenuLink = {
 /**
  * Grouped link list on L2 flat-section views (and L3 data shape).
  *
- * - L1 collage uses content-spot eyebrows — not MenuLinkSection.
+ * Multiple sections in one screen are separated by 32px; links within a section use 16px.
+ * Applies to L2 flat-section and L2 sub-category-section drill templates, and L3.
+ *
+ * - L1 content spots use content-spot eyebrows — not MenuLinkSection.
  * - L2 sub-category lists (chevron rows) do not render section eyebrows.
  * - L3 never renders section eyebrows; the drill header is the title.
  *
@@ -37,10 +40,22 @@ export type MenuSubCategory = {
   sections: MenuLinkSection[]
 }
 
+/** Grouped chevron rows on L2 sub-category drill views — 32px between sections. */
+export type MenuSubCategorySection = {
+  id: string
+  eyebrow?: string
+  showEyebrow?: boolean
+  subCategories: MenuSubCategory[]
+}
+
 export type MenuCategoryDetail = {
   id: string
   label: string
+  /** @deprecated Prefer subCategorySections for multi-section L2 layouts. */
   subCategories?: MenuSubCategory[]
+  /** L2 chevron rows grouped into sections (e.g. Shop by Category + Trending). */
+  subCategorySections?: MenuSubCategorySection[]
+  /** L2 flat terminal links grouped into sections. */
   sections?: MenuLinkSection[]
 }
 

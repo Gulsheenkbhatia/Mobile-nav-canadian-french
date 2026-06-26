@@ -61,7 +61,7 @@
 
 .invoked-menu__base--l1-ready
   .nav-link-enter-group.nav-enter-group--slide-in
-  .nav-enter-group__item:not(.nav-enter-group__item--static):not(.v3-l1__collage-list-item) {
+  .nav-enter-group__item:not(.nav-enter-group__item--static):not(.v3-l1__content-spots-list-item) {
   animation-name: nav-enter-slide-in;
   animation-duration: var(--transition-duration-content);
   animation-timing-function: var(--transition-easing-content);
@@ -72,8 +72,8 @@
   animation: none !important;
 }
 
-/* L1 collage row inside link list — inner tiles own fade-down */
-.v3-l1__collage-list-item.nav-enter-group__item {
+/* L1 content spots row inside link list — inner tiles own fade-down */
+.v3-l1__content-spots-list-item.nav-enter-group__item {
   animation: none !important;
   opacity: 1;
   transform: none;
@@ -102,9 +102,9 @@
   animation-name: nav-enter-slide-in;
 }
 
-.v3-collage .nav-enter-group__item,
-.v3-collage__duo-cell .nav-enter-group__item,
-.v3-collage--l1-stagger .nav-enter-group__item {
+.v3-content-spots .nav-enter-group__item,
+.v3-content-spots__duo-cell .nav-enter-group__item,
+.v3-content-spots[class*='--l1-'] .nav-enter-group__item {
   width: 100%;
 }
 

@@ -125,3 +125,16 @@ h4 {
   font-size: var(--text-24);
   line-height: var(--line-height-m);
 }
+
+/* Vercel preview toolbar — overlaps prototype content on deploy previews */
+vercel-toolbar,
+vercel-live-feedback,
+[data-vercel-toolbar],
+[data-vercel-toolbar-api],
+[class*='vercel-toolbar'],
+#__vercel-toolbar,
+#__vercel_toolbar {
+  display: none !important;
+  pointer-events: none !important;
+  visibility: hidden !important;
+}

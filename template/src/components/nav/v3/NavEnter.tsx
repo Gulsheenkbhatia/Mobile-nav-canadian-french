@@ -22,12 +22,15 @@ export const NAV_LINK_ENTER_L1_DELAY = 0.15
 /** L2/L3 link lists — first link after drill panel lands. */
 export const NAV_LINK_ENTER_DRILL_DELAY = 0.15
 
-/** V3 image collage load-in — coach-nav.vercel.app Fd variant. */
-export const NAV_IMAGE_ENTER = {
+/** V3 content spots load-in — coach-nav.vercel.app Fd variant. */
+export const NAV_CONTENT_SPOTS_ENTER = {
   variant: 'fade-down' as const,
   stagger: 0.1,
   delay: 0.2,
 } as const
+
+/** @deprecated Use NAV_CONTENT_SPOTS_ENTER */
+export const NAV_IMAGE_ENTER = NAV_CONTENT_SPOTS_ENTER
 
 type NavEnterGroupProps = {
   /** Seconds before first child animates (vercel delayChildren). */

@@ -49,7 +49,7 @@
 }
 
 .v1-prototype .content-spot__tile-label,
-.v1-prototype .v3-collage__label-text {
+.v1-prototype .v3-content-spots__label-text {
   font-family: var(--font-face1-extended);
   font-size: var(--text-12);
   font-weight: 400;

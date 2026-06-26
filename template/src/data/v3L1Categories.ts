@@ -1,13 +1,7 @@
 import type { BrandId } from '../components/nav/NavSearchExposed'
 import type { MenuCategory } from './mobileMenuData'
-import { getMenuTopCategories } from './mobileMenuData'
 
 const HOLIDAY_PLACEHOLDER_LABEL = 'Holiday'
-
-const HOLIDAY_L1_IDS = new Set([
-  'retail_qa_auto_category',
-  'outlet_qa_auto_category',
-])
 
 /** coach-nav.vercel.app V3 Coach L1 — excludes SIT, Think, Sale, Featured. */
 const COACH_V3_L1: MenuCategory[] = [
@@ -20,12 +14,15 @@ const COACH_V3_L1: MenuCategory[] = [
   { id: 'coachtopia', label: 'Coachtopia' },
 ]
 
-/** Outlet L1 — same vercel order where live ids exist. */
+/** Outlet L1 — vercel order with Best Sellers after Bags, Clearance after Holiday. */
 const OUTLET_V3_L1: MenuCategory[] = [
   { id: 'outlet-women', label: 'Women' },
   { id: 'outlet-men-men', label: 'Men' },
   { id: 'outlet-bags-bags', label: 'Bags' },
+  { id: 'outlet-bags-bestselling-bags', label: 'Best Sellers' },
   { id: 'outlet-whats-new', label: 'New' },
+  { id: 'outlet_qa_auto_category', label: HOLIDAY_PLACEHOLDER_LABEL },
+  { id: 'outlet-clearance', label: 'Clearance' },
 ]
 
 /**
@@ -34,10 +31,5 @@ const OUTLET_V3_L1: MenuCategory[] = [
  */
 export function getV3L1Categories(brand: BrandId): MenuCategory[] {
   if (brand === 'coach') return COACH_V3_L1
-
-  const qaAuto = getMenuTopCategories(brand)
-    .filter((c) => HOLIDAY_L1_IDS.has(c.id))
-    .map((c) => ({ ...c, label: HOLIDAY_PLACEHOLDER_LABEL }))
-
-  return [...OUTLET_V3_L1, ...qaAuto]
+  return OUTLET_V3_L1
 }

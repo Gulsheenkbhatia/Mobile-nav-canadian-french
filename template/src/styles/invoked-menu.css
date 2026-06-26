@@ -49,6 +49,7 @@ body.drawerOpened {
 
 .invoked-menu--closed {
   pointer-events: none;
+  visibility: hidden;
   transform: translateX(100%);
 }
 
@@ -335,15 +336,16 @@ body.drawerOpened {
   display: flex;
   flex-direction: column;
   min-width: 0;
+  --nav-drill-section-gap: 32px;
 }
 
 /* PWA: navFlyoutPromoContent */
-.v3-l1__collage-wrap {
+.v3-l1__content-spots-wrap {
   padding: 0 var(--spacing-4);
   margin-top: 0;
 }
 
-.v3-l1__collage-list-item {
+.v3-l1__content-spots-list-item {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -367,7 +369,7 @@ body.drawerOpened {
   gap: var(--spacing-4);
 }
 
-/* Utility footer — own section, 32px below last L1 category (Coachtopia / collage on outlet) */
+/* Utility footer — own section, 32px below last L1 category (Coachtopia / content spots on outlet) */
 .v3-l1__utility-section {
   margin-top: 32px;
 }
@@ -421,11 +423,11 @@ body.drawerOpened {
 .v3-l3__sections {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-4);
+  gap: var(--nav-drill-section-gap, 32px);
   margin-top: 0;
 }
 
-.v3-l2__sections--after-collage {
+.v3-l2__sections--after-content-spots {
   margin-top: var(--spacing-4);
 }
 

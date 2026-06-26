@@ -1,0 +1,121 @@
+import type { MenuSubCategorySection } from '../../../data/mobileMenuData'
+import {
+  shouldShowSectionEyebrow,
+  type NavEyebrowContext,
+} from '../../../data/navEyebrowVisibility'
+import { getV3L2LinkLabel } from '../../../data/v3ContentSpots'
+import { CoachIconMask } from '../../CoachIconMask'
+import {
+  shouldDrillNavLink,
+  shouldShowNavLinkChevron,
+} from '../../../utils/navLinkChevron'
+import { toNavHeadlineCase } from '../../../utils/toNavHeadlineCase'
+import {
+  NavEnterGroup,
+  NAV_LINK_ENTER,
+  NAV_LINK_ENTER_DRILL_DELAY,
+  type NavAnimDirection,
+} from '../v3/NavEnter'
+
+const CHEVRON_RIGHT = '/assets/icons/chevron-right.svg'
+
+type DrillSubCategorySectionsProps = {
+  sections: MenuSubCategorySection[]
+  className?: string
+  screenTitle: string
+  /** Eyebrow from L2 content spots — shown on first section when it has no eyebrow. */
+  leadingEyebrow?: string
+  animDirection: NavAnimDirection
+  mountKey: string
+  onSelectSub: (subId: string, title: string) => void
+}
+
+/** L2 chevron sub-category lists — one or more sections with 32px between groups. */
+export function DrillSubCategorySections({
+  sections,
+  className = 'v3-l2__sections',
+  screenTitle,
+  leadingEyebrow,
+  animDirection,
+  mountKey,
+  onSelectSub,
+}: DrillSubCategorySectionsProps) {
+  const ctx: NavEyebrowContext = {
+    depth: 'l2',
+    screenTitle,
+    sectionCount: sections.length,
+  }
+
+  const sectionBlocks = sections
+    .map((section, sectionIndex) => {
+      if (section.subCategories.length === 0) return null
+
+      const showSectionEyebrow =
+        shouldShowSectionEyebrow(section, ctx) && section.eyebrow
+      const leading =
+        sectionIndex === 0 && leadingEyebrow && !showSectionEyebrow
+          ? leadingEyebrow
+          : null
+      const eyebrowLabel =
+        showSectionEyebrow && section.eyebrow ? section.eyebrow : leading
+
+      return { section, eyebrowLabel, sectionIndex }
+    })
+    .filter((block): block is NonNullable<typeof block> => block !== null)
+
+  if (sectionBlocks.length === 0) return null
+
+  let staggerOffset = 0
+
+  return (
+    <div className={className}>
+      {sectionBlocks.map(({ section, eyebrowLabel }) => {
+        const rowCount = section.subCategories.length + (eyebrowLabel ? 1 : 0)
+        const delay = NAV_LINK_ENTER_DRILL_DELAY + staggerOffset * NAV_LINK_ENTER.stagger
+        staggerOffset += rowCount
+
+        return (
+          <NavEnterGroup
+            key={`${mountKey}-${section.id}`}
+            as="ul"
+            list
+            delay={delay}
+            {...NAV_LINK_ENTER}
+            direction={animDirection}
+            className="v3-l2__section v3-l2__sub-list"
+          >
+            {eyebrowLabel && (
+              <li className="v3-l2__eyebrow-item nav-enter-group__item--static">
+                <p className="v3-l2__eyebrow">{toNavHeadlineCase(eyebrowLabel)}</p>
+              </li>
+            )}
+            {section.subCategories.map((sub) => {
+              const rowLabel = getV3L2LinkLabel(sub.id, sub.label)
+
+              return (
+                <li key={sub.id}>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      if (shouldDrillNavLink(sub.label, sub.id)) {
+                        onSelectSub(sub.id, rowLabel)
+                      }
+                    }}
+                    className="v1-nav-link flex w-full items-center justify-between text-left"
+                  >
+                    <span className="min-w-0 flex-1 font-extended text-[20px] leading-[1.2] tracking-[0.4px] text-coach-black">
+                      {toNavHeadlineCase(rowLabel)}
+                    </span>
+                    {shouldShowNavLinkChevron(sub.label, sub.id) && (
+                      <CoachIconMask src={CHEVRON_RIGHT} size={16} />
+                    )}
+                  </button>
+                </li>
+              )
+            })}
+          </NavEnterGroup>
+        )
+      })}
+    </div>
+  )
+}

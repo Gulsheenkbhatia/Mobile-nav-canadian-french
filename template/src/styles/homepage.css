@@ -1,5 +1,16 @@
 /* Coach mobile homepage modules */
 
+/* Prototype intro — full-width copy below retail header */
+.prototype-intro {
+  width: 100%;
+  min-width: 0;
+}
+
+.prototype-intro__body {
+  width: 100%;
+  max-width: none;
+}
+
 .home-hero {
   position: relative;
   min-height: 420px;
