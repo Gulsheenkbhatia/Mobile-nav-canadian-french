@@ -1,4 +1,5 @@
 import type { HomepageSubnavLink } from '../../data/homepageData'
+import { CoachtopiaLogo, isCoachtopiaCategory } from '../nav/CoachLogos'
 
 export type HomepageVideoHeroProps = {
   title: string
@@ -39,12 +40,16 @@ export function HomepageVideoHero({
         <div className="home-video-hero__subnav-scroll">
           {subnavLinks.map((link) => (
             <a
-              key={link.label}
+              key={link.id ?? link.label}
               href={link.href}
               className="home-video-hero__subnav-link"
               onClick={(e) => e.preventDefault()}
             >
-              {link.label}
+              {link.id && isCoachtopiaCategory(link.id) ? (
+                <CoachtopiaLogo height={12} />
+              ) : (
+                link.label
+              )}
             </a>
           ))}
         </div>

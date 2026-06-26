@@ -68,6 +68,16 @@ function normalizeUrl(url) {
   }
 }
 
+/** Strip SFCC pipe delimiters and invisible characters from synced nav labels. */
+function sanitizeNavLabel(value) {
+  if (typeof value !== 'string') return value
+  return value
+    .replace(/[\u200B-\u200D\uFEFF\u00AD\u2060]/g, '')
+    .replace(/\s*\|\s*/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim()
+}
+
 function isPlainObject(v) {
   return v !== null && typeof v === 'object' && !Array.isArray(v)
 }
@@ -254,7 +264,7 @@ function toLink(category) {
   const href = normalizeUrl(category.url)
   const link = {
     id: category.cgid,
-    label: category.name ?? category.cgid,
+    label: sanitizeNavLabel(category.name ?? category.cgid),
   }
   if (href) link.href = href
   return link
@@ -295,7 +305,7 @@ function buildSectionsFromChildren(children, eyebrow, ctx) {
 
 function buildSubCategory(t2, menuData) {
   const t3Children = getCategoriesByCgIds(menuData, t2.subCategories ?? [])
-  const screenTitle = t2.name ?? t2.cgid
+  const screenTitle = sanitizeNavLabel(t2.name ?? t2.cgid)
   const l3Ctx = { depth: 'l3', screenTitle, sectionCount: 1 }
 
   if (t3Children.length > 0) {
@@ -322,7 +332,7 @@ function buildSubCategory(t2, menuData) {
 
 function buildCategoryDetail(t1, menuData) {
   const t2Children = getCategoriesByCgIds(menuData, t1.subCategories ?? [])
-  const screenTitle = t1.name ?? t1.cgid
+  const screenTitle = sanitizeNavLabel(t1.name ?? t1.cgid)
   const l2Ctx = { depth: 'l2', screenTitle, sectionCount: 1 }
 
   if (!t2Children.length) {
@@ -372,7 +382,7 @@ function buildBrandMenu(brandMenuData) {
     const cat = brandMenuData[cgid]
     return {
       id: cgid,
-      label: cat?.name ?? cgid,
+      label: sanitizeNavLabel(cat?.name ?? cgid),
     }
   })
 

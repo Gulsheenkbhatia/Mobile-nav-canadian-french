@@ -1,4 +1,5 @@
 import type { HomepageCategory } from '../../data/homepageData'
+import { CoachtopiaLogo, isCoachtopiaCategory } from '../nav/CoachLogos'
 
 type MobileCategoryRailProps = {
   categories: HomepageCategory[]
@@ -32,8 +33,12 @@ export function MobileCategoryRail({
               className="home-category-rail__image"
               style={{ background: category.imageBg }}
             />
-            <p className="mt-coach-xs text-center text-sm font-bold tracking-[0.2px]">
-              {category.name}
+            <p className="mt-coach-xs flex justify-center text-sm font-bold tracking-[0.2px]">
+              {isCoachtopiaCategory(category.id) ? (
+                <CoachtopiaLogo height={14} />
+              ) : (
+                category.name
+              )}
             </p>
           </a>
         ))}

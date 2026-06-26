@@ -7,6 +7,8 @@ const QA_AUTO_IDS = new Set([
   'outlet_qa_auto_category',
 ])
 
+const HOLIDAY_PLACEHOLDER_LABEL = 'Holiday Placeholder Category'
+
 /** coach-nav.vercel.app V3 Coach L1 — excludes SIT, Think, Sale, Featured. */
 const COACH_V3_L1: MenuCategory[] = [
   { id: 'coach-women', label: 'Women' },
@@ -14,6 +16,7 @@ const COACH_V3_L1: MenuCategory[] = [
   { id: 'bags', label: 'Bags' },
   { id: 'new', label: 'New' },
   { id: 'gifts', label: 'Gifts' },
+  { id: 'retail_qa_auto_category', label: HOLIDAY_PLACEHOLDER_LABEL },
   { id: 'coachtopia', label: 'Coachtopia' },
 ]
 
@@ -26,12 +29,15 @@ const OUTLET_V3_L1: MenuCategory[] = [
 ]
 
 /**
- * V3 L1 category list — fixed vercel order, QA Auto Category appended last.
+ * V3 L1 category list — fixed vercel order; holiday placeholder sits above Coachtopia.
  * Omits SIT Products, Think, Featured, and Sale from the synced menu.
  */
 export function getV3L1Categories(brand: BrandId): MenuCategory[] {
-  const ordered = brand === 'coach' ? COACH_V3_L1 : OUTLET_V3_L1
-  const qaAuto = getMenuTopCategories(brand).filter((c) => QA_AUTO_IDS.has(c.id))
+  if (brand === 'coach') return COACH_V3_L1
 
-  return [...ordered, ...qaAuto]
+  const qaAuto = getMenuTopCategories(brand)
+    .filter((c) => QA_AUTO_IDS.has(c.id))
+    .map((c) => ({ ...c, label: HOLIDAY_PLACEHOLDER_LABEL }))
+
+  return [...OUTLET_V3_L1, ...qaAuto]
 }

@@ -25,6 +25,7 @@ import {
 } from '../../../data/navEyebrowVisibility'
 import type { BrandId } from '../NavSearchExposed'
 import { NavEnterGroup, NavEnterItem, type NavAnimDirection } from './NavEnter'
+import { CoachtopiaLogo, isCoachtopiaCategory } from '../CoachLogos'
 import { toNavHeadlineCase } from '../../../utils/toNavHeadlineCase'
 import { formatDrillTitle } from '../../../utils/navDrillTitle'
 import { isViewAllNavLink, shouldShowNavLinkChevron, shouldDrillNavLink } from '../../../utils/navLinkChevron'
@@ -181,11 +182,15 @@ function L1Screen({
               <button
                 type="button"
                 onClick={() => onSelect(cat.id, cat.label)}
-                className="v1-nav-link flex w-full items-center justify-between text-left"
+                className="v1-nav-link v3-l1__category-link flex w-full min-h-[28px] items-center justify-between text-left"
               >
-                <span className="font-extended text-[20px] leading-[1.2] tracking-[0.4px] text-coach-black">
-                  {toNavHeadlineCase(cat.label)}
-                </span>
+                {isCoachtopiaCategory(cat.id) ? (
+                  <CoachtopiaLogo height={20} />
+                ) : (
+                  <span className="min-w-0 flex-1 truncate font-extended text-[20px] leading-[1.2] tracking-[0.4px] text-coach-black">
+                    {toNavHeadlineCase(cat.label)}
+                  </span>
+                )}
                 {shouldShowNavLinkChevron(cat.label, cat.id) && <ChevronRight />}
               </button>
             </li>
@@ -203,7 +208,7 @@ function L1Screen({
               <li key={label}>
                 <button
                   type="button"
-                  className="v1-utility-link flex items-center font-extended text-[16px] leading-[1.2] tracking-[0.4px] text-coach-black"
+                  className="v1-utility-link flex items-center"
                 >
                   {toNavHeadlineCase(label)}
                 </button>
@@ -353,7 +358,6 @@ function DrillHeader({
       >
         {formatDrillTitle(title)}
       </h2>
-      <span aria-hidden className="v3-l2__header-spacer size-6 shrink-0" />
     </div>
   )
 }

@@ -1,7 +1,38 @@
 /**
  * Coach wordmarks — from coach-srp-filter-prototype / ux-design-repo Coach Design System.
  * currentColor fills for active/inactive tab states.
+ *
+ * Coachtopia wordmark — @tapestry-inc/design-tokens/coachtopia/logo/primary-black.svg
+ * (coach-pwa TierOneMobileCategories uses 20px height for L1 nav).
  */
+
+const COACHTOPIA_LOGO_SRC = '/assets/logo/coachtopia-primary-black.svg'
+const COACHTOPIA_LOGO_ASPECT = 76 / 15
+
+export const COACHTOPIA_CATEGORY_ID = 'coachtopia'
+
+export function isCoachtopiaCategory(id: string): boolean {
+  return id === COACHTOPIA_CATEGORY_ID
+}
+
+export function CoachtopiaLogo({
+  className,
+  height = 20,
+}: {
+  className?: string
+  height?: number
+}) {
+  return (
+    <img
+      src={COACHTOPIA_LOGO_SRC}
+      alt="Coachtopia"
+      className={`block shrink-0 ${className ?? ''}`}
+      width={height * COACHTOPIA_LOGO_ASPECT}
+      height={height}
+      decoding="async"
+    />
+  )
+}
 
 export function CoachRetailLogo({ className }: { className?: string }) {
   return (

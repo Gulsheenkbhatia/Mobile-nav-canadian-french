@@ -61,6 +61,7 @@ const liveHeroes = liveHeroesJson as LiveHeroRecord[]
 export const HOMEPAGE_HERO_VIDEO = '/assets/videos/20260603-hp1-tabby-video-mobile.webm'
 
 export type HomepageSubnavLink = {
+  id?: string
   label: string
   href: string
 }
@@ -71,7 +72,7 @@ export const homepageSubnavLinks: HomepageSubnavLink[] = [
   { label: 'Women', href: '#' },
   { label: 'Men', href: '#' },
   { label: 'Bags', href: '#' },
-  { label: 'Coachtopia', href: '#' },
+  { id: 'coachtopia', label: 'Coachtopia', href: '#' },
 ]
 
 /** First two heroes synced from live coach.com (refresh via npm run sync:heroes). */

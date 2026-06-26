@@ -32,11 +32,11 @@ function placeholderLinksForTitle(
 
   if (key.includes('qa auto')) {
     return [
-      link('qa-placeholder-l3-a', 'QA Auto L3 | Category'),
-      link('qa-placeholder-l3-b', 'QA Auto L3 | Subcategory'),
-      link('qa-placeholder-l3-c', 'QA Auto L3 | Product Set'),
-      link('qa-placeholder-l3-d', 'QA Auto L3 | View All'),
-      link('qa-placeholder-l3-e', 'QA Auto L3 | Sale Item'),
+      link('qa-placeholder-l3-a', 'QA Auto L3 Category'),
+      link('qa-placeholder-l3-b', 'QA Auto L3 Subcategory'),
+      link('qa-placeholder-l3-c', 'QA Auto L3 Product Set'),
+      link('qa-placeholder-l3-d', 'QA Auto L3 View All'),
+      link('qa-placeholder-l3-e', 'QA Auto L3 Sale Item'),
     ]
   }
 

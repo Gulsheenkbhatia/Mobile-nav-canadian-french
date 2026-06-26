@@ -1,6 +1,17 @@
 /** Words that should stay all-caps (acronyms, currency). */
 const ALL_CAPS_WORD = /^[A-Z]{2,}$/
 const CURRENCY_CODE = /^\$[A-Za-z]+$/
+const INVISIBLE_CHARS = /[\u200B-\u200D\uFEFF\u00AD\u2060]/g
+const PIPE_SEPARATORS = /\s*\|\s*/g
+
+/** Strip invisible characters and SFCC pipe delimiters from nav copy. */
+export function sanitizeNavLabel(value: string): string {
+  return value
+    .replace(INVISIBLE_CHARS, '')
+    .replace(PIPE_SEPARATORS, ' ')
+    .replace(/\s+/g, ' ')
+    .trim()
+}
 
 function formatWord(word: string): string {
   if (!word) return word
@@ -16,8 +27,7 @@ function formatWord(word: string): string {
  * Preserves short acronyms (QA, SIT) and currency tokens ($USD).
  */
 export function toNavHeadlineCase(value: string): string {
-  return value
-    .trim()
+  return sanitizeNavLabel(value)
     .split(/\s+/)
     .map(formatWord)
     .join(' ')

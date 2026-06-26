@@ -10,6 +10,8 @@
   font-weight: 400;
   line-height: var(--line-height-m);
   letter-spacing: var(--letter-spacing-xs);
+  hyphens: none;
+  -webkit-hyphens: none;
 }
 
 .v1-prototype .invoked-menu__l1-link--large,
@@ -26,7 +28,7 @@
 
 .v1-prototype .v1-utility-link,
 .v1-prototype .content-spot__footer-links .invoked-menu__link {
-  font-family: var(--font-face1);
+  font-family: var(--font-face1-extended);
   font-size: var(--text-16);
   font-weight: 400;
   line-height: var(--line-height-xl);
@@ -39,6 +41,11 @@
 }
 
 .v1-prototype .content-spot__hero-copy .content-spot__title,
-.v1-prototype .content-spot__tile-label {
+.v1-prototype .content-spot__tile-label,
+.v1-prototype .v3-collage__label-text {
+  font-family: var(--font-face1-extended);
+  font-size: var(--text-16);
+  font-weight: 400;
+  letter-spacing: 0.2px;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.55);
 }

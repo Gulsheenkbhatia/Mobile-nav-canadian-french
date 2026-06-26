@@ -1,4 +1,5 @@
 import { CoachIconMask } from '../../CoachIconMask'
+import { CoachtopiaLogo, isCoachtopiaCategory } from '../CoachLogos'
 import type { MenuCategoryDetail } from '../../../data/mobileMenuData'
 import { shouldShowSectionEyebrow } from '../../../data/navEyebrowVisibility'
 import { formatDrillTitle } from '../../../utils/navDrillTitle'
@@ -29,7 +30,13 @@ export function MenuL1List({
               className={`v1-nav-link invoked-menu__l1-link invoked-menu__l1-link--compact invoked-menu__l1-link--row`}
               onClick={() => onSelect?.(item.id)}
             >
-              <span>{toNavHeadlineCase(item.label)}</span>
+              <span>
+                {isCoachtopiaCategory(item.id) ? (
+                  <CoachtopiaLogo height={20} />
+                ) : (
+                  toNavHeadlineCase(item.label)
+                )}
+              </span>
               {showChevron && shouldShowNavLinkChevron(item.label, item.id) && (
                 <CoachIconMask src={ICONS.chevronRight} size={16} />
               )}

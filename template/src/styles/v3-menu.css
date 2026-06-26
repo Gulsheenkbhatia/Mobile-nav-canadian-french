@@ -105,8 +105,8 @@
 
 .v3-collage__label-text {
   font-family: var(--font-face1-extended);
-  font-size: var(--text-10);
-  font-weight: 700;
+  font-size: var(--text-16);
+  font-weight: 400;
   line-height: 1.35;
   letter-spacing: 0.2px;
   color: var(--color-white);

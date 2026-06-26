@@ -17,7 +17,7 @@
       },
       {
         "id": "retail_qa_auto_category",
-        "label": "QA Auto Category"
+        "label": "Holiday Placeholder Category"
       },
       {
         "id": "coach-men",
@@ -329,7 +329,7 @@
                   },
                   {
                     "id": "coach-women-accessories-desk",
-                    "label": "Tech, Desk,  & Travel",
+                    "label": "Tech, Desk, & Travel",
                     "href": "/shop/women/accessories/tech-desk--travel"
                   }
                 ],
@@ -421,83 +421,83 @@
       },
       "retail_qa_auto_category": {
         "id": "retail_qa_auto_category",
-        "label": "QA Auto Category",
+        "label": "Holiday Placeholder Category",
         "subCategories": [
           {
             "id": "retail_qa_auto_l2",
-            "label": "QA Auto L2 | Category",
+            "label": "QA Auto L2 Category",
             "sections": [
               {
                 "id": "shop-by-category",
                 "links": [
                   {
                     "id": "retail_qa_auto_l3",
-                    "label": "QA Auto L3 | Category",
+                    "label": "QA Auto L3 Category",
                     "href": "/shop/coach/qa-auto-category/qa-auto-l2-%7C-category/qa-auto-l3-%7C-category"
                   }
                 ],
                 "showEyebrow": false,
-                "eyebrow": "QA Auto L2 | Category"
+                "eyebrow": "QA Auto L2 Category"
               }
             ]
           },
           {
             "id": "retail_qa_auto_sale_category",
-            "label": "QA Auto Sale | Category",
+            "label": "QA Auto Sale Category",
             "sections": [
               {
                 "id": "shop",
                 "links": [
                   {
                     "id": "retail_qa_auto_sale_category",
-                    "label": "QA Auto Sale | Category",
+                    "label": "QA Auto Sale Category",
                     "href": "/shop/coach/qa-auto-category/qa-auto-sale-%7C-category"
                   }
                 ],
                 "showEyebrow": false,
-                "eyebrow": "QA Auto Sale | Category"
+                "eyebrow": "QA Auto Sale Category"
               }
             ]
           },
           {
             "id": "retail_qa_auto_viewAll",
-            "label": "QA Auto | View All",
+            "label": "QA Auto View All",
             "sections": [
               {
                 "id": "shop",
                 "links": [
                   {
                     "id": "retail_qa_auto_viewAll",
-                    "label": "QA Auto | View All",
+                    "label": "QA Auto View All",
                     "href": "/shop/coach/qa-auto-category/qa-auto-%7C-view-all"
                   }
                 ],
                 "showEyebrow": false,
-                "eyebrow": "QA Auto | View All"
+                "eyebrow": "QA Auto View All"
               }
             ]
           },
           {
             "id": "retail_qa_auto_l2_set_products",
-            "label": "QA Auto L2 | Category | Set Products",
+            "label": "QA Auto L2 Category Set Products",
             "sections": [
               {
                 "id": "shop",
                 "links": [
                   {
                     "id": "retail_qa_auto_l2_set_products",
-                    "label": "QA Auto L2 | Category | Set Products",
+                    "label": "QA Auto L2 Category Set Products",
                     "href": "/shop/coach/qa-auto-category/qa-auto-l2-%7C-category-%7C-set-products"
                   }
                 ],
                 "showEyebrow": false,
-                "eyebrow": "QA Auto L2 | Category | Set Products"
+                "eyebrow": "QA Auto L2 Category Set Products"
               }
             ]
           },
           {
             "id": "retail_qa_auto_test",
-            "label": "QA Auto Test | Category",
+            "label": "QA Auto Test Category",
             "sections": [
               {
                 "id": "shop-by-category",
@@ -509,7 +509,7 @@
                   }
                 ],
                 "showEyebrow": false,
-                "eyebrow": "QA Auto Test | Category"
+                "eyebrow": "QA Auto Test Category"
               }
             ]
           }
@@ -1221,7 +1221,7 @@
       },
       {
         "id": "outlet_qa_auto_category",
-        "label": "QA Auto Category"
+        "label": "Holiday Placeholder Category"
       },
       {
         "id": "outlet-bags-bags",
@@ -1534,65 +1534,65 @@
       },
       "outlet_qa_auto_category": {
         "id": "outlet_qa_auto_category",
-        "label": "QA Auto Category",
+        "label": "Holiday Placeholder Category",
         "subCategories": [
           {
             "id": "outlet_qa_auto_l2",
-            "label": "QA Auto L2 | Category",
+            "label": "QA Auto L2 Category",
             "sections": [
               {
                 "id": "shop-by-category",
                 "links": [
                   {
                     "id": "outlet_qa_auto_l3",
-                    "label": "QA Auto L3 | Category",
+                    "label": "QA Auto L3 Category",
                     "href": "/shop/outlet/qa-auto-category/qa-auto-l2-%7C-category/qa-auto-l3-%7C-category"
                   }
                 ],
                 "showEyebrow": false,
-                "eyebrow": "QA Auto L2 | Category"
+                "eyebrow": "QA Auto L2 Category"
               }
             ]
           },
           {
             "id": "outlet_qa_auto_sale_category",
-            "label": "QA Auto Sale | Category",
+            "label": "QA Auto Sale Category",
             "sections": [
               {
                 "id": "shop",
                 "links": [
                   {
                     "id": "outlet_qa_auto_sale_category",
-                    "label": "QA Auto Sale | Category",
+                    "label": "QA Auto Sale Category",
                     "href": "/shop/outlet/qa-auto-category/qa-auto-sale-%7C-category"
                   }
                 ],
                 "showEyebrow": false,
-                "eyebrow": "QA Auto Sale | Category"
+                "eyebrow": "QA Auto Sale Category"
               }
             ]
           },
           {
             "id": "outlet_qa_auto_viewAll",
-            "label": "QA Auto | View All",
+            "label": "QA Auto View All",
             "sections": [
               {
                 "id": "shop",
                 "links": [
                   {
                     "id": "outlet_qa_auto_viewAll",
-                    "label": "QA Auto | View All",
+                    "label": "QA Auto View All",
                     "href": "/shop/outlet/qa-auto-category/qa-auto-%7C-view-all"
                   }
                 ],
                 "showEyebrow": false,
-                "eyebrow": "QA Auto | View All"
+                "eyebrow": "QA Auto View All"
               }
             ]
           },
           {
             "id": "outlet_qa_auto_l2_set_products",
-            "label": "QA Auto L2 | Category | Set Products",
+            "label": "QA Auto L2 Category Set Products",
             "sections": [
               {
                 "id": "shop-by-category",
@@ -1604,25 +1604,25 @@
                   }
                 ],
                 "showEyebrow": false,
-                "eyebrow": "QA Auto L2 | Category | Set Products"
+                "eyebrow": "QA Auto L2 Category Set Products"
               }
             ]
           },
           {
             "id": "outlet_qa_auto_test",
-            "label": "QA Auto Test | Category",
+            "label": "QA Auto Test Category",
             "sections": [
               {
                 "id": "shop",
                 "links": [
                   {
                     "id": "outlet_qa_auto_test",
-                    "label": "QA Auto Test | Category",
+                    "label": "QA Auto Test Category",
                     "href": "/shop/outlet/qa-auto-category/qa-auto-test-%7C-category/test-l3-view-all-2"
                   }
                 ],
                 "showEyebrow": false,
-                "eyebrow": "QA Auto Test | Category"
+                "eyebrow": "QA Auto Test Category"
               }
             ]
           }

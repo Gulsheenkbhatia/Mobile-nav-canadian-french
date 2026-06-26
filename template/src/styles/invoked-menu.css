@@ -356,6 +356,10 @@ body.drawerOpened {
   list-style: none;
 }
 
+.v3-l1__category-link {
+  gap: var(--spacing-4);
+}
+
 .v3-l1__utility-list {
   display: flex;
   flex-direction: column;
@@ -373,7 +377,7 @@ body.drawerOpened {
 .v3-l2__header,
 .v3-l3__header {
   display: grid;
-  grid-template-columns: 24px 1fr 24px;
+  grid-template-columns: 24px 1fr;
   align-items: center;
   margin-bottom: var(--spacing-4);
   min-height: 24px;
@@ -387,17 +391,13 @@ body.drawerOpened {
   flex-shrink: 0;
 }
 
-.v3-l2__header-spacer {
-  display: none;
-}
-
 .v3-l2__header-title {
   grid-column: 1 / -1;
   grid-row: 1;
   margin: 0;
   min-width: 0;
   width: 100%;
-  padding-inline: 32px;
+  padding-inline: 32px 16px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
