@@ -1,0 +1,131 @@
+{
+  "masthead": {
+    "id": "home_masthead",
+    "title": "Moments of becoming.",
+    "body": "Co-created with Gen Z, &Coach explores the in-between, where confidence is built. Singular moments, universally felt, which connect us all.",
+    "primaryCta": "Shop Bags",
+    "primaryHref": "/shop/women/handbags/view-all",
+    "secondaryCta": "Discover &Coach",
+    "secondaryHref": "/content/and-coach",
+    "logoUrl": "https://cms.coach.com/i/coach/20260617-rtl-lp1-logo",
+    "imageUrl": "https://cms.coach.com/i/coach/20260617-rtl-hp1-card-tabby20?&w=640&fmt=webp&$qlt_med$",
+    "syncedAt": "2026-06-23T02:14:31.743Z"
+  },
+  "cards": [
+    {
+      "id": "20260617-rtl-hp1-card-tabby20",
+      "kind": "product",
+      "isVideo": false,
+      "imageUrl": "https://cms.coach.com/i/coach/20260617-rtl-hp1-card-tabby20?&w=640&fmt=webp&$qlt_med$",
+      "posterUrl": "https://cms.coach.com/i/coach/20260617-rtl-hp1-card-tabby20?&w=640&fmt=webp&$qlt_med$",
+      "ctaLabel": "Shop Tabby",
+      "ctaHref": "/shop/women/collections/tabby"
+    },
+    {
+      "id": "20260617-rtl-hp1-card2-pink-v2",
+      "kind": "editorial",
+      "isVideo": true,
+      "imageUrl": "https://cms.coach.com/i/coach/20260617-rtl-hp1-card2-pink-v2?&w=640&sm=aspect&aspect=1274:1646&fmt=webp&$qlt_med$",
+      "posterUrl": "https://cms.coach.com/i/coach/20260617-rtl-hp1-card2-pink-v2?&w=640&sm=aspect&aspect=1274:1646&fmt=webp&$qlt_med$",
+      "videoUrl": "https://assets.coach.com/na/media/web-production/202606/20260617-rtl-hp1-card2-pink-v2.mp4"
+    },
+    {
+      "id": "20260617-rtl-hp1-card4-avantika",
+      "kind": "editorial",
+      "isVideo": true,
+      "imageUrl": "https://cms.coach.com/i/coach/20260617-rtl-hp1-card4-avantika?&w=640&sm=aspect&aspect=1274:1646&fmt=webp&$qlt_med$",
+      "posterUrl": "https://cms.coach.com/i/coach/20260617-rtl-hp1-card4-avantika?&w=640&sm=aspect&aspect=1274:1646&fmt=webp&$qlt_med$",
+      "videoUrl": "https://assets.coach.com/na/media/web-production/202606/20260617-rtl-hp1-card4-avantika.mp4"
+    },
+    {
+      "id": "20260617-rtl-hp1-card-tabby26",
+      "kind": "product",
+      "isVideo": false,
+      "imageUrl": "https://cms.coach.com/i/coach/20260617-rtl-hp1-card-tabby26?&w=640&fmt=webp&$qlt_med$",
+      "posterUrl": "https://cms.coach.com/i/coach/20260617-rtl-hp1-card-tabby26?&w=640&fmt=webp&$qlt_med$",
+      "ctaLabel": "Shop Women's",
+      "ctaHref": "/shop/women/view-all"
+    },
+    {
+      "id": "20260617-rtl-hp1-card-each-others-v2",
+      "kind": "editorial",
+      "isVideo": false,
+      "imageUrl": "https://cms.coach.com/i/coach/20260617-rtl-hp1-card-each-others-v2?&w=640&sm=aspect&aspect=1274:1646&fmt=webp&$qlt_med$",
+      "posterUrl": "https://cms.coach.com/i/coach/20260617-rtl-hp1-card-each-others-v2?&w=640&sm=aspect&aspect=1274:1646&fmt=webp&$qlt_med$"
+    },
+    {
+      "id": "20260617-rtl-lp2-just-being-girls-new",
+      "kind": "editorial",
+      "isVideo": false,
+      "imageUrl": "https://cms.coach.com/i/coach/20260617-rtl-lp2-just-being-girls-new?&w=640&sm=aspect&aspect=1274:1646&fmt=webp&$qlt_med$",
+      "posterUrl": "https://cms.coach.com/i/coach/20260617-rtl-lp2-just-being-girls-new?&w=640&sm=aspect&aspect=1274:1646&fmt=webp&$qlt_med$"
+    },
+    {
+      "id": "20260617-rtl-hp1-card-charm",
+      "kind": "product",
+      "isVideo": false,
+      "imageUrl": "https://cms.coach.com/i/coach/20260617-rtl-hp1-card-charm?&w=640&fmt=webp&$qlt_med$",
+      "posterUrl": "https://cms.coach.com/i/coach/20260617-rtl-hp1-card-charm?&w=640&fmt=webp&$qlt_med$",
+      "ctaLabel": "Shop Charms",
+      "ctaHref": "/shop/women/accessories/bag-accessories-keychains"
+    },
+    {
+      "id": "20260617-rtl-lp2-never-dreams-us-new",
+      "kind": "editorial",
+      "isVideo": false,
+      "imageUrl": "https://cms.coach.com/i/coach/20260617-rtl-lp2-never-dreams-us-new?&w=640&sm=aspect&aspect=1274:1646&fmt=webp&$qlt_med$",
+      "posterUrl": "https://cms.coach.com/i/coach/20260617-rtl-lp2-never-dreams-us-new?&w=640&sm=aspect&aspect=1274:1646&fmt=webp&$qlt_med$"
+    }
+  ],
+  "primarySubnav": [
+    { "label": "Women", "href": "#" },
+    { "label": "Men", "href": "#" },
+    { "label": "Bags", "href": "#" },
+    { "label": "New", "href": "#" },
+    { "label": "Gifts", "href": "#" },
+    { "label": "Coachtopia", "href": "#" }
+  ],
+  "shoulderBags": {
+    "title": "Bags that meet you where you are, and where you're headed next.",
+    "links": [
+      { "label": "Shop Women's", "href": "/shop/women/view-all" },
+      { "label": "Shop Shoulder Bags", "href": "/shop/women/handbags/shoulder-bags-hobos" }
+    ],
+    "images": [
+      {
+        "src": "https://cms.coach.com/i/coach/20260617-rtl-hp2-mobile?&w=640&fmt=webp&$qlt_med$",
+        "alt": "Two Coach burgundy handbags — a textured hobo with logo and a quilted bag with gold chain strap."
+      },
+      {
+        "src": "https://cms.coach.com/i/coach/20260617-rtl-hp2-2-mobile?&w=640&fmt=webp&$qlt_med$",
+        "alt": "Two Coach handbags — a black woven hobo with cherry charm and a cream leather bag with gold chain."
+      }
+    ]
+  },
+  "shopByCategory": [
+    {
+      "title": "Bags",
+      "links": [
+        { "label": "Shop Tabby", "href": "/shop/women/collections/tabby" },
+        { "label": "Shop All Bags", "href": "/shop/women/handbags/view-all" }
+      ]
+    },
+    {
+      "title": "Women's",
+      "links": [
+        { "label": "Shop Charms", "href": "/shop/women/accessories/bag-accessories-keychains" },
+        { "label": "Shop All Wallets", "href": "/shop/women/wallets-wristlets/view-all" }
+      ]
+    },
+    {
+      "title": "Shoes",
+      "links": [
+        { "label": "Shop Sandals", "href": "/shop/women/shoes/sandals" },
+        { "label": "Shop All Shoes", "href": "/shop/women/shoes/view-all" }
+      ]
+    }
+  ],
+  "storiesSectionTitle": "Catch up on Coach.",
+  "syncedAt": "2026-06-26T00:00:00.000Z",
+  "source": "https://coach-nav.vercel.app/"
+}

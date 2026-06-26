@@ -13,8 +13,7 @@ import {
 import { toNavHeadlineCase } from '../../../utils/toNavHeadlineCase'
 import {
   NavEnterGroup,
-  NAV_LINK_ENTER,
-  NAV_LINK_ENTER_DRILL_DELAY,
+  getNavLinkEnterPreset,
   type NavAnimDirection,
 } from '../v3/NavEnter'
 
@@ -68,14 +67,16 @@ export function DrillSubCategorySections({
 
   if (sectionBlocks.length === 0) return null
 
+  const phase = animDirection === 'exit' ? 'exit' : 'enter'
+  const preset = getNavLinkEnterPreset('drill', phase)
   let staggerOffset = 0
 
   return (
     <div className={className}>
       {sectionBlocks.map(({ section, eyebrowLabel }) => {
-        const rowCount = section.subCategories.length + (eyebrowLabel ? 1 : 0)
-        const delay = NAV_LINK_ENTER_DRILL_DELAY + staggerOffset * NAV_LINK_ENTER.stagger
-        staggerOffset += rowCount
+        const animatedCount = section.subCategories.length
+        const delay = preset.delay + staggerOffset * preset.stagger
+        staggerOffset += phase === 'exit' ? animatedCount : animatedCount + (eyebrowLabel ? 1 : 0)
 
         return (
           <NavEnterGroup
@@ -83,7 +84,8 @@ export function DrillSubCategorySections({
             as="ul"
             list
             delay={delay}
-            {...NAV_LINK_ENTER}
+            stagger={preset.stagger}
+            variant={preset.variant}
             direction={animDirection}
             className="v3-l2__section v3-l2__sub-list"
           >

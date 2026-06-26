@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from 'react'
-import { PrototypeHomePlaceholder } from './components/homepage/PrototypeHomePlaceholder'
+import { CoachHomePage } from './components/homepage/CoachHomePage'
 import { NavBrandProvider } from './components/nav/NavBrandContext'
 import { NavSearchExposed } from './components/nav/NavSearchExposed'
 import { NavV3ImageCollage } from './components/nav/v3/NavV3ImageCollage'
@@ -36,7 +36,7 @@ export default function App() {
           onMenuSearchClick={() => setMenuOpen(true)}
         />
 
-        <PrototypeHomePlaceholder />
+        <CoachHomePage showSubnav={false} />
 
         <NavScrim open={menuOpen} onClose={closeMenu} />
         <NavV3ImageCollage open={menuOpen} onClose={closeMenu} />

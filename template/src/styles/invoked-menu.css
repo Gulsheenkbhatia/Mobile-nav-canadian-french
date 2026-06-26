@@ -151,8 +151,15 @@ body.drawerOpened {
   .invoked-menu,
   .invoked-menu__track,
   .invoked-menu__overlay,
-  .retail-nav-scrim {
+  .retail-nav-scrim,
+  .invoked-menu__base--revealing,
+  .invoked-menu__overlay--revealed {
+    animation: none;
     transition: none;
+  }
+
+  .invoked-menu__overlay {
+    opacity: 1;
   }
 }
 
@@ -503,6 +510,21 @@ body.drawerOpened {
   pointer-events: none;
 }
 
+/* L1 welcome-back when L2 slides away — no list re-stagger */
+@keyframes nav-parent-reveal {
+  from {
+    opacity: 0.97;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.invoked-menu__base--revealing {
+  animation: nav-parent-reveal 220ms var(--transition-easing-panel) both;
+}
+
 .invoked-menu__overlay {
   position: absolute;
   z-index: 0;
@@ -513,14 +535,18 @@ body.drawerOpened {
   background: var(--nav-tab-active-bg, #f0f0f0);
   visibility: hidden;
   pointer-events: none;
+  opacity: 0.96;
   transform: translate3d(100%, 0, 0);
-  transition: transform var(--transition-duration-drill) var(--transition-easing-drill);
-  will-change: transform;
+  transition:
+    transform var(--transition-duration-drill) var(--transition-easing-drill),
+    opacity var(--transition-duration-drill) var(--transition-easing-drill);
+  will-change: transform, opacity;
   backface-visibility: hidden;
 }
 
 .invoked-menu__overlay--entered {
   transform: translate3d(0, 0, 0);
+  opacity: 1;
 }
 
 /* Active drill panel — in-flow; scrolls with brand tabs in invoked-menu__body */
@@ -562,6 +588,7 @@ body.drawerOpened {
   width: 100%;
   visibility: visible;
   pointer-events: none;
+  animation: nav-parent-reveal 220ms var(--transition-easing-panel) both;
 }
 
 /* Future search overlay — PWA SearchWidget searchV2 */

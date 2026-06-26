@@ -6,6 +6,8 @@ type DrillOverlayProps = {
   /** Visible underneath while a child panel slides out. */
   isRevealed: boolean
   contentKey: number
+  /** Fires once when the panel has `--entered` (after double rAF). */
+  onEntered?: () => void
   children: ReactNode
 }
 
@@ -18,18 +20,27 @@ export function DrillOverlay({
   isExiting,
   isRevealed,
   contentKey,
+  onEntered,
   children,
 }: DrillOverlayProps) {
   const [entered, setEntered] = useState(false)
   const [exitSliding, setExitSliding] = useState(false)
   const panelRef = useRef<HTMLDivElement>(null)
+  const onEnteredRef = useRef(onEntered)
+
+  useEffect(() => {
+    onEnteredRef.current = onEntered
+  }, [onEntered])
 
   useEffect(() => {
     setEntered(false)
     let outer = 0
     let inner = 0
     outer = requestAnimationFrame(() => {
-      inner = requestAnimationFrame(() => setEntered(true))
+      inner = requestAnimationFrame(() => {
+        setEntered(true)
+        onEnteredRef.current?.()
+      })
     })
     return () => {
       cancelAnimationFrame(outer)

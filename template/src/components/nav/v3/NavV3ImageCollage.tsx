@@ -3,7 +3,7 @@ import { InvokedMenuShell } from '../invoked/InvokedMenuShell'
 import { DrillOverlay } from '../drill/DrillOverlay'
 import { useDrillBack } from '../drill/useDrillBack'
 import type { DrillStackEntry } from '../navDrillMotion'
-import { NAV_DRAWER_CONTENT_DELAY_MS } from '../navDrillMotion'
+import { NAV_DRAWER_CONTENT_DELAY_MS, NAV_DRILL_MS } from '../navDrillMotion'
 import { SearchIcon16 } from '../HeaderIcons'
 import {
   resolveV3CategoryDetail,
@@ -28,8 +28,8 @@ import {
   NavEnterGroup,
   NAV_CONTENT_SPOTS_L1_ENTER,
   NAV_CONTENT_SPOTS_DRILL_ENTER,
-  NAV_LINK_ENTER_L1,
-  NAV_LINK_ENTER_L1_DELAY,
+  NAV_CONTENT_SPOTS_DRILL_EXIT,
+  getNavLinkEnterPreset,
   type NavAnimDirection,
 } from './NavEnter'
 import { CoachIconMask } from '../../CoachIconMask'
@@ -42,8 +42,8 @@ const FOOTER_LINKS = ['Track Order', 'Help', '$USD', 'Login'] as const
 
 const CHEVRON_RIGHT = '/assets/icons/chevron-right.svg'
 
-function animMountKey(direction: NavAnimDirection, enterKey: number): string {
-  return `${direction}-${enterKey}`
+function animMountKey(_direction: NavAnimDirection, enterKey: number): string {
+  return String(enterKey)
 }
 
 const campaignImage = '/assets/figma/v3-campaign.png'
@@ -174,9 +174,9 @@ function L1Screen({
   const l1ContentSpots = getV3L1ContentSpots(menuBrand)
   const inlineAfterCategoryId = getL1ContentSpotsAnchorCategoryId(l1ContentSpots.placement)
   const showAboveCategories = !isL1ContentSpotsInline(l1ContentSpots.placement)
+  const l1LinkPreset = getNavLinkEnterPreset('l1', 'enter')
   const categoryRowCount = categories.length + (inlineAfterCategoryId ? 1 : 0)
-  const utilityDelay =
-    NAV_LINK_ENTER_L1_DELAY + categoryRowCount * NAV_LINK_ENTER_L1.stagger
+  const utilityDelay = l1LinkPreset.delay + categoryRowCount * l1LinkPreset.stagger
   const contentSpotsAnimDirection: NavAnimDirection = staggerEnter ? 'enter' : 'idle'
   const listMountKey = `l1-${enterKey}`
 
@@ -213,8 +213,9 @@ function L1Screen({
             key={`${listMountKey}-categories`}
             as="ul"
             list
-            delay={NAV_LINK_ENTER_L1_DELAY}
-            {...NAV_LINK_ENTER_L1}
+            delay={l1LinkPreset.delay}
+            stagger={l1LinkPreset.stagger}
+            variant={l1LinkPreset.variant}
             direction={staggerEnter ? 'enter' : 'idle'}
             className="v3-l1__category-list"
           >
@@ -251,7 +252,8 @@ function L1Screen({
               as="ul"
               list
               delay={utilityDelay}
-              {...NAV_LINK_ENTER_L1}
+              stagger={l1LinkPreset.stagger}
+              variant={l1LinkPreset.variant}
               direction={staggerEnter ? 'enter' : 'idle'}
               className="v3-l1__utility-list"
             >
@@ -292,7 +294,9 @@ function L2ContentSpots({
   return (
     <NavEnterGroup
       key={animMountKey(animDirection, enterKey)}
-      {...NAV_CONTENT_SPOTS_DRILL_ENTER}
+      {...(animDirection === 'exit'
+        ? NAV_CONTENT_SPOTS_DRILL_EXIT
+        : NAV_CONTENT_SPOTS_DRILL_ENTER)}
       direction={animDirection}
       className={`v3-content-spots v3-content-spots--${layout} v3-content-spots--l2-under-headline${ratioClass}`.trim()}
     >
@@ -441,6 +445,8 @@ function DrilldownBody({
   const [l3AnimKey, setL3AnimKey] = useState(0)
   const [l2ShouldEnter, setL2ShouldEnter] = useState(false)
   const [l3ShouldEnter, setL3ShouldEnter] = useState(false)
+  const [l2StaggerReady, setL2StaggerReady] = useState(false)
+  const [l3StaggerReady, setL3StaggerReady] = useState(false)
   const [exitingIndex, setExitingIndex] = useState<number | null>(null)
   const stackRef = useRef<HTMLDivElement>(null)
   const l1EnterTimerRef = useRef<number | null>(null)
@@ -511,6 +517,8 @@ function DrilldownBody({
     setL1ShouldEnter(false)
     setL2ShouldEnter(false)
     setL3ShouldEnter(false)
+    setL2StaggerReady(false)
+    setL3StaggerReady(false)
   }, [open, armL1Enter, clearL1EnterTimer])
 
   useEffect(() => {
@@ -524,8 +532,38 @@ function DrilldownBody({
     setExitingIndex(null)
     setL2ShouldEnter(false)
     setL3ShouldEnter(false)
+    setL2StaggerReady(false)
+    setL3StaggerReady(false)
     armL1Enter(0)
   }, [menuBrand, open, armL1Enter])
+
+  /** Arm L2 link stagger after overlay --entered (mirror L1 double rAF). */
+  const handleL2Entered = useCallback(() => {
+    setL2StaggerReady(false)
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => setL2StaggerReady(true))
+    })
+  }, [])
+
+  /** Arm L3 link stagger after overlay --entered. */
+  const handleL3Entered = useCallback(() => {
+    setL3StaggerReady(false)
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => setL3StaggerReady(true))
+    })
+  }, [])
+
+  useEffect(() => {
+    if (!l2ShouldEnter || !l2StaggerReady) return
+    const timer = window.setTimeout(() => setL2ShouldEnter(false), NAV_DRILL_MS)
+    return () => window.clearTimeout(timer)
+  }, [l2ShouldEnter, l2StaggerReady, l2AnimKey])
+
+  useEffect(() => {
+    if (!l3ShouldEnter || !l3StaggerReady) return
+    const timer = window.setTimeout(() => setL3ShouldEnter(false), NAV_DRILL_MS)
+    return () => window.clearTimeout(timer)
+  }, [l3ShouldEnter, l3StaggerReady, l3AnimKey])
 
   const popStack = useDrillBack({
     depth: stack.length,
@@ -539,7 +577,6 @@ function DrilldownBody({
     },
     onComplete: () => {
       setL3ShouldEnter(false)
-      setExitStackHeight(null)
     },
   })
 
@@ -550,24 +587,28 @@ function DrilldownBody({
     popStack()
   }, [popStack])
 
+  /** L1 scroll — save on drill-in; restore when L2 slides away; defer stack height reset. */
   useEffect(() => {
-    if (exitingIndex === null) {
-      setExitStackHeight(null)
-    }
-  }, [exitingIndex])
-
-  /** Restore L1 scroll on drill back; scroll to top when entering a drill panel. */
-  useEffect(() => {
-    if (!open || exitingIndex !== null) return
+    if (!open) return
     const body = menuBodyRef.current
     if (!body) return
 
+    if (exitingIndex === 0) {
+      body.scrollTo(0, l1ScrollTopRef.current)
+      return
+    }
+
+    if (exitingIndex !== null) return
+
     if (stack.length === 0) {
       body.scrollTo(0, l1ScrollTopRef.current)
-    } else {
-      body.scrollTo(0, 0)
+      if (exitStackHeight === null) return
+      const frame = requestAnimationFrame(() => setExitStackHeight(null))
+      return () => cancelAnimationFrame(frame)
     }
-  }, [stack.length, exitingIndex, open, menuBodyRef])
+
+    body.scrollTo(0, 0)
+  }, [stack.length, exitingIndex, open, menuBodyRef, exitStackHeight])
 
   const pushCategory = (categoryId: string, title: string) => {
     if (menuBodyRef.current) {
@@ -576,6 +617,7 @@ function DrilldownBody({
     setL1ShouldEnter(false)
     setL2ShouldEnter(true)
     setL3ShouldEnter(false)
+    setL2StaggerReady(false)
     setStack([{ id: categoryId, title }])
     setL2AnimKey((key) => key + 1)
   }
@@ -583,15 +625,24 @@ function DrilldownBody({
   const pushSubCategory = (subId: string, title: string) => {
     setL2ShouldEnter(false)
     setL3ShouldEnter(true)
+    setL3StaggerReady(false)
     setStack((current) => [...current, { id: subId, title }])
     setL3AnimKey((key) => key + 1)
   }
 
   const l2AnimDirection: NavAnimDirection =
-    exitingIndex !== null && exitingIndex < 1 ? 'idle' : l2ShouldEnter ? 'enter' : 'idle'
+    exitingIndex === 0
+      ? 'exit'
+      : l2ShouldEnter && l2StaggerReady
+        ? 'enter'
+        : 'idle'
 
   const l3AnimDirection: NavAnimDirection =
-    exitingIndex === 1 ? 'idle' : l3ShouldEnter ? 'enter' : 'idle'
+    exitingIndex === 1
+      ? 'exit'
+      : l3ShouldEnter && l3StaggerReady
+        ? 'enter'
+        : 'idle'
 
   const categoryEntry = stack[0]
   const categoryId = categoryEntry?.id
@@ -608,7 +659,8 @@ function DrilldownBody({
       : undefined
 
   const l1ListsMounted = open && exitingIndex !== 1
-  const l1StaggerEnter = l1ListsMounted && l1ShouldEnter && exitingIndex === null
+  const l1StaggerEnter =
+    l1ListsMounted && l1ShouldEnter && l1StaggerReady && exitingIndex === null
 
   return (
     <div
@@ -617,7 +669,7 @@ function DrilldownBody({
       style={exitStackHeight ? { minHeight: exitStackHeight } : undefined}
     >
       <div
-        className={`invoked-menu__base${stack.length > 0 && exitingIndex !== 0 ? ' invoked-menu__base--covered' : ''}${l1StaggerReady ? ' invoked-menu__base--l1-ready' : ''}`.trim()}
+        className={`invoked-menu__base${stack.length > 0 && exitingIndex !== 0 ? ' invoked-menu__base--covered' : ''}${exitingIndex === 0 ? ' invoked-menu__base--revealing' : ''}${l1StaggerReady ? ' invoked-menu__base--l1-ready' : ''}`.trim()}
         aria-hidden={stack.length > 0 && exitingIndex !== 0}
       >
         <L1Screen
@@ -636,6 +688,7 @@ function DrilldownBody({
           isExiting={exitingIndex === 0}
           isRevealed={exitingIndex === 1}
           contentKey={l2AnimKey}
+          onEntered={handleL2Entered}
         >
           <L2Screen
             screenTitle={l2Title}
@@ -654,6 +707,7 @@ function DrilldownBody({
           isExiting={exitingIndex === 1}
           isRevealed={false}
           contentKey={l3AnimKey}
+          onEntered={handleL3Entered}
         >
           <L3Screen
             screenTitle={l3Title}

@@ -10,6 +10,9 @@ import {
 
 export type NavAnimDirection = 'enter' | 'exit' | 'idle'
 
+export type NavLinkDepth = 'l1' | 'drill'
+export type NavLinkPhase = 'enter' | 'exit'
+
 /** V3 text link load-in — coach-nav.vercel.app Id variant. */
 export const NAV_LINK_ENTER = {
   variant: 'slide-in' as const,
@@ -25,8 +28,28 @@ export const NAV_LINK_ENTER_L1 = {
 /** L1 link list — overlap with drawer slide. */
 export const NAV_LINK_ENTER_L1_DELAY = 0.08
 
-/** L2/L3 link lists — overlap with drill panel slide (not after it lands). */
-export const NAV_LINK_ENTER_DRILL_DELAY = 0.1
+/** L2/L3 link lists — overlap with drill panel after --entered. */
+export const NAV_LINK_ENTER_DRILL_DELAY = 0.08
+
+/** Unified nav-link motion preset — one recipe, depth + phase variants. */
+export function getNavLinkEnterPreset(depth: NavLinkDepth, phase: NavLinkPhase) {
+  if (phase === 'exit') {
+    return {
+      variant: 'slide-in' as const,
+      stagger: 0.03,
+      delay: 0,
+    }
+  }
+
+  return {
+    variant: 'slide-in' as const,
+    stagger: depth === 'l1' ? NAV_LINK_ENTER_L1.stagger : NAV_LINK_ENTER.stagger,
+    delay: depth === 'l1' ? NAV_LINK_ENTER_L1_DELAY : NAV_LINK_ENTER_DRILL_DELAY,
+  }
+}
+
+/** @deprecated Use getNavLinkEnterPreset('drill', 'exit') */
+export const NAV_LINK_ENTER_DRILL_EXIT = getNavLinkEnterPreset('drill', 'exit')
 
 /** V3 content spots load-in — coach-nav.vercel.app Fd variant. */
 export const NAV_CONTENT_SPOTS_ENTER = {
@@ -47,6 +70,13 @@ export const NAV_CONTENT_SPOTS_DRILL_ENTER = {
   variant: 'fade-down' as const,
   stagger: 0.08,
   delay: 0.12,
+} as const
+
+/** L2 content spots — faster exit with drill back. */
+export const NAV_CONTENT_SPOTS_DRILL_EXIT = {
+  variant: 'fade-down' as const,
+  stagger: 0.04,
+  delay: 0,
 } as const
 
 /** @deprecated Use NAV_CONTENT_SPOTS_ENTER */
@@ -108,6 +138,7 @@ export function NavEnterGroup({
     'nav-enter-group',
     `nav-enter-group--${variant}`,
     variant === 'slide-in' ? 'nav-link-enter-group' : '',
+    direction === 'enter' ? 'nav-enter-group--enter' : '',
     direction === 'exit' ? 'nav-enter-group--exit' : '',
     direction === 'idle' ? 'nav-enter-group--idle' : '',
     className,
@@ -170,6 +201,7 @@ export function NavEnterItem({
         'nav-enter-group__item',
         'nav-enter-group__item--solo',
         `nav-enter-group__item--${variant}`,
+        direction === 'enter' ? 'nav-enter-group__item--enter' : '',
         direction === 'exit' ? 'nav-enter-group__item--exit' : '',
         direction === 'idle' ? 'nav-enter-group__item--idle' : '',
         className,

@@ -8,8 +8,7 @@ import { isViewAllNavLink } from '../../../utils/navLinkChevron'
 import { toNavHeadlineCase } from '../../../utils/toNavHeadlineCase'
 import {
   NavEnterGroup,
-  NAV_LINK_ENTER,
-  NAV_LINK_ENTER_DRILL_DELAY,
+  getNavLinkEnterPreset,
   type NavAnimDirection,
 } from '../v3/NavEnter'
 
@@ -67,13 +66,16 @@ export function DrillLinkSections({
 
   if (sectionBlocks.length === 0) return null
 
+  const phase = animDirection === 'exit' ? 'exit' : 'enter'
+  const preset = getNavLinkEnterPreset('drill', phase)
   let staggerOffset = 0
 
   return (
     <div className={className}>
       {sectionBlocks.map(({ section, rows }) => {
-        const delay = NAV_LINK_ENTER_DRILL_DELAY + staggerOffset * NAV_LINK_ENTER.stagger
-        staggerOffset += rows.length
+        const animatedCount = rows.filter((row) => row.type === 'link').length
+        const delay = preset.delay + staggerOffset * preset.stagger
+        staggerOffset += phase === 'exit' ? animatedCount : rows.length
 
         return (
           <NavEnterGroup
@@ -81,7 +83,8 @@ export function DrillLinkSections({
             as="ul"
             list
             delay={delay}
-            {...NAV_LINK_ENTER}
+            stagger={preset.stagger}
+            variant={preset.variant}
             direction={animDirection}
             className="v3-l2__section v3-l2__links"
           >

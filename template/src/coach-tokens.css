@@ -275,24 +275,37 @@
   --transition-delay-gentle: 250ms;
   --transition-delay-quick: 100ms;
 
+  /* Retail Gentle — shared panel family (drawer, drill, scrim) */
+  --transition-easing-panel: cubic-bezier(0.49, 0, 0.47, 0.98);
+
   /* PWA SearchWidget searchV2 — menu shell slide */
   --transition-duration-drawer: 400ms;
-  --transition-easing-drawer: cubic-bezier(0.83, 0, 0.17, 1);
+  --transition-easing-drawer: var(--transition-easing-panel);
 
   /* L1 link / content-spot entrance — quicker than legacy 700ms content token */
   --transition-duration-content-l1: 500ms;
 
-  /* V3 drill overlays — Coach Gentle transform (symmetric ease, no end snap) */
+  /* V3 drill overlays */
   --transition-duration-drill: 500ms;
-  --transition-easing-drill: cubic-bezier(0.83, 0, 0.17, 1);
+  --transition-easing-drill: var(--transition-easing-panel);
+
+  /* Drill content exit — ~70% of enter; reverse stagger on back */
+  --transition-duration-content-exit: 300ms;
+  --transition-easing-content-exit: var(--transition-easing-panel);
+
+  /* Nav text links — unified slide-in (L1 + L2/L3) */
+  --transition-duration-nav-link-enter: 480ms;
+  --transition-duration-nav-link-exit: var(--transition-duration-content-exit);
+  --transition-easing-nav-link-enter: cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-easing-nav-link-exit: var(--transition-easing-content-exit);
 
   /* coach-nav.vercel.app V3 content entrance (Fd / Id variants) */
   --transition-duration-content: 700ms;
   --transition-easing-content: cubic-bezier(0.16, 1, 0.3, 1);
 
-  /* PWA MobileMenu mobileMenuDrawerContainer — scrim fade only */
-  --transition-duration-scrim: 300ms;
-  --transition-easing-scrim: ease;
+  /* PWA MobileMenu mobileMenuDrawerContainer — scrim matches drawer exhale */
+  --transition-duration-scrim: 400ms;
+  --transition-easing-scrim: var(--transition-easing-panel);
 
   /* PWA mobile-menu-tabs / nav-exposed tab hover */
   --transition-duration-tab: 100ms;

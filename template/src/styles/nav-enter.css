@@ -24,69 +24,64 @@
   }
 }
 
+/* Shared stagger timing — animation-name/duration set per context × phase */
 .nav-enter-group__item {
-  animation-duration: var(--transition-duration-content);
-  animation-timing-function: var(--transition-easing-content);
   animation-fill-mode: both;
   animation-delay: calc(
     var(--nav-enter-delay, 0) * 1s + var(--nav-enter-i, 0) * var(--nav-enter-stagger, 0.05) * 1s
   );
 }
 
-.nav-enter-group--fade-down .nav-enter-group__item {
-  animation-name: nav-enter-fade-down;
-}
-
-.nav-enter-group--slide-in .nav-enter-group__item {
-  animation-name: nav-enter-slide-in;
-}
-
-/* Text link stagger — runs in sync with drill panel slide, not after it lands */
-.invoked-menu__overlay:not(.invoked-menu__overlay--active):not(.invoked-menu__overlay--revealed)
-  .nav-link-enter-group.nav-enter-group--slide-in
+/* --- Text links: pre-enter hidden state (not idle — resting drill links stay visible) --- */
+.nav-link-enter-group.nav-enter-group--slide-in:not(.nav-enter-group--enter):not(.nav-enter-group--exit):not(.nav-enter-group--idle)
   .nav-enter-group__item:not(.nav-enter-group__item--static) {
   animation: none !important;
   opacity: 0;
   transform: translateX(20px);
 }
 
-/* Drill content — quicker than L1 so it finishes with the panel */
-.invoked-menu__overlay--active .nav-link-enter-group.nav-enter-group--slide-in
-  .nav-enter-group__item:not(.nav-enter-group__item--static) {
-  animation-duration: 500ms;
-}
-
-.invoked-menu__overlay--active .nav-enter-group--fade-down .nav-enter-group__item {
-  animation-duration: 500ms;
-}
-
-/* L1 link stagger — hidden until ready; gentler motion than drill panels */
-.invoked-menu__base:not(.invoked-menu__base--l1-ready)
-  .nav-link-enter-group.nav-enter-group--slide-in
-  .nav-enter-group__item:not(.nav-enter-group__item--static) {
-  animation: none !important;
-  opacity: 0;
-  transform: translateX(20px);
-}
-
+/* L1: armed after drawer overlap */
 .invoked-menu__base--l1-ready
-  .nav-link-enter-group.nav-enter-group--slide-in
+  .nav-link-enter-group.nav-enter-group--enter.nav-enter-group--slide-in
   .nav-enter-group__item:not(.nav-enter-group__item--static):not(.v3-l1__content-spots-list-item) {
   animation-name: nav-enter-slide-in;
-  animation-duration: var(--transition-duration-content-l1);
-  animation-timing-function: var(--transition-easing-gentle);
-  animation-fill-mode: both;
+  animation-duration: var(--transition-duration-nav-link-enter);
+  animation-timing-function: var(--transition-easing-nav-link-enter);
 }
 
-.invoked-menu__base--l1-ready
-  .v3-content-spots .nav-enter-group--fade-down
-  .nav-enter-group__item {
-  animation-duration: var(--transition-duration-content-l1);
-  animation-timing-function: var(--transition-easing-gentle);
+/* L2/L3: armed after overlay --entered + --active */
+.invoked-menu__overlay--entered.invoked-menu__overlay--active
+  .nav-link-enter-group.nav-enter-group--enter.nav-enter-group--slide-in
+  .nav-enter-group__item:not(.nav-enter-group__item--static) {
+  animation-name: nav-enter-slide-in;
+  animation-duration: var(--transition-duration-nav-link-enter);
+  animation-timing-function: var(--transition-easing-nav-link-enter);
+}
+
+/* Drill back — reverse stagger on exiting panel */
+.invoked-menu__overlay--exiting
+  .nav-link-enter-group.nav-enter-group--exit.nav-enter-group--slide-in
+  .nav-enter-group__item:not(.nav-enter-group__item--static) {
+  animation-name: nav-enter-slide-in;
+  animation-direction: reverse;
+  animation-duration: var(--transition-duration-nav-link-exit);
+  animation-timing-function: var(--transition-easing-nav-link-exit);
+}
+
+/* Idle — revealed parent, return from drill, covered layer */
+.nav-enter-group--idle .nav-enter-group__item:not(.nav-enter-group__item--static),
+.nav-enter-group__item--idle {
+  animation: none;
+  opacity: 1;
+  transform: none;
 }
 
 .invoked-menu--closed .nav-link-enter-group .nav-enter-group__item {
   animation: none !important;
+}
+
+.nav-enter-group__item--static {
+  animation: none;
 }
 
 /* L1 content spots row inside link list — inner tiles own fade-down */
@@ -96,19 +91,44 @@
   transform: none;
 }
 
-.nav-enter-group--exit .nav-enter-group__item,
-.nav-enter-group__item--exit {
-  animation-direction: reverse;
+/* --- Content spots (fade-down) — editorial, separate from nav links --- */
+.nav-enter-group--fade-down .nav-enter-group__item {
+  animation-duration: var(--transition-duration-content);
+  animation-timing-function: var(--transition-easing-content);
+}
+
+.nav-enter-group--fade-down.nav-enter-group--enter .nav-enter-group__item {
+  animation-name: nav-enter-fade-down;
+}
+
+.invoked-menu__base--l1-ready
+  .v3-content-spots .nav-enter-group--fade-down.nav-enter-group--enter
+  .nav-enter-group__item {
+  animation-duration: var(--transition-duration-content-l1);
+  animation-timing-function: var(--transition-easing-gentle);
+}
+
+.invoked-menu__overlay--entered.invoked-menu__overlay--active
+  .nav-enter-group--fade-down.nav-enter-group--enter
+  .nav-enter-group__item {
   animation-duration: var(--transition-duration-drill);
+  animation-timing-function: var(--transition-easing-content);
 }
 
-.nav-enter-group--idle .nav-enter-group__item,
-.nav-enter-group__item--idle {
-  animation: none;
+.invoked-menu__overlay--exiting
+  .nav-enter-group--fade-down.nav-enter-group--exit
+  .nav-enter-group__item:not(.nav-enter-group__item--static) {
+  animation-name: nav-enter-fade-down;
+  animation-direction: reverse;
+  animation-duration: var(--transition-duration-content-exit);
+  animation-timing-function: var(--transition-easing-content-exit);
 }
 
-.nav-enter-group__item--static {
-  animation: none;
+.nav-enter-group--fade-down:not(.nav-enter-group--enter):not(.nav-enter-group--exit):not(.nav-enter-group--idle)
+  .nav-enter-group__item:not(.nav-enter-group__item--static) {
+  animation: none !important;
+  opacity: 0;
+  transform: translateY(-12px);
 }
 
 .nav-enter-group__item--solo.nav-enter-group__item--fade-down {
@@ -128,5 +148,7 @@
 @media (prefers-reduced-motion: reduce) {
   .nav-enter-group__item {
     animation: none;
+    opacity: 1;
+    transform: none;
   }
 }
