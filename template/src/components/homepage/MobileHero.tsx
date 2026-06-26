@@ -32,10 +32,7 @@ export function MobileHero({ hero }: MobileHeroProps) {
           <p className="type-body-2 mt-coach-s max-w-[18rem] text-coach-white/90">{hero.body}</p>
         )}
         <div className="mt-coach-lg flex flex-col items-start gap-coach-s">
-          <CoachButton
-            variant="primary"
-            className="bg-coach-white text-coach-black hover:bg-coach-page"
-          >
+          <CoachButton variant="secondary" className="border-0 bg-coach-white text-coach-black hover:bg-coach-page">
             {hero.primaryCta}
           </CoachButton>
           {hero.secondaryCta && (

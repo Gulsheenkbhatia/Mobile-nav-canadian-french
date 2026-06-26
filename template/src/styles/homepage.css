@@ -19,10 +19,16 @@
 .home-subnav--below-hero {
   position: relative;
   margin-top: 0;
+  border-top: none;
+  background: var(--nav-tab-active-bg, #f0f0f0);
 }
 
 .home-subnav--below-hero .home-video-hero__subnav-scroll {
-  padding-top: var(--space-xs);
+  padding-top: var(--space-s);
+}
+
+.home-subnav--below-hero .home-video-hero__subnav-link {
+  color: var(--color-black);
 }
 
 .home-hero__scrim {

@@ -350,11 +350,6 @@ body.drawerOpened {
   width: 100%;
 }
 
-/* Outlet collage sits inside link list — inner tiles own fade-down stagger. */
-.v3-l1__collage-list-item.nav-enter-group__item {
-  animation: none;
-}
-
 .v3-l1__categories {
   padding: var(--spacing-4) var(--spacing-4) 0;
 }
@@ -370,6 +365,20 @@ body.drawerOpened {
 
 .v3-l1__category-link {
   gap: var(--spacing-4);
+}
+
+/* Utility footer — own section, 32px below last L1 category (Coachtopia / collage on outlet) */
+.v3-l1__utility-section {
+  margin-top: 32px;
+}
+
+.v3-l1__utility-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .v3-l2,

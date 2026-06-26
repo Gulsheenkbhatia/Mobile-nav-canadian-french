@@ -41,6 +41,44 @@
   animation-name: nav-enter-slide-in;
 }
 
+/* Text link stagger — wait until drill panel has finished sliding in */
+.invoked-menu__overlay:not(.invoked-menu__overlay--entered)
+  .nav-link-enter-group.nav-enter-group--slide-in
+  .nav-enter-group__item:not(.nav-enter-group__item--static) {
+  animation: none !important;
+  opacity: 0;
+  transform: translateX(40px);
+}
+
+/* L1 link stagger — wait until drawer has landed and link lists mount */
+.invoked-menu__base:not(.invoked-menu__base--l1-ready)
+  .nav-link-enter-group.nav-enter-group--slide-in
+  .nav-enter-group__item:not(.nav-enter-group__item--static) {
+  animation: none !important;
+  opacity: 0;
+  transform: translateX(40px);
+}
+
+.invoked-menu__base--l1-ready
+  .nav-link-enter-group.nav-enter-group--slide-in
+  .nav-enter-group__item:not(.nav-enter-group__item--static):not(.v3-l1__collage-list-item) {
+  animation-name: nav-enter-slide-in;
+  animation-duration: var(--transition-duration-content);
+  animation-timing-function: var(--transition-easing-content);
+  animation-fill-mode: both;
+}
+
+.invoked-menu--closed .nav-link-enter-group .nav-enter-group__item {
+  animation: none !important;
+}
+
+/* L1 collage row inside link list — inner tiles own fade-down */
+.v3-l1__collage-list-item.nav-enter-group__item {
+  animation: none !important;
+  opacity: 1;
+  transform: none;
+}
+
 .nav-enter-group--exit .nav-enter-group__item,
 .nav-enter-group__item--exit {
   animation-direction: reverse;

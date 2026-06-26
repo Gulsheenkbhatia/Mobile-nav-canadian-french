@@ -19,8 +19,8 @@ export const NAV_LINK_ENTER = {
 /** L1 link list — after drawer lands. */
 export const NAV_LINK_ENTER_L1_DELAY = 0.15
 
-/** L2/L3 link lists — after drill panel is visible. */
-export const NAV_LINK_ENTER_DRILL_DELAY = 0.4
+/** L2/L3 link lists — first link after drill panel lands. */
+export const NAV_LINK_ENTER_DRILL_DELAY = 0.15
 
 /** V3 image collage load-in — coach-nav.vercel.app Fd variant. */
 export const NAV_IMAGE_ENTER = {
@@ -84,6 +84,7 @@ export function NavEnterGroup({
   const groupClass = [
     'nav-enter-group',
     `nav-enter-group--${variant}`,
+    variant === 'slide-in' ? 'nav-link-enter-group' : '',
     direction === 'exit' ? 'nav-enter-group--exit' : '',
     direction === 'idle' ? 'nav-enter-group--idle' : '',
     className,

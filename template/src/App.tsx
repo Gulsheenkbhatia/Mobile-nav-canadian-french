@@ -1,8 +1,7 @@
 import { useCallback, useEffect, useState } from 'react'
-import { CoachHomePage } from './components/homepage/CoachHomePage'
+import { PrototypeHomePlaceholder } from './components/homepage/PrototypeHomePlaceholder'
 import { NavBrandProvider } from './components/nav/NavBrandContext'
 import { NavSearchExposed } from './components/nav/NavSearchExposed'
-import { OutletHomePage } from './components/homepage/OutletHomePage'
 import { NavV3ImageCollage } from './components/nav/v3/NavV3ImageCollage'
 import { NavScrim } from './components/NavScrim'
 
@@ -37,7 +36,7 @@ export default function App() {
           onMenuSearchClick={() => setMenuOpen(true)}
         />
 
-        {activeBrand === 'coach' ? <CoachHomePage /> : <OutletHomePage />}
+        <PrototypeHomePlaceholder />
 
         <NavScrim open={menuOpen} onClose={closeMenu} />
         <NavV3ImageCollage open={menuOpen} onClose={closeMenu} />

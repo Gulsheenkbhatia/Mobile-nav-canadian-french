@@ -63,8 +63,18 @@ type LiveHeroRecord = {
 
 const liveHeroes = liveHeroesJson as LiveHeroRecord[]
 
-const CMS_FALLBACK =
-  'https://cms.coach.com/i/coach/20260603-hp1-tabby-still-new?&w=640&fmt=webp&$qlt_med$'
+const CMS_HERO =
+  'https://cms.coach.com/i/coach/20260603-hp1-tabby-still-new?&w=750&fmt=webp&$qlt_med$'
+const CMS_TABBY =
+  'https://cms.coach.com/i/coach/20260603-hp1-tabby-video-mobile?&w=640&fmt=webp&$qlt_med$'
+
+const LOCAL = {
+  womens: '/assets/figma/v2-women-shoulder.png',
+  tabby: '/assets/figma/v2-women-tabby.png',
+  charms: '/assets/figma/v3-bags-tan.png',
+  shoes: '/assets/figma/v2-women-shoes.png',
+  campaign: '/assets/figma/v3-campaign.png',
+} as const
 
 export type HomepageSubnavLink = {
   id?: string
@@ -104,7 +114,7 @@ export const homepagePromoModules: HomepageHero[] = [
     title: "Shop Women's",
     primaryCta: "Shop Women's",
     primaryHref: '/shop/women/view-all',
-    imageUrl: CMS_FALLBACK,
+    imageUrl: LOCAL.womens,
     imageBg: 'linear-gradient(135deg,#B85C3A 0%,#5A2D28 100%)',
     compact: true,
   },
@@ -114,7 +124,7 @@ export const homepagePromoModules: HomepageHero[] = [
     title: 'Shop Charms',
     primaryCta: 'Shop Charms',
     primaryHref: '/shop/women/accessories/bag-accessories-keychains',
-    imageUrl: CMS_FALLBACK,
+    imageUrl: LOCAL.charms,
     imageBg: 'linear-gradient(135deg,#D4B896 0%,#8B6F47 100%)',
     compact: true,
   },
@@ -123,8 +133,7 @@ export const homepagePromoModules: HomepageHero[] = [
     title: 'Shop Tabby',
     primaryCta: 'Shop Tabby',
     primaryHref: '/shop/women/collections/tabby',
-    imageUrl:
-      'https://cms.coach.com/i/coach/20260603-hp1-tabby-video-mobile?&w=640&fmt=webp&$qlt_med$',
+    imageUrl: LOCAL.tabby,
     imageBg: 'linear-gradient(135deg,#8B6F47 0%,#231F20 100%)',
     compact: true,
   },
@@ -135,19 +144,19 @@ export const homepageCategories: HomepageCategory[] = [
   {
     id: 'bags',
     name: 'Bags',
-    imageUrl: CMS_FALLBACK,
+    imageUrl: LOCAL.tabby,
     imageBg: 'linear-gradient(135deg,#8B6F47 0%,#5A3C22 100%)',
   },
   {
     id: 'women',
     name: "Women's",
-    imageUrl: CMS_FALLBACK,
+    imageUrl: LOCAL.womens,
     imageBg: 'linear-gradient(135deg,#B85C3A 0%,#5A2D28 100%)',
   },
   {
     id: 'shoes',
     name: 'Shoes',
-    imageUrl: CMS_FALLBACK,
+    imageUrl: LOCAL.shoes,
     imageBg: 'linear-gradient(135deg,#F5E6D3 0%,#C4A57A 100%)',
   },
 ]
@@ -163,7 +172,7 @@ export const homepageStories: HomepageStory[] = [
     body: '',
     cta: 'Discover the Campaign',
     imageBg: 'linear-gradient(135deg,#231F20 0%,#000 100%)',
-    imageUrl: CMS_FALLBACK,
+    imageUrl: LOCAL.campaign,
   },
   {
     id: 'summer-shoes',
@@ -173,7 +182,7 @@ export const homepageStories: HomepageStory[] = [
     cta: 'Shop Shoes',
     secondaryCta: 'Explore Our Style Guides',
     imageBg: 'linear-gradient(135deg,#F5E6D3 0%,#8B6F47 100%)',
-    imageUrl: CMS_FALLBACK,
+    imageUrl: LOCAL.shoes,
   },
   {
     id: 'tabby-tour',
@@ -182,7 +191,7 @@ export const homepageStories: HomepageStory[] = [
     body: '',
     cta: 'Learn More',
     imageBg: 'linear-gradient(135deg,#8B6F47 0%,#231F20 100%)',
-    imageUrl: CMS_FALLBACK,
+    imageUrl: LOCAL.tabby,
   },
   {
     id: 'wnba',
@@ -192,7 +201,7 @@ export const homepageStories: HomepageStory[] = [
     body: '',
     cta: 'See More',
     imageBg: 'linear-gradient(135deg,#B85C3A 0%,#231F20 100%)',
-    imageUrl: CMS_FALLBACK,
+    imageUrl: LOCAL.womens,
   },
 ]
 
@@ -204,7 +213,7 @@ export const outletHomepageHeroes: HomepageHero[] = [
     title: 'Outlet New Arrivals',
     body: 'Styles starting under $100',
     primaryCta: 'Shop now',
-    imageUrl: liveHeroes[1]?.imageUrl ?? CMS_FALLBACK,
+    imageUrl: liveHeroes[1]?.imageUrl ?? CMS_TABBY,
     imageBg: 'linear-gradient(135deg, #8B1A1A 0%, #231F20 100%)',
   },
   {
@@ -213,7 +222,7 @@ export const outletHomepageHeroes: HomepageHero[] = [
     title: 'Clearance up to 50% off',
     body: 'Last chance on seasonal favorites.',
     primaryCta: 'Shop clearance',
-    imageUrl: liveHeroes[0]?.imageUrl ?? CMS_FALLBACK,
+    imageUrl: liveHeroes[0]?.imageUrl ?? CMS_HERO,
     imageBg: 'linear-gradient(135deg, #231F20 0%, #000 100%)',
   },
 ]

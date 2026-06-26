@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef, useCallback } from 'react'
+import { useEffect, useState, useRef, useCallback, type CSSProperties } from 'react'
 import { InvokedMenuShell } from '../invoked/InvokedMenuShell'
 import { DrillOverlay } from '../drill/DrillOverlay'
 import { useDrillBack } from '../drill/useDrillBack'
@@ -45,7 +45,6 @@ const FOOTER_LINKS = ['Track Order', 'Help', '$USD', 'Login'] as const
 const OUTLET_HOLIDAY_L1_ID = 'outlet_qa_auto_category'
 
 function animMountKey(direction: NavAnimDirection, enterKey: number): string {
-  if (direction === 'idle') return 'idle'
   return `${direction}-${enterKey}`
 }
 
@@ -134,12 +133,16 @@ function L1Collage({
 function L1CategoryRow({
   cat,
   onSelect,
+  className,
+  style,
 }: {
   cat: MenuCategory
   onSelect: (id: string, title: string) => void
+  className?: string
+  style?: CSSProperties
 }) {
   return (
-    <li key={cat.id}>
+    <li className={className} style={style}>
       <button
         type="button"
         onClick={() => onSelect(cat.id, cat.label)}
@@ -162,16 +165,20 @@ function L1Screen({
   menuBrand,
   onSelect,
   enterKey,
-  animDirection,
+  staggerReady,
 }: {
   menuBrand: BrandId
   onSelect: (id: string, title: string) => void
   enterKey: number
-  animDirection: NavAnimDirection
+  staggerReady: boolean
 }) {
   const categories = getV3L1Categories(menuBrand)
-  const mountKey = animMountKey(animDirection, enterKey)
   const collageAfterHoliday = menuBrand === 'outlet'
+  const categoryRowCount = categories.length + (collageAfterHoliday ? 1 : 0)
+  const utilityDelay =
+    NAV_LINK_ENTER_L1_DELAY + categoryRowCount * NAV_LINK_ENTER.stagger
+  const collageAnimDirection: NavAnimDirection = staggerReady ? 'enter' : 'idle'
+  const listMountKey = `l1-${enterKey}`
 
   return (
     <div className="v3-l1">
@@ -193,7 +200,7 @@ function L1Screen({
       {!collageAfterHoliday && (
         <div className="v3-l1__collage-wrap">
           <L1Collage
-            animDirection={animDirection}
+            animDirection={collageAnimDirection}
             enterKey={enterKey}
             menuBrand={menuBrand}
           />
@@ -201,46 +208,66 @@ function L1Screen({
       )}
 
       <div className="v3-l1__categories">
-        <NavEnterGroup
-          key={mountKey}
-          as="ul"
-          list
-          delay={NAV_LINK_ENTER_L1_DELAY}
-          {...NAV_LINK_ENTER}
-          direction={animDirection}
-          className="v3-l1__category-list"
-        >
-          {categories.flatMap((cat) => {
-            const row = (
-              <L1CategoryRow key={cat.id} cat={cat} onSelect={onSelect} />
-            )
+        {staggerReady && (
+          <NavEnterGroup
+            key={`${listMountKey}-categories`}
+            as="ul"
+            list
+            delay={NAV_LINK_ENTER_L1_DELAY}
+            {...NAV_LINK_ENTER}
+            direction="enter"
+            className="v3-l1__category-list"
+          >
+            {categories.flatMap((cat) => {
+              const row = (
+                <L1CategoryRow key={cat.id} cat={cat} onSelect={onSelect} />
+              )
 
-            if (collageAfterHoliday && cat.id === OUTLET_HOLIDAY_L1_ID) {
-              return [
-                row,
-                <li key={`${mountKey}-collage`} className="v3-l1__collage-list-item">
-                  <L1Collage
-                    animDirection={animDirection}
-                    enterKey={enterKey}
-                    menuBrand={menuBrand}
-                  />
-                </li>,
-              ]
-            }
+              if (collageAfterHoliday && cat.id === OUTLET_HOLIDAY_L1_ID) {
+                return [
+                  row,
+                  <li
+                    key={`${listMountKey}-collage`}
+                    className="v3-l1__collage-list-item"
+                  >
+                    <L1Collage
+                      animDirection={collageAnimDirection}
+                      enterKey={enterKey}
+                      menuBrand={menuBrand}
+                    />
+                  </li>,
+                ]
+              }
 
-            return [row]
-          })}
-          {FOOTER_LINKS.map((label) => (
-            <li key={`utility-${label}`}>
-              <button
-                type="button"
-                className="v1-utility-link flex items-center"
-              >
-                {toNavHeadlineCase(label)}
-              </button>
-            </li>
-          ))}
-        </NavEnterGroup>
+              return [row]
+            })}
+          </NavEnterGroup>
+        )}
+
+        {staggerReady && (
+          <nav className="v3-l1__utility-section" aria-label="Account and support">
+            <NavEnterGroup
+              key={`${listMountKey}-utility`}
+              as="ul"
+              list
+              delay={utilityDelay}
+              {...NAV_LINK_ENTER}
+              direction="enter"
+              className="v3-l1__utility-list"
+            >
+              {FOOTER_LINKS.map((label) => (
+                <li key={`utility-${label}`}>
+                  <button
+                    type="button"
+                    className="v1-utility-link flex items-center"
+                  >
+                    {toNavHeadlineCase(label)}
+                  </button>
+                </li>
+              ))}
+            </NavEnterGroup>
+          </nav>
+        )}
       </div>
     </div>
   )
@@ -546,6 +573,7 @@ function DrilldownBody({
   const prevStackLenRef = useRef(0)
   const prevMenuBrandRef = useRef(menuBrand)
   const [exitStackHeight, setExitStackHeight] = useState<number | null>(null)
+  const [l1StaggerReady, setL1StaggerReady] = useState(false)
 
   const clearL1EnterTimer = useCallback(() => {
     if (l1EnterTimerRef.current !== null) {
@@ -560,6 +588,7 @@ function DrilldownBody({
       clearL1EnterTimer()
       setL1ShouldEnter(true)
       setL1ContentReady(false)
+      setL1StaggerReady(false)
       setL1AnimKey((key) => key + 1)
 
       if (contentDelayMs <= 0) {
@@ -575,6 +604,24 @@ function DrilldownBody({
     [clearL1EnterTimer],
   )
 
+  /** Two frames after drawer lands — mount link lists so CSS stagger always fires. */
+  useEffect(() => {
+    if (!open || !l1ContentReady) {
+      setL1StaggerReady(false)
+      return
+    }
+
+    let inner = 0
+    const outer = requestAnimationFrame(() => {
+      inner = requestAnimationFrame(() => setL1StaggerReady(true))
+    })
+
+    return () => {
+      cancelAnimationFrame(outer)
+      cancelAnimationFrame(inner)
+    }
+  }, [open, l1ContentReady, l1AnimKey])
+
   useEffect(() => {
     if (open) {
       armL1Enter(NAV_DRAWER_MS)
@@ -583,6 +630,7 @@ function DrilldownBody({
 
     clearL1EnterTimer()
     setL1ContentReady(false)
+    setL1StaggerReady(false)
     setStack([])
     setExitingIndex(null)
     setL1ShouldEnter(false)
@@ -639,17 +687,24 @@ function DrilldownBody({
     menuBodyRef.current?.scrollTo(0, 0)
   }, [stack, open, exitingIndex, menuBodyRef])
 
-  /** Re-stagger L1 links when backing out of a drill (l1ShouldEnter was cleared on drill-in). */
+  /** Re-stagger L1 when backing to root; re-stagger L2 when backing from L3. */
   useEffect(() => {
     if (!open) {
       prevStackLenRef.current = 0
       return
     }
 
-    const wasDrilled = prevStackLenRef.current > 0
-    if (wasDrilled && stack.length === 0 && exitingIndex === null) {
+    const prevDepth = prevStackLenRef.current
+
+    if (prevDepth > 0 && stack.length === 0 && exitingIndex === null) {
       setL2ShouldEnter(false)
       armL1Enter(0)
+    }
+
+    if (prevDepth === 2 && stack.length === 1 && exitingIndex === null) {
+      setL2ShouldEnter(true)
+      setL3ShouldEnter(false)
+      setL2AnimKey((key) => key + 1)
     }
 
     prevStackLenRef.current = stack.length
@@ -670,11 +725,8 @@ function DrilldownBody({
     setL3AnimKey((key) => key + 1)
   }
 
-  const l1AnimDirection: NavAnimDirection =
-    l1ShouldEnter && l1ContentReady && exitingIndex === null ? 'enter' : 'idle'
-
   const l2AnimDirection: NavAnimDirection =
-    exitingIndex !== null ? 'idle' : l2ShouldEnter ? 'enter' : 'idle'
+    exitingIndex !== null && exitingIndex < 1 ? 'idle' : l2ShouldEnter ? 'enter' : 'idle'
 
   const l3AnimDirection: NavAnimDirection =
     exitingIndex === 1 ? 'idle' : l3ShouldEnter ? 'enter' : 'idle'
@@ -700,7 +752,7 @@ function DrilldownBody({
       style={exitStackHeight ? { minHeight: exitStackHeight } : undefined}
     >
       <div
-        className={`invoked-menu__base${stack.length > 0 && exitingIndex !== 0 ? ' invoked-menu__base--covered' : ''}`.trim()}
+        className={`invoked-menu__base${stack.length > 0 && exitingIndex !== 0 ? ' invoked-menu__base--covered' : ''}${l1StaggerReady ? ' invoked-menu__base--l1-ready' : ''}`.trim()}
         aria-hidden={stack.length > 0 && exitingIndex !== 0}
       >
         <L1Screen
@@ -708,7 +760,7 @@ function DrilldownBody({
           menuBrand={menuBrand}
           onSelect={pushCategory}
           enterKey={l1AnimKey}
-          animDirection={l1AnimDirection}
+          staggerReady={l1StaggerReady && l1ShouldEnter && exitingIndex === null}
         />
       </div>
 

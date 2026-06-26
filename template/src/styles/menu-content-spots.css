@@ -88,7 +88,7 @@
   left: var(--spacing-4);
   color: var(--color-white);
   font-family: var(--font-face1-extended);
-  font-size: var(--text-16);
+  font-size: var(--text-12);
   font-weight: 400;
   letter-spacing: 0.2px;
 }
