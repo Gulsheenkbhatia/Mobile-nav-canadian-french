@@ -1,23 +1,25 @@
 [
   {
-    "id": "home_body_slot_2_hero_1",
-    "eyebrow": "@Cristina Cheni",
-    "title": "Your ultimate plus-one.",
-    "body": "",
-    "primaryCta": "Shop Tabby",
-    "primaryHref": "/shop/women/collections/tabby",
-    "imageUrl": "https://cms.coach.com/i/coach/20260603-hp1-tabby-still-new?&w=480&fmt=webp&$qlt_med$",
-    "syncedAt": "2026-06-11T17:26:26.585Z"
-  },
-  {
-    "id": "home_body_slot_2_hero_2",
-    "title": "Designed for your day.",
-    "body": "Always by your side.",
+    "id": "home_hero_andcoach",
+    "eyebrow": "&Coach",
+    "title": "Moments of becoming.",
+    "body": "Co-created with Gen Z, &Coach explores the in-between, where confidence is built. Singular moments, universally felt, that connect us all.",
     "primaryCta": "Shop Bags",
     "primaryHref": "/shop/women/bags",
-    "secondaryCta": "Shop New Arrivals",
-    "secondaryHref": "/shop/new",
-    "imageUrl": "https://cms.coach.com/i/coach/20260603-hp1-tabby-video-mobile?&w=640&fmt=webp&$qlt_med$",
-    "syncedAt": "2026-06-11T17:26:26.589Z"
+    "secondaryCta": "Discover &Coach",
+    "secondaryHref": "/content/and-coach",
+    "imageUrl": null,
+    "syncedAt": "2026-06-26T00:00:00.000Z"
+  },
+  {
+    "id": "home_shoulder_bags",
+    "title": "Bags that meet you where you are, and where you're headed next.",
+    "body": "",
+    "primaryCta": "Shop Women's",
+    "primaryHref": "/shop/women/view-all",
+    "secondaryCta": "Shop Shoulder Bags",
+    "secondaryHref": "/shop/women/handbags/shoulder-bags-hobos",
+    "imageUrl": "https://cms.coach.com/i/coach/20260603-hp1-tabby-still-new?&w=640&fmt=webp&$qlt_med$",
+    "syncedAt": "2026-06-26T00:00:00.000Z"
   }
 ]

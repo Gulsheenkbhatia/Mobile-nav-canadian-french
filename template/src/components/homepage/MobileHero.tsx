@@ -14,9 +14,11 @@ export function MobileHero({ hero }: MobileHeroProps) {
       }
     : { background: hero.imageBg }
 
+  const sectionClass = hero.compact ? 'home-hero home-hero--compact' : 'home-hero'
+
   return (
     <section
-      className="home-hero"
+      className={sectionClass}
       style={backgroundStyle}
       aria-label={hero.title}
     >

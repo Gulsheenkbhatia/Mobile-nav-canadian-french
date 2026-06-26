@@ -4,23 +4,35 @@ import { CoachtopiaLogo, isCoachtopiaCategory } from '../nav/CoachLogos'
 type MobileCategoryRailProps = {
   categories: HomepageCategory[]
   title?: string
+  showShopAll?: boolean
 }
 
 export function MobileCategoryRail({
   categories,
-  title = 'Shop by category',
+  title,
+  showShopAll = true,
 }: MobileCategoryRailProps) {
+  const sectionLabel = title ?? 'Shop by category'
+
   return (
-    <section className="py-coach-lg" aria-label={title}>
-      <div className="mb-coach-m flex items-end justify-between px-coach-m">
-        <h2 className="type-title-2 text-coach-black">{title}</h2>
-        <button
-          type="button"
-          className="text-sm tracking-[0.2px] text-coach-black underline underline-offset-2"
-        >
-          Shop all
-        </button>
-      </div>
+    <section className="py-coach-lg" aria-label={sectionLabel}>
+      {(title || showShopAll) && (
+        <div className="mb-coach-m flex items-end justify-between px-coach-m">
+          {title ? (
+            <h2 className="type-title-2 text-coach-black">{title}</h2>
+          ) : (
+            <span className="type-title-2 text-coach-black">{sectionLabel}</span>
+          )}
+          {showShopAll && (
+            <button
+              type="button"
+              className="text-sm tracking-[0.2px] text-coach-black underline underline-offset-2"
+            >
+              Shop all
+            </button>
+          )}
+        </div>
+      )}
       <div className="home-category-rail__scroll">
         {categories.map((category) => (
           <a
@@ -31,7 +43,15 @@ export function MobileCategoryRail({
           >
             <div
               className="home-category-rail__image"
-              style={{ background: category.imageBg }}
+              style={
+                category.imageUrl
+                  ? {
+                      backgroundImage: `url(${category.imageUrl})`,
+                      backgroundSize: 'cover',
+                      backgroundPosition: 'center',
+                    }
+                  : { background: category.imageBg }
+              }
             />
             <p className="mt-coach-xs flex justify-center text-sm font-bold tracking-[0.2px]">
               {isCoachtopiaCategory(category.id) ? (

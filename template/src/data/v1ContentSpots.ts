@@ -36,20 +36,20 @@ export function getV1ContentSpots(brand: BrandId): {
 
   return {
     hero: {
-      id: 'tabby-hero',
-      title: homepageHeroes[0]?.title ?? 'Your ultimate plus-one.',
-      subtitle: homepageHeroes[0]?.eyebrow,
+      id: 'andcoach-hero',
+      title: homepageHeroes[0]?.title ?? 'Moments of becoming.',
+      subtitle: homepageHeroes[0]?.eyebrow ?? '&Coach',
       imageUrl: heroImage,
     },
     duo: [
       {
-        id: 'bags-story',
-        title: homepageHeroes[1]?.title ?? 'Designed for your day.',
+        id: 'promo-tabby',
+        title: 'Shop Tabby',
         imageUrl: secondaryImage,
       },
       {
-        id: 'gifts-story',
-        title: 'Gift Guide',
+        id: 'promo-charms',
+        title: 'Shop Charms',
         imageUrl: heroImage,
       },
     ],

@@ -13,14 +13,17 @@ export type HomepageHero = {
   imageBg?: string
   /** Live coach.com CMS / Scene7 hero photography. */
   imageUrl?: string
-  /** Local hero video (webm) for video + subnav module. */
+  /** Local hero video (webm) — only when synced from live CMS. */
   videoUrl?: string
+  /** Shorter promo tile between main heroes. */
+  compact?: boolean
 }
 
 export type HomepageCategory = {
   id: string
   name: string
   imageBg: string
+  imageUrl?: string
 }
 
 export type HomepageProduct = {
@@ -40,7 +43,9 @@ export type HomepageStory = {
   title: string
   body: string
   cta: string
+  secondaryCta?: string
   imageBg: string
+  imageUrl?: string
 }
 
 type LiveHeroRecord = {
@@ -58,7 +63,8 @@ type LiveHeroRecord = {
 
 const liveHeroes = liveHeroesJson as LiveHeroRecord[]
 
-export const HOMEPAGE_HERO_VIDEO = '/assets/videos/20260603-hp1-tabby-video-mobile.webm'
+const CMS_FALLBACK =
+  'https://cms.coach.com/i/coach/20260603-hp1-tabby-still-new?&w=640&fmt=webp&$qlt_med$'
 
 export type HomepageSubnavLink = {
   id?: string
@@ -66,16 +72,14 @@ export type HomepageSubnavLink = {
   href: string
 }
 
-/** Quick links under the homepage video hero (local substitute for coach-prototype-base). */
+/** Quick links under the homepage hero — coach.com mobile (Jun 2026). */
 export const homepageSubnavLinks: HomepageSubnavLink[] = [
-  { label: 'New', href: '#' },
-  { label: 'Women', href: '#' },
-  { label: 'Men', href: '#' },
-  { label: 'Bags', href: '#' },
-  { id: 'coachtopia', label: 'Coachtopia', href: '#' },
+  { label: 'Shop Tabby', href: '/shop/women/collections/tabby' },
+  { label: 'Shop Charms', href: '/shop/women/accessories/bag-accessories-keychains' },
+  { label: "Shop Women's", href: '/shop/women/view-all' },
 ]
 
-/** First two heroes synced from live coach.com (refresh via npm run sync:heroes). */
+/** Primary + shoulder-bags heroes — refresh copy/images via npm run sync:heroes. */
 export const homepageHeroes: HomepageHero[] = liveHeroes.slice(0, 2).map((hero, index) => ({
   id: hero.id || `home-hero-${index + 1}`,
   eyebrow: hero.eyebrow,
@@ -86,138 +90,111 @@ export const homepageHeroes: HomepageHero[] = liveHeroes.slice(0, 2).map((hero, 
   secondaryCta: hero.secondaryCta,
   secondaryHref: hero.secondaryHref,
   imageUrl: hero.imageUrl ?? undefined,
-  videoUrl: index === 0 ? HOMEPAGE_HERO_VIDEO : undefined,
-  imageBg: 'linear-gradient(135deg, #8B6F47 0%, #231F20 100%)',
+  imageBg:
+    index === 0
+      ? 'linear-gradient(180deg, #3d2c24 0%, #231F20 100%)'
+      : 'linear-gradient(135deg, #8B6F47 0%, #231F20 100%)',
 }))
 
+/** Image promo modules between hero and shoulder-bags banner. */
+export const homepagePromoModules: HomepageHero[] = [
+  {
+    id: 'promo-womens',
+    eyebrow: 'Emotional Support',
+    title: "Shop Women's",
+    primaryCta: "Shop Women's",
+    primaryHref: '/shop/women/view-all',
+    imageUrl: CMS_FALLBACK,
+    imageBg: 'linear-gradient(135deg,#B85C3A 0%,#5A2D28 100%)',
+    compact: true,
+  },
+  {
+    id: 'promo-charms',
+    eyebrow: 'Owning my style',
+    title: 'Shop Charms',
+    primaryCta: 'Shop Charms',
+    primaryHref: '/shop/women/accessories/bag-accessories-keychains',
+    imageUrl: CMS_FALLBACK,
+    imageBg: 'linear-gradient(135deg,#D4B896 0%,#8B6F47 100%)',
+    compact: true,
+  },
+  {
+    id: 'promo-tabby',
+    title: 'Shop Tabby',
+    primaryCta: 'Shop Tabby',
+    primaryHref: '/shop/women/collections/tabby',
+    imageUrl:
+      'https://cms.coach.com/i/coach/20260603-hp1-tabby-video-mobile?&w=640&fmt=webp&$qlt_med$',
+    imageBg: 'linear-gradient(135deg,#8B6F47 0%,#231F20 100%)',
+    compact: true,
+  },
+]
+
+/** Shop-by-category trio — coach.com mobile homepage. */
 export const homepageCategories: HomepageCategory[] = [
   {
     id: 'bags',
     name: 'Bags',
+    imageUrl: CMS_FALLBACK,
     imageBg: 'linear-gradient(135deg,#8B6F47 0%,#5A3C22 100%)',
   },
   {
-    id: 'wallets',
-    name: 'Wallets',
-    imageBg: 'linear-gradient(135deg,#B85C3A 0%,#7A3B22 100%)',
-  },
-  {
-    id: 'rtw',
-    name: 'Ready-to-Wear',
-    imageBg: 'linear-gradient(135deg,#231F20 0%,#000 100%)',
+    id: 'women',
+    name: "Women's",
+    imageUrl: CMS_FALLBACK,
+    imageBg: 'linear-gradient(135deg,#B85C3A 0%,#5A2D28 100%)',
   },
   {
     id: 'shoes',
     name: 'Shoes',
+    imageUrl: CMS_FALLBACK,
     imageBg: 'linear-gradient(135deg,#F5E6D3 0%,#C4A57A 100%)',
   },
-  {
-    id: 'jewelry',
-    name: 'Jewelry',
-    imageBg: 'linear-gradient(135deg,#D4B896 0%,#8B6F47 100%)',
-  },
-  {
-    id: 'coachtopia',
-    name: 'Coachtopia',
-    imageBg: 'linear-gradient(135deg,#057550 0%,#003020 100%)',
-  },
 ]
 
-export const homepageProducts: HomepageProduct[] = [
-  {
-    id: 1,
-    name: 'Tabby shoulder bag 26',
-    price: '$450',
-    tag: 'New',
-    imageBg: '#F0F0F0',
-    imageBg2: '#E9E9E9',
-    swatches: ['#231F20', '#8B6F47', '#5B3A29'],
-  },
-  {
-    id: 2,
-    name: 'Rowan file bag',
-    price: '$298',
-    compareAt: '$395',
-    tag: 'Sale',
-    imageBg: '#F0F0F0',
-    imageBg2: '#E9E9E9',
-    swatches: ['#2E2E2E', '#F5E6D3'],
-  },
-  {
-    id: 3,
-    name: 'Brooklyn bag 28',
-    price: '$595',
-    tag: 'Best Seller',
-    imageBg: '#F0F0F0',
-    imageBg2: '#E9E9E9',
-    swatches: ['#B85C3A', '#231F20', '#F5E6D3'],
-  },
-  {
-    id: 4,
-    name: 'Tabby wallet',
-    price: '$195',
-    imageBg: '#F0F0F0',
-    imageBg2: '#E9E9E9',
-    swatches: ['#949494', '#231F20'],
-  },
-  {
-    id: 5,
-    name: 'Kira crossbody',
-    price: '$350',
-    imageBg: '#F0F0F0',
-    imageBg2: '#E9E9E9',
-    swatches: ['#D9A5A0', '#F5E6D3', '#231F20'],
-  },
-  {
-    id: 6,
-    name: 'Pillow Tabby 18',
-    price: '$495',
-    tag: 'New',
-    imageBg: '#F0F0F0',
-    imageBg2: '#E9E9E9',
-    swatches: ['#FAFAFA', '#231F20'],
-  },
-  {
-    id: 7,
-    name: 'Charter belt bag 7',
-    price: '$250',
-    imageBg: '#F0F0F0',
-    imageBg2: '#E9E9E9',
-    swatches: ['#000'],
-  },
-  {
-    id: 8,
-    name: 'Mollie tote',
-    price: '$425',
-    imageBg: '#F0F0F0',
-    imageBg2: '#E9E9E9',
-    swatches: ['#A85A52', '#231F20'],
-  },
-]
+export const homepageStoriesSectionTitle = 'Catch up on Coach.'
 
+/** Editorial carousel — coach.com “Catch up on Coach” modules. */
 export const homepageStories: HomepageStory[] = [
   {
-    id: 'coachtopia',
-    eyebrow: 'Coachtopia',
-    title: 'Circular by design.',
-    body: 'A new world of circular craft — products made from recycled, recyclable, and regenerated materials. For a generation that wants to make things better.',
-    cta: 'Discover Coachtopia',
+    id: 'explore-your-story',
+    eyebrow: 'Coach Spring 2026 Explore Your Story campaign',
+    title: 'Wear your Tabby with a story worth sharing.',
+    body: '',
+    cta: 'Discover the Campaign',
     imageBg: 'linear-gradient(135deg,#231F20 0%,#000 100%)',
+    imageUrl: CMS_FALLBACK,
   },
   {
-    id: 'craftsmanship',
-    eyebrow: 'Our craftsmanship',
-    title: 'Made to be handed down.',
-    body: 'Every Coach bag is built by hand, with leathers we source and finish ourselves. The Coach (Re)Loved program refurbishes, restores, and reimagines vintage pieces.',
-    cta: 'Learn more',
-    imageBg: 'linear-gradient(135deg,#B85C3A 0%,#5A2D28 100%)',
+    id: 'summer-shoes',
+    eyebrow: 'Shoes',
+    title: "Discover (and learn how to style) the summer's best shoes.",
+    body: '',
+    cta: 'Shop Shoes',
+    secondaryCta: 'Explore Our Style Guides',
+    imageBg: 'linear-gradient(135deg,#F5E6D3 0%,#8B6F47 100%)',
+    imageUrl: CMS_FALLBACK,
+  },
+  {
+    id: 'tabby-tour',
+    eyebrow: 'Tabby Tour',
+    title: 'The Tabby Tour is coming to a city near you.',
+    body: '',
+    cta: 'Learn More',
+    imageBg: 'linear-gradient(135deg,#8B6F47 0%,#231F20 100%)',
+    imageUrl: CMS_FALLBACK,
+  },
+  {
+    id: 'wnba',
+    eyebrow: 'WNBA',
+    title:
+      'Get to know the newly drafted WNBA players championing self-expression.',
+    body: '',
+    cta: 'See More',
+    imageBg: 'linear-gradient(135deg,#B85C3A 0%,#231F20 100%)',
+    imageUrl: CMS_FALLBACK,
   },
 ]
-
-export const homepageProductGridMeta = {
-  title: 'New arrivals',
-  subtitle: "Just in — this season's most-wanted",
-}
 
 /** Coach Outlet mobile homepage — pseudo content aligned with outlet nav spots. */
 export const outletHomepageHeroes: HomepageHero[] = [
@@ -227,7 +204,7 @@ export const outletHomepageHeroes: HomepageHero[] = [
     title: 'Outlet New Arrivals',
     body: 'Styles starting under $100',
     primaryCta: 'Shop now',
-    imageUrl: liveHeroes[1]?.imageUrl ?? undefined,
+    imageUrl: liveHeroes[1]?.imageUrl ?? CMS_FALLBACK,
     imageBg: 'linear-gradient(135deg, #8B1A1A 0%, #231F20 100%)',
   },
   {
@@ -236,7 +213,7 @@ export const outletHomepageHeroes: HomepageHero[] = [
     title: 'Clearance up to 50% off',
     body: 'Last chance on seasonal favorites.',
     primaryCta: 'Shop clearance',
-    imageUrl: liveHeroes[0]?.imageUrl ?? undefined,
+    imageUrl: liveHeroes[0]?.imageUrl ?? CMS_FALLBACK,
     imageBg: 'linear-gradient(135deg, #231F20 0%, #000 100%)',
   },
 ]
@@ -277,6 +254,31 @@ export const outletHomepageCategories: HomepageCategory[] = [
   },
 ]
 
+export const outletHomepageStories: HomepageStory[] = [
+  {
+    id: 'outlet-clearance',
+    eyebrow: 'Clearance',
+    title: 'Extra savings on last-chance styles.',
+    body: 'Shop handbags, wallets, and ready-to-wear at outlet prices — while supplies last.',
+    cta: 'Shop clearance',
+    imageBg: 'linear-gradient(135deg,#8B1A1A 0%,#231F20 100%)',
+  },
+  {
+    id: 'outlet-bags',
+    eyebrow: 'Bags',
+    title: 'Iconic silhouettes, outlet prices.',
+    body: 'Discover bestsellers and new arrivals starting under $100.',
+    cta: 'Shop bags',
+    imageBg: 'linear-gradient(135deg,#8B6F47 0%,#231F20 100%)',
+  },
+]
+
+export const outletHomepageProductGridMeta = {
+  title: 'Outlet bestsellers',
+  subtitle: 'Top styles at up to 50% off',
+}
+
+/** Legacy mock grid — outlet tab only. */
 export const outletHomepageProducts: HomepageProduct[] = [
   {
     id: 101,
@@ -318,27 +320,3 @@ export const outletHomepageProducts: HomepageProduct[] = [
     swatches: ['#949494', '#231F20'],
   },
 ]
-
-export const outletHomepageStories: HomepageStory[] = [
-  {
-    id: 'outlet-clearance',
-    eyebrow: 'Clearance',
-    title: 'Extra savings on last-chance styles.',
-    body: 'Shop handbags, wallets, and ready-to-wear at outlet prices — while supplies last.',
-    cta: 'Shop clearance',
-    imageBg: 'linear-gradient(135deg,#8B1A1A 0%,#231F20 100%)',
-  },
-  {
-    id: 'outlet-bags',
-    eyebrow: 'Bags',
-    title: 'Iconic silhouettes, outlet prices.',
-    body: 'Discover bestsellers and new arrivals starting under $100.',
-    cta: 'Shop bags',
-    imageBg: 'linear-gradient(135deg,#8B6F47 0%,#231F20 100%)',
-  },
-]
-
-export const outletHomepageProductGridMeta = {
-  title: 'Outlet bestsellers',
-  subtitle: 'Top styles at up to 50% off',
-}

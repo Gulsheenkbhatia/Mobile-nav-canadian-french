@@ -8,6 +8,23 @@
   background-position: center;
 }
 
+.home-hero--compact {
+  min-height: 300px;
+}
+
+.home-hero--compact .home-hero__content {
+  min-height: 300px;
+}
+
+.home-subnav--below-hero {
+  position: relative;
+  margin-top: 0;
+}
+
+.home-subnav--below-hero .home-video-hero__subnav-scroll {
+  padding-top: var(--space-xs);
+}
+
 .home-hero__scrim {
   position: absolute;
   inset: 0;

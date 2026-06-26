@@ -1,42 +1,37 @@
 import {
   homepageCategories,
   homepageHeroes,
-  homepageProductGridMeta,
-  homepageProducts,
+  homepagePromoModules,
   homepageStories,
+  homepageStoriesSectionTitle,
   homepageSubnavLinks,
 } from '../../data/homepageData'
-import { HomepageVideoHero } from './HomepageVideoHero'
+import { HomepageSubnav } from './HomepageSubnav'
 import { MobileCategoryRail } from './MobileCategoryRail'
 import { MobileHero } from './MobileHero'
-import { MobileProductGrid } from './MobileProductGrid'
 import { MobileStoryBlock } from './MobileStoryBlock'
 
 /** Coach.com mobile homepage — scrollable page. */
 export function CoachHomePage() {
-  const [primaryHero, secondaryHero] = homepageHeroes
+  const [primaryHero, shoulderBagsHero] = homepageHeroes
 
   return (
     <main className="pb-coach-xl">
-      {primaryHero?.videoUrl && (
-        <HomepageVideoHero
-          title={primaryHero.title}
-          primaryCta={primaryHero.primaryCta}
-          videoSrc={primaryHero.videoUrl}
-          posterSrc={primaryHero.imageUrl}
-          subnavLinks={homepageSubnavLinks}
-        />
-      )}
-      {secondaryHero && <MobileHero hero={secondaryHero} />}
-      <MobileCategoryRail categories={homepageCategories} />
-      <MobileProductGrid
-        products={homepageProducts}
-        title={homepageProductGridMeta.title}
-        subtitle={homepageProductGridMeta.subtitle}
-      />
-      {homepageStories.map((story) => (
-        <MobileStoryBlock key={story.id} story={story} />
+      {primaryHero && <MobileHero hero={primaryHero} />}
+      <HomepageSubnav links={homepageSubnavLinks} />
+      {homepagePromoModules.map((promo) => (
+        <MobileHero key={promo.id} hero={promo} />
       ))}
+      {shoulderBagsHero && <MobileHero hero={shoulderBagsHero} />}
+      <MobileCategoryRail categories={homepageCategories} showShopAll={false} />
+      <section className="px-coach-m pt-coach-xl" aria-label={homepageStoriesSectionTitle}>
+        <h2 className="type-title-2 mb-coach-lg text-coach-black">
+          {homepageStoriesSectionTitle}
+        </h2>
+        {homepageStories.map((story) => (
+          <MobileStoryBlock key={story.id} story={story} />
+        ))}
+      </section>
     </main>
   )
 }
