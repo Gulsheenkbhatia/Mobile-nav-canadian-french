@@ -1,0 +1,97 @@
+.invoked-menu__track-wrap {
+  height: 100%;
+  overflow: hidden;
+}
+
+.v1-menu__l1-screen {
+  display: flex;
+  flex-direction: column;
+}
+
+.v1-menu__l1-scroll {
+  flex: 1;
+  min-height: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.v1-menu__spots {
+  padding: 0 var(--space-xxs) var(--space-xs);
+}
+
+.v1-menu__accordion {
+  padding: var(--space-m) var(--space-m) 0;
+}
+
+.v1-menu__accordion-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-m);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.v1-menu__accordion-item {
+  margin: 0;
+}
+
+.v1-menu__accordion-trigger {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-s);
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: var(--color-black);
+  text-align: left;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.v1-menu__accordion-trigger:focus-visible {
+  outline: 2px solid var(--color-black);
+  outline-offset: 2px;
+}
+
+.v1-menu__accordion-panel {
+  margin: var(--space-xs) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.v1-menu__accordion-panel .invoked-menu__link {
+  padding: var(--space-xxs) 0;
+}
+
+.v1-menu__footer {
+  flex-shrink: 0;
+  margin-top: auto;
+  padding: var(--space-s) var(--space-m) var(--space-m);
+  border-top: 1px solid var(--color-grey-20);
+  background: var(--nav-tab-active-bg, #f0f0f0);
+}
+
+.v1-menu__footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-s) var(--space-m);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.v1-menu__footer-links li {
+  margin: 0;
+}
+
+.v1-menu__footer-links button {
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}

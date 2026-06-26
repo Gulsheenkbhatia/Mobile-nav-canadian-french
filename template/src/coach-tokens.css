@@ -1,0 +1,470 @@
+/* ============================================================
+   COACH DESIGN SYSTEM — Colors & Type
+   Source: Coach Brand Foundations (Figma) + design tokens at
+   https://assets.tapestry.com/ux/design-tokens/coach/index.html
+   ============================================================ */
+
+/* -----------------------------------------------------------
+   Fonts
+   -------------------------------------------------------- */
+@font-face {
+  font-family: "Helvetica LT Pro";
+  src: url("/fonts/Helvetica-Roman.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Helvetica LT Pro";
+  src: url("/fonts/Helvetica-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Helvetica Now";
+  src: url("/fonts/HelveticaNowMedium.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Helvetica Now";
+  src: url("/fonts/HelveticaNowMedium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Helvetica Now";
+  src: url("/fonts/HelveticaNowExtraBold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Helvetica Now";
+  src: url("/fonts/HelveticaNowExtraBold.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Helvetica Neue LT Pro Extended";
+  src: url("/fonts/neue_helvetica_53_extended.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Helvetica Neue LT Pro Extended";
+  src: url("/fonts/neue_helvetica_73_extended_bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* --------------------------------------------------------
+     CORE PRIMITIVES
+     -------------------------------------------------------- */
+  --color-black:             #000000;
+  --color-primary:           #000001;    /* coach-pwa variables.css */
+  --color-white:             #FFFFFF;
+  --color-neutral-medium:    #575757;    /* coach-pwa variables.css — search placeholder */
+  --color-page-bg:           #F7F7F7;    /* page background */
+
+  /* Grey scale (from Figma color palette) */
+  --color-grey-20:           #E9E9E9;
+  --color-grey-30:           #D8D8D8;
+  --color-grey-40:           #C4C4C4;
+  --color-grey-50:           #949494;
+  --color-grey-60:           #727272;
+  --color-grey-70:           #575757;
+  --color-grey-80:           #333E47;
+  --color-grey-90:           #2E2E2E;
+  --color-grey-base:         #161616;
+
+  /* Status / accent */
+  --color-success-primary:   #007A65;    /* Coach green */
+  --color-error-primary:     #C00000;
+  --color-sale:              #F04000;    /* bright orange/red */
+  --color-inactive:          #D8D8D8;
+  --color-carousel-bg:       #EFEFEF;
+
+  /* Brand primitives (per Figma /Primitives section) */
+  --color-green-500:         #057550;
+  --color-blue-500:          #016FD0;
+  --color-navy-500:          #003087;
+  --color-yellow-500:        #DBFF00;
+
+  /* Scrims — coach-pwa variables.css */
+  --color-scrim-dark:        rgba(0, 0, 0, 0.75);
+  --color-scrim-light:       rgba(255, 255, 255, 0.50);
+  --linear-gradient-scrim-top: linear-gradient(180deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 100%);
+  --linear-gradient-scrim-bottom: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.75) 100%);
+
+  /* Component colors */
+  --color-flyout-nav-dark-bg:   #161616;
+  --color-nav-tab-bar-dark-bg:  #192F5D;
+  --color-price-percentage:     #C00000;
+  --color-price-strikethrough:  #575757;
+  --color-price-comp-value:     #575757;
+
+  /* --------------------------------------------------------
+     SEMANTIC — foreground
+     -------------------------------------------------------- */
+  --fg-1:                    var(--color-black);       /* primary text */
+  --fg-2:                    var(--color-grey-70);     /* secondary */
+  --fg-3:                    var(--color-grey-60);     /* tertiary / meta */
+  --fg-muted:                var(--color-grey-50);
+  --fg-inverse:              var(--color-white);
+  --fg-link:                 var(--color-black);
+  --fg-link-hover:           var(--color-grey-70);
+
+  /* --------------------------------------------------------
+     SEMANTIC — background
+     -------------------------------------------------------- */
+  --bg-canvas:               var(--color-white);
+  --bg-subtle:               var(--color-page-bg);
+  --bg-muted:                var(--color-grey-20);
+  --bg-inverse:              var(--color-black);
+
+  /* --------------------------------------------------------
+     SEMANTIC — borders
+     -------------------------------------------------------- */
+  --border-strong:           var(--color-black);
+  --border-default:          var(--color-grey-40);
+  --border-subtle:           var(--color-grey-30);
+
+  /* --------------------------------------------------------
+     CTA colors
+     -------------------------------------------------------- */
+  --color-bg-cta-primary:    var(--color-black);
+  --color-bg-cta-hover:      #2E2E2E;
+  --color-bg-cta-focus:      var(--color-black);
+  --color-bg-cta-disabled:   var(--color-grey-30);
+  --color-border-cta-primary: var(--color-black);
+  --color-text-cta-primary:  var(--color-white);
+
+  /* --------------------------------------------------------
+     TYPE — font families
+     Coach's DEFAULT body face is Helvetica Now Text — use it
+     everywhere except two exceptions:
+       1. Display / wordmark → Helvetica Neue LT Pro Extended
+       2. Compact places where character width is tight
+          (narrow nav cells, dense tables, price chips) → fall back
+          to Helvetica LT Pro Roman, whose narrower glyphs save space.
+     Helvetica LT Pro Bold and Roman are used SPARINGLY.
+     Garamond is DEPRECATED.
+     -------------------------------------------------------- */
+  --font-face1:              "Helvetica Now", Helvetica, Arial, sans-serif;           /* default body */
+  --font-face1-compact:      "Helvetica LT Pro", Helvetica, Arial, sans-serif;        /* narrow contexts only */
+  --font-face1-extended:     "Helvetica Neue LT Pro Extended", Helvetica, Arial, sans-serif; /* display/wordmark */
+  --font-face-system:        Helvetica, Arial, sans-serif;
+  --font-face-serif:         Times, "Times New Roman", serif; /* legal / email fallback */
+
+  /* --------------------------------------------------------
+     TYPE — size scale (px, rem noted in comment)
+     -------------------------------------------------------- */
+  --text-10:  0.625rem;   /* 10 */
+  --text-12:  0.75rem;    /* 12 */
+  --text-14:  0.875rem;   /* 14 */
+  --text-16:  1rem;       /* 16 */
+  --text-18:  1.125rem;   /* 18 */
+  --text-20:  1.25rem;    /* 20 */
+  --text-24:  1.5rem;     /* 24 */
+  --text-26:  1.625rem;   /* 26 */
+  --text-28:  1.75rem;    /* 28 */
+  --text-30:  1.875rem;   /* 30 */
+  --text-32:  2rem;       /* 32 */
+  --text-36:  2.25rem;    /* 36 */
+  --text-44:  2.75rem;    /* 44 */
+  --text-55:  3.438rem;   /* 55 */
+  --text-60:  3.75rem;    /* 60 */
+  --text-65:  4.063rem;   /* 65 */
+  --text-80:  5rem;       /* 80 */
+  --text-96:  6rem;       /* 96 */
+
+  /* --------------------------------------------------------
+     TYPE — line height scale
+     -------------------------------------------------------- */
+  --line-height-xxs: 1;        /* 100% */
+  --line-height-xs:  1.15;
+  --line-height-s:   1.2;
+  --line-height-m:   1.25;
+  --line-height-l:   1.35;
+  --line-height-xl:  1.4;
+  --line-height-2xl: 1.5;
+
+  /* --------------------------------------------------------
+     TYPE — letter spacing
+     -------------------------------------------------------- */
+  --letter-spacing-xs:   0.2px;
+  --letter-spacing-s:    0.4px;
+  --letter-spacing-m:    0.8px;
+  --letter-spacing-l:    1px;
+  --letter-spacing-xl:   1.25px;
+  --letter-spacing-2xl:  1.75px;
+
+  /* --------------------------------------------------------
+     SPACING — PWA-canonical (coach-pwa variables.css)
+     -------------------------------------------------------- */
+  --spacing-0: 0;
+  --spacing-1: 0.25rem;
+  --spacing-2: 0.5rem;
+  --spacing-3: 0.75rem;
+  --spacing-4: 1rem;
+  --spacing-6: 1.5rem;
+  --spacing-8: 2rem;
+  --spacing-10: 2.5rem;
+  --spacing-12: 3rem;
+  --spacing-16: 4rem;
+  --spacing-20: 5rem;
+  --spacing-24: 6rem;
+
+  /* Legacy aliases (Figma naming) */
+  --space-xxs:   var(--spacing-1);
+  --space-xs:    var(--spacing-2);
+  --space-s:     var(--spacing-3);
+  --space-m:     var(--spacing-4);
+  --space-lg:    var(--spacing-6);
+  --space-xl:    var(--spacing-8);
+  --space-xl2:   var(--spacing-10);
+  --space-xxl:   var(--spacing-12);
+  --space-xxl2:  var(--spacing-16);
+  --space-xxl3:  var(--spacing-20);
+  --space-jumbo: var(--spacing-24);
+  --space-xxl4:  120px;
+
+  /* Breakpoints — coach-pwa theme.js */
+  --breakpoint-coach-sm: 544px;
+  --breakpoint-coach-md: 769px;
+
+  /* --------------------------------------------------------
+     RADII
+     -------------------------------------------------------- */
+  --radius-xs:    2px;
+  --radius-s:     4px;
+  --radius-m:     8px;
+  --radius-l:     12px;
+  --radius-xl:    16px;
+  --radius-full:  9999px;
+
+  /* --------------------------------------------------------
+     SHADOWS (subtle — Coach is primarily flat)
+     -------------------------------------------------------- */
+  --shadow-top:   0 -8px 10px 0 rgba(0,0,0,0.02);
+  --shadow-left:  -8px 0 10px 0 rgba(0,0,0,0.02);
+  --shadow-right: 8px 0 10px 0 rgba(0,0,0,0.02);
+  --shadow-ltrb:  0 0 16px 0 rgba(0,0,0,0.04);
+  --shadow-ltr:   0 8px 10px 0 rgba(0,0,0,0.02);
+  --shadow-card:  0 8px 10px 0 rgba(0,0,0,0.02);
+  --shadow-dropdown: 0 2px 8px 0 rgba(0,0,0,0.25);
+
+  /* --------------------------------------------------------
+     MOTION — coach-pwa public/styles/theme/coach/variables.css
+     Canonical for prototype handoff. Search drawer timing from
+     SearchWidget searchV2 searchDrawerEntry (theme.js).
+     -------------------------------------------------------- */
+
+  --transition-duration-gentle: 1s;
+  --transition-duration-quick: 0.85s;
+  --transition-easing-gentle: cubic-bezier(0.83, 0, 0.17, 1);
+  --transition-easing-quick: cubic-bezier(0.85, 0, 0.15, 1);
+  --transition-delay-gentle: 250ms;
+  --transition-delay-quick: 100ms;
+
+  /* PWA SearchWidget searchV2 — menu shell slide */
+  --transition-duration-drawer: 400ms;
+  --transition-easing-drawer: ease;
+
+  /* coach-nav.vercel.app V3 drill overlays (ease-drawer) */
+  --transition-duration-drill: 600ms;
+  --transition-easing-drill: cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* coach-nav.vercel.app V3 content entrance (Fd / Id variants) */
+  --transition-duration-content: 700ms;
+  --transition-easing-content: cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* PWA MobileMenu mobileMenuDrawerContainer — scrim fade only */
+  --transition-duration-scrim: 300ms;
+  --transition-easing-scrim: ease;
+
+  /* PWA mobile-menu-tabs / nav-exposed tab hover */
+  --transition-duration-tab: 100ms;
+  --transition-easing-tab: ease-out;
+
+  /* Aliases used across prototype CSS */
+  --ease-gentle: var(--transition-easing-gentle);
+  --ease-quick: var(--transition-easing-quick);
+  --duration-gentle: var(--transition-duration-gentle);
+  --duration-quick: var(--transition-duration-quick);
+  --delay-gentle: var(--transition-delay-gentle);
+  --delay-quick: var(--transition-delay-quick);
+
+  /* Short UI transitions mapped to PWA quick easing */
+  --duration-fast: 150ms;
+  --duration-base: 240ms;
+  --duration-slow: 360ms;
+  --ease-default: var(--transition-easing-gentle);
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --ease-in: cubic-bezier(0.4, 0, 1, 1);
+
+  /* Legacy Motion DS (reference only — not canonical for handoff) */
+  --ease-transform-out: cubic-bezier(0.33, 0.00, 0.00, 0.90);
+  --ease-transform-in:  cubic-bezier(0.39, 0.18, 0.20, 1.00);
+  --duration-transform: 800ms;
+
+  --rotate-90:   90deg;
+  --rotate-180:  180deg;
+  --rotate-270:  270deg;
+  --rotate-360:  360deg;
+  --scale-0:     0;
+  --scale-25:    0.25;
+  --scale-50:    0.50;
+  --scale-75:    0.75;
+  --scale-100:   1.00;
+
+  /* --------------------------------------------------------
+     BREAKPOINTS (reference values)
+     -------------------------------------------------------- */
+  --bp-mobile:   375px;
+  --bp-tablet:   768px;
+  --bp-desktop:  1024px;
+  --bp-wide:     1440px;
+}
+
+/* ============================================================
+   SEMANTIC TYPE CLASSES
+   Coach type patterns: a tall-cap, wide, all-CAPS display face
+   sitting over tight, small-caps body text. Everything tracks
+   slightly open (0.2–1.75px) depending on scale.
+   ============================================================ */
+
+/* Display — the signature Coach wordmark-style headline.
+   Wide, tracked open, sentence case. Use for hero/campaign moments. */
+.type-display-1 {
+  font-family: var(--font-face1-extended);
+  font-weight: 700;
+  font-size: var(--text-96);
+  line-height: var(--line-height-xxs);
+  letter-spacing: var(--letter-spacing-xs);
+}
+.type-display-2 {
+  font-family: var(--font-face1-extended);
+  font-weight: 700;
+  font-size: var(--text-65);
+  line-height: var(--line-height-xxs);
+  letter-spacing: var(--letter-spacing-xs);
+}
+.type-display-3 {
+  font-family: var(--font-face1-extended);
+  font-weight: 700;
+  font-size: var(--text-44);
+  line-height: var(--line-height-xs);
+  letter-spacing: var(--letter-spacing-xs);
+}
+.type-display-4 {
+  font-family: var(--font-face1-extended);
+  font-weight: 400;
+  font-size: var(--text-32);
+  line-height: var(--line-height-s);
+  letter-spacing: var(--letter-spacing-xs);
+}
+
+/* Titles — section headers and category leads */
+.type-title-1 {
+  font-family: var(--font-face1);
+  font-weight: 700;
+  font-size: var(--text-28);
+  line-height: var(--line-height-s);
+  letter-spacing: var(--letter-spacing-xs);
+}
+.type-title-2 {
+  font-family: var(--font-face1);
+  font-weight: 700;
+  font-size: var(--text-20);
+  line-height: var(--line-height-m);
+  letter-spacing: var(--letter-spacing-xs);
+}
+
+/* Body */
+.type-body-1 {
+  font-family: var(--font-face1);
+  font-weight: 400;
+  font-size: var(--text-16);
+  line-height: var(--line-height-xl);
+  letter-spacing: var(--letter-spacing-xs);
+}
+.type-body-2 {
+  font-family: var(--font-face1);
+  font-weight: 400;
+  font-size: var(--text-14);
+  line-height: var(--line-height-l);
+  letter-spacing: var(--letter-spacing-xs);
+}
+
+/* CTA — sentence case, used on buttons and primary links */
+.type-cta-1 {
+  font-family: var(--font-face1);
+  font-weight: 700;
+  font-size: var(--text-14);
+  line-height: var(--line-height-m);
+  letter-spacing: var(--letter-spacing-xs);
+}
+.type-cta-2 {
+  font-family: var(--font-face1);
+  font-weight: 700;
+  font-size: var(--text-12);
+  line-height: var(--line-height-m);
+  letter-spacing: var(--letter-spacing-xs);
+}
+.type-cta-3 {
+  font-family: var(--font-face1);
+  font-weight: 700;
+  font-size: var(--text-10);
+  line-height: var(--line-height-m);
+  letter-spacing: var(--letter-spacing-xs);
+}
+
+/* Text links — always underlined, thin */
+.type-link {
+  font-family: var(--font-face1);
+  font-weight: 400;
+  font-size: var(--text-14);
+  line-height: var(--line-height-l);
+  letter-spacing: var(--letter-spacing-xs);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  color: var(--fg-link);
+}
+.type-link:hover { color: var(--fg-link-hover); }
+
+/* Micro / eyebrow — the rare uppercase survivor, tracked open, 10–11px */
+.type-eyebrow {
+  font-family: var(--font-face1);
+  font-weight: 700;
+  font-size: var(--text-10);
+  line-height: var(--line-height-xxs);
+  letter-spacing: var(--letter-spacing-xs);
+}
+
+/* Element defaults */
+body {
+  font-family: var(--font-face1);
+  color: var(--fg-1);
+  background: var(--bg-canvas);
+  font-size: var(--text-16);
+  line-height: var(--line-height-xl);
+  -webkit-font-smoothing: antialiased;
+}
+h1 { font-family: var(--font-face1-extended); font-weight: 700; font-size: var(--text-65); line-height: var(--line-height-xxs); letter-spacing: var(--letter-spacing-xs); margin: 0; }
+h2 { font-family: var(--font-face1-extended); font-weight: 700; font-size: var(--text-44); line-height: var(--line-height-xs); letter-spacing: var(--letter-spacing-xs); margin: 0; }
+h3 { font-family: var(--font-face1); font-weight: 700; font-size: var(--text-28); line-height: var(--line-height-s); letter-spacing: var(--letter-spacing-xs); margin: 0; }
+h4 { font-family: var(--font-face1); font-weight: 700; font-size: var(--text-20); line-height: var(--line-height-m); letter-spacing: var(--letter-spacing-xs); margin: 0; }
+p  { margin: 0; }
+a  { color: var(--fg-link); text-decoration: underline; text-underline-offset: 2px; }
+a:hover { color: var(--fg-link-hover); }
+code, pre { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: var(--text-14); }
+

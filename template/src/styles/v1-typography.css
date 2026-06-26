@@ -1,0 +1,44 @@
+/* V1 prototype — fixed mobile nav typography (20px nav, 16px utility) */
+
+.v1-prototype .v1-nav-link,
+.v1-prototype .invoked-menu__l1-link,
+.v1-prototype .invoked-menu__menu-link,
+.v1-prototype .invoked-menu__link,
+.v1-prototype .invoked-menu__l2-title {
+  font-family: var(--font-face1-extended);
+  font-size: var(--text-20);
+  font-weight: 400;
+  line-height: var(--line-height-m);
+  letter-spacing: var(--letter-spacing-xs);
+}
+
+.v1-prototype .invoked-menu__l1-link--large,
+.v1-prototype .invoked-menu__l1-link--compact {
+  font-size: var(--text-20);
+  font-weight: 400;
+  line-height: var(--line-height-m);
+  min-height: 28px;
+}
+
+.v1-prototype .invoked-menu__l2-title {
+  font-weight: 700;
+}
+
+.v1-prototype .v1-utility-link,
+.v1-prototype .content-spot__footer-links .invoked-menu__link {
+  font-family: var(--font-face1);
+  font-size: var(--text-16);
+  font-weight: 400;
+  line-height: var(--line-height-xl);
+  letter-spacing: var(--letter-spacing-xs);
+  color: var(--color-grey-60);
+}
+
+.v1-prototype .invoked-menu__eyebrow {
+  font-size: var(--text-10);
+}
+
+.v1-prototype .content-spot__hero-copy .content-spot__title,
+.v1-prototype .content-spot__tile-label {
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.55);
+}

@@ -1,0 +1,289 @@
+/* Coach Global Header — ported from coach-srp-filter-prototype (MobileMenuTabs + SearchWidgetExposed) */
+
+.nav-exposed {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  width: 100%;
+}
+
+.nav-exposed__top {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  min-height: calc(49px + env(safe-area-inset-top, 0px));
+  padding: env(safe-area-inset-top, 0) var(--space-m) 0;
+  background: var(--nav-tab-bar-bg, #333333);
+}
+
+.nav-exposed__tabs {
+  display: flex;
+  align-items: flex-end;
+  flex: 1;
+  min-width: 0;
+  gap: 0;
+}
+
+.nav-exposed__tab {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  height: 40px;
+  padding: var(--space-m);
+  margin: 0 var(--space-s) 0 0;
+  border: none;
+  border-radius: 6px 6px 0 0;
+  background: var(--nav-tab-bar-bg, #333333);
+  color: var(--color-white);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition:
+    background-color var(--transition-duration-tab) var(--transition-easing-tab),
+    color var(--transition-duration-tab) var(--transition-easing-tab);
+}
+
+.nav-exposed__tab:focus-visible {
+  outline: 2px solid var(--color-white);
+  outline-offset: 2px;
+}
+
+.nav-exposed__tab--active {
+  background: var(--nav-tab-active-bg, #f0f0f0);
+  color: var(--color-black);
+}
+
+.nav-exposed__tab--active::before {
+  content: '';
+  position: absolute;
+  left: -20px;
+  bottom: 0;
+  width: 20px;
+  height: 10px;
+  border-bottom-right-radius: 6px;
+  box-shadow: 8px 0.3px 0 var(--nav-tab-active-bg, #f0f0f0);
+}
+
+.nav-exposed__tab--active::after {
+  content: '';
+  position: absolute;
+  right: -20px;
+  bottom: 0;
+  width: 20px;
+  height: 10px;
+  border-bottom-left-radius: 6px;
+  box-shadow: -8px 0.3px 0 var(--nav-tab-active-bg, #f0f0f0);
+}
+
+.nav-exposed__tab--outlet:not(.nav-exposed__tab--active) {
+  background: transparent;
+  margin-left: 0;
+  margin-right: var(--space-s);
+}
+
+.nav-exposed__logo {
+  position: relative;
+  z-index: 1;
+  display: block;
+  flex-shrink: 0;
+  height: 8px;
+}
+
+.nav-exposed__logo--retail {
+  width: 74px;
+  height: 8px;
+  color: var(--color-black);
+}
+
+.nav-exposed__tab:not(.nav-exposed__tab--active) .nav-exposed__logo--retail {
+  color: var(--color-white);
+}
+
+.nav-exposed__logo--outlet {
+  width: 124px;
+  height: 8px;
+  color: var(--color-black);
+}
+
+.nav-exposed__tab:not(.nav-exposed__tab--active) .nav-exposed__logo--outlet {
+  color: var(--color-white);
+}
+
+.nav-exposed__icons {
+  display: flex;
+  align-items: center;
+  align-self: center;
+  gap: var(--space-m);
+  flex-shrink: 0;
+  color: var(--color-white);
+}
+
+.nav-exposed__icon-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.nav-exposed__icon-btn:focus-visible {
+  outline: 2px solid var(--color-white);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.nav-exposed__bag-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-exposed__bag-badge {
+  position: absolute;
+  top: -4px;
+  right: -6px;
+  min-width: 13px;
+  height: 13px;
+  padding: 0 3px;
+  border-radius: 7px;
+  background: var(--color-white);
+  color: var(--color-black);
+  font-size: 9px;
+  line-height: 13px;
+  text-align: center;
+  font-family: var(--font-face1-compact);
+}
+
+/* Outlet tab switch placeholder */
+.outlet-placeholder {
+  padding: var(--space-m);
+  background: var(--color-page-bg);
+  min-height: 50vh;
+  flex: 1;
+}
+
+.outlet-placeholder__skeleton {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-m);
+}
+
+.outlet-placeholder__skeleton-hero {
+  width: 100%;
+  height: 180px;
+  background: var(--color-grey-20);
+}
+
+.outlet-placeholder__skeleton-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-m);
+}
+
+.outlet-placeholder__skeleton-tile {
+  aspect-ratio: 3 / 4;
+  background: var(--color-grey-20);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Invoked menu tabs + close — coach-pwa MobileMenuTabs/theme.ts */
+.mobile-menu-tabs {
+  display: flex;
+  width: 100%;
+  height: 49px;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 0 var(--space-m);
+  background: var(--nav-tab-bar-bg, var(--color-standout-primary, #333333));
+}
+
+.mobile-menu-tabs__tab-list {
+  flex: 1;
+  min-width: 0;
+}
+
+.mobile-menu-tabs .nav-exposed__tab {
+  transition: background-color 100ms ease-out;
+}
+
+.mobile-menu-tabs__close {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  align-self: center;
+  justify-content: flex-end;
+  width: 24px;
+  height: 24px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: var(--color-white);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.mobile-menu-tabs__close:focus-visible {
+  outline: 2px solid var(--color-white);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.mobile-menu-tabs__close:active {
+  opacity: 0.85;
+}
+
+/* PWA Tabs theme — device-width bands (375–440px) */
+@media (min-width: 375px) and (max-width: 389px) {
+  .nav-exposed__tab {
+    padding: var(--spacing-4) var(--spacing-2) !important;
+    margin-right: var(--spacing-3) !important;
+  }
+}
+
+@media (min-width: 390px) and (max-width: 413px) {
+  .nav-exposed__tab {
+    padding: var(--spacing-4) var(--spacing-3) !important;
+    margin-right: var(--spacing-2) !important;
+  }
+}
+
+@media (min-width: 414px) and (max-width: 429px) {
+  .nav-exposed__tab {
+    padding: var(--spacing-4) !important;
+    margin-right: var(--spacing-2) !important;
+  }
+}
+
+@media (min-width: 430px) and (max-width: 440px) {
+  .nav-exposed__tab {
+    padding: var(--spacing-4) !important;
+    margin-right: 15px !important;
+  }
+}
+
+/* PWA HeaderMainContent — mobile header padding */
+@media (max-width: 769px) {
+  .nav-exposed__top {
+    padding-left: var(--spacing-2);
+  }
+}

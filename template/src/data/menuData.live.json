@@ -1,0 +1,1787 @@
+{
+  "syncedAt": "2026-06-26T00:24:59.923Z",
+  "source": "oneSite",
+  "coach": {
+    "topCategories": [
+      {
+        "id": "retail_sit_products",
+        "label": "SIT Products"
+      },
+      {
+        "id": "think",
+        "label": "Think"
+      },
+      {
+        "id": "coach-women",
+        "label": "Women"
+      },
+      {
+        "id": "retail_qa_auto_category",
+        "label": "QA Auto Category"
+      },
+      {
+        "id": "coach-men",
+        "label": "Men"
+      },
+      {
+        "id": "coach-shop-by-T1",
+        "label": "Featured"
+      },
+      {
+        "id": "coach-sale",
+        "label": "Sale"
+      },
+      {
+        "id": "coachtopia",
+        "label": "Coachtopia"
+      }
+    ],
+    "categories": {
+      "retail_sit_products": {
+        "id": "retail_sit_products",
+        "label": "SIT Products",
+        "sections": [
+          {
+            "id": "shop",
+            "links": [
+              {
+                "id": "retail_sit_products",
+                "label": "SIT Products",
+                "href": "/shop/coach/sit-products"
+              }
+            ],
+            "showEyebrow": false,
+            "eyebrow": "SIT Products"
+          }
+        ]
+      },
+      "think": {
+        "id": "think",
+        "label": "Think",
+        "sections": [
+          {
+            "id": "shop-by-category",
+            "links": [
+              {
+                "id": "think-nolita",
+                "label": "Nolita",
+                "href": "/shop/coach/think/nolita"
+              }
+            ],
+            "showEyebrow": false,
+            "eyebrow": "Shop by Category"
+          }
+        ]
+      },
+      "coach-women": {
+        "id": "coach-women",
+        "label": "Women",
+        "subCategories": [
+          {
+            "id": "coach-women-view-all",
+            "label": "View All",
+            "sections": [
+              {
+                "id": "shop",
+                "links": [
+                  {
+                    "id": "coach-women-view-all",
+                    "label": "View All",
+                    "href": "/shop/women/view-all"
+                  }
+                ],
+                "showEyebrow": false,
+                "eyebrow": "View All"
+              }
+            ]
+          },
+          {
+            "id": "coach-women-new-arrivals-label",
+            "label": "New",
+            "sections": [
+              {
+                "id": "shop",
+                "links": [
+                  {
+                    "id": "coach-women-new-arrivals-label",
+                    "label": "New",
+                    "href": "/shop/new/womens-new-arrivals/view-all"
+                  }
+                ],
+                "showEyebrow": false,
+                "eyebrow": "New"
+              }
+            ]
+          },
+          {
+            "id": "coach-women-handbags",
+            "label": "Handbags",
+            "sections": [
+              {
+                "id": "shop-by-category",
+                "links": [
+                  {
+                    "id": "coach-women-handbags-view-all",
+                    "label": "View All",
+                    "href": "/shop/women/handbags/view-all"
+                  },
+                  {
+                    "id": "coach-women-handbags-new-arrivals-label",
+                    "label": "New",
+                    "href": "/shop/new/womens-new-arrivals/bags"
+                  },
+                  {
+                    "id": "coach-women-handbags-shoulder-bags",
+                    "label": "Shoulder Bags & Hobos",
+                    "href": "/shop/women/handbags/shoulder-bags-hobos"
+                  },
+                  {
+                    "id": "coach-women-handbags-crossbody-bags",
+                    "label": "Crossbody Bags",
+                    "href": "/shop/women/handbags/crossbody-bags"
+                  },
+                  {
+                    "id": "coach-women-handbags-totes",
+                    "label": "Totes & Carryalls",
+                    "href": "/shop/women/handbags/totes-carryalls"
+                  },
+                  {
+                    "id": "coach-women-handbags-satchels",
+                    "label": "Satchels & Top Handles",
+                    "href": "/shop/women/handbags/satchels-top-handles"
+                  },
+                  {
+                    "id": "coach-women-handbags-clutches",
+                    "label": "Clutches",
+                    "href": "/shop/women/handbags/clutches"
+                  },
+                  {
+                    "id": "coach-women-handbags-backpacks",
+                    "label": "Backpacks",
+                    "href": "/shop/women/handbags/backpacks"
+                  },
+                  {
+                    "id": "coach-women-handbags-tabby",
+                    "label": "Tabby Collection",
+                    "href": "/shop/women/handbags/tabby-collection"
+                  }
+                ],
+                "showEyebrow": false,
+                "eyebrow": "Handbags"
+              }
+            ]
+          },
+          {
+            "id": "coach-women-wallets",
+            "label": "Wallets & Wristlets",
+            "sections": [
+              {
+                "id": "shop-by-category",
+                "links": [
+                  {
+                    "id": "coach-women-wallets-view-all",
+                    "label": "View All",
+                    "href": "/shop/women/wallets-wristlets/view-all"
+                  },
+                  {
+                    "id": "coach-women-wallets-new-arrivals-label",
+                    "label": "New",
+                    "href": "/shop/new/womens-new-arrivals/wallets-wristlets"
+                  },
+                  {
+                    "id": "coach-women-wallets-small-wallets",
+                    "label": "Small Wallets",
+                    "href": "/shop/women/wallets-wristlets/small-wallets"
+                  },
+                  {
+                    "id": "coach-women-wallets-large-wallets",
+                    "label": "Large Wallets",
+                    "href": "/shop/women/wallets-wristlets/large-wallets"
+                  },
+                  {
+                    "id": "coach-women-wristlets",
+                    "label": "Wristlets",
+                    "href": "/shop/women/wallets-wristlets/wristlets"
+                  },
+                  {
+                    "id": "coach-women-wallets-card-cases",
+                    "label": "Card Cases",
+                    "href": "/shop/women/wallets-wristlets/card-cases"
+                  }
+                ],
+                "showEyebrow": false,
+                "eyebrow": "Wallets & Wristlets"
+              }
+            ]
+          },
+          {
+            "id": "coach-women-bag-straps-charms-label",
+            "label": "Charms & Straps",
+            "sections": [
+              {
+                "id": "shop",
+                "links": [
+                  {
+                    "id": "coach-women-bag-straps-charms-label",
+                    "label": "Charms & Straps",
+                    "href": "/shop/women/accessories/straps-charms-and-keyrings"
+                  }
+                ],
+                "showEyebrow": false,
+                "eyebrow": "Charms & Straps"
+              }
+            ]
+          },
+          {
+            "id": "coach-women-shoes",
+            "label": "Shoes",
+            "sections": [
+              {
+                "id": "shop-by-category",
+                "links": [
+                  {
+                    "id": "coach-women-shoes-view-all",
+                    "label": "View All",
+                    "href": "/shop/women/shoes/view-all"
+                  },
+                  {
+                    "id": "coach-women-shoes-sandals",
+                    "label": "Sandals",
+                    "href": "/shop/women/shoes/sandals"
+                  },
+                  {
+                    "id": "coach-women-shoes-sneakers",
+                    "label": "Sneakers",
+                    "href": "/shop/women/shoes/sneakers"
+                  },
+                  {
+                    "id": "coach-women-shoes-flats",
+                    "label": "Flats & Loafers",
+                    "href": "/shop/women/shoes/flats-loafers"
+                  },
+                  {
+                    "id": "coach-women-shoes-heels",
+                    "label": "Heels",
+                    "href": "/shop/women/shoes/heels"
+                  },
+                  {
+                    "id": "coach-women-shoes-boots",
+                    "label": "Boots & Booties",
+                    "href": "/shop/women/shoes/boots-booties"
+                  }
+                ],
+                "showEyebrow": false,
+                "eyebrow": "Shoes"
+              }
+            ]
+          },
+          {
+            "id": "coach-women-accessories",
+            "label": "Accessories",
+            "sections": [
+              {
+                "id": "shop-by-category",
+                "links": [
+                  {
+                    "id": "coach-women-accessories-view-all",
+                    "label": "View All",
+                    "href": "/shop/women/accessories/view-all"
+                  },
+                  {
+                    "id": "coach-women-accessories-new-arrivals-label",
+                    "label": "New",
+                    "href": "/shop/new/womens-new-arrivals/accessories"
+                  },
+                  {
+                    "id": "coach-women-accessories-bag-charms",
+                    "label": "Straps, Charms, and Keyrings",
+                    "href": "/shop/women/accessories/straps-charms-and-keyrings"
+                  },
+                  {
+                    "id": "coach-women-jewelry",
+                    "label": "Jewelry",
+                    "href": "/shop/women/accessories/jewelry"
+                  },
+                  {
+                    "id": "coach-women-watches",
+                    "label": "Watches",
+                    "href": "/shop/women/accessories/watches"
+                  },
+                  {
+                    "id": "coach-women-accessories-belts",
+                    "label": "Belts",
+                    "href": "/shop/women/accessories/belts"
+                  },
+                  {
+                    "id": "coach-women-sunwear",
+                    "label": "Eyewear",
+                    "href": "/shop/women/accessories/eyewear"
+                  },
+                  {
+                    "id": "coach-women-fragrance",
+                    "label": "Fragrance",
+                    "href": "/shop/women/accessories/fragrance"
+                  },
+                  {
+                    "id": "coach-women-accessories-product-care",
+                    "label": "Product Care",
+                    "href": "/shop/women/accessories/product-care"
+                  },
+                  {
+                    "id": "coach-women-accessories-desk",
+                    "label": "Tech, Desk,  & Travel",
+                    "href": "/shop/women/accessories/tech-desk--travel"
+                  }
+                ],
+                "showEyebrow": false,
+                "eyebrow": "Accessories"
+              }
+            ]
+          },
+          {
+            "id": "coach-women-clothing",
+            "label": "Clothes",
+            "sections": [
+              {
+                "id": "shop-by-category",
+                "links": [
+                  {
+                    "id": "coach-women-clothing-view-all",
+                    "label": "View All",
+                    "href": "/shop/women/clothes/view-all"
+                  },
+                  {
+                    "id": "coach-women-clothing-new-arrivals-label",
+                    "label": "New",
+                    "href": "/shop/new/womens-new-arrivals/clothes"
+                  },
+                  {
+                    "id": "coach-women-clothing-tops",
+                    "label": "Tops",
+                    "href": "/shop/women/clothes/tops"
+                  },
+                  {
+                    "id": "coach-women-clothing-pants-skirts",
+                    "label": "Bottoms",
+                    "href": "/shop/women/clothes/bottoms"
+                  },
+                  {
+                    "id": "coach-women-clothing-dresses",
+                    "label": "Dresses",
+                    "href": "/shop/women/clothes/dresses"
+                  },
+                  {
+                    "id": "coach-women-clothing-outerwear",
+                    "label": "Jackets & Outerwear",
+                    "href": "/shop/women/clothes/jackets-outerwear"
+                  }
+                ],
+                "showEyebrow": false,
+                "eyebrow": "Clothes"
+              }
+            ]
+          },
+          {
+            "id": "coach-women-sale",
+            "label": "Sale",
+            "sections": [
+              {
+                "id": "shop",
+                "links": [
+                  {
+                    "id": "coach-women-sale",
+                    "label": "Sale",
+                    "href": "/shop/sale/womens-sale/view-all"
+                  }
+                ],
+                "showEyebrow": false,
+                "eyebrow": "Sale"
+              }
+            ]
+          },
+          {
+            "id": "coach-gifts-women-label",
+            "label": "Gifts",
+            "sections": [
+              {
+                "id": "shop",
+                "links": [
+                  {
+                    "id": "coach-gifts-women-label",
+                    "label": "Gifts",
+                    "href": "/shop/gifts/view-all?gender=Women"
+                  }
+                ],
+                "showEyebrow": false,
+                "eyebrow": "Gifts"
+              }
+            ]
+          }
+        ]
+      },
+      "retail_qa_auto_category": {
+        "id": "retail_qa_auto_category",
+        "label": "QA Auto Category",
+        "subCategories": [
+          {
+            "id": "retail_qa_auto_l2",
+            "label": "QA Auto L2 | Category",
+            "sections": [
+              {
+                "id": "shop-by-category",
+                "links": [
+                  {
+                    "id": "retail_qa_auto_l3",
+                    "label": "QA Auto L3 | Category",
+                    "href": "/shop/coach/qa-auto-category/qa-auto-l2-%7C-category/qa-auto-l3-%7C-category"
+                  }
+                ],
+                "showEyebrow": false,
+                "eyebrow": "QA Auto L2 | Category"
+              }
+            ]
+          },
+          {
+            "id": "retail_qa_auto_sale_category",
+            "label": "QA Auto Sale | Category",
+            "sections": [
+              {
+                "id": "shop",
+                "links": [
+                  {
+                    "id": "retail_qa_auto_sale_category",
+                    "label": "QA Auto Sale | Category",
+                    "href": "/shop/coach/qa-auto-category/qa-auto-sale-%7C-category"
+                  }
+                ],
+                "showEyebrow": false,
+                "eyebrow": "QA Auto Sale | Category"
+              }
+            ]
+          },
+          {
+            "id": "retail_qa_auto_viewAll",
+            "label": "QA Auto | View All",
+            "sections": [
+              {
+                "id": "shop",
+                "links": [
+                  {
+                    "id": "retail_qa_auto_viewAll",
+                    "label": "QA Auto | View All",
+                    "href": "/shop/coach/qa-auto-category/qa-auto-%7C-view-all"
+                  }
+                ],
+                "showEyebrow": false,
+                "eyebrow": "QA Auto | View All"
+              }
+            ]
+          },
+          {
+            "id": "retail_qa_auto_l2_set_products",
+            "label": "QA Auto L2 | Category | Set Products",
+            "sections": [
+              {
+                "id": "shop",
+                "links": [
+                  {
+                    "id": "retail_qa_auto_l2_set_products",
+                    "label": "QA Auto L2 | Category | Set Products",
+                    "href": "/shop/coach/qa-auto-category/qa-auto-l2-%7C-category-%7C-set-products"
+                  }
+                ],
+                "showEyebrow": false,
+                "eyebrow": "QA Auto L2 | Category | Set Products"
+              }
+            ]
+          },
+          {
+            "id": "retail_qa_auto_test",
+            "label": "QA Auto Test | Category",
+            "sections": [
+              {
+                "id": "shop-by-category",
+                "links": [
+                  {
+                    "id": "retail_test-l3-viewall",
+                    "label": "TEST L3 VIEW ALL",
+                    "href": "/shop/coach/qa-auto-category/qa-auto-test-%7C-category/test-l3-view-all"
+                  }
+                ],
+                "showEyebrow": false,
+                "eyebrow": "QA Auto Test | Category"
+              }
+            ]
+          }
+        ]
+      },
+      "coach-men": {
+        "id": "coach-men",
+        "label": "Men",
+        "subCategories": [
+          {
+            "id": "coach-men-view-all",
+            "label": "View All",
+            "sections": [
+              {
+                "id": "shop",
+                "links": [
+                  {
+                    "id": "coach-men-view-all",
+                    "label": "View All",
+                    "href": "/shop/men/view-all"
+                  }
+                ],
+                "showEyebrow": false,
+                "eyebrow": "View All"
+              }
+            ]
+          },
+          {
+            "id": "coach-mens-new-arrivals-label",
+            "label": "New",
+            "sections": [
+              {
+                "id": "shop",
+                "links": [
+                  {
+                    "id": "coach-mens-new-arrivals-label",
+                    "label": "New",
+                    "href": "/shop/new/mens-new-arrivals/view-all"
+                  }
+                ],
+                "showEyebrow": false,
+                "eyebrow": "New"
+              }
+            ]
+          },
+          {
+            "id": "coach-men-bags",
+            "label": "Bags",
+            "sections": [
+              {
+                "id": "shop-by-category",
+                "links": [
+                  {
+                    "id": "coach-men-bags-view-all",
+                    "label": "View All",
+                    "href": "/shop/men/bags/view-all"
+                  },
+                  {
+                    "id": "coach-men-bags-backpacks",
+                    "label": "Backpacks",
+                    "href": "/shop/men/bags/backpacks"
+                  },
+                  {
+                    "id": "coach-men-bags-messengers",
+                    "label": "Messenger & Crossbody",
+                    "href": "/shop/men/bags/messenger-crossbody"
+                  },
+                  {
+                    "id": "coach-men-bags-totes-duffles",
+                    "label": "Totes & Duffles",
+                    "href": "/shop/men/bags/totes-duffles"
+                  },
+                  {
+                    "id": "coach-men-bags-briefcases",
+                    "label": "Briefcases",
+                    "href": "/shop/men/bags/briefcases"
+                  }
+                ],
+                "showEyebrow": false,
+                "eyebrow": "Bags"
+              }
+            ]
+          },
+          {
+            "id": "coach-men-wallets",
+            "label": "Wallets",
+            "sections": [
+              {
+                "id": "shop-by-category",
+                "links": [
+                  {
+                    "id": "coach-men-wallets-view-all",
+                    "label": "View All",
+                    "href": "/shop/men/wallets/view-all"
+                  },
+                  {
+                    "id": "coach-men-wallets-new-arrivals-label",
+                    "label": "New",
+                    "href": "/shop/new/mens-new-arrivals/wallets"
+                  },
+                  {
+                    "id": "coach-men-wallets-card-cases",
+                    "label": "Card Cases & Money Clips",
+                    "href": "/shop/men/wallets/card-cases-money-clips"
+                  },
+                  {
+                    "id": "coach-men-wallets-billfolds",
+                    "label": "Billfolds",
+                    "href": "/shop/men/wallets/billfolds"
+                  },
+                  {
+                    "id": "coach-men-wallets-large-wallets",
+                    "label": "Large Wallets",
+                    "href": "/shop/men/wallets/large-wallets"
+                  }
+                ],
+                "showEyebrow": false,
+                "eyebrow": "Wallets"
+              }
+            ]
+          },
+          {
+            "id": "coach-men-shoes",
+            "label": "Shoes",
+            "sections": [
+              {
+                "id": "shop-by-category",
+                "links": [
+                  {
+                    "id": "coach-men-shoes-view-all",
+                    "label": "View All",
+                    "href": "/shop/men/shoes/view-all"
+                  },
+                  {
+                    "id": "coach-men-shoes-sneakers",
+                    "label": "Sneakers",
+                    "href": "/shop/men/shoes/sneakers"
+                  },
+                  {
+                    "id": "coach-men-shoes-casual",
+                    "label": "Sandals & Slides",
+                    "href": "/shop/men/shoes/sandals-slides"
+                  },
+                  {
+                    "id": "coach-men-shoes-business",
+                    "label": "Loafers & Drivers",
+                    "href": "/shop/men/shoes/loafers-drivers"
+                  },
+                  {
+                    "id": "coach-men-shoes-boots",
+                    "label": "Boots",
+                    "href": "/shop/men/shoes/boots"
+                  }
+                ],
+                "showEyebrow": false,
+                "eyebrow": "Shoes"
+              }
+            ]
+          },
+          {
+            "id": "coach-men-accessories",
+            "label": "Accessories",
+            "sections": [
+              {
+                "id": "shop-by-category",
+                "links": [
+                  {
+                    "id": "coach-men-accessories-view-all",
+                    "label": "View All",
+                    "href": "/shop/men/accessories/view-all"
+                  },
+                  {
+                    "id": "coach-men-accessories-new-arrivals-label",
+                    "label": "New",
+                    "href": "/shop/new/mens-new-arrivals/accessories"
+                  },
+                  {
+                    "id": "coach-men-watches",
+                    "label": "Watches",
+                    "href": "/shop/men/accessories/watches"
+                  },
+                  {
+                    "id": "coach-men-belts",
+                    "label": "Belts",
+                    "href": "/shop/men/accessories/belts"
+                  },
+                  {
+                    "id": "coach-men-sunwear",
+                    "label": "Sunglasses",
+                    "href": "/shop/men/accessories/sunglasses"
+                  },
+                  {
+                    "id": "coach-men-accessories-travel",
+                    "label": "Tech & Travel",
+                    "href": "/shop/men/accessories/tech-travel"
+                  },
+                  {
+                    "id": "coach-men-accessories-product-care",
+                    "label": "Product Care",
+                    "href": "/shop/men/accessories/product-care"
+                  }
+                ],
+                "showEyebrow": false,
+                "eyebrow": "Accessories"
+              }
+            ]
+          },
+          {
+            "id": "coach-men-clothing",
+            "label": "Clothes",
+            "sections": [
+              {
+                "id": "shop-by-category",
+                "links": [
+                  {
+                    "id": "coach-men-clothing-view-all",
+                    "label": "View All",
+                    "href": "/shop/men/clothes/view-all"
+                  },
+                  {
+                    "id": "coach-men-clothing-new-arrivals-label",
+                    "label": "New",
+                    "href": "/shop/new/mens-new-arrivals/clothes"
+                  },
+                  {
+                    "id": "coach-men-clothing-apparel",
+                    "label": "Tops & Bottoms",
+                    "href": "/shop/men/clothes/tops-bottoms"
+                  }
+                ],
+                "showEyebrow": false,
+                "eyebrow": "Clothes"
+              }
+            ]
+          },
+          {
+            "id": "coach-men-sale",
+            "label": "Sale",
+            "sections": [
+              {
+                "id": "shop",
+                "links": [
+                  {
+                    "id": "coach-men-sale",
+                    "label": "Sale",
+                    "href": "/shop/sale/mens-sale/view-all"
+                  }
+                ],
+                "showEyebrow": false,
+                "eyebrow": "Sale"
+              }
+            ]
+          },
+          {
+            "id": "coach-gifts-men-label",
+            "label": "Gifts",
+            "sections": [
+              {
+                "id": "shop",
+                "links": [
+                  {
+                    "id": "coach-gifts-men-label",
+                    "label": "Gifts",
+                    "href": "/shop/gifts/view-all?gender=Men"
+                  }
+                ],
+                "showEyebrow": false,
+                "eyebrow": "Gifts"
+              }
+            ]
+          }
+        ]
+      },
+      "coach-shop-by-T1": {
+        "id": "coach-shop-by-T1",
+        "label": "Featured",
+        "subCategories": [
+          {
+            "id": "coach-shop-by-new-arrivals-label",
+            "label": "New",
+            "sections": [
+              {
+                "id": "shop",
+                "links": [
+                  {
+                    "id": "coach-shop-by-new-arrivals-label",
+                    "label": "New",
+                    "href": "/shop/new/view-all"
+                  }
+                ],
+                "showEyebrow": false,
+                "eyebrow": "New"
+              }
+            ]
+          },
+          {
+            "id": "coach-shop-by-coach-reloved",
+            "label": "Coach (Re)loved",
+            "sections": [
+              {
+                "id": "shop-by-category",
+                "links": [
+                  {
+                    "id": "coach-shop-by-coach-reloved-view-all-label",
+                    "label": "View All",
+                    "href": "/shop/coach-reloved-2"
+                  },
+                  {
+                    "id": "coach-shop-by-coach-reloved-new-arrivals-label",
+                    "label": "New Arrivals",
+                    "href": "/shop/coach-reloved/reloved-new-arrivals"
+                  }
+                ],
+                "showEyebrow": false,
+                "eyebrow": "Coach (Re)loved"
+              }
+            ]
+          },
+          {
+            "id": "coach-shop-by-collections",
+            "label": "Collections",
+            "sections": [
+              {
+                "id": "shop",
+                "links": [
+                  {
+                    "id": "coach-shop-by-collections",
+                    "label": "Collections",
+                    "href": "/shop/coach/women/collections"
+                  }
+                ],
+                "showEyebrow": false,
+                "eyebrow": "Collections"
+              }
+            ]
+          },
+          {
+            "id": "coach-shop by-edits",
+            "label": "Edits",
+            "sections": [
+              {
+                "id": "shop-by-category",
+                "links": [
+                  {
+                    "id": "coach-new-featured-trending now",
+                    "label": "Trending Now: Summer Styles",
+                    "href": "/shop/featured/edits/trending-now-summer-styles"
+                  },
+                  {
+                    "id": "coach-matching-styles",
+                    "label": "Bags, Meet Charms",
+                    "href": "/shop/featured/edits/bags-meet-charms"
+                  }
+                ],
+                "showEyebrow": false,
+                "eyebrow": "Edits"
+              }
+            ]
+          },
+          {
+            "id": "coach-shop-by-gifts-label",
+            "label": "Gifts",
+            "sections": [
+              {
+                "id": "shop-by-category",
+                "links": [
+                  {
+                    "id": "coach-shop-by-gifts-view-all-label",
+                    "label": "View All",
+                    "href": "/shop/gifts/view-all"
+                  }
+                ],
+                "showEyebrow": false,
+                "eyebrow": "Gifts"
+              }
+            ]
+          },
+          {
+            "id": "coach-shop-by-sale-view-all-label",
+            "label": "Sale",
+            "sections": [
+              {
+                "id": "shop",
+                "links": [
+                  {
+                    "id": "coach-shop-by-sale-view-all-label",
+                    "label": "Sale",
+                    "href": "/shop/sale/view-all-2"
+                  }
+                ],
+                "showEyebrow": false,
+                "eyebrow": "Sale"
+              }
+            ]
+          },
+          {
+            "id": "coach-shop-by-made-to-order",
+            "label": "Made To Order",
+            "sections": [
+              {
+                "id": "shop",
+                "links": [
+                  {
+                    "id": "coach-shop-by-made-to-order",
+                    "label": "Made To Order",
+                    "href": "/shop/coach/customization/made-to-order-tabby"
+                  }
+                ],
+                "showEyebrow": false,
+                "eyebrow": "Made To Order"
+              }
+            ]
+          }
+        ]
+      },
+      "coach-sale": {
+        "id": "coach-sale",
+        "label": "Sale",
+        "subCategories": [
+          {
+            "id": "coach-sale-view-all",
+            "label": "View All",
+            "sections": [
+              {
+                "id": "shop",
+                "links": [
+                  {
+                    "id": "coach-sale-view-all",
+                    "label": "View All",
+                    "href": "/shop/sale/view-all-2"
+                  }
+                ],
+                "showEyebrow": false,
+                "eyebrow": "View All"
+              }
+            ]
+          },
+          {
+            "id": "coach-sale-women",
+            "label": "Women's Sale",
+            "sections": [
+              {
+                "id": "shop-by-category",
+                "links": [
+                  {
+                    "id": "coach-sale-women-view-all",
+                    "label": "View All",
+                    "href": "/shop/sale/womens-sale/view-all"
+                  },
+                  {
+                    "id": "coach-sale-women-bags",
+                    "label": "Bags",
+                    "href": "/shop/sale/womens-sale/bags"
+                  },
+                  {
+                    "id": "coach-sale-women-small-leather-goods",
+                    "label": "Wallets & Wristlets",
+                    "href": "/shop/sale/womens-sale/wallets-wristlets"
+                  },
+                  {
+                    "id": "coach-sale-women-shoes",
+                    "label": "Shoes",
+                    "href": "/shop/sale/womens-sale/shoes"
+                  },
+                  {
+                    "id": "coach-sale-women-ready-to-wear",
+                    "label": "Clothes",
+                    "href": "/shop/sale/womens-sale/clothes"
+                  },
+                  {
+                    "id": "coach-sale-women-accessories",
+                    "label": "Accessories",
+                    "href": "/shop/sale/womens-sale/accessories"
+                  }
+                ],
+                "showEyebrow": false,
+                "eyebrow": "Women's Sale"
+              }
+            ]
+          },
+          {
+            "id": "coach-sale-men",
+            "label": "Men's Sale",
+            "sections": [
+              {
+                "id": "shop-by-category",
+                "links": [
+                  {
+                    "id": "coach-sale-men-view-all",
+                    "label": "View All",
+                    "href": "/shop/sale/mens-sale/view-all"
+                  },
+                  {
+                    "id": "coach-sale-men-bags",
+                    "label": "Bags",
+                    "href": "/shop/sale/mens-sale/bags"
+                  },
+                  {
+                    "id": "coach-sale-men-shoes",
+                    "label": "Shoes",
+                    "href": "/shop/sale/mens-sale/shoes"
+                  },
+                  {
+                    "id": "coach-sale-men-ready-to-wear",
+                    "label": "Clothes",
+                    "href": "/shop/sale/mens-sale/clothes"
+                  },
+                  {
+                    "id": "coach-sale-men-accessories",
+                    "label": "Accessories",
+                    "href": "/shop/sale/mens-sale/accessories"
+                  }
+                ],
+                "showEyebrow": false,
+                "eyebrow": "Men's Sale"
+              }
+            ]
+          }
+        ]
+      },
+      "coachtopia": {
+        "id": "coachtopia",
+        "label": "Coachtopia",
+        "subCategories": [
+          {
+            "id": "coachtopia-all",
+            "label": "All",
+            "sections": [
+              {
+                "id": "shop-by-category",
+                "links": [
+                  {
+                    "id": "coachtopia-all-view-all",
+                    "label": "View All",
+                    "href": "/shop/coachtopia/all/view-all"
+                  },
+                  {
+                    "id": "coachtopia-all-new",
+                    "label": "New",
+                    "href": "/shop/coachtopia/all/new"
+                  },
+                  {
+                    "id": "coachtopia-all-bags",
+                    "label": "Bags",
+                    "href": "/shop/coachtopia/all/bags"
+                  },
+                  {
+                    "id": "coachtopia-all-accessories",
+                    "label": "Accessories",
+                    "href": "/shop/coachtopia/all/accessories"
+                  },
+                  {
+                    "id": "coachtopia-all-clothes",
+                    "label": "Clothes",
+                    "href": "/shop/coachtopia/all/clothes"
+                  }
+                ],
+                "showEyebrow": false,
+                "eyebrow": "All"
+              }
+            ]
+          },
+          {
+            "id": "coachtopia-bags-label",
+            "label": "Bags",
+            "sections": [
+              {
+                "id": "shop-by-category",
+                "links": [
+                  {
+                    "id": "coachtopia-bags-view-all-label",
+                    "label": "View All Bags",
+                    "href": "/shop/coachtopia/all/bags"
+                  },
+                  {
+                    "id": "coachtopia-bags-totes",
+                    "label": "Tote Bags",
+                    "href": "/shop/coachtopia/bags/tote-bags"
+                  },
+                  {
+                    "id": "coachtopia-bags-shoulder-bags",
+                    "label": "Shoulder Bags & Hobos",
+                    "href": "/shop/coachtopia/bags/shoulder-bags-hobos"
+                  },
+                  {
+                    "id": "coachtopia-bags-ergo-bags",
+                    "label": "Ergo Bags",
+                    "href": "/shop/coachtopia/bags/ergo-bags"
+                  }
+                ],
+                "showEyebrow": false,
+                "eyebrow": "Bags"
+              }
+            ]
+          },
+          {
+            "id": "coachtopia-accessories-label",
+            "label": "Accessories",
+            "sections": [
+              {
+                "id": "shop-by-category",
+                "links": [
+                  {
+                    "id": "coachtopia-accessories-view-all-label",
+                    "label": "View All Accessories",
+                    "href": "/shop/coachtopia/all/accessories"
+                  },
+                  {
+                    "id": "coachtopia-accessories-bag-charms-stickers",
+                    "label": "Bag Charms & Stickers",
+                    "href": "/shop/coachtopia/accessories/bag-charms-stickers"
+                  }
+                ],
+                "showEyebrow": false,
+                "eyebrow": "Accessories"
+              }
+            ]
+          },
+          {
+            "id": "coachtopia-clothes-label",
+            "label": "Clothes",
+            "sections": [
+              {
+                "id": "shop-by-category",
+                "links": [
+                  {
+                    "id": "coachtopia-clothes-view-all-label",
+                    "label": "View All Clothes",
+                    "href": "/shop/coachtopia/all/clothes"
+                  },
+                  {
+                    "id": "coachtopia-clothes-new",
+                    "label": "New Clothes",
+                    "href": "/shop/coachtopia/clothes/new-clothes"
+                  },
+                  {
+                    "id": "coachtopia-clothes-tops",
+                    "label": "Tops",
+                    "href": "/shop/coachtopia/clothes/tops"
+                  },
+                  {
+                    "id": "coachtopia-clothes-bottoms",
+                    "label": "Bottoms",
+                    "href": "/shop/coachtopia/clothes/bottoms"
+                  }
+                ],
+                "showEyebrow": false,
+                "eyebrow": "Clothes"
+              }
+            ]
+          },
+          {
+            "id": "coachtopia-sale",
+            "label": "Sale",
+            "sections": [
+              {
+                "id": "shop",
+                "links": [
+                  {
+                    "id": "coachtopia-sale",
+                    "label": "Sale",
+                    "href": "/shop/coachtopia/sale-1"
+                  }
+                ],
+                "showEyebrow": false,
+                "eyebrow": "Sale"
+              }
+            ]
+          },
+          {
+            "id": "coachtopia-hub-t1-label",
+            "label": "Circularity",
+            "sections": [
+              {
+                "id": "shop",
+                "links": [
+                  {
+                    "id": "coachtopia-hub-t1-label",
+                    "label": "Circularity",
+                    "href": "/shop/coachtopia/the-world-of-coachtopia"
+                  }
+                ],
+                "showEyebrow": false,
+                "eyebrow": "Circularity"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "outlet": {
+    "topCategories": [
+      {
+        "id": "outlet_sit_products",
+        "label": "SIT Products"
+      },
+      {
+        "id": "think-outlet",
+        "label": "Think"
+      },
+      {
+        "id": "outlet-women",
+        "label": "Women"
+      },
+      {
+        "id": "outlet-men-men",
+        "label": "Men"
+      },
+      {
+        "id": "outlet_qa_auto_category",
+        "label": "QA Auto Category"
+      },
+      {
+        "id": "outlet-bags-bags",
+        "label": "Bags"
+      },
+      {
+        "id": "outlet-whats-new",
+        "label": "New"
+      },
+      {
+        "id": "outlet-shop-by",
+        "label": "Featured"
+      }
+    ],
+    "categories": {
+      "outlet_sit_products": {
+        "id": "outlet_sit_products",
+        "label": "SIT Products",
+        "sections": [
+          {
+            "id": "shop",
+            "links": [
+              {
+                "id": "outlet_sit_products",
+                "label": "SIT Products",
+                "href": "/shop/outlet/sit-products"
+              }
+            ],
+            "showEyebrow": false,
+            "eyebrow": "SIT Products"
+          }
+        ]
+      },
+      "think-outlet": {
+        "id": "think-outlet",
+        "label": "Think",
+        "sections": [
+          {
+            "id": "shop",
+            "links": [
+              {
+                "id": "think-outlet",
+                "label": "Think",
+                "href": "/shop/outlet/think"
+              }
+            ],
+            "showEyebrow": false,
+            "eyebrow": "Think"
+          }
+        ]
+      },
+      "outlet-women": {
+        "id": "outlet-women",
+        "label": "Women",
+        "subCategories": [
+          {
+            "id": "outlet-women-view-all",
+            "label": "View All",
+            "sections": [
+              {
+                "id": "shop",
+                "links": [
+                  {
+                    "id": "outlet-women-view-all",
+                    "label": "View All",
+                    "href": "/shop/outlet/women/view-all"
+                  }
+                ],
+                "showEyebrow": false,
+                "eyebrow": "View All"
+              }
+            ]
+          },
+          {
+            "id": "outlet-women-new-arrivals",
+            "label": "New Arrivals",
+            "sections": [
+              {
+                "id": "shop",
+                "links": [
+                  {
+                    "id": "outlet-women-new-arrivals",
+                    "label": "New Arrivals",
+                    "href": "/shop/outlet/women/new-arrivals"
+                  }
+                ],
+                "showEyebrow": false,
+                "eyebrow": "New Arrivals"
+              }
+            ]
+          },
+          {
+            "id": "outlet-women-bags",
+            "label": "Bags",
+            "sections": [
+              {
+                "id": "shop-by-category",
+                "links": [
+                  {
+                    "id": "outlet-women-bags-view-all",
+                    "label": "View All",
+                    "href": "/shop/outlet/women/bags"
+                  },
+                  {
+                    "id": "outlet-women-bags-totes-and-carryalls",
+                    "label": "Totes & Carryalls",
+                    "href": "/shop/outlet/women/bags?filterCategory=Totes+and+Carryalls"
+                  },
+                  {
+                    "id": "outlet-women-bags-shoulder-bags",
+                    "label": "Shoulder Bags",
+                    "href": "/shop/outlet/women/bags?filterCategory=Shoulder+Bags"
+                  },
+                  {
+                    "id": "outlet-women-bags-crossbody-bags",
+                    "label": "Crossbody Bags",
+                    "href": "/shop/outlet/women/bags?filterCategory=Crossbody+Bags"
+                  }
+                ],
+                "showEyebrow": false,
+                "eyebrow": "Bags"
+              }
+            ]
+          },
+          {
+            "id": "outlet-women-wallets",
+            "label": "Card Cases & Wallets",
+            "sections": [
+              {
+                "id": "shop",
+                "links": [
+                  {
+                    "id": "outlet-women-wallets",
+                    "label": "Card Cases & Wallets",
+                    "href": "/shop/outlet/women/card-cases-wallets"
+                  }
+                ],
+                "showEyebrow": false,
+                "eyebrow": "Card Cases & Wallets"
+              }
+            ]
+          },
+          {
+            "id": "outlet-women-wristlets",
+            "label": "Wristlets",
+            "sections": [
+              {
+                "id": "shop",
+                "links": [
+                  {
+                    "id": "outlet-women-wristlets",
+                    "label": "Wristlets",
+                    "href": "/shop/outlet/women/wristlets"
+                  }
+                ],
+                "showEyebrow": false,
+                "eyebrow": "Wristlets"
+              }
+            ]
+          },
+          {
+            "id": "outlet-accessories-bag-charms-and-accessories",
+            "label": "Charms & Straps",
+            "sections": [
+              {
+                "id": "shop",
+                "links": [
+                  {
+                    "id": "outlet-accessories-bag-charms-and-accessories",
+                    "label": "Charms & Straps",
+                    "href": "/shop/outlet/women/charms-straps"
+                  }
+                ],
+                "showEyebrow": false,
+                "eyebrow": "Charms & Straps"
+              }
+            ]
+          },
+          {
+            "id": "outlet-women-accessories",
+            "label": "Accessories",
+            "sections": [
+              {
+                "id": "shop-by-category",
+                "links": [
+                  {
+                    "id": "outlet-accessories-jewelry",
+                    "label": "Jewelry & Watches",
+                    "href": "/shop/outlet/women/accessories/jewelry-watches"
+                  }
+                ],
+                "showEyebrow": false,
+                "eyebrow": "Accessories"
+              }
+            ]
+          },
+          {
+            "id": "outlet-women-shoes",
+            "label": "Shoes",
+            "sections": [
+              {
+                "id": "shop-by-category",
+                "links": [
+                  {
+                    "id": "outlet-women-shoes-sneakers",
+                    "label": "Sneakers",
+                    "href": "/shop/outlet/women/shoes-1?filterCategory=Sneakers"
+                  },
+                  {
+                    "id": "outlet-women-shoes-flats",
+                    "label": "Flats & Loafers",
+                    "href": "/shop/outlet/women/shoes-1?filterCategory=Loafers+and+Flats"
+                  }
+                ],
+                "showEyebrow": false,
+                "eyebrow": "Shoes"
+              }
+            ]
+          },
+          {
+            "id": "outlet-women-ready-to-wear",
+            "label": "Clothing",
+            "sections": [
+              {
+                "id": "shop",
+                "links": [
+                  {
+                    "id": "outlet-women-ready-to-wear",
+                    "label": "Clothing",
+                    "href": "/shop/outlet/women/clothing"
+                  }
+                ],
+                "showEyebrow": false,
+                "eyebrow": "Clothing"
+              }
+            ]
+          },
+          {
+            "id": "outlet-women-fragrance",
+            "label": "Perfume",
+            "sections": [
+              {
+                "id": "shop",
+                "links": [
+                  {
+                    "id": "outlet-women-fragrance",
+                    "label": "Perfume",
+                    "href": "/shop/outlet/women/perfume"
+                  }
+                ],
+                "showEyebrow": false,
+                "eyebrow": "Perfume"
+              }
+            ]
+          }
+        ]
+      },
+      "outlet-men-men": {
+        "id": "outlet-men-men",
+        "label": "Men",
+        "sections": [
+          {
+            "id": "shop-by-category",
+            "links": [
+              {
+                "id": "outlet-men-view-all",
+                "label": "View All",
+                "href": "/shop/outlet/men/view-all"
+              },
+              {
+                "id": "outlet-men-new-arrivals",
+                "label": "New Arrivals",
+                "href": "/shop/outlet/new/mens"
+              },
+              {
+                "id": "outlet-men-bags",
+                "label": "Bags",
+                "href": "/shop/outlet/men/bags"
+              },
+              {
+                "id": "outlet-men-wallets",
+                "label": "Card Cases & Wallets",
+                "href": "/shop/outlet/men/card-cases-wallets"
+              },
+              {
+                "id": "outlet-men-accessories",
+                "label": "Accessories",
+                "href": "/shop/outlet/men/accessories"
+              },
+              {
+                "id": "outlet-men-shoes",
+                "label": "Shoes",
+                "href": "/shop/outlet/men/shoes"
+              },
+              {
+                "id": "outlet-men-ready-to-wear",
+                "label": "Clothing",
+                "href": "/shop/outlet/men/clothing"
+              },
+              {
+                "id": "outlet-men-fragrance",
+                "label": "Cologne",
+                "href": "/shop/outlet/men/cologne"
+              }
+            ],
+            "showEyebrow": false,
+            "eyebrow": "Shop by Category"
+          }
+        ]
+      },
+      "outlet_qa_auto_category": {
+        "id": "outlet_qa_auto_category",
+        "label": "QA Auto Category",
+        "subCategories": [
+          {
+            "id": "outlet_qa_auto_l2",
+            "label": "QA Auto L2 | Category",
+            "sections": [
+              {
+                "id": "shop-by-category",
+                "links": [
+                  {
+                    "id": "outlet_qa_auto_l3",
+                    "label": "QA Auto L3 | Category",
+                    "href": "/shop/outlet/qa-auto-category/qa-auto-l2-%7C-category/qa-auto-l3-%7C-category"
+                  }
+                ],
+                "showEyebrow": false,
+                "eyebrow": "QA Auto L2 | Category"
+              }
+            ]
+          },
+          {
+            "id": "outlet_qa_auto_sale_category",
+            "label": "QA Auto Sale | Category",
+            "sections": [
+              {
+                "id": "shop",
+                "links": [
+                  {
+                    "id": "outlet_qa_auto_sale_category",
+                    "label": "QA Auto Sale | Category",
+                    "href": "/shop/outlet/qa-auto-category/qa-auto-sale-%7C-category"
+                  }
+                ],
+                "showEyebrow": false,
+                "eyebrow": "QA Auto Sale | Category"
+              }
+            ]
+          },
+          {
+            "id": "outlet_qa_auto_viewAll",
+            "label": "QA Auto | View All",
+            "sections": [
+              {
+                "id": "shop",
+                "links": [
+                  {
+                    "id": "outlet_qa_auto_viewAll",
+                    "label": "QA Auto | View All",
+                    "href": "/shop/outlet/qa-auto-category/qa-auto-%7C-view-all"
+                  }
+                ],
+                "showEyebrow": false,
+                "eyebrow": "QA Auto | View All"
+              }
+            ]
+          },
+          {
+            "id": "outlet_qa_auto_l2_set_products",
+            "label": "QA Auto L2 | Category | Set Products",
+            "sections": [
+              {
+                "id": "shop-by-category",
+                "links": [
+                  {
+                    "id": "qa-l3-viewall",
+                    "label": "QA-L3-VIEW ALL",
+                    "href": "/qa-auto-category/qa-auto-l2-7c-category-7c-set-products/qa-l3-viewall-2"
+                  }
+                ],
+                "showEyebrow": false,
+                "eyebrow": "QA Auto L2 | Category | Set Products"
+              }
+            ]
+          },
+          {
+            "id": "outlet_qa_auto_test",
+            "label": "QA Auto Test | Category",
+            "sections": [
+              {
+                "id": "shop",
+                "links": [
+                  {
+                    "id": "outlet_qa_auto_test",
+                    "label": "QA Auto Test | Category",
+                    "href": "/shop/outlet/qa-auto-category/qa-auto-test-%7C-category/test-l3-view-all-2"
+                  }
+                ],
+                "showEyebrow": false,
+                "eyebrow": "QA Auto Test | Category"
+              }
+            ]
+          }
+        ]
+      },
+      "outlet-bags-bags": {
+        "id": "outlet-bags-bags",
+        "label": "Bags",
+        "sections": [
+          {
+            "id": "shop-by-category",
+            "links": [
+              {
+                "id": "outlet-bags-view-all",
+                "label": "View All",
+                "href": "/shop/outlet/bags/view-all"
+              },
+              {
+                "id": "outlet-bags-totes-and-carryalls",
+                "label": "Totes & Carryalls",
+                "href": "/shop/outlet/bags/totes-carryalls"
+              },
+              {
+                "id": "outlet-bags-shoulder-bags-and-hobos",
+                "label": "Shoulder Bags",
+                "href": "/shop/outlet/bags/shoulder-bags"
+              },
+              {
+                "id": "outlet-bags-crossbody-bags",
+                "label": "Crossbody Bags",
+                "href": "/shop/outlet/bags/crossbody-bags"
+              },
+              {
+                "id": "outlet-bags-satchels-and-top-handles",
+                "label": "Satchels & Top Handles",
+                "href": "/shop/outlet/bags/satchels-top-handles"
+              },
+              {
+                "id": "outlet-bags-backpacks",
+                "label": "Backpacks",
+                "href": "/shop/outlet/bags/backpacks"
+              },
+              {
+                "id": "outlet-bags-belt-bags",
+                "label": "Belt Bags & Sling Bags",
+                "href": "/shop/outlet/bags/belt-bags-sling-bags"
+              },
+              {
+                "id": "outlet-bags-mini-bags-and-clutches",
+                "label": "Mini Bags",
+                "href": "/shop/outlet/bags/mini-bags"
+              },
+              {
+                "id": "outlet-wallets-wristlets",
+                "label": "Wristlets",
+                "href": "/shop/outlet/bags/wristlets"
+              }
+            ],
+            "showEyebrow": false,
+            "eyebrow": "Shop by Category"
+          }
+        ]
+      },
+      "outlet-whats-new": {
+        "id": "outlet-whats-new",
+        "label": "New",
+        "sections": [
+          {
+            "id": "shop-by-category",
+            "links": [
+              {
+                "id": "outlet-whats-new-view-all",
+                "label": "View All",
+                "href": "/shop/outlet/new/view-all"
+              }
+            ],
+            "showEyebrow": false,
+            "eyebrow": "Shop by Category"
+          }
+        ]
+      },
+      "outlet-shop-by": {
+        "id": "outlet-shop-by",
+        "label": "Featured",
+        "subCategories": [
+          {
+            "id": "outlet-bags-bestselling-bags",
+            "label": "Bestsellers",
+            "sections": [
+              {
+                "id": "shop",
+                "links": [
+                  {
+                    "id": "outlet-bags-bestselling-bags",
+                    "label": "Bestsellers",
+                    "href": "/shop/outlet/shop-all/bestsellers"
+                  }
+                ],
+                "showEyebrow": false,
+                "eyebrow": "Bestsellers"
+              }
+            ]
+          },
+          {
+            "id": "outlet-gifts",
+            "label": "Gifts",
+            "sections": [
+              {
+                "id": "shop-by-category",
+                "links": [
+                  {
+                    "id": "outlet-view-all",
+                    "label": "View All",
+                    "href": "/shop/outlet/featured/gifts/view-all-4"
+                  }
+                ],
+                "showEyebrow": false,
+                "eyebrow": "Gifts"
+              }
+            ]
+          },
+          {
+            "id": "outlet-occasions",
+            "label": "Edits",
+            "sections": [
+              {
+                "id": "shop",
+                "links": [
+                  {
+                    "id": "outlet-occasions",
+                    "label": "Edits",
+                    "href": "/shop/outlet/featured/edits/the-vacation-edit"
+                  }
+                ],
+                "showEyebrow": false,
+                "eyebrow": "Edits"
+              }
+            ]
+          },
+          {
+            "id": "outlet-whats-new-coachtopia-label",
+            "label": "Coachtopia",
+            "sections": [
+              {
+                "id": "shop",
+                "links": [
+                  {
+                    "id": "outlet-whats-new-coachtopia-label",
+                    "label": "Coachtopia",
+                    "href": "/shop/outlet/coachtopia"
+                  }
+                ],
+                "showEyebrow": false,
+                "eyebrow": "Coachtopia"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

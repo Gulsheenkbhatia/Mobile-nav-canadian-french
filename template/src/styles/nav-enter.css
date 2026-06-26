@@ -1,0 +1,73 @@
+/* V3 content entrance — coach-nav.vercel.app Fd / Id / stagger (CSS handoff for PWA keyframes) */
+
+@keyframes nav-enter-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes nav-enter-slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.nav-enter-group__item {
+  animation-duration: var(--transition-duration-content);
+  animation-timing-function: var(--transition-easing-content);
+  animation-fill-mode: both;
+  animation-delay: calc(
+    var(--nav-enter-delay, 0) * 1s + var(--nav-enter-i, 0) * var(--nav-enter-stagger, 0.05) * 1s
+  );
+}
+
+.nav-enter-group--fade-up .nav-enter-group__item {
+  animation-name: nav-enter-fade-up;
+}
+
+.nav-enter-group--slide-in .nav-enter-group__item {
+  animation-name: nav-enter-slide-in;
+}
+
+.nav-enter-group--exit .nav-enter-group__item,
+.nav-enter-group__item--exit {
+  animation-direction: reverse;
+  animation-duration: var(--transition-duration-drill);
+}
+
+.nav-enter-group--idle .nav-enter-group__item,
+.nav-enter-group__item--idle {
+  animation: none;
+}
+
+.nav-enter-group__item--solo.nav-enter-group__item--fade-up {
+  animation-name: nav-enter-fade-up;
+}
+
+.nav-enter-group__item--solo.nav-enter-group__item--slide-in {
+  animation-name: nav-enter-slide-in;
+}
+
+.v3-collage .nav-enter-group__item,
+.v3-collage__duo-cell .nav-enter-group__item,
+.v3-collage--l1-stagger .nav-enter-group__item {
+  width: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-enter-group__item {
+    animation: none;
+  }
+}

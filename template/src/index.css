@@ -1,3 +1,58 @@
+@import "tailwindcss";
+@import "./coach-tokens.css";
+@import "./styles/nav-exposed.css";
+@import "./styles/invoked-menu.css";
+@import "./styles/nav-enter.css";
+@import "./styles/menu-content-spots.css";
+@import "./styles/homepage.css";
+@import "./styles/v1-typography.css";
+@import "./styles/v1-menu.css";
+@import "./styles/v3-menu.css";
+
+@theme {
+  --font-extended: "Helvetica Neue LT Pro Extended", system-ui, sans-serif;
+  --font-now: "Helvetica Now", system-ui, sans-serif;
+  --font-compact: "Helvetica LT Pro", system-ui, sans-serif;
+
+  --color-coach-black: var(--color-black);
+  --color-coach-white: var(--color-white);
+  --color-coach-page: var(--color-page-bg);
+  --color-coach-grey-20: var(--color-grey-20);
+  --color-coach-grey-50: var(--color-grey-50);
+  --color-coach-grey-60: var(--color-grey-60);
+  --color-coach-grey-70: var(--color-grey-70);
+  --color-coach-flyout: var(--color-flyout-nav-dark-bg);
+  --color-coach-tabbar: var(--color-nav-tab-bar-dark-bg);
+  --color-coach-green: var(--color-success-primary);
+  --color-coach-sale: var(--color-sale);
+  --color-coach-scrim: var(--color-scrim-dark);
+
+  --spacing-coach-xxs: var(--space-xxs);
+  --spacing-coach-xs: var(--space-xs);
+  --spacing-coach-s: var(--space-s);
+  --spacing-coach-m: var(--space-m);
+  --spacing-coach-lg: var(--space-lg);
+  --spacing-coach-xl: var(--space-xl);
+  --spacing-coach-xl2: var(--space-xl2);
+  --spacing-coach-xxl: var(--space-xxl);
+
+  --breakpoint-sm: var(--breakpoint-coach-sm);
+  --breakpoint-md: var(--breakpoint-coach-md);
+
+  --radius-coach-xs: var(--radius-xs);
+  --radius-coach-s: var(--radius-s);
+  --radius-coach-m: var(--radius-m);
+  --radius-coach-full: var(--radius-full);
+
+  --ease-coach-quick: var(--ease-quick);
+  --ease-coach-gentle: var(--ease-gentle);
+  --duration-coach-fast: var(--duration-fast);
+  --duration-coach-base: var(--duration-base);
+  --duration-coach-slow: var(--duration-slow);
+  --duration-coach-drawer: var(--transition-duration-drawer);
+  --ease-coach-drawer: var(--transition-easing-drawer);
+}
+
 *,
 *::before,
 *::after {
@@ -5,17 +60,22 @@
 }
 
 html,
-body {
+body,
+#root {
   margin: 0;
-  min-height: 100%;
-  font-family: var(--coach-font-sans);
-  color: var(--coach-color-ink-primary);
-  -webkit-font-smoothing: antialiased;
-  background: var(--coach-color-scrim-app);
+  min-height: 100dvh;
 }
 
-#root {
-  min-height: 100vh;
+html {
+  overflow-x: hidden;
+}
+
+body {
+  font-family: var(--font-extended);
+  color: var(--fg-1);
+  background: var(--bg-canvas);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
 button {
@@ -28,12 +88,40 @@ a {
   text-decoration: none;
 }
 
-/* Shared icon sizing hook */
-.coach-icon {
-  display: block;
-  flex-shrink: 0;
+h1,
+h2,
+h3,
+h4 {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+  margin: 0;
 }
 
-.coach-icon--bag .coach-icon__bagCount {
-  font-family: var(--coach-font-sans);
+.type-title-1 {
+  font-family: var(--font-face1-extended);
+  font-weight: 700;
+  font-size: var(--text-20);
+  line-height: var(--line-height-m);
+  letter-spacing: var(--letter-spacing-xs);
+}
+
+.type-title-2 {
+  font-family: var(--font-face1-extended);
+  font-weight: 700;
+  font-size: var(--text-16);
+  line-height: var(--line-height-l);
+  letter-spacing: var(--letter-spacing-xs);
+}
+
+.type-display-3 {
+  font-size: var(--text-28);
+  line-height: var(--line-height-s);
+}
+
+.type-display-4 {
+  font-size: var(--text-24);
+  line-height: var(--line-height-m);
 }

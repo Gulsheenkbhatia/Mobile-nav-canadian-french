@@ -1,0 +1,237 @@
+/* Coach mobile homepage modules */
+
+.home-hero {
+  position: relative;
+  min-height: 420px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+}
+
+.home-hero__scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.55) 0%,
+    rgba(0, 0, 0, 0.15) 55%,
+    rgba(0, 0, 0, 0.35) 100%
+  );
+}
+
+.home-hero__content {
+  position: relative;
+  display: flex;
+  min-height: 420px;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: var(--space-lg) var(--space-m) var(--space-xl);
+  color: var(--color-white);
+}
+
+.home-category-rail__scroll {
+  display: flex;
+  gap: var(--space-s);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding: 0 var(--space-m) var(--space-xs);
+}
+
+.home-category-rail__scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.home-category-rail__tile {
+  flex: 0 0 132px;
+  scroll-snap-align: start;
+  text-decoration: none;
+  color: inherit;
+}
+
+.home-category-rail__image {
+  aspect-ratio: 3 / 4;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.home-product-card {
+  display: flex;
+  width: 100%;
+  cursor: pointer;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: background 300ms ease;
+}
+
+.home-product-card__image {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  width: 100%;
+  overflow: hidden;
+}
+
+.home-product-card__tag {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  border-radius: var(--radius-full);
+  padding: 5px 10px;
+  font-size: 10px;
+  letter-spacing: 0.3px;
+}
+
+.home-product-card__tag--dark {
+  background: var(--color-black);
+  color: var(--color-white);
+}
+
+.home-product-card__tag--light {
+  background: var(--color-white);
+  color: var(--color-black);
+}
+
+.home-product-card__meta {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 8px 16px;
+}
+
+.home-story-block__image {
+  aspect-ratio: 4 / 3;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Homepage video hero (was coach-prototype-base homepage-hero.css) */
+.home-video-hero {
+  position: relative;
+  display: flex;
+  min-height: 72vh;
+  flex-direction: column;
+  overflow: hidden;
+  background: var(--color-black);
+  color: var(--color-white);
+}
+
+@media (max-width: 544px) {
+  .home-video-hero {
+    min-height: 60vh;
+  }
+
+  .home-hero {
+    min-height: 360px;
+  }
+
+  .home-hero__content {
+    min-height: 360px;
+  }
+}
+
+.home-video-hero__video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.home-video-hero__scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.35) 0%,
+    rgba(0, 0, 0, 0.05) 45%,
+    rgba(0, 0, 0, 0.65) 100%
+  );
+  pointer-events: none;
+}
+
+.home-video-hero__content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: var(--space-xl) var(--space-m);
+  padding-bottom: var(--space-m);
+}
+
+.home-video-hero__title {
+  margin: 0 0 var(--space-m);
+  max-width: 16rem;
+  font-family: var(--font-face1-extended);
+  font-size: var(--text-28);
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: var(--letter-spacing-xs);
+}
+
+.home-video-hero__cta {
+  align-self: flex-start;
+  padding: 12px 20px;
+  border: 1px solid var(--color-white);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--color-white);
+  font-family: var(--font-face1-extended);
+  font-size: var(--text-12);
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.home-video-hero__cta:focus-visible {
+  outline: 2px solid var(--color-white);
+  outline-offset: 3px;
+}
+
+.home-video-hero__subnav {
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(8px);
+}
+
+.home-video-hero__subnav-scroll {
+  display: flex;
+  gap: var(--space-m);
+  overflow-x: auto;
+  padding: var(--space-s) var(--space-m);
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.home-video-hero__subnav-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.home-video-hero__subnav-link {
+  flex-shrink: 0;
+  font-family: var(--font-face1-extended);
+  font-size: var(--text-12);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--color-white);
+  white-space: nowrap;
+}
+
+.home-video-hero__subnav-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
