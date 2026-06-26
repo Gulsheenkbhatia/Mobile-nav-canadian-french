@@ -45,24 +45,32 @@ body.drawerOpened {
   color: var(--color-black);
   transition: transform var(--transition-duration-drawer) var(--transition-easing-drawer);
   will-change: transform;
+  backface-visibility: hidden;
 }
 
 .invoked-menu--closed {
   pointer-events: none;
   visibility: hidden;
-  transform: translateX(100%);
+  transform: translate3d(100%, 0, 0);
 }
 
 .invoked-menu--open {
-  transform: translateX(0);
+  transform: translate3d(0, 0, 0);
 }
 
 .invoked-menu__header {
   flex-shrink: 0;
   position: static;
+  top: auto;
 }
 
-/* PWA: menuBody + accordionWrapper — L1 scrolls body; drilled panels fill remaining viewport */
+/* Brand tabs scroll with menu body — never sticky inside the flyout */
+.invoked-menu .mobile-menu-tabs {
+  position: static;
+  top: auto;
+}
+
+/* PWA: menuBody — single scroll region (tabs + L1/L2/L3 scroll together) */
 .invoked-menu__body {
   display: flex;
   flex-direction: column;
@@ -73,10 +81,6 @@ body.drawerOpened {
   -webkit-overflow-scrolling: touch;
   overscroll-behavior: contain;
   padding-bottom: calc(var(--spacing-4) + env(safe-area-inset-bottom, 0px));
-}
-
-.invoked-menu__body--drilled {
-  overflow-y: hidden;
 }
 
 .invoked-menu__search-wrap {
@@ -480,15 +484,10 @@ body.drawerOpened {
   list-style: none;
 }
 
-/* V3 drill — L1 base + full-viewport L2/L3 overlays below brand tabs */
+/* V3 drill — L1 base + sliding L2/L3 panels (in-flow when active; body scrolls all) */
 .invoked-menu__stack {
   position: relative;
   width: 100%;
-}
-
-.invoked-menu__body--drilled .invoked-menu__stack {
-  flex: 1 1 auto;
-  min-height: 0;
 }
 
 .invoked-menu__base {
@@ -524,23 +523,27 @@ body.drawerOpened {
   transform: translate3d(0, 0, 0);
 }
 
-/* Active drill panel — fills stack viewport; scrolls internally */
+/* Active drill panel — in-flow; scrolls with brand tabs in invoked-menu__body */
 .invoked-menu__overlay--active {
+  position: relative;
   z-index: 1;
-  overflow-x: hidden;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
-  overscroll-behavior: contain;
+  inset: auto;
+  width: 100%;
+  height: auto;
+  min-height: auto;
+  overflow: visible;
   visibility: visible;
   pointer-events: auto;
   padding-bottom: calc(var(--spacing-4) + env(safe-area-inset-bottom, 0px));
 }
 
 .invoked-menu__overlay--exiting {
+  position: absolute;
   z-index: 2;
-  inset: 0;
-  height: 100%;
-  min-height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
   overflow: hidden;
   visibility: visible;
   pointer-events: none;
@@ -553,9 +556,10 @@ body.drawerOpened {
 
 .invoked-menu__overlay--revealed {
   z-index: 1;
-  inset: 0;
-  height: 100%;
-  min-height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
   visibility: visible;
   pointer-events: none;
 }

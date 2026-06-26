@@ -60,22 +60,29 @@
   animation-duration: 500ms;
 }
 
-/* L1 link stagger — wait until drawer has landed and link lists mount */
+/* L1 link stagger — hidden until ready; gentler motion than drill panels */
 .invoked-menu__base:not(.invoked-menu__base--l1-ready)
   .nav-link-enter-group.nav-enter-group--slide-in
   .nav-enter-group__item:not(.nav-enter-group__item--static) {
   animation: none !important;
   opacity: 0;
-  transform: translateX(40px);
+  transform: translateX(20px);
 }
 
 .invoked-menu__base--l1-ready
   .nav-link-enter-group.nav-enter-group--slide-in
   .nav-enter-group__item:not(.nav-enter-group__item--static):not(.v3-l1__content-spots-list-item) {
   animation-name: nav-enter-slide-in;
-  animation-duration: var(--transition-duration-content);
-  animation-timing-function: var(--transition-easing-content);
+  animation-duration: var(--transition-duration-content-l1);
+  animation-timing-function: var(--transition-easing-gentle);
   animation-fill-mode: both;
+}
+
+.invoked-menu__base--l1-ready
+  .v3-content-spots .nav-enter-group--fade-down
+  .nav-enter-group__item {
+  animation-duration: var(--transition-duration-content-l1);
+  animation-timing-function: var(--transition-easing-gentle);
 }
 
 .invoked-menu--closed .nav-link-enter-group .nav-enter-group__item {

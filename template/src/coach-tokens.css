@@ -277,7 +277,10 @@
 
   /* PWA SearchWidget searchV2 — menu shell slide */
   --transition-duration-drawer: 400ms;
-  --transition-easing-drawer: ease;
+  --transition-easing-drawer: cubic-bezier(0.83, 0, 0.17, 1);
+
+  /* L1 link / content-spot entrance — quicker than legacy 700ms content token */
+  --transition-duration-content-l1: 500ms;
 
   /* V3 drill overlays — Coach Gentle transform (symmetric ease, no end snap) */
   --transition-duration-drill: 500ms;

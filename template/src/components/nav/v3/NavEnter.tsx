@@ -16,8 +16,14 @@ export const NAV_LINK_ENTER = {
   stagger: 0.05,
 } as const
 
-/** L1 link list — after drawer lands. */
-export const NAV_LINK_ENTER_L1_DELAY = 0.15
+/** L1 category / utility links — tighter stagger for smoother open. */
+export const NAV_LINK_ENTER_L1 = {
+  variant: 'slide-in' as const,
+  stagger: 0.04,
+} as const
+
+/** L1 link list — overlap with drawer slide. */
+export const NAV_LINK_ENTER_L1_DELAY = 0.08
 
 /** L2/L3 link lists — overlap with drill panel slide (not after it lands). */
 export const NAV_LINK_ENTER_DRILL_DELAY = 0.1
@@ -27,6 +33,13 @@ export const NAV_CONTENT_SPOTS_ENTER = {
   variant: 'fade-down' as const,
   stagger: 0.1,
   delay: 0.2,
+} as const
+
+/** L1 content spots — overlap with drawer slide. */
+export const NAV_CONTENT_SPOTS_L1_ENTER = {
+  variant: 'fade-down' as const,
+  stagger: 0.08,
+  delay: 0.08,
 } as const
 
 /** L2 content spots — overlap with drill panel slide. */
