@@ -108,20 +108,18 @@ Future search overlay: use `.nav-drawer-slide` / `.nav-drawer-slide--open` in `i
 
 ## Deploy to Vercel
 
-The Vite app lives in **`template/`** — set that as the project **Root Directory** when importing the repo.
+The Vite app lives in **`template/`**. The repo root **`vercel.json`** tells Vercel to build that folder (so you do **not** need a separate Root Directory override if this file is committed).
 
 ### Git integration (recommended)
 
-1. Push this repo to GitHub: [github.com/wchan26/mobile-nav-drawer](https://github.com/wchan26/mobile-nav-drawer)
-2. [vercel.com/new](https://vercel.com/new) → **Import** `wchan26/mobile-nav-drawer`
-3. Configure:
-   - **Root Directory:** `template`
-   - **Framework Preset:** Vite (auto-detected)
-   - **Build Command:** `npm run build`
-   - **Output Directory:** `dist`
-4. Deploy — Vercel redeploys on every push to `main`.
+1. Push to [github.com/wchan26/mobile-nav-drawer](https://github.com/wchan26/mobile-nav-drawer)
+2. [vercel.com/new](https://vercel.com/new) → Import the repo (if not already connected)
+3. Default settings are fine — root `vercel.json` sets build/output paths
+4. Every push to `main` redeploys production
 
-`template/vercel.json` includes SPA rewrites so deep links resolve to `index.html`.
+**If you already imported without root `vercel.json`:** either push this fix, or set **Root Directory** → `template` in Vercel → Project → Settings → General.
+
+`template/vercel.json` is used when deploying from the `template/` folder via CLI only.
 
 ### CLI (one-off or local deploy)
 
