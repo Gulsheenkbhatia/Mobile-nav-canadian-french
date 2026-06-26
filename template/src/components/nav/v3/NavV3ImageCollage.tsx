@@ -21,11 +21,13 @@ import {
   isL1ContentSpotsInline,
   type V3L1ContentSpotsConfig,
   type V3L2ContentSpotsLayout,
+  type V3L2ContentSpotAspectRatio,
 } from '../../../data/v3ContentSpots'
 import type { BrandId } from '../NavSearchExposed'
 import {
   NavEnterGroup,
   NAV_CONTENT_SPOTS_ENTER,
+  NAV_CONTENT_SPOTS_DRILL_ENTER,
   NAV_LINK_ENTER,
   NAV_LINK_ENTER_L1_DELAY,
   type NavAnimDirection,
@@ -132,7 +134,7 @@ function L1CategoryRow({
   style?: CSSProperties
 }) {
   return (
-    <li className={className} style={style}>
+    <li className={className} style={style} data-l1-category={cat.id}>
       <button
         type="button"
         onClick={() => onSelect(cat.id, cat.label)}
@@ -157,12 +159,16 @@ function L1Screen({
   menuBrand,
   onSelect,
   enterKey,
-  staggerReady,
+  listsMounted,
+  staggerEnter,
 }: {
   menuBrand: BrandId
   onSelect: (id: string, title: string) => void
   enterKey: number
-  staggerReady: boolean
+  /** Keep L1 lists in the DOM while L2 covers them — avoids empty flash on drill back. */
+  listsMounted: boolean
+  /** True only for the initial L1 stagger — not when returning from L2. */
+  staggerEnter: boolean
 }) {
   const categories = getV3L1Categories(menuBrand)
   const l1ContentSpots = getV3L1ContentSpots(menuBrand)
@@ -171,7 +177,7 @@ function L1Screen({
   const categoryRowCount = categories.length + (inlineAfterCategoryId ? 1 : 0)
   const utilityDelay =
     NAV_LINK_ENTER_L1_DELAY + categoryRowCount * NAV_LINK_ENTER.stagger
-  const contentSpotsAnimDirection: NavAnimDirection = staggerReady ? 'enter' : 'idle'
+  const contentSpotsAnimDirection: NavAnimDirection = staggerEnter ? 'enter' : 'idle'
   const listMountKey = `l1-${enterKey}`
 
   return (
@@ -202,14 +208,14 @@ function L1Screen({
       )}
 
       <div className="v3-l1__categories">
-        {staggerReady && (
+        {listsMounted && (
           <NavEnterGroup
             key={`${listMountKey}-categories`}
             as="ul"
             list
             delay={NAV_LINK_ENTER_L1_DELAY}
             {...NAV_LINK_ENTER}
-            direction="enter"
+            direction={staggerEnter ? 'enter' : 'idle'}
             className="v3-l1__category-list"
           >
             {categories.flatMap((cat) => {
@@ -238,7 +244,7 @@ function L1Screen({
           </NavEnterGroup>
         )}
 
-        {staggerReady && (
+        {listsMounted && (
           <nav className="v3-l1__utility-section" aria-label="Account and support">
             <NavEnterGroup
               key={`${listMountKey}-utility`}
@@ -246,7 +252,7 @@ function L1Screen({
               list
               delay={utilityDelay}
               {...NAV_LINK_ENTER}
-              direction="enter"
+              direction={staggerEnter ? 'enter' : 'idle'}
               className="v3-l1__utility-list"
             >
               {FOOTER_LINKS.map((label) => (
@@ -269,24 +275,29 @@ function L1Screen({
 
 function L2ContentSpots({
   layout,
-  images,
+  tiles,
+  tileAspectRatio = '16:9',
   animDirection,
   enterKey,
 }: {
   layout: V3L2ContentSpotsLayout
-  images: string[]
+  tiles: { label: string; image?: string }[]
+  tileAspectRatio?: V3L2ContentSpotAspectRatio
   animDirection: NavAnimDirection
   enterKey: number
 }) {
+  const ratioClass =
+    tileAspectRatio === '4:5' ? ' v3-content-spots--tile-ratio-4-5' : ''
+
   return (
     <NavEnterGroup
       key={animMountKey(animDirection, enterKey)}
-      {...NAV_CONTENT_SPOTS_ENTER}
+      {...NAV_CONTENT_SPOTS_DRILL_ENTER}
       direction={animDirection}
-      className={`v3-content-spots v3-content-spots--${layout} v3-content-spots--l2-under-headline`}
+      className={`v3-content-spots v3-content-spots--${layout} v3-content-spots--l2-under-headline${ratioClass}`.trim()}
     >
-      {images.map((src, i) => (
-        <ContentSpotTile key={i} src={src} />
+      {tiles.map((tile, i) => (
+        <ContentSpotTile key={`${tile.label}-${i}`} src={tile.image} label={tile.label} />
       ))}
     </NavEnterGroup>
   )
@@ -348,7 +359,8 @@ function L2Screen({
       {contentSpots && (
         <L2ContentSpots
           layout={contentSpots.layout}
-          images={contentSpots.images}
+          tiles={contentSpots.tiles}
+          tileAspectRatio={contentSpots.tileAspectRatio}
           animDirection={animDirection}
           enterKey={enterKey}
         />
@@ -432,10 +444,9 @@ function DrilldownBody({
   const [exitingIndex, setExitingIndex] = useState<number | null>(null)
   const stackRef = useRef<HTMLDivElement>(null)
   const l1EnterTimerRef = useRef<number | null>(null)
-  const prevStackLenRef = useRef(0)
   const prevMenuBrandRef = useRef(menuBrand)
-  const [exitStackHeight, setExitStackHeight] = useState<number | null>(null)
   const [l1StaggerReady, setL1StaggerReady] = useState(false)
+  const l1ScrollTopRef = useRef(0)
 
   const clearL1EnterTimer = useCallback(() => {
     if (l1EnterTimerRef.current !== null) {
@@ -486,6 +497,7 @@ function DrilldownBody({
 
   useEffect(() => {
     if (open) {
+      l1ScrollTopRef.current = 0
       armL1Enter(NAV_DRAWER_MS)
       return () => clearL1EnterTimer()
     }
@@ -526,53 +538,33 @@ function DrilldownBody({
     },
     onComplete: () => {
       setL3ShouldEnter(false)
-      setExitStackHeight(null)
     },
   })
 
   const handleBack = useCallback(() => {
-    if (stackRef.current) {
-      setExitStackHeight(stackRef.current.offsetHeight)
-    }
     popStack()
   }, [popStack])
 
+  /** Lock body scroll while drilled; restore L1 scroll position when back at root. */
   useEffect(() => {
-    if (exitingIndex === null) {
-      setExitStackHeight(null)
+    if (!open) return
+    const body = menuBodyRef.current
+    if (!body) return
+
+    const drilled = stack.length > 0 || exitingIndex !== null
+    body.classList.toggle('invoked-menu__body--drilled', drilled)
+
+    if (stack.length === 0 && exitingIndex === null) {
+      body.scrollTo(0, l1ScrollTopRef.current)
+    } else if (drilled) {
+      body.scrollTo(0, 0)
     }
-  }, [exitingIndex])
-
-  /** Drill panels are in-flow — reset menu scroll so headers aren't clipped after drill/back. */
-  useEffect(() => {
-    if (!open || exitingIndex !== null) return
-    menuBodyRef.current?.scrollTo(0, 0)
-  }, [stack, open, exitingIndex, menuBodyRef])
-
-  /** Re-stagger L1 when backing to root; re-stagger L2 when backing from L3. */
-  useEffect(() => {
-    if (!open) {
-      prevStackLenRef.current = 0
-      return
-    }
-
-    const prevDepth = prevStackLenRef.current
-
-    if (prevDepth > 0 && stack.length === 0 && exitingIndex === null) {
-      setL2ShouldEnter(false)
-      armL1Enter(0)
-    }
-
-    if (prevDepth === 2 && stack.length === 1 && exitingIndex === null) {
-      setL2ShouldEnter(true)
-      setL3ShouldEnter(false)
-      setL2AnimKey((key) => key + 1)
-    }
-
-    prevStackLenRef.current = stack.length
-  }, [stack.length, open, exitingIndex, armL1Enter])
+  }, [stack.length, exitingIndex, open, menuBodyRef])
 
   const pushCategory = (categoryId: string, title: string) => {
+    if (menuBodyRef.current) {
+      l1ScrollTopRef.current = menuBodyRef.current.scrollTop
+    }
     setL1ShouldEnter(false)
     setL2ShouldEnter(true)
     setL3ShouldEnter(false)
@@ -607,23 +599,32 @@ function DrilldownBody({
       ? resolveV3SubCategory(categoryId, subId, menuBrand)
       : undefined
 
+  const l1ListsMounted = l1StaggerReady && exitingIndex !== 1
+  const l1StaggerEnter = l1ListsMounted && l1ShouldEnter && exitingIndex === null
+  const l1Frozen = stack.length > 0 || exitingIndex === 0
+  const l1ScrollOffset =
+    l1Frozen && l1ScrollTopRef.current > 0 ? l1ScrollTopRef.current : 0
+
   return (
-    <div
-      ref={stackRef}
-      className="invoked-menu__stack"
-      style={exitStackHeight ? { minHeight: exitStackHeight } : undefined}
-    >
+    <div ref={stackRef} className="invoked-menu__stack">
       <div
         className={`invoked-menu__base${stack.length > 0 && exitingIndex !== 0 ? ' invoked-menu__base--covered' : ''}${l1StaggerReady ? ' invoked-menu__base--l1-ready' : ''}`.trim()}
         aria-hidden={stack.length > 0 && exitingIndex !== 0}
       >
-        <L1Screen
+        <div
+          style={
+            l1ScrollOffset > 0 ? { marginTop: -l1ScrollOffset } : undefined
+          }
+        >
+          <L1Screen
           key={l1AnimKey}
           menuBrand={menuBrand}
           onSelect={pushCategory}
           enterKey={l1AnimKey}
-          staggerReady={l1StaggerReady && l1ShouldEnter && exitingIndex === null}
+          listsMounted={l1ListsMounted}
+          staggerEnter={l1StaggerEnter}
         />
+        </div>
       </div>
 
       {stack.length >= 1 && categoryDetail && (

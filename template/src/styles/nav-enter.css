@@ -3,7 +3,7 @@
 @keyframes nav-enter-fade-down {
   from {
     opacity: 0;
-    transform: translateY(-20px);
+    transform: translateY(-12px);
   }
 
   to {
@@ -15,7 +15,7 @@
 @keyframes nav-enter-slide-in {
   from {
     opacity: 0;
-    transform: translateX(40px);
+    transform: translateX(20px);
   }
 
   to {
@@ -41,13 +41,23 @@
   animation-name: nav-enter-slide-in;
 }
 
-/* Text link stagger — wait until drill panel has finished sliding in */
-.invoked-menu__overlay:not(.invoked-menu__overlay--entered)
+/* Text link stagger — runs in sync with drill panel slide, not after it lands */
+.invoked-menu__overlay:not(.invoked-menu__overlay--active):not(.invoked-menu__overlay--revealed)
   .nav-link-enter-group.nav-enter-group--slide-in
   .nav-enter-group__item:not(.nav-enter-group__item--static) {
   animation: none !important;
   opacity: 0;
-  transform: translateX(40px);
+  transform: translateX(20px);
+}
+
+/* Drill content — quicker than L1 so it finishes with the panel */
+.invoked-menu__overlay--active .nav-link-enter-group.nav-enter-group--slide-in
+  .nav-enter-group__item:not(.nav-enter-group__item--static) {
+  animation-duration: 500ms;
+}
+
+.invoked-menu__overlay--active .nav-enter-group--fade-down .nav-enter-group__item {
+  animation-duration: 500ms;
 }
 
 /* L1 link stagger — wait until drawer has landed and link lists mount */

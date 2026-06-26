@@ -23,18 +23,18 @@ export function DrillOverlay({
   const [entered, setEntered] = useState(false)
   const [exitSliding, setExitSliding] = useState(false)
   const panelRef = useRef<HTMLDivElement>(null)
-  const panelHeightRef = useRef(0)
-
-  useLayoutEffect(() => {
-    if (isTop && panelRef.current) {
-      panelHeightRef.current = panelRef.current.offsetHeight
-    }
-  })
 
   useEffect(() => {
     setEntered(false)
-    const frame = requestAnimationFrame(() => setEntered(true))
-    return () => cancelAnimationFrame(frame)
+    let outer = 0
+    let inner = 0
+    outer = requestAnimationFrame(() => {
+      inner = requestAnimationFrame(() => setEntered(true))
+    })
+    return () => {
+      cancelAnimationFrame(outer)
+      cancelAnimationFrame(inner)
+    }
   }, [contentKey])
 
   useLayoutEffect(() => {
@@ -72,14 +72,10 @@ export function DrillOverlay({
     .filter(Boolean)
     .join(' ')
 
-  const exitHeight =
-    isExiting && panelHeightRef.current > 0 ? panelHeightRef.current : undefined
-
   return (
     <div
       ref={panelRef}
       className={className}
-      style={exitHeight ? { height: exitHeight } : undefined}
       aria-hidden={!isTop && !isExiting}
     >
       {children}

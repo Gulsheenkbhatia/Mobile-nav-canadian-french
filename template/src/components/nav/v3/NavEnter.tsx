@@ -19,14 +19,21 @@ export const NAV_LINK_ENTER = {
 /** L1 link list — after drawer lands. */
 export const NAV_LINK_ENTER_L1_DELAY = 0.15
 
-/** L2/L3 link lists — first link after drill panel lands. */
-export const NAV_LINK_ENTER_DRILL_DELAY = 0.15
+/** L2/L3 link lists — overlap with drill panel slide (not after it lands). */
+export const NAV_LINK_ENTER_DRILL_DELAY = 0.1
 
 /** V3 content spots load-in — coach-nav.vercel.app Fd variant. */
 export const NAV_CONTENT_SPOTS_ENTER = {
   variant: 'fade-down' as const,
   stagger: 0.1,
   delay: 0.2,
+} as const
+
+/** L2 content spots — overlap with drill panel slide. */
+export const NAV_CONTENT_SPOTS_DRILL_ENTER = {
+  variant: 'fade-down' as const,
+  stagger: 0.08,
+  delay: 0.12,
 } as const
 
 /** @deprecated Use NAV_CONTENT_SPOTS_ENTER */

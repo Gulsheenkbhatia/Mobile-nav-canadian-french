@@ -62,8 +62,10 @@ body.drawerOpened {
   position: static;
 }
 
-/* PWA: menuBody + accordionWrapper — single scroll region (tabs scroll with content) */
+/* PWA: menuBody + accordionWrapper — L1 scrolls body; drilled panels fill remaining viewport */
 .invoked-menu__body {
+  display: flex;
+  flex-direction: column;
   flex: 1 1 auto;
   min-height: 0;
   overflow-x: hidden;
@@ -71,6 +73,10 @@ body.drawerOpened {
   -webkit-overflow-scrolling: touch;
   overscroll-behavior: contain;
   padding-bottom: calc(var(--spacing-4) + env(safe-area-inset-bottom, 0px));
+}
+
+.invoked-menu__body--drilled {
+  overflow-y: hidden;
 }
 
 .invoked-menu__search-wrap {
@@ -329,13 +335,14 @@ body.drawerOpened {
   --invoked-menu-l1-gap: 16px;
 }
 
-/* V3 L1 / L2 / L3 — content panels (scroll handled by invoked-menu__body) */
+/* V3 L1 / L2 / L3 — L1 scrolls with body; L2/L3 scroll inside full-height drill overlays */
 .v3-l1,
 .v3-l2,
 .v3-l3 {
   display: flex;
   flex-direction: column;
   min-width: 0;
+  min-height: 100%;
   --nav-drill-section-gap: 32px;
 }
 
@@ -473,9 +480,15 @@ body.drawerOpened {
   list-style: none;
 }
 
-/* V3 drill — coach-nav.vercel.app overlay stack (L1 base + sliding L2/L3 panels) */
+/* V3 drill — L1 base + full-viewport L2/L3 overlays below brand tabs */
 .invoked-menu__stack {
   position: relative;
+  width: 100%;
+}
+
+.invoked-menu__body--drilled .invoked-menu__stack {
+  flex: 1 1 auto;
+  min-height: 0;
 }
 
 .invoked-menu__base {
@@ -484,9 +497,9 @@ body.drawerOpened {
 
 .invoked-menu__base--covered {
   position: absolute;
-  top: 0;
-  left: 0;
+  inset: 0;
   width: 100%;
+  overflow: hidden;
   visibility: hidden;
   pointer-events: none;
 }
@@ -501,33 +514,33 @@ body.drawerOpened {
   background: var(--nav-tab-active-bg, #f0f0f0);
   visibility: hidden;
   pointer-events: none;
-  transform: translateX(100%);
+  transform: translate3d(100%, 0, 0);
   transition: transform var(--transition-duration-drill) var(--transition-easing-drill);
   will-change: transform;
+  backface-visibility: hidden;
 }
 
 .invoked-menu__overlay--entered {
-  transform: translateX(0);
+  transform: translate3d(0, 0, 0);
 }
 
-/* In-flow when active — body scroll includes brand tabs + drill content (PWA menuBody) */
+/* Active drill panel — fills stack viewport; scrolls internally */
 .invoked-menu__overlay--active {
-  position: relative;
   z-index: 1;
-  inset: auto;
-  height: auto;
-  overflow: visible;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
   visibility: visible;
   pointer-events: auto;
+  padding-bottom: calc(var(--spacing-4) + env(safe-area-inset-bottom, 0px));
 }
 
 .invoked-menu__overlay--exiting {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
   z-index: 2;
+  inset: 0;
+  height: 100%;
+  min-height: 100%;
   overflow: hidden;
   visibility: visible;
   pointer-events: none;
@@ -540,6 +553,9 @@ body.drawerOpened {
 
 .invoked-menu__overlay--revealed {
   z-index: 1;
+  inset: 0;
+  height: 100%;
+  min-height: 100%;
   visibility: visible;
   pointer-events: none;
 }

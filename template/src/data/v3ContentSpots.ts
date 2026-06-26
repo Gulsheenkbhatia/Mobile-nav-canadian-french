@@ -44,9 +44,18 @@ export type V3L1ContentSpotsConfig = {
   tiles: V3L1ContentSpotTile[]
 }
 
+export type V3L2ContentSpotTile = {
+  label: string
+  image?: string
+}
+
+export type V3L2ContentSpotAspectRatio = '16:9' | '4:5'
+
 export type V3L2ContentSpotsConfig = {
   layout: V3L2ContentSpotsLayout
-  images: string[]
+  tiles: V3L2ContentSpotTile[]
+  /** Tile aspect ratio — defaults to 16:9 when omitted. */
+  tileAspectRatio?: V3L2ContentSpotAspectRatio
   /** Eyebrow above the flat category list (e.g. "Shop by Category"). */
   eyebrow: string
 }
@@ -57,6 +66,9 @@ const womenShoulderImage = '/assets/figma/v2-women-shoulder.png'
 
 const bagsTanImage = '/assets/figma/v3-bags-tan.png'
 const bagsBlackImage = '/assets/figma/v3-bags-black.png'
+const campaignImage = '/assets/figma/v3-campaign.png'
+const menMobileImage = '/assets/figma/v3-men-mobile.png'
+const newWomensArrivalsImage = '/assets/figma/v3-new-womens-arrivals.png'
 
 /** coach-nav.vercel.app Wp — l2-6 grid under Women headline. */
 const womenContentSpotImages = [
@@ -78,31 +90,71 @@ const bagsContentSpotImages = [
   bagsBlackImage,
 ]
 
+/** Men L2 — l2-4 grid (2×2) under Men headline. */
+const menContentSpotTiles: V3L2ContentSpotTile[] = [
+  { label: "Men's New Arrivals", image: menMobileImage },
+  { label: 'Bags', image: menMobileImage },
+  { label: 'Shoes', image: menMobileImage },
+  { label: 'Wallets', image: menMobileImage },
+]
+
+/** New L2 — l2-2 duo, 4:5 tiles. */
+const newContentSpotTiles: V3L2ContentSpotTile[] = [
+  { label: "Women's New Arrivals", image: newWomensArrivalsImage },
+  { label: "Men's New Arrivals", image: menMobileImage },
+]
+
+const newContentSpotsConfig: V3L2ContentSpotsConfig = {
+  layout: 'l2-2',
+  tiles: newContentSpotTiles,
+  tileAspectRatio: '4:5',
+  eyebrow: 'Shop by Category',
+}
+
+function tilesFromImages(
+  images: string[],
+  label = 'Copy Goes Here',
+): V3L2ContentSpotTile[] {
+  return images.map((image) => ({ label, image }))
+}
+
 const l2ContentSpotsByCategoryId: Record<string, V3L2ContentSpotsConfig> = {
   women: {
     layout: 'l2-6',
-    images: womenContentSpotImages,
+    tiles: tilesFromImages(womenContentSpotImages),
     eyebrow: 'Shop by Category',
   },
   'coach-women': {
     layout: 'l2-6',
-    images: womenContentSpotImages,
+    tiles: tilesFromImages(womenContentSpotImages),
     eyebrow: 'Shop by Category',
   },
   'outlet-women': {
     layout: 'l2-6',
-    images: womenContentSpotImages,
+    tiles: tilesFromImages(womenContentSpotImages),
     eyebrow: 'Shop by Category',
   },
+  'coach-men': {
+    layout: 'l2-4',
+    tiles: menContentSpotTiles,
+    eyebrow: 'Shop by Category',
+  },
+  new: newContentSpotsConfig,
+  'outlet-whats-new': newContentSpotsConfig,
   bags: {
     layout: 'l2-6',
-    images: bagsContentSpotImages,
+    tiles: tilesFromImages(bagsContentSpotImages),
     eyebrow: 'Shop by Category',
   },
   'outlet-bags-bags': {
     layout: 'l2-6',
-    images: bagsContentSpotImages,
+    tiles: tilesFromImages(bagsContentSpotImages),
     eyebrow: 'Shop by Category',
+  },
+  coachtopia: {
+    layout: 'l2-1',
+    tiles: [{ label: 'The World of Coachtopia', image: campaignImage }],
+    eyebrow: '',
   },
 }
 

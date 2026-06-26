@@ -279,9 +279,9 @@
   --transition-duration-drawer: 400ms;
   --transition-easing-drawer: ease;
 
-  /* coach-nav.vercel.app V3 drill overlays (ease-drawer) */
-  --transition-duration-drill: 600ms;
-  --transition-easing-drill: cubic-bezier(0.16, 1, 0.3, 1);
+  /* V3 drill overlays — Coach Gentle transform (symmetric ease, no end snap) */
+  --transition-duration-drill: 500ms;
+  --transition-easing-drill: cubic-bezier(0.83, 0, 0.17, 1);
 
   /* coach-nav.vercel.app V3 content entrance (Fd / Id variants) */
   --transition-duration-content: 700ms;

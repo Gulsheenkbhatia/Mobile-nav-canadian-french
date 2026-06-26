@@ -1,6 +1,7 @@
-/* V3 content spots — full-bleed tiles, 1px gutters, 16:9 aspect ratio */
+/* V3 content spots — full-bleed tiles, 1px gutters; aspect ratio configurable per layout */
 
 .v3-content-spots {
+  --v3-content-spot-aspect-ratio: 16 / 9;
   width: 100%;
   margin-left: 0;
   margin-right: 0;
@@ -46,7 +47,46 @@
   grid-column: 1 / -1;
 }
 
-/* L2 layouts — l2-6: 2×3 grid (future: l2-1, l2-2, l2-3, l2-4) */
+/* L2 layouts — l2-1: single tile; l2-2: duo; l2-4: 2×2 grid; l2-6: 2×3 grid */
+.v3-content-spots--l2-1 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1px;
+  width: calc(100% + (2 * var(--spacing-4)));
+  margin-left: calc(-1 * var(--spacing-4));
+  margin-right: calc(-1 * var(--spacing-4));
+}
+
+.v3-content-spots--l2-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  width: calc(100% + (2 * var(--spacing-4)));
+  margin-left: calc(-1 * var(--spacing-4));
+  margin-right: calc(-1 * var(--spacing-4));
+}
+
+.v3-content-spots--l2-2 .nav-enter-group__item {
+  min-width: 0;
+}
+
+.v3-content-spots--tile-ratio-4-5 {
+  --v3-content-spot-aspect-ratio: 4 / 5;
+}
+
+.v3-content-spots--l2-4 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  width: calc(100% + (2 * var(--spacing-4)));
+  margin-left: calc(-1 * var(--spacing-4));
+  margin-right: calc(-1 * var(--spacing-4));
+}
+
+.v3-content-spots--l2-4 .nav-enter-group__item {
+  min-width: 0;
+}
+
 .v3-content-spots--l2-6 {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -77,7 +117,7 @@
   position: relative;
   display: block;
   width: 100%;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: var(--v3-content-spot-aspect-ratio);
   margin: 0;
   padding: 0;
   border: none;
