@@ -114,7 +114,7 @@ export function DrillLinkSections({
                       }
                       e.preventDefault()
                     }}
-                    className="v1-nav-link block w-full text-left font-extended text-[20px] leading-[1.2] tracking-[0.4px] text-coach-black"
+                    className="v1-nav-link block w-full text-left font-extended text-[16px] leading-[1.4] tracking-[0.2px] text-coach-black"
                   >
                     <span>{toNavHeadlineCase(row.link.label)}</span>
                   </button>

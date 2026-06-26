@@ -86,7 +86,10 @@ export function V1MenuBody({ open, menuBrand, menuBodyRef }: V1MenuBodyProps) {
             <ul className="v1-menu__footer-links">
               {v1UtilityLinks.map((link) => (
                 <li key={link.id}>
-                  <button type="button" className="v1-utility-link">
+                  <button
+                    type="button"
+                    className="v1-utility-link font-extended text-[12px] leading-[1.35] tracking-[0.2px]"
+                  >
                     {toNavHeadlineCase(link.label)}
                   </button>
                 </li>

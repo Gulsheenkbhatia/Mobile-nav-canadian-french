@@ -261,7 +261,7 @@ function L1Screen({
                 <li key={`utility-${label}`}>
                   <button
                     type="button"
-                    className="v1-utility-link flex items-center"
+                    className="v1-utility-link flex items-center font-extended text-[12px] leading-[1.35] tracking-[0.2px]"
                   >
                     {toNavHeadlineCase(label)}
                   </button>
@@ -325,7 +325,7 @@ function DrillHeader({
         <ArrowBack />
       </button>
       <h2
-        className="v3-l2__header-title v1-nav-link font-extended text-[20px] leading-[1.2] tracking-[0.4px] text-coach-black"
+        className="v3-l2__header-title v1-nav-link font-extended text-[16px] leading-[1.4] tracking-[0.2px] text-coach-black"
         title={toNavHeadlineCase(title)}
       >
         {formatDrillTitle(title)}
