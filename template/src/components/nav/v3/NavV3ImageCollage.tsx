@@ -494,9 +494,11 @@ function L3Screen({
 function DrilldownBody({
   open,
   menuBrand,
+  menuBodyRef,
 }: {
   open: boolean
   menuBrand: BrandId
+  menuBodyRef: React.RefObject<HTMLDivElement>
 }) {
   const [stack, setStack] = useState<DrillStackEntry[]>([])
   const [l1AnimKey, setL1AnimKey] = useState(0)
@@ -559,6 +561,12 @@ function DrilldownBody({
       setExitStackHeight(null)
     }
   }, [exitingIndex])
+
+  /** Drill panels are in-flow — reset menu scroll so headers aren't clipped after drill/back. */
+  useEffect(() => {
+    if (!open || exitingIndex !== null) return
+    menuBodyRef.current?.scrollTo(0, 0)
+  }, [stack, open, exitingIndex, menuBodyRef])
 
   const pushCategory = (categoryId: string, title: string) => {
     setL1ShouldEnter(false)
@@ -659,8 +667,8 @@ function DrilldownBody({
 export function NavV3ImageCollage({ open, onClose }: NavV3ImageCollageProps) {
   return (
     <InvokedMenuShell open={open} onClose={onClose} aria-label="Shop navigation">
-      {({ menuBrand }) => (
-        <DrilldownBody open={open} menuBrand={menuBrand} />
+      {({ menuBrand, menuBodyRef }) => (
+        <DrilldownBody open={open} menuBrand={menuBrand} menuBodyRef={menuBodyRef} />
       )}
     </InvokedMenuShell>
   )

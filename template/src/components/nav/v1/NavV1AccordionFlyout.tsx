@@ -16,7 +16,9 @@ export function NavV1AccordionFlyout({ open, onClose }: NavV1AccordionFlyoutProp
       panelClassName="invoked-menu--l1-gap-16"
       aria-label="Shop navigation"
     >
-      {({ menuBrand }) => <V1MenuBody open={open} menuBrand={menuBrand} />}
+      {({ menuBrand, menuBodyRef }) => (
+        <V1MenuBody open={open} menuBrand={menuBrand} menuBodyRef={menuBodyRef} />
+      )}
     </InvokedMenuShell>
   )
 }

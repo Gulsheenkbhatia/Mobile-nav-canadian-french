@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, type RefObject } from 'react'
 import type { BrandId } from '../NavSearchExposed'
 import {
   getCategoryDetail,
@@ -18,9 +18,10 @@ import { toNavHeadlineCase } from '../../../utils/toNavHeadlineCase'
 type V1MenuBodyProps = {
   open: boolean
   menuBrand: BrandId
+  menuBodyRef: RefObject<HTMLDivElement>
 }
 
-export function V1MenuBody({ open, menuBrand }: V1MenuBodyProps) {
+export function V1MenuBody({ open, menuBrand, menuBodyRef }: V1MenuBodyProps) {
   const [depth, setDepth] = useState(0)
   const [categoryId, setCategoryId] = useState(getDefaultCategoryId(menuBrand))
   const [l2ContentKey, setL2ContentKey] = useState(0)
@@ -36,6 +37,11 @@ export function V1MenuBody({ open, menuBrand }: V1MenuBodyProps) {
     setExitingIndex(null)
     setCategoryId(getDefaultCategoryId(menuBrand))
   }, [open, menuBrand])
+
+  useEffect(() => {
+    if (!open || exitingIndex !== null) return
+    menuBodyRef.current?.scrollTo(0, 0)
+  }, [depth, open, exitingIndex, menuBodyRef])
 
   const topCategories = getMenuTopCategories(menuBrand).filter(
     (item) => item.id !== 'help',

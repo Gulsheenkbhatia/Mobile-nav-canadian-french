@@ -1,4 +1,4 @@
-import { useEffect, useState, type ReactNode } from 'react'
+import { useEffect, useRef, useState, type ReactNode, type RefObject } from 'react'
 import { MobileMenuTabs } from '../MobileMenuTabs'
 import { useNavBrand } from '../NavBrandContext'
 import { SearchIcon16 } from '../HeaderIcons'
@@ -6,6 +6,7 @@ import type { BrandId } from '../NavSearchExposed'
 
 export type InvokedMenuShellRenderProps = {
   menuBrand: BrandId
+  menuBodyRef: RefObject<HTMLDivElement>
 }
 
 export type InvokedMenuShellProps = {
@@ -27,6 +28,7 @@ export function InvokedMenuShell({
 }: InvokedMenuShellProps) {
   const { activeBrand } = useNavBrand()
   const [menuBrand, setMenuBrand] = useState<BrandId>('coach')
+  const menuBodyRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     if (!open) return
@@ -48,7 +50,7 @@ export function InvokedMenuShell({
       aria-hidden={!open}
       className={`invoked-menu ${open ? 'invoked-menu--open' : 'invoked-menu--closed'} ${panelClassName}`.trim()}
     >
-      <div className="invoked-menu__body">
+      <div ref={menuBodyRef} className="invoked-menu__body">
         <div className="invoked-menu__header">
           <MobileMenuTabs
             activeBrand={menuBrand}
@@ -74,7 +76,7 @@ export function InvokedMenuShell({
           )}
         </div>
 
-        {children({ menuBrand })}
+        {children({ menuBrand, menuBodyRef })}
       </div>
     </nav>
   )
