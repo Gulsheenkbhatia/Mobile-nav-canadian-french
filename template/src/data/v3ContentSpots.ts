@@ -139,6 +139,11 @@ const l2ContentSpotsByCategoryId: Record<string, V3L2ContentSpotsConfig> = {
     tiles: menContentSpotTiles,
     eyebrow: 'Shop by Category',
   },
+  'outlet-men-men': {
+    layout: 'l2-4',
+    tiles: menContentSpotTiles,
+    eyebrow: 'Shop by Category',
+  },
   new: newContentSpotsConfig,
   'outlet-whats-new': newContentSpotsConfig,
   bags: {

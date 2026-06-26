@@ -1,0 +1,9 @@
+{
+  "name": "@tapestry/nav-v3",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Mobile Nav V3 handoff module — re-exports from prototype src",
+  "type": "module",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts"
+}

@@ -309,6 +309,9 @@
 
   /* PWA mobile-menu-tabs / nav-exposed tab hover */
   --transition-duration-tab: 100ms;
+
+  /* Nav V3 content-spot tile label — 12px inset bottom-left (v1 handoff) */
+  --nav-content-spot-label-inset: var(--spacing-3);
   --transition-easing-tab: ease-out;
 
   /* Aliases used across prototype CSS */

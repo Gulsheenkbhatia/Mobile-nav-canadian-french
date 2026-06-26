@@ -61,7 +61,7 @@ Test at **375px** width.
 | L2 collage + labels | `src/data/v3L2Collage.ts` |
 | Bags L2 fixture | `src/data/v3CategoryFixtures.ts` |
 | Live nav data | `src/data/menuData.live.json` |
-| Motion tokens | `src/coach-tokens.css` (`--transition-duration-drill` 600ms) |
+| Motion tokens | `src/coach-tokens.css` (`--transition-duration-drill` 500ms) |
 | Title truncate | `src/utils/navDrillTitle.ts` |
 | View All rules | `src/utils/navLinkChevron.ts` |
 
@@ -101,7 +101,7 @@ Compare side-by-side with coach-nav.vercel.app at 375px.
 
 ## Transitions to refine
 
-- **Panel drill:** 600ms `ease-drawer` — enter from right; exit reverses (remove `--entered`)
+- **Panel drill:** 500ms `--transition-easing-panel` — enter from right; exit reverses (remove `--entered`)
 - **Content enter:** `NavEnterGroup` fade-up (collage) vs slide-in (links); stagger 0.05–0.1s
 - **Back:** no enter replay on revealed panel
 - **V1 drill:** `V1MenuBody.tsx` uses same `DrillOverlay` if still relevant

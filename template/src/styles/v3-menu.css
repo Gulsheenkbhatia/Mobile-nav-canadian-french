@@ -70,6 +70,24 @@
   min-width: 0;
 }
 
+/* l2-3: hero tile full width + 2-up row (16:9) */
+.v3-content-spots--l2-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  width: calc(100% + (2 * var(--spacing-4)));
+  margin-left: calc(-1 * var(--spacing-4));
+  margin-right: calc(-1 * var(--spacing-4));
+}
+
+.v3-content-spots--l2-3 .nav-enter-group__item {
+  min-width: 0;
+}
+
+.v3-content-spots--l2-3 .nav-enter-group__item:first-child {
+  grid-column: 1 / -1;
+}
+
 .v3-content-spots--tile-ratio-4-5 {
   --v3-content-spot-aspect-ratio: 4 / 5;
 }
@@ -152,9 +170,9 @@
 
 .v3-content-spots__label {
   position: absolute;
-  left: var(--spacing-4);
+  left: var(--nav-content-spot-label-inset);
   right: auto;
-  bottom: var(--spacing-3);
+  bottom: var(--nav-content-spot-label-inset);
   z-index: 2;
   display: flex;
   align-items: flex-end;

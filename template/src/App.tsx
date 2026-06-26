@@ -3,9 +3,27 @@ import { CoachHomePage } from './components/homepage/CoachHomePage'
 import { NavBrandProvider } from './components/nav/NavBrandContext'
 import { NavSearchExposed } from './components/nav/NavSearchExposed'
 import { NavV3ImageCollage } from './components/nav/v3/NavV3ImageCollage'
+import { NavTemplateGallery } from './components/nav/gallery/NavTemplateGallery'
 import { NavScrim } from './components/NavScrim'
 
+function useGalleryMode(): boolean {
+  const [gallery, setGallery] = useState(
+    () => new URLSearchParams(window.location.search).get('gallery') === 'nav',
+  )
+
+  useEffect(() => {
+    const onPopState = () => {
+      setGallery(new URLSearchParams(window.location.search).get('gallery') === 'nav')
+    }
+    window.addEventListener('popstate', onPopState)
+    return () => window.removeEventListener('popstate', onPopState)
+  }, [])
+
+  return gallery
+}
+
 export default function App() {
+  const galleryMode = useGalleryMode()
   const [activeBrand, setActiveBrand] = useState<'coach' | 'outlet'>('coach')
   const [menuOpen, setMenuOpen] = useState(false)
 
@@ -24,6 +42,10 @@ export default function App() {
     document.body.classList.toggle('drawerOpened', menuOpen)
     return () => document.body.classList.remove('drawerOpened')
   }, [menuOpen])
+
+  if (galleryMode) {
+    return <NavTemplateGallery />
+  }
 
   return (
     <NavBrandProvider activeBrand={activeBrand} setActiveBrand={setActiveBrand}>

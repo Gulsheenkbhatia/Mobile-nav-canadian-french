@@ -1,0 +1,22 @@
+.nav-gallery__preview {
+  max-width: 390px;
+  margin: 0 auto;
+  background: var(--nav-tab-active-bg, #f0f0f0);
+}
+
+.nav-gallery__heading {
+  font-size: var(--text-16);
+  font-weight: 400;
+  letter-spacing: 0.2px;
+  margin-bottom: var(--spacing-3);
+}
+
+.nav-gallery__note {
+  font-size: var(--text-12);
+  color: var(--color-grey-60);
+  margin-bottom: var(--spacing-3);
+}
+
+.nav-gallery__section {
+  scroll-margin-top: var(--spacing-4);
+}

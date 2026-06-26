@@ -82,6 +82,20 @@ Section eyebrows label grouped link lists on **L2 flat-section** views. They are
 
 Sync sets `showEyebrow` when generating `menuData.live.json` (L3 sections always `false`).
 
+## Developer handoff (v1.0)
+
+Full handoff package for PWA integration:
+
+| Doc | Purpose |
+|-----|---------|
+| [`docs/NAV_V3_HANDOFF.md`](docs/NAV_V3_HANDOFF.md) | Component map, data contracts, PWA checklist |
+| [`docs/NAV_V3_REQUIREMENTS.md`](docs/NAV_V3_REQUIREMENTS.md) | Tiered requirements (Frozen / Stable / Polish / Open) |
+| [`docs/NAV_V3_MOTION.md`](docs/NAV_V3_MOTION.md) | Motion tokens and arming protocol |
+| [`docs/FIGMA_HANDOFF_GUIDE.md`](docs/FIGMA_HANDOFF_GUIDE.md) | Figma canvas structure and badges |
+| [`packages/nav-v3/`](packages/nav-v3/) | Extractable module + `integration.md` |
+
+**Layout gallery:** `?gallery=nav` (e.g. `http://localhost:5173/?gallery=nav`)
+
 ## Motion
 
 Tokens follow **coach-pwa** [`variables.css`](../../coach-pwa/public/styles/theme/coach/variables.css). Drill panel motion matches **[coach-nav.vercel.app](https://coach-nav.vercel.app/) V3** (ease-drawer + content stagger).
@@ -89,8 +103,9 @@ Tokens follow **coach-pwa** [`variables.css`](../../coach-pwa/public/styles/them
 | Surface | Timing |
 |---------|--------|
 | Menu drawer open/close | `--transition-duration-drawer` (400ms ease, PWA SearchWidget searchV2) |
-| Scrim | `--transition-duration-scrim` (300ms ease fade) |
-| L2/L3 drill panels | `--transition-duration-drill` (600ms) + `--transition-easing-drill` (ease-drawer) |
+| Scrim | `--transition-duration-scrim` (400ms ease fade) |
+| L2/L3 drill panels | `--transition-duration-drill` (500ms) + `--transition-easing-panel` |
+| Nav link stagger | `--transition-duration-nav-link-enter` (480ms) |
 | Content load-in (images, links, sections) | `--transition-duration-content` (700ms ease-drawer) with stagger via `NavEnterGroup` |
 | Brand tabs | `--transition-duration-tab` (100ms ease-out) |
 

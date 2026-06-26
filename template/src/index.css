@@ -8,6 +8,7 @@
 @import "./styles/v1-typography.css";
 @import "./styles/v1-menu.css";
 @import "./styles/v3-menu.css";
+@import "./styles/nav-gallery.css";
 
 @theme {
   --font-extended: "Helvetica Neue LT Pro Extended", system-ui, sans-serif;
