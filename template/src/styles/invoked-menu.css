@@ -343,6 +343,13 @@ body.drawerOpened {
   margin-top: 0;
 }
 
+.v3-l1__collage-list-item {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+}
+
 .v3-l1__categories {
   padding: var(--spacing-4) var(--spacing-4) 0;
 }
@@ -358,15 +365,6 @@ body.drawerOpened {
 
 .v3-l1__category-link {
   gap: var(--spacing-4);
-}
-
-.v3-l1__utility-list {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-4);
-  margin: var(--spacing-10) 0 0;
-  padding: 0;
-  list-style: none;
 }
 
 .v3-l2,
@@ -451,6 +449,12 @@ body.drawerOpened {
   line-height: 1;
   letter-spacing: var(--letter-spacing-xs);
   color: var(--color-grey-60, #575757);
+}
+
+.v3-l2__eyebrow-item {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 /* V3 drill — coach-nav.vercel.app overlay stack (L1 base + sliding L2/L3 panels) */

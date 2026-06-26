@@ -17,7 +17,7 @@
       },
       {
         "id": "retail_qa_auto_category",
-        "label": "Holiday Placeholder Category"
+        "label": "Holiday"
       },
       {
         "id": "coach-men",
@@ -421,7 +421,7 @@
       },
       "retail_qa_auto_category": {
         "id": "retail_qa_auto_category",
-        "label": "Holiday Placeholder Category",
+        "label": "Holiday",
         "subCategories": [
           {
             "id": "retail_qa_auto_l2",
@@ -1221,7 +1221,7 @@
       },
       {
         "id": "outlet_qa_auto_category",
-        "label": "Holiday Placeholder Category"
+        "label": "Holiday"
       },
       {
         "id": "outlet-bags-bags",
@@ -1534,7 +1534,7 @@
       },
       "outlet_qa_auto_category": {
         "id": "outlet_qa_auto_category",
-        "label": "Holiday Placeholder Category",
+        "label": "Holiday",
         "subCategories": [
           {
             "id": "outlet_qa_auto_l2",

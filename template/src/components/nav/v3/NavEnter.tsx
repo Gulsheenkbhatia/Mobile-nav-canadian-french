@@ -10,6 +10,18 @@ import {
 
 export type NavAnimDirection = 'enter' | 'exit' | 'idle'
 
+/** V3 text link load-in — coach-nav.vercel.app Id variant. */
+export const NAV_LINK_ENTER = {
+  variant: 'slide-in' as const,
+  stagger: 0.05,
+} as const
+
+/** L1 link list — after drawer lands. */
+export const NAV_LINK_ENTER_L1_DELAY = 0.15
+
+/** L2/L3 link lists — after drill panel is visible. */
+export const NAV_LINK_ENTER_DRILL_DELAY = 0.4
+
 type NavEnterGroupProps = {
   /** Seconds before first child animates (vercel delayChildren). */
   delay?: number
