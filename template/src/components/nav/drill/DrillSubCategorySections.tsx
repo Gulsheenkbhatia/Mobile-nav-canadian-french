@@ -108,7 +108,7 @@ export function DrillSubCategorySections({
                     }}
                     className="v1-nav-link flex w-full items-center justify-between text-left"
                   >
-                    <span className="min-w-0 flex-1 font-extended text-[20px] leading-[1.2] tracking-[0.4px] text-coach-black">
+                    <span className="min-w-0 flex-1 font-extended text-[16px] leading-[1.4] tracking-[0.2px] text-coach-black">
                       {toNavHeadlineCase(rowLabel)}
                     </span>
                     {shouldShowNavLinkChevron(sub.label, sub.id) && (
