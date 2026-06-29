@@ -25,7 +25,7 @@ Open the URL Vite prints (usually `http://localhost:5173`). Test at **375px** or
 | Menu data | `src/data/mobileMenuData.ts` + live fixture `src/data/menuData.live.json` |
 | Image assets | `public/assets/figma/` — V3 campaign, Bags L2 shots, chevron |
 | Design tokens | `src/coach-tokens.css` + Tailwind `@theme` in `src/index.css` |
-| Typography | `src/styles/v1-typography.css` — **20px** L1 links, **16px** L2/L3 drill links + header, **12px** utility footer |
+| Typography | `src/styles/v1-typography.css` — **20px** nav/L2 links, **16px** utility footer |
 
 ## Assets
 
@@ -116,8 +116,8 @@ Future search overlay: use `.nav-drawer-slide` / `.nav-drawer-slide--open` in `i
 ## Behavior
 
 1. Tap **menu + search** in the header to open the invoked menu.
-2. **L1:** search field, 20px category list with chevrons, 12px utility links, then **full-bleed image collage** (1px gutters, no outer margin).
-3. Tap a category (e.g. **Bags**) for **L2** — back arrow, optional 2×3 product grid, optional eyebrow sections + 16px links.
+2. **L1:** search field, 20px category list with chevrons, 16px utility links, then **full-bleed image collage** (1px gutters, no outer margin).
+3. Tap a category (e.g. **Bags**) for **L2** — back arrow, optional 2×3 product grid, optional eyebrow sections + 20px links.
 4. Close with **X**, scrim tap, or **Escape**.
 5. Switch **Coach / Outlet** tabs in header or menu header.
 

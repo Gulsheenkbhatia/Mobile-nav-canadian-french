@@ -62,9 +62,8 @@ Unconstrained tweak notes go on the **Polish Backlog** frame — not on LOCK fra
 
 | ID | Requirement | Token / reference |
 |----|-------------|-------------------|
-| REQ-NAV-101 | L1 nav link typography | `--text-20`, `--font-face1-extended` |
-| REQ-NAV-101b | L2/L3 drill link + header typography | `--text-16`, `--font-face1-extended` |
-| REQ-NAV-102 | Utility footer typography | `--text-12` |
+| REQ-NAV-101 | Nav / L2 link typography | `--text-20`, `--font-face1-extended` |
+| REQ-NAV-102 | Utility footer typography | `--text-16` |
 | REQ-NAV-103 | Horizontal page margin | `--spacing-4` (16px) |
 | REQ-NAV-104 | Spacing scale | 4px increments (`--spacing-*`) |
 | REQ-NAV-105 | Drill section gap | 32px (`NAV_DRILL_SECTION_GAP_PX` / `--spacing-8`) |

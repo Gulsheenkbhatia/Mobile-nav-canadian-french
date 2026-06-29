@@ -101,16 +101,14 @@ function L1ContentSpots({
   animDirection: NavAnimDirection
   enterKey: number
 }) {
-  const { layout, tiles, tileAspectRatio } = config
-  const ratioClass =
-    tileAspectRatio === '4:5' ? ' v3-content-spots--tile-ratio-4-5' : ''
+  const { layout, tiles } = config
 
   return (
     <NavEnterGroup
       key={animMountKey(animDirection, enterKey)}
       {...NAV_CONTENT_SPOTS_L1_ENTER}
       direction={animDirection}
-      className={`v3-content-spots v3-content-spots--${layout}${ratioClass}`.trim()}
+      className={`v3-content-spots v3-content-spots--${layout}`}
     >
       {tiles.map((tile, index) => (
         <ContentSpotTile
@@ -263,7 +261,7 @@ function L1Screen({
                 <li key={`utility-${label}`}>
                   <button
                     type="button"
-                    className="v1-utility-link flex items-center font-extended text-[12px] leading-[1.35] tracking-[0.2px]"
+                    className="v1-utility-link flex items-center"
                   >
                     {toNavHeadlineCase(label)}
                   </button>
@@ -327,7 +325,7 @@ function DrillHeader({
         <ArrowBack />
       </button>
       <h2
-        className="v3-l2__header-title v1-nav-link font-extended text-[16px] leading-[1.4] tracking-[0.2px] text-coach-black"
+        className="v3-l2__header-title v1-nav-link font-extended text-[20px] leading-[1.2] tracking-[0.4px] text-coach-black"
         title={toNavHeadlineCase(title)}
       >
         {formatDrillTitle(title)}

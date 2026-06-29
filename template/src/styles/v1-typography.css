@@ -1,4 +1,4 @@
-/* V1 prototype — fixed mobile nav typography (20px L1 nav, 12px utility, 16px L2/L3 drill) */
+/* V1 prototype — fixed mobile nav typography (20px nav, 16px utility) */
 
 .v1-prototype .v1-nav-link,
 .v1-prototype .invoked-menu__l1-link,
@@ -26,32 +26,12 @@
   font-weight: 700;
 }
 
-/* L2/L3 drill — 16px links + header title */
-.v1-prototype .v3-l2__header-title,
-.v1-prototype .v3-l2__sub-list .v1-nav-link,
-.v1-prototype .v3-l2__sub-list .v1-nav-link span,
-.v1-prototype .v3-l2__links .v1-nav-link,
-.v1-prototype .v3-l3__links .v1-nav-link {
-  font-size: var(--text-16);
-  line-height: var(--line-height-xl);
-  letter-spacing: var(--letter-spacing-xs);
-}
-
 .v1-prototype .v1-utility-link,
-.v1-prototype .v3-l1__utility-list .v1-utility-link {
-  font-family: var(--font-face1-extended);
-  font-size: var(--text-12);
-  font-weight: 400;
-  line-height: var(--line-height-l);
-  letter-spacing: var(--letter-spacing-xs);
-  color: var(--color-grey-60);
-}
-
 .v1-prototype .content-spot__footer-links .invoked-menu__link {
   font-family: var(--font-face1-extended);
-  font-size: var(--text-12);
+  font-size: var(--text-16);
   font-weight: 400;
-  line-height: var(--line-height-l);
+  line-height: var(--line-height-xl);
   letter-spacing: var(--letter-spacing-xs);
   color: var(--color-grey-60);
 }
