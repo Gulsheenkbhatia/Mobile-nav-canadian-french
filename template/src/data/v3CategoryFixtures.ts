@@ -202,11 +202,74 @@ const outletClearanceV3Detail: MenuCategoryDetail = {
   ],
 }
 
+/** Coach Outlet Deals T1 — flat L2 (no L2 content spots in production). */
+const outletDealsV3Detail: MenuCategoryDetail = {
+  id: 'outlet-deals',
+  label: 'Deals',
+  sections: [
+    {
+      id: 'shop-by-category',
+      eyebrow: 'Shop by Category',
+      showEyebrow: true,
+      links: [
+        { id: 'outlet-deals-view-all', label: 'View All Deals' },
+        { id: 'outlet-deals-extra-clearance', label: 'Extra 20% Off Clearance' },
+        { id: 'outlet-deals-doorbusters', label: 'Doorbusters' },
+        { id: 'outlet-deals-bags', label: 'Bags' },
+        { id: 'outlet-deals-wallets', label: 'Wallets & Wristlets' },
+        { id: 'outlet-deals-women', label: "Women's Deals" },
+        { id: 'outlet-deals-men', label: "Men's Deals" },
+      ],
+    },
+    {
+      id: 'trending',
+      eyebrow: 'Trending',
+      showEyebrow: true,
+      links: [
+        { id: 'outlet-deals-bestsellers', label: 'Bestsellers' },
+        { id: 'outlet-deals-clearance', label: 'Clearance' },
+      ],
+    },
+  ],
+}
+
+/** Coach Outlet Gifts T1 — promoted from Featured in live menu. */
+const outletGiftsV3Detail: MenuCategoryDetail = {
+  id: 'outlet-gifts',
+  label: 'Gifts',
+  sections: [
+    {
+      id: 'shop-by-category',
+      eyebrow: 'Shop by Category',
+      showEyebrow: true,
+      links: [
+        { id: 'outlet-gifts-view-all', label: 'View All' },
+        { id: 'outlet-gifts-for-her', label: 'Gifts for Her' },
+        { id: 'outlet-gifts-for-him', label: 'Gifts for Him' },
+        { id: 'outlet-gifts-under-100', label: 'Gifts Under $100' },
+        { id: 'outlet-gifts-cards', label: 'Gift Cards' },
+        { id: 'outlet-gifts-bags', label: 'Bags' },
+      ],
+    },
+    {
+      id: 'trending',
+      eyebrow: 'Trending',
+      showEyebrow: true,
+      links: [
+        { id: 'outlet-gifts-top', label: 'Top Gifts' },
+        { id: 'outlet-gifts-bestsellers', label: 'Bestsellers' },
+      ],
+    },
+  ],
+}
+
 const outletV3CategoryFixtures: Record<string, MenuCategoryDetail> = {
   'outlet-bags-bags': outletBagsV3Detail,
   'outlet-bags-bestselling-bags': outletBestSellersV3Detail,
   'outlet-whats-new': outletNewV3Detail,
   'outlet-clearance': outletClearanceV3Detail,
+  'outlet-deals': outletDealsV3Detail,
+  'outlet-gifts': outletGiftsV3Detail,
 }
 
 export function getV3CategoryDetail(

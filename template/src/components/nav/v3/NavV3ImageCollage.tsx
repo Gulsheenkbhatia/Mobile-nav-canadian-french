@@ -19,6 +19,7 @@ import {
   getV3L1ContentSpots,
   getL1ContentSpotsAnchorCategoryId,
   isL1ContentSpotsInline,
+  hasV3L1ContentSpots,
   type V3L1ContentSpotsConfig,
   type V3L2ContentSpotsLayout,
   type V3L2ContentSpotAspectRatio,
@@ -163,6 +164,7 @@ function L1Screen({
   enterKey,
   listsMounted,
   staggerEnter,
+  pendingEnter,
 }: {
   menuBrand: BrandId
   onSelect: (id: string, title: string) => void
@@ -171,15 +173,22 @@ function L1Screen({
   listsMounted: boolean
   /** True only for the initial L1 stagger — not when returning from L2. */
   staggerEnter: boolean
+  /** Armed enter before --l1-ready — keeps items hidden during brand swap. */
+  pendingEnter: boolean
 }) {
   const categories = getV3L1Categories(menuBrand)
   const l1ContentSpots = getV3L1ContentSpots(menuBrand)
-  const inlineAfterCategoryId = getL1ContentSpotsAnchorCategoryId(l1ContentSpots.placement)
-  const showAboveCategories = !isL1ContentSpotsInline(l1ContentSpots.placement)
+  const hasL1ContentSpots = hasV3L1ContentSpots(menuBrand)
+  const inlineAfterCategoryId = hasL1ContentSpots
+    ? getL1ContentSpotsAnchorCategoryId(l1ContentSpots.placement)
+    : null
+  const showAboveCategories =
+    hasL1ContentSpots && !isL1ContentSpotsInline(l1ContentSpots.placement)
   const l1LinkPreset = getNavLinkEnterPreset('l1', 'enter')
   const categoryRowCount = categories.length + (inlineAfterCategoryId ? 1 : 0)
   const utilityDelay = l1LinkPreset.delay + categoryRowCount * l1LinkPreset.stagger
-  const contentSpotsAnimDirection: NavAnimDirection = staggerEnter ? 'enter' : 'idle'
+  const contentAnimDirection: NavAnimDirection =
+    staggerEnter || pendingEnter ? 'enter' : 'idle'
   const listMountKey = `l1-${enterKey}`
 
   return (
@@ -203,7 +212,7 @@ function L1Screen({
         <div className="v3-l1__content-spots-wrap">
           <L1ContentSpots
             config={l1ContentSpots}
-            animDirection={contentSpotsAnimDirection}
+            animDirection={contentAnimDirection}
             enterKey={enterKey}
           />
         </div>
@@ -218,7 +227,7 @@ function L1Screen({
             delay={l1LinkPreset.delay}
             stagger={l1LinkPreset.stagger}
             variant={l1LinkPreset.variant}
-            direction={staggerEnter ? 'enter' : 'idle'}
+            direction={contentAnimDirection}
             className="v3-l1__category-list"
           >
             {categories.flatMap((cat) => {
@@ -235,7 +244,7 @@ function L1Screen({
                   >
                     <L1ContentSpots
                       config={l1ContentSpots}
-                      animDirection={contentSpotsAnimDirection}
+                      animDirection={contentAnimDirection}
                       enterKey={enterKey}
                     />
                   </li>,
@@ -256,7 +265,7 @@ function L1Screen({
               delay={utilityDelay}
               stagger={l1LinkPreset.stagger}
               variant={l1LinkPreset.variant}
-              direction={staggerEnter ? 'enter' : 'idle'}
+              direction={contentAnimDirection}
               className="v3-l1__utility-list"
             >
               {FOOTER_LINKS.map((label) => (
@@ -440,7 +449,7 @@ function DrilldownBody({
   menuBodyRef: React.RefObject<HTMLDivElement>
 }) {
   const [stack, setStack] = useState<DrillStackEntry[]>([])
-  const [l1AnimKey, setL1AnimKey] = useState(0)
+  const [l1ListEnterKey, setL1ListEnterKey] = useState(0)
   const [l1ShouldEnter, setL1ShouldEnter] = useState(false)
   const [l1ContentReady, setL1ContentReady] = useState(false)
   const [l2AnimKey, setL2AnimKey] = useState(0)
@@ -464,14 +473,14 @@ function DrilldownBody({
     }
   }, [])
 
-  /** Bump L1 mount key; defer stagger until drawer lands (or run immediately when already open). */
+  /** Bump list/content enter keys; defer stagger until drawer lands (or run immediately when already open). */
   const armL1Enter = useCallback(
     (contentDelayMs: number) => {
       clearL1EnterTimer()
       setL1ShouldEnter(true)
       setL1ContentReady(false)
       setL1StaggerReady(false)
-      setL1AnimKey((key) => key + 1)
+      setL1ListEnterKey((key) => key + 1)
 
       if (contentDelayMs <= 0) {
         setL1ContentReady(true)
@@ -485,6 +494,21 @@ function DrilldownBody({
     },
     [clearL1EnterTimer],
   )
+
+  /** Brand tab switch — re-stagger L1 without remounting search or clearing l1-ready prep. */
+  const armL1BrandSwitch = useCallback(() => {
+    clearL1EnterTimer()
+    setStack([])
+    setExitingIndex(null)
+    setL2ShouldEnter(false)
+    setL3ShouldEnter(false)
+    setL2StaggerReady(false)
+    setL3StaggerReady(false)
+    setL1ShouldEnter(true)
+    setL1StaggerReady(false)
+    setL1ListEnterKey((key) => key + 1)
+    menuBodyRef.current?.scrollTo(0, 0)
+  }, [clearL1EnterTimer, menuBodyRef])
 
   /** Two frames after drawer lands — mount link lists so CSS stagger always fires. */
   useEffect(() => {
@@ -502,7 +526,7 @@ function DrilldownBody({
       cancelAnimationFrame(outer)
       cancelAnimationFrame(inner)
     }
-  }, [open, l1ContentReady, l1AnimKey])
+  }, [open, l1ContentReady, l1ListEnterKey])
 
   useEffect(() => {
     if (open) {
@@ -530,14 +554,8 @@ function DrilldownBody({
     }
     if (prevMenuBrandRef.current === menuBrand) return
     prevMenuBrandRef.current = menuBrand
-    setStack([])
-    setExitingIndex(null)
-    setL2ShouldEnter(false)
-    setL3ShouldEnter(false)
-    setL2StaggerReady(false)
-    setL3StaggerReady(false)
-    armL1Enter(0)
-  }, [menuBrand, open, armL1Enter])
+    armL1BrandSwitch()
+  }, [menuBrand, open, armL1BrandSwitch])
 
   /** Arm L2 link stagger after overlay --entered (mirror L1 double rAF). */
   const handleL2Entered = useCallback(() => {
@@ -661,6 +679,7 @@ function DrilldownBody({
       : undefined
 
   const l1ListsMounted = open && exitingIndex !== 1
+  const l1PendingEnter = l1ShouldEnter && !l1StaggerReady && exitingIndex === null
   const l1StaggerEnter =
     l1ListsMounted && l1ShouldEnter && l1StaggerReady && exitingIndex === null
 
@@ -675,12 +694,12 @@ function DrilldownBody({
         aria-hidden={stack.length > 0 && exitingIndex !== 0}
       >
         <L1Screen
-          key={l1AnimKey}
           menuBrand={menuBrand}
           onSelect={pushCategory}
-          enterKey={l1AnimKey}
+          enterKey={l1ListEnterKey}
           listsMounted={l1ListsMounted}
           staggerEnter={l1StaggerEnter}
+          pendingEnter={l1PendingEnter}
         />
       </div>
 

@@ -133,29 +133,13 @@ const l2ContentSpotsByCategoryId: Record<string, V3L2ContentSpotsConfig> = {
     tiles: tilesFromImages(womenContentSpotImages),
     eyebrow: 'Shop by Category',
   },
-  'outlet-women': {
-    layout: 'l2-6',
-    tiles: tilesFromImages(womenContentSpotImages),
-    eyebrow: 'Shop by Category',
-  },
   'coach-men': {
     layout: 'l2-4',
     tiles: menContentSpotTiles,
     eyebrow: 'Shop by Category',
   },
-  'outlet-men-men': {
-    layout: 'l2-4',
-    tiles: menContentSpotTiles,
-    eyebrow: 'Shop by Category',
-  },
   new: newContentSpotsConfig,
-  'outlet-whats-new': newContentSpotsConfig,
   bags: {
-    layout: 'l2-6',
-    tiles: tilesFromImages(bagsContentSpotImages),
-    eyebrow: 'Shop by Category',
-  },
-  'outlet-bags-bags': {
     layout: 'l2-6',
     tiles: tilesFromImages(bagsContentSpotImages),
     eyebrow: 'Shop by Category',
@@ -172,19 +156,15 @@ const l1ContentSpotsByBrand: Record<BrandId, V3L1ContentSpotsConfig> = {
     placement: { mode: 'above-categories' },
     layout: 'l1-3',
     tiles: [
-      { label: 'New Arrivals' },
-      { label: 'Women' },
-      { label: 'Bags' },
+      { label: 'New Arrivals', image: newWomensArrivalsImage },
+      { label: 'Women', image: womenShoesImage },
+      { label: 'Bags', image: bagsTanImage },
     ],
   },
   outlet: {
     placement: { mode: 'above-categories' },
-    layout: 'l1-2',
-    tileAspectRatio: '4:5',
-    tiles: [
-      { label: 'Outlet New Arrivals' },
-      { label: 'Clearance' },
-    ],
+    layout: 'l1-1',
+    tiles: [],
   },
 }
 
@@ -198,6 +178,10 @@ export function resolveL1ContentSpotsLayout(
 
 export function getV3L1ContentSpots(brand: BrandId): V3L1ContentSpotsConfig {
   return l1ContentSpotsByBrand[brand]
+}
+
+export function hasV3L1ContentSpots(brand: BrandId): boolean {
+  return l1ContentSpotsByBrand[brand].tiles.length > 0
 }
 
 /** Whether L1 content spots sit inline inside the category list (vs above it). */

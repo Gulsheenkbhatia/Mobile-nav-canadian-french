@@ -20,3 +20,54 @@
 .nav-gallery__section {
   scroll-margin-top: var(--spacing-4);
 }
+
+/* T1 pressure test — side-by-side with/without image layouts */
+.nav-t1-pressure__compare {
+  display: grid;
+  gap: var(--spacing-4);
+}
+
+@media (min-width: 820px) {
+  .nav-t1-pressure__compare {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.nav-t1-pressure__frame-title {
+  display: block;
+  font-size: var(--text-12);
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  margin-bottom: var(--spacing-2);
+}
+
+.nav-t1-pressure__frame-note {
+  display: block;
+  font-size: var(--text-12);
+  color: var(--color-grey-60);
+  margin-top: 2px;
+  margin-bottom: var(--spacing-2);
+}
+
+.nav-t1-pressure__preview {
+  max-height: 720px;
+  overflow-y: auto;
+  border: 1px solid var(--color-grey-20);
+}
+
+.nav-t1-pressure__screen {
+  background: var(--nav-tab-active-bg, #f0f0f0);
+  min-height: 100%;
+}
+
+.nav-t1-pressure__brand-badge {
+  display: none;
+}
+
+.v3-content-spots__tile--no-image {
+  background: var(--color-grey-20);
+}
+
+.v3-content-spots__tile--no-image .v3-content-spots__label {
+  position: static;
+}

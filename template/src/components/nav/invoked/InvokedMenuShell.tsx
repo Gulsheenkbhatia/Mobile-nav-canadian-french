@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, type ReactNode, type RefObject } from 'react'
+import { useRef, type ReactNode, type RefObject } from 'react'
 import { MobileMenuTabs } from '../MobileMenuTabs'
 import { useNavBrand } from '../NavBrandContext'
 import { SearchIcon16 } from '../HeaderIcons'
@@ -26,22 +26,12 @@ export function InvokedMenuShell({
   'aria-label': ariaLabel = 'Shop navigation',
   children,
 }: InvokedMenuShellProps) {
-  const { activeBrand } = useNavBrand()
-  const [menuBrand, setMenuBrand] = useState<BrandId>('coach')
+  const { activeBrand, setActiveBrand } = useNavBrand()
   const menuBodyRef = useRef<HTMLDivElement>(null)
 
-  useEffect(() => {
-    if (!open) return
-    setMenuBrand(activeBrand)
-  }, [open, activeBrand])
-
   const handleMenuBrandChange = (brand: BrandId) => {
-    setMenuBrand(brand)
-  }
-
-  const handleClose = () => {
-    setMenuBrand(activeBrand)
-    onClose()
+    if (brand === activeBrand) return
+    setActiveBrand(brand)
   }
 
   return (
@@ -53,9 +43,9 @@ export function InvokedMenuShell({
       <div ref={menuBodyRef} className="invoked-menu__body">
         <div className="invoked-menu__header">
           <MobileMenuTabs
-            activeBrand={menuBrand}
+            activeBrand={activeBrand}
             onBrandChange={handleMenuBrandChange}
-            onClose={handleClose}
+            onClose={onClose}
           />
 
           {showSearch && (
@@ -76,7 +66,7 @@ export function InvokedMenuShell({
           )}
         </div>
 
-        {children({ menuBrand, menuBodyRef })}
+        {children({ menuBrand: activeBrand, menuBodyRef })}
       </div>
     </nav>
   )

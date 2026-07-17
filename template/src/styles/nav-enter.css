@@ -41,6 +41,22 @@
 }
 
 /* L1: armed after drawer overlap */
+.invoked-menu__base:not(.invoked-menu__base--l1-ready)
+  .nav-link-enter-group.nav-enter-group--enter.nav-enter-group--slide-in
+  .nav-enter-group__item:not(.nav-enter-group__item--static) {
+  animation: none !important;
+  opacity: 0;
+  transform: translateX(20px);
+}
+
+.invoked-menu__base:not(.invoked-menu__base--l1-ready)
+  .v3-content-spots .nav-enter-group--fade-down.nav-enter-group--enter
+  .nav-enter-group__item:not(.nav-enter-group__item--static) {
+  animation: none !important;
+  opacity: 0;
+  transform: translateY(-12px);
+}
+
 .invoked-menu__base--l1-ready
   .nav-link-enter-group.nav-enter-group--enter.nav-enter-group--slide-in
   .nav-enter-group__item:not(.nav-enter-group__item--static):not(.v3-l1__content-spots-list-item) {
