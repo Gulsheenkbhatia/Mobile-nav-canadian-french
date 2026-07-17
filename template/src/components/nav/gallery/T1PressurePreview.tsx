@@ -6,9 +6,13 @@ import { DrillSubCategorySections } from '../drill/DrillSubCategorySections'
 import { resolveNavDrillL2Body } from '../../../data/navDrillSections'
 import { resolveV3CategoryDetail } from '../../../data/v3CategoryFixtures'
 import type { MenuCategory } from '../../../data/mobileMenuData'
-import type {
-  V3L1ContentSpotsConfig,
-  V3L2ContentSpotsConfig,
+import {
+  getL1ContentSpotsAnchorCategoryId,
+  isL1ContentSpotsInline,
+  isL2ContentSpotsBelowSections,
+  type V3L1ContentSpotsConfig,
+  type V3L2ContentSpotsConfig,
+  type V3L2ContentSpotsPlacement,
 } from '../../../data/v3ContentSpots'
 import type { BrandId } from '../NavSearchExposed'
 import {
@@ -85,12 +89,18 @@ function L2ContentSpotsPreview({
     contentSpots.tileAspectRatio === '4:5'
       ? ' v3-content-spots--tile-ratio-4-5'
       : ''
+  const placement: V3L2ContentSpotsPlacement =
+    contentSpots.placement ?? 'above-sections'
+  const positionClass =
+    placement === 'below-sections'
+      ? ' v3-content-spots--l2-below-sections'
+      : ' v3-content-spots--l2-under-headline'
 
   return (
     <NavEnterGroup
       {...NAV_CONTENT_SPOTS_DRILL_ENTER}
       direction="idle"
-      className={`v3-content-spots v3-content-spots--${contentSpots.layout} v3-content-spots--l2-under-headline${ratioClass}`.trim()}
+      className={`v3-content-spots v3-content-spots--${contentSpots.layout}${positionClass}${ratioClass}`.trim()}
     >
       {contentSpots.tiles.map((tile, i) => (
         <ContentSpotTile
@@ -137,8 +147,15 @@ export function T1L1MenuPreview({
   l1ContentSpots: V3L1ContentSpotsConfig | null
 }) {
   const l1LinkPreset = getNavLinkEnterPreset('l1', 'enter')
+  const inlineAfterCategoryId =
+    l1ContentSpots && isL1ContentSpotsInline(l1ContentSpots.placement)
+      ? getL1ContentSpotsAnchorCategoryId(l1ContentSpots.placement)
+      : null
+  const showAboveCategories =
+    l1ContentSpots && !isL1ContentSpotsInline(l1ContentSpots.placement)
+  const categoryRowCount = categories.length + (inlineAfterCategoryId ? 1 : 0)
   const utilityDelay =
-    l1LinkPreset.delay + categories.length * l1LinkPreset.stagger
+    l1LinkPreset.delay + categoryRowCount * l1LinkPreset.stagger
 
   return (
     <div className="v3-l1 nav-t1-pressure__screen">
@@ -157,7 +174,7 @@ export function T1L1MenuPreview({
         </label>
       </div>
 
-      {l1ContentSpots && (
+      {showAboveCategories && l1ContentSpots && (
         <div className="v3-l1__content-spots-wrap">
           <L1ContentSpotsPreview config={l1ContentSpots} />
         </div>
@@ -173,9 +190,20 @@ export function T1L1MenuPreview({
           direction="idle"
           className="v3-l1__category-list"
         >
-          {categories.map((cat) => (
-            <L1CategoryRow key={cat.id} cat={cat} />
-          ))}
+          {categories.flatMap((cat) => {
+            const row = <L1CategoryRow key={cat.id} cat={cat} />
+
+            if (inlineAfterCategoryId && cat.id === inlineAfterCategoryId && l1ContentSpots) {
+              return [
+                row,
+                <li key="l1-content-spots" className="v3-l1__content-spots-list-item">
+                  <L1ContentSpotsPreview config={l1ContentSpots} />
+                </li>,
+              ]
+            }
+
+            return [row]
+          })}
         </NavEnterGroup>
 
         <nav className="v3-l1__utility-section" aria-label="Account and support">
@@ -223,13 +251,15 @@ export function T1L2DrillPreview({
 }) {
   const detail = resolveV3CategoryDetail(categoryId, brand)
   const drillBody = resolveNavDrillL2Body(detail)
-  const sectionsClassName = contentSpots
+  const spotsBelow = contentSpots ? isL2ContentSpotsBelowSections(contentSpots) : false
+  const spotsAbove = contentSpots && !spotsBelow
+  const sectionsClassName = spotsAbove
     ? 'v3-l2__sections v3-l2__sections--after-content-spots'
     : 'v3-l2__sections'
 
   return (
     <div
-      className={`v3-l2 nav-t1-pressure__screen${contentSpots ? ' v3-l2--with-content-spots' : ''}`.trim()}
+      className={`v3-l2 nav-t1-pressure__screen${contentSpots ? ' v3-l2--with-content-spots' : ''}${spotsBelow ? ' v3-l2--content-spots-below' : ''}`.trim()}
     >
       <div className="v3-l2__header">
         <button
@@ -252,15 +282,17 @@ export function T1L2DrillPreview({
         </h2>
       </div>
 
-      {contentSpots && <L2ContentSpotsPreview contentSpots={contentSpots} />}
+      {spotsAbove && contentSpots && (
+        <L2ContentSpotsPreview contentSpots={contentSpots} />
+      )}
 
       {drillBody?.kind === 'sub-category-sections' && (
-        <div className={contentSpots ? 'v3-l2__category-block' : undefined}>
+        <div className={spotsAbove ? 'v3-l2__category-block' : undefined}>
           <DrillSubCategorySections
             sections={drillBody.sections}
             className={sectionsClassName}
             screenTitle={title}
-            leadingEyebrow={contentSpots?.eyebrow}
+            leadingEyebrow={spotsAbove ? contentSpots?.eyebrow : undefined}
             animDirection="idle"
             mountKey="pressure"
             onSelectSub={() => {}}
@@ -277,6 +309,10 @@ export function T1L2DrillPreview({
           animDirection="idle"
           mountKey="pressure"
         />
+      )}
+
+      {spotsBelow && contentSpots && (
+        <L2ContentSpotsPreview contentSpots={contentSpots} />
       )}
     </div>
   )

@@ -55,13 +55,22 @@ export type V3L2ContentSpotAspectRatio = '16:9' | '4:5'
 
 export type V3L1ContentSpotAspectRatio = V3L2ContentSpotAspectRatio
 
+/**
+ * L2 placement — where content spots render in the T1 drill scroll order.
+ * - above-sections: under headline, before links (Coach retail)
+ * - below-sections: after link lists (Coach Outlet)
+ */
+export type V3L2ContentSpotsPlacement = 'above-sections' | 'below-sections'
+
 export type V3L2ContentSpotsConfig = {
   layout: V3L2ContentSpotsLayout
   tiles: V3L2ContentSpotTile[]
   /** Tile aspect ratio — defaults to 16:9 when omitted. */
   tileAspectRatio?: V3L2ContentSpotAspectRatio
-  /** Eyebrow above the flat category list (e.g. "Shop by Category"). */
+  /** Eyebrow above the flat category list when spots sit above sections. */
   eyebrow: string
+  /** Defaults to above-sections (Coach retail). */
+  placement?: V3L2ContentSpotsPlacement
 }
 
 const womenShoesImage = '/assets/figma/v2-women-shoes.png'
@@ -162,9 +171,13 @@ const l1ContentSpotsByBrand: Record<BrandId, V3L1ContentSpotsConfig> = {
     ],
   },
   outlet: {
-    placement: { mode: 'above-categories' },
-    layout: 'l1-1',
-    tiles: [],
+    placement: { mode: 'after-category', categoryId: 'outlet-gifts' },
+    layout: 'l1-2',
+    tileAspectRatio: '4:5',
+    tiles: [
+      { label: 'Outlet New Arrivals', image: newWomensArrivalsImage },
+      { label: 'Deals', image: bagsBlackImage },
+    ],
   },
 }
 
@@ -212,6 +225,12 @@ export function getV3L2ContentSpots(
   categoryId: string,
 ): V3L2ContentSpotsConfig | undefined {
   return l2ContentSpotsByCategoryId[categoryId]
+}
+
+export function isL2ContentSpotsBelowSections(
+  config: V3L2ContentSpotsConfig,
+): boolean {
+  return config.placement === 'below-sections'
 }
 
 /** L2/L3 nav row label — also used when capturing the tapped row for drill headlines. */

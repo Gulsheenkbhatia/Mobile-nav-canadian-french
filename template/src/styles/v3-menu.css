@@ -120,6 +120,15 @@
   margin-top: 0;
 }
 
+/* L2: content spots after link lists (Coach Outlet) */
+.v3-content-spots--l2-below-sections {
+  margin-top: var(--spacing-4);
+}
+
+.v3-l2--content-spots-below .v3-l2__category-block {
+  margin-top: 0;
+}
+
 .v3-l2__category-block {
   display: flex;
   flex-direction: column;

@@ -41,8 +41,9 @@ function BrandL1Section({ brand }: { brand: BrandId }) {
     >
       <h2 className="nav-gallery__heading">{brandLabel} — L1 menu (all T1s)</h2>
       <p className="nav-gallery__note">
-        Compare scroll height and category list position with and without the L1
-        image collage above the T1 list.
+        {brand === 'coach'
+          ? 'L1 collage above T1 list.'
+          : 'L1 collage below T1 list (after Gifts, before utility links).'}
       </p>
       <div className="nav-t1-pressure__compare">
         <PressureFrame label="With L1 images">
@@ -72,8 +73,8 @@ function BrandT1Section({ brand }: { brand: BrandId }) {
     <>
       {categories.map((cat) => {
         const imageNote = getT1PressureImageNote(brand, cat.id)
-        const withSpots = getT1PressureL2ContentSpots(cat.id, true)
-        const withoutSpots = getT1PressureL2ContentSpots(cat.id, false)
+        const withSpots = getT1PressureL2ContentSpots(cat.id, brand, true)
+        const withoutSpots = getT1PressureL2ContentSpots(cat.id, brand, false)
 
         return (
           <section
@@ -137,7 +138,8 @@ export function NavT1PressureGallery() {
         </h1>
         <p className="mt-coach-xs text-[14px] leading-[1.35] text-coach-grey-60">
           Side-by-side layouts for Coach and Coach Outlet T1 categories — with
-          and without content images. Use at 375px or 430px width per frame.
+          and without content images. Coach: L1 images on top. Outlet: L1 images
+          on bottom of the open menu.
         </p>
         <div className="mt-coach-s flex flex-wrap items-center gap-coach-m">
           <a href="/" className="text-[14px] underline">

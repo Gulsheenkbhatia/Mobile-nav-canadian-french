@@ -20,9 +20,11 @@ import {
   getL1ContentSpotsAnchorCategoryId,
   isL1ContentSpotsInline,
   hasV3L1ContentSpots,
+  isL2ContentSpotsBelowSections,
   type V3L1ContentSpotsConfig,
   type V3L2ContentSpotsLayout,
   type V3L2ContentSpotAspectRatio,
+  type V3L2ContentSpotsPlacement,
 } from '../../../data/v3ContentSpots'
 import type { BrandId } from '../NavSearchExposed'
 import {
@@ -290,17 +292,23 @@ function L2ContentSpots({
   layout,
   tiles,
   tileAspectRatio = '16:9',
+  placement = 'above-sections',
   animDirection,
   enterKey,
 }: {
   layout: V3L2ContentSpotsLayout
   tiles: { label: string; image?: string }[]
   tileAspectRatio?: V3L2ContentSpotAspectRatio
+  placement?: V3L2ContentSpotsPlacement
   animDirection: NavAnimDirection
   enterKey: number
 }) {
   const ratioClass =
     tileAspectRatio === '4:5' ? ' v3-content-spots--tile-ratio-4-5' : ''
+  const positionClass =
+    placement === 'below-sections'
+      ? ' v3-content-spots--l2-below-sections'
+      : ' v3-content-spots--l2-under-headline'
 
   return (
     <NavEnterGroup
@@ -309,7 +317,7 @@ function L2ContentSpots({
         ? NAV_CONTENT_SPOTS_DRILL_EXIT
         : NAV_CONTENT_SPOTS_DRILL_ENTER)}
       direction={animDirection}
-      className={`v3-content-spots v3-content-spots--${layout} v3-content-spots--l2-under-headline${ratioClass}`.trim()}
+      className={`v3-content-spots v3-content-spots--${layout}${positionClass}${ratioClass}`.trim()}
     >
       {tiles.map((tile, i) => (
         <ContentSpotTile key={`${tile.label}-${i}`} src={tile.image} label={tile.label} />
@@ -363,31 +371,36 @@ function L2Screen({
   const contentSpots = getV3L2ContentSpots(detail.id)
   const drillBody = resolveNavDrillL2Body(detail)
   const mountKey = animMountKey(animDirection, enterKey)
-  const sectionsClassName = contentSpots
+  const spotsBelow = contentSpots ? isL2ContentSpotsBelowSections(contentSpots) : false
+  const spotsAbove = contentSpots && !spotsBelow
+  const sectionsClassName = spotsAbove
     ? 'v3-l2__sections v3-l2__sections--after-content-spots'
     : 'v3-l2__sections'
 
   return (
-    <div className={`v3-l2${contentSpots ? ' v3-l2--with-content-spots' : ''}`.trim()}>
+    <div
+      className={`v3-l2${contentSpots ? ' v3-l2--with-content-spots' : ''}${spotsBelow ? ' v3-l2--content-spots-below' : ''}`.trim()}
+    >
       <DrillHeader title={screenTitle} onBack={onBack} />
 
-      {contentSpots && (
+      {spotsAbove && contentSpots && (
         <L2ContentSpots
           layout={contentSpots.layout}
           tiles={contentSpots.tiles}
           tileAspectRatio={contentSpots.tileAspectRatio}
+          placement="above-sections"
           animDirection={animDirection}
           enterKey={enterKey}
         />
       )}
 
       {drillBody?.kind === 'sub-category-sections' && (
-        <div className={contentSpots ? 'v3-l2__category-block' : undefined}>
+        <div className={spotsAbove ? 'v3-l2__category-block' : undefined}>
           <DrillSubCategorySections
             sections={drillBody.sections}
             className={sectionsClassName}
             screenTitle={screenTitle}
-            leadingEyebrow={contentSpots?.eyebrow}
+            leadingEyebrow={spotsAbove ? contentSpots?.eyebrow : undefined}
             animDirection={animDirection}
             mountKey={mountKey}
             onSelectSub={onSelectSub}
@@ -403,6 +416,17 @@ function L2Screen({
           screenTitle={screenTitle}
           animDirection={animDirection}
           mountKey={mountKey}
+        />
+      )}
+
+      {spotsBelow && contentSpots && (
+        <L2ContentSpots
+          layout={contentSpots.layout}
+          tiles={contentSpots.tiles}
+          tileAspectRatio={contentSpots.tileAspectRatio}
+          placement="below-sections"
+          animDirection={animDirection}
+          enterKey={enterKey}
         />
       )}
     </div>
