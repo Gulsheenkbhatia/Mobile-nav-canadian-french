@@ -1,25 +1,25 @@
 import type { BrandId } from '../components/nav/NavSearchExposed'
 import type { MenuCategory } from './mobileMenuData'
 
-/** Nav pod T1 list — Coach retail. */
+/** Nav pod T1 list — Coach retail (Canadian French, ca.coach.com/fr). */
 export const COACH_T1_CATEGORIES: MenuCategory[] = [
-  { id: 'coach-women', label: 'Women' },
-  { id: 'coach-men', label: 'Men' },
-  { id: 'bags', label: 'Bags' },
-  { id: 'new', label: 'New' },
-  { id: 'gifts', label: 'Gifts' },
-  { id: 'coach-sale', label: 'Sale' },
+  { id: 'coach-women', label: 'Femme' },
+  { id: 'coach-men', label: 'Pour homme' },
+  { id: 'bags', label: 'Sacs' },
+  { id: 'new', label: 'Nouveauté' },
+  { id: 'gifts', label: 'Cadeaux' },
+  { id: 'coach-sale', label: 'Soldes' },
   { id: 'coachtopia', label: 'Coachtopia' },
 ]
 
-/** Nav pod T1 list — Coach Outlet. */
+/** Nav pod T1 list — Coach Outlet (Canadian French). */
 export const OUTLET_T1_CATEGORIES: MenuCategory[] = [
-  { id: 'outlet-women', label: 'Women' },
-  { id: 'outlet-men-men', label: 'Men' },
-  { id: 'outlet-bags-bags', label: 'Bags' },
-  { id: 'outlet-deals', label: 'Deals' },
-  { id: 'outlet-whats-new', label: 'New' },
-  { id: 'outlet-gifts', label: 'Gifts' },
+  { id: 'outlet-women', label: 'Femme' },
+  { id: 'outlet-men-men', label: 'Pour homme' },
+  { id: 'outlet-bags-bags', label: 'Sacs' },
+  { id: 'outlet-deals', label: 'Offres' },
+  { id: 'outlet-whats-new', label: 'Nouveauté' },
+  { id: 'outlet-gifts', label: 'Cadeaux' },
 ]
 
 /** V3 L1 category list — Nav pod T1 order for pressure testing and prototype. */

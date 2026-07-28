@@ -21,12 +21,18 @@ import {
   NAV_CONTENT_SPOTS_DRILL_ENTER,
   getNavLinkEnterPreset,
 } from '../v3/NavEnter'
-import { toNavHeadlineCase } from '../../../utils/toNavHeadlineCase'
+import { formatNavLabel } from '../../../utils/toNavHeadlineCase'
 import { formatDrillTitle } from '../../../utils/navDrillTitle'
 import { shouldShowNavLinkChevron } from '../../../utils/navLinkChevron'
+import { navMessages } from '../../../locales'
 
 const CHEVRON_RIGHT = '/assets/icons/chevron-right.svg'
-const FOOTER_LINKS = ['Track Order', 'Help', '$USD', 'Login'] as const
+const FOOTER_LINKS = [
+  navMessages.trackOrder,
+  navMessages.help,
+  navMessages.currency,
+  navMessages.login,
+] as const
 const campaignImage = '/assets/figma/v3-campaign.png'
 
 function ContentSpotTile({
@@ -49,7 +55,7 @@ function ContentSpotTile({
       {showImage && <img src={src ?? campaignImage} alt="" loading="lazy" />}
       <div className="v3-content-spots__label">
         <span className="v3-content-spots__label-text">
-          {toNavHeadlineCase(label)}
+          {formatNavLabel(label)}
         </span>
       </div>
     </a>
@@ -125,7 +131,7 @@ function L1CategoryRow({ cat }: { cat: MenuCategory }) {
           <CoachtopiaLogo height={20} />
         ) : (
           <span className="min-w-0 flex-1 truncate font-extended text-[20px] leading-[1.2] tracking-[0.4px] text-coach-black">
-            {toNavHeadlineCase(cat.label)}
+            {formatNavLabel(cat.label)}
           </span>
         )}
         {shouldShowNavLinkChevron(cat.label, cat.id) && (
@@ -167,8 +173,8 @@ export function T1L1MenuPreview({
           <input
             type="search"
             className="invoked-menu__search-input"
-            placeholder="Search"
-            aria-label="Search"
+            placeholder={navMessages.search}
+            aria-label={navMessages.searchAria}
             readOnly
           />
         </label>
@@ -206,7 +212,7 @@ export function T1L1MenuPreview({
           })}
         </NavEnterGroup>
 
-        <nav className="v3-l1__utility-section" aria-label="Account and support">
+        <nav className="v3-l1__utility-section" aria-label={navMessages.accountAndSupport}>
           <NavEnterGroup
             as="ul"
             list
@@ -222,7 +228,7 @@ export function T1L1MenuPreview({
                   type="button"
                   className="v1-utility-link flex items-center font-extended text-[12px] leading-[1.35] tracking-[0.2px]"
                 >
-                  {toNavHeadlineCase(label)}
+                  {formatNavLabel(label)}
                 </button>
               </li>
             ))}
@@ -264,7 +270,7 @@ export function T1L2DrillPreview({
       <div className="v3-l2__header">
         <button
           type="button"
-          aria-label="Back"
+          aria-label={navMessages.back}
           className="v3-l2__header-back flex size-6 items-center justify-center text-coach-black"
         >
           <svg viewBox="0 0 24 24" width={24} height={24} fill="none" aria-hidden>

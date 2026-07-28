@@ -3,7 +3,8 @@ import { CoachtopiaLogo, isCoachtopiaCategory } from '../CoachLogos'
 import type { MenuCategoryDetail } from '../../../data/mobileMenuData'
 import { shouldShowSectionEyebrow } from '../../../data/navEyebrowVisibility'
 import { formatDrillTitle } from '../../../utils/navDrillTitle'
-import { toNavHeadlineCase } from '../../../utils/toNavHeadlineCase'
+import { formatNavLabel } from '../../../utils/toNavHeadlineCase'
+import { navMessages } from '../../../locales'
 import { shouldShowNavLinkChevron } from '../../../utils/navLinkChevron'
 
 const ICONS = {
@@ -34,7 +35,7 @@ export function MenuL1List({
                 {isCoachtopiaCategory(item.id) ? (
                   <CoachtopiaLogo height={20} />
                 ) : (
-                  toNavHeadlineCase(item.label)
+                  formatNavLabel(item.label)
                 )}
               </span>
               {showChevron && shouldShowNavLinkChevron(item.label, item.id) && (
@@ -61,14 +62,14 @@ export function MenuL2Drilldown({
         <button
           type="button"
           className="invoked-menu__l2-back"
-          aria-label="Back to main menu"
+          aria-label={navMessages.backToMainMenu}
           onClick={onBack}
         >
           <CoachIconMask src={ICONS.chevronLeft} size={20} />
         </button>
         <h2
           className="v1-nav-link invoked-menu__l2-title"
-          title={toNavHeadlineCase(category.label)}
+          title={formatNavLabel(category.label)}
         >
           {formatDrillTitle(category.label)}
         </h2>
@@ -93,14 +94,14 @@ export function MenuL2Drilldown({
           <div key={section.id} className="invoked-menu__section">
             {shouldShowSectionEyebrow(section, ctx) && section.eyebrow && (
               <p className="invoked-menu__eyebrow type-eyebrow">
-                {toNavHeadlineCase(section.eyebrow)}
+                {formatNavLabel(section.eyebrow)}
               </p>
             )}
             <ul className="invoked-menu__links">
               {section.links.map((link) => (
                 <li key={link.id}>
                   <button type="button" className="v1-nav-link invoked-menu__link">
-                    {toNavHeadlineCase(link.label)}
+                    {formatNavLabel(link.label)}
                   </button>
                 </li>
               ))}

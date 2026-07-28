@@ -1,4 +1,6 @@
 import type { BrandId } from '../components/nav/NavSearchExposed'
+import { MENU_ID_TRANSLATIONS } from '../locales/menuIdTranslations'
+import { translateNavLabel } from '../locales/menuLabelTranslations'
 
 /** V3 content spots — L1/L2 configurable image layouts. */
 
@@ -189,8 +191,29 @@ export function resolveL1ContentSpotsLayout(
   return 'l1-3'
 }
 
+function localizeL1Config(config: V3L1ContentSpotsConfig): V3L1ContentSpotsConfig {
+  return {
+    ...config,
+    tiles: config.tiles.map((tile) => ({
+      ...tile,
+      label: translateNavLabel(tile.label),
+    })),
+  }
+}
+
+function localizeL2Config(config: V3L2ContentSpotsConfig): V3L2ContentSpotsConfig {
+  return {
+    ...config,
+    eyebrow: config.eyebrow ? translateNavLabel(config.eyebrow) : config.eyebrow,
+    tiles: config.tiles.map((tile) => ({
+      ...tile,
+      label: translateNavLabel(tile.label),
+    })),
+  }
+}
+
 export function getV3L1ContentSpots(brand: BrandId): V3L1ContentSpotsConfig {
-  return l1ContentSpotsByBrand[brand]
+  return localizeL1Config(l1ContentSpotsByBrand[brand])
 }
 
 export function hasV3L1ContentSpots(brand: BrandId): boolean {
@@ -224,7 +247,8 @@ export const v3L2LinkLabelOverrides: Record<string, string> = {
 export function getV3L2ContentSpots(
   categoryId: string,
 ): V3L2ContentSpotsConfig | undefined {
-  return l2ContentSpotsByCategoryId[categoryId]
+  const config = l2ContentSpotsByCategoryId[categoryId]
+  return config ? localizeL2Config(config) : undefined
 }
 
 export function isL2ContentSpotsBelowSections(
@@ -235,7 +259,11 @@ export function isL2ContentSpotsBelowSections(
 
 /** L2/L3 nav row label — also used when capturing the tapped row for drill headlines. */
 export function getV3L2LinkLabel(subCategoryId: string, fallback: string): string {
-  return v3L2LinkLabelOverrides[subCategoryId] ?? fallback
+  const idLabel = MENU_ID_TRANSLATIONS[subCategoryId]
+  if (idLabel) return idLabel
+
+  const override = v3L2LinkLabelOverrides[subCategoryId]
+  return translateNavLabel(override ?? fallback, { id: subCategoryId })
 }
 
 /** @deprecated Prefer drill stack `title` captured from the tapped nav row. */

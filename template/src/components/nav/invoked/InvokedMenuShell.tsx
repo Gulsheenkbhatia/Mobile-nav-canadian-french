@@ -18,12 +18,14 @@ export type InvokedMenuShellProps = {
   children: (props: InvokedMenuShellRenderProps) => ReactNode
 }
 
+import { navMessages } from '../../../locales'
+
 export function InvokedMenuShell({
   open,
   onClose,
   showSearch = false,
   panelClassName = '',
-  'aria-label': ariaLabel = 'Shop navigation',
+  'aria-label': ariaLabel = navMessages.shopNavigation,
   children,
 }: InvokedMenuShellProps) {
   const { activeBrand, setActiveBrand } = useNavBrand()
@@ -57,8 +59,8 @@ export function InvokedMenuShell({
                 <input
                   type="search"
                   className="invoked-menu__search-input"
-                  placeholder="Search"
-                  aria-label="Search"
+                  placeholder={navMessages.search}
+                  aria-label={navMessages.searchAria}
                   readOnly
                 />
               </label>

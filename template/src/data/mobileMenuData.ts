@@ -1,4 +1,9 @@
 import type { BrandId } from '../components/nav/NavSearchExposed'
+import {
+  localizeMenuCategory,
+  localizeMenuCategoryDetail,
+  navMessages,
+} from '../locales'
 import liveMenu from './menuData.live.json'
 
 export type MenuCategory = {
@@ -82,7 +87,8 @@ const outletCategoryDetails = menuData.outlet.categories
 export const menuDataSyncedAt = menuData.syncedAt
 
 export function getMenuTopCategories(brand: BrandId): MenuCategory[] {
-  return brand === 'coach' ? coachTopCategories : outletTopCategories
+  const categories = brand === 'coach' ? coachTopCategories : outletTopCategories
+  return categories.map(localizeMenuCategory)
 }
 
 /** @deprecated Use getMenuTopCategories(brand) */
@@ -91,8 +97,8 @@ export const menuTopCategories = coachTopCategories
 const genericSections = (label: string): MenuLinkSection[] => [
   {
     id: 'shop',
-    eyebrow: 'Shop by Category',
-    links: [{ id: 'view-all', label: `View All ${label}` }],
+    eyebrow: navMessages.shopByCategory,
+    links: [{ id: 'view-all', label: navMessages.viewAllNamed(label) }],
   },
 ]
 
@@ -107,13 +113,14 @@ export function getCategoryDetail(
   const details =
     brand === 'coach' ? coachCategoryDetails : outletCategoryDetails
 
-  return (
+  const detail =
     details[id] ?? {
       id,
       label: id,
       sections: genericSections(id),
     }
-  )
+
+  return localizeMenuCategoryDetail(detail)
 }
 
 export function getSubCategory(

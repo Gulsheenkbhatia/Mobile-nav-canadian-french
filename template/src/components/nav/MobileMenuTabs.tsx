@@ -8,6 +8,8 @@ type MobileMenuTabsProps = {
   onClose: () => void
 }
 
+import { navMessages } from '../../locales'
+
 /** Flyout menu header — brand toggles + close X. */
 export function MobileMenuTabs({
   activeBrand,
@@ -24,7 +26,7 @@ export function MobileMenuTabs({
       <button
         type="button"
         className="mobile-menu-tabs__close"
-        aria-label="Close menu"
+        aria-label={navMessages.closeMenu}
         data-qa="m_btn_hamburger_close_x"
         onClick={onClose}
       >

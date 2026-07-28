@@ -1,3 +1,9 @@
+import {
+  localizeNavLabel,
+  NAV_LOCALE,
+  shouldApplyNavHeadlineCase,
+} from '../locales'
+
 /** Words that should stay all-caps (acronyms, currency). */
 const ALL_CAPS_WORD = /^[A-Z]{2,}$/
 const CURRENCY_CODE = /^\$[A-Za-z]+$/
@@ -31,4 +37,13 @@ export function toNavHeadlineCase(value: string): string {
     .split(/\s+/)
     .map(formatWord)
     .join(' ')
+}
+
+/** Locale-aware nav label — translates for fr-CA, title-cases for en-US. */
+export function formatNavLabel(value: string, id?: string): string {
+  const localized = localizeNavLabel(value, NAV_LOCALE, id)
+  if (!shouldApplyNavHeadlineCase()) {
+    return sanitizeNavLabel(localized)
+  }
+  return toNavHeadlineCase(localized)
 }

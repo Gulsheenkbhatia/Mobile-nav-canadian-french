@@ -1,0 +1,22 @@
+import type { NavUiMessages } from '../types'
+
+export const enUSMessages: NavUiMessages = {
+  search: 'Search',
+  searchAria: 'Search',
+  trackOrder: 'Track Order',
+  help: 'Help',
+  currency: '$USD',
+  login: 'Login',
+  closeMenu: 'Close menu',
+  menu: 'Menu',
+  bagItems: (count) => `Bag, ${count} item${count === 1 ? '' : 's'}`,
+  back: 'Back',
+  backToMainMenu: 'Back to main menu',
+  accountAndSupport: 'Account and support',
+  brand: 'Brand',
+  shopNavigation: 'Shop navigation',
+  shopByCategory: 'Shop by Category',
+  viewAll: 'View All',
+  viewAllNamed: (name) => `View All ${name}`,
+  copyGoesHere: 'Copy Goes Here',
+}

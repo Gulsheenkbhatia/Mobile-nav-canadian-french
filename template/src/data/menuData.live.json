@@ -114,6 +114,24 @@
             ]
           },
           {
+            "id": "coach-women-bestsellers",
+            "label": "Bestsellers",
+            "sections": [
+              {
+                "id": "shop",
+                "links": [
+                  {
+                    "id": "coach-women-bestsellers",
+                    "label": "Bestsellers",
+                    "href": "/shop/women/bestsellers"
+                  }
+                ],
+                "showEyebrow": false,
+                "eyebrow": "Bestsellers"
+              }
+            ]
+          },
+          {
             "id": "coach-women-handbags",
             "label": "Handbags",
             "sections": [
@@ -276,6 +294,49 @@
             ]
           },
           {
+            "id": "coach-women-clothing",
+            "label": "Clothes",
+            "sections": [
+              {
+                "id": "shop-by-category",
+                "links": [
+                  {
+                    "id": "coach-women-clothing-view-all",
+                    "label": "View All",
+                    "href": "/shop/women/clothes/view-all"
+                  },
+                  {
+                    "id": "coach-women-clothing-new-arrivals-label",
+                    "label": "New",
+                    "href": "/shop/new/womens-new-arrivals/clothes"
+                  },
+                  {
+                    "id": "coach-women-clothing-tops",
+                    "label": "Tops",
+                    "href": "/shop/women/clothes/tops"
+                  },
+                  {
+                    "id": "coach-women-clothing-pants-skirts",
+                    "label": "Bottoms",
+                    "href": "/shop/women/clothes/bottoms"
+                  },
+                  {
+                    "id": "coach-women-clothing-dresses",
+                    "label": "Dresses",
+                    "href": "/shop/women/clothes/dresses"
+                  },
+                  {
+                    "id": "coach-women-clothing-outerwear",
+                    "label": "Jackets & Outerwear",
+                    "href": "/shop/women/clothes/jackets-outerwear"
+                  }
+                ],
+                "showEyebrow": false,
+                "eyebrow": "Clothes"
+              }
+            ]
+          },
+          {
             "id": "coach-women-accessories",
             "label": "Accessories",
             "sections": [
@@ -339,45 +400,20 @@
             ]
           },
           {
-            "id": "coach-women-clothing",
-            "label": "Clothes",
+            "id": "coach-women-luxury-accessories",
+            "label": "Luxury Accessories",
             "sections": [
               {
-                "id": "shop-by-category",
+                "id": "shop",
                 "links": [
                   {
-                    "id": "coach-women-clothing-view-all",
-                    "label": "View All",
-                    "href": "/shop/women/clothes/view-all"
-                  },
-                  {
-                    "id": "coach-women-clothing-new-arrivals-label",
-                    "label": "New",
-                    "href": "/shop/new/womens-new-arrivals/clothes"
-                  },
-                  {
-                    "id": "coach-women-clothing-tops",
-                    "label": "Tops",
-                    "href": "/shop/women/clothes/tops"
-                  },
-                  {
-                    "id": "coach-women-clothing-pants-skirts",
-                    "label": "Bottoms",
-                    "href": "/shop/women/clothes/bottoms"
-                  },
-                  {
-                    "id": "coach-women-clothing-dresses",
-                    "label": "Dresses",
-                    "href": "/shop/women/clothes/dresses"
-                  },
-                  {
-                    "id": "coach-women-clothing-outerwear",
-                    "label": "Jackets & Outerwear",
-                    "href": "/shop/women/clothes/jackets-outerwear"
+                    "id": "coach-women-luxury-accessories",
+                    "label": "Luxury Accessories",
+                    "href": "/shop/women/luxury-accessories"
                   }
                 ],
                 "showEyebrow": false,
-                "eyebrow": "Clothes"
+                "eyebrow": "Luxury Accessories"
               }
             ]
           },
@@ -396,24 +432,6 @@
                 ],
                 "showEyebrow": false,
                 "eyebrow": "Sale"
-              }
-            ]
-          },
-          {
-            "id": "coach-gifts-women-label",
-            "label": "Gifts",
-            "sections": [
-              {
-                "id": "shop",
-                "links": [
-                  {
-                    "id": "coach-gifts-women-label",
-                    "label": "Gifts",
-                    "href": "/shop/gifts/view-all?gender=Women"
-                  }
-                ],
-                "showEyebrow": false,
-                "eyebrow": "Gifts"
               }
             ]
           }
@@ -556,6 +574,24 @@
             ]
           },
           {
+            "id": "coach-men-bestsellers",
+            "label": "Bestsellers",
+            "sections": [
+              {
+                "id": "shop",
+                "links": [
+                  {
+                    "id": "coach-men-bestsellers",
+                    "label": "Bestsellers",
+                    "href": "/shop/men/bestsellers"
+                  }
+                ],
+                "showEyebrow": false,
+                "eyebrow": "Bestsellers"
+              }
+            ]
+          },
+          {
             "id": "coach-men-bags",
             "label": "Bags",
             "sections": [
@@ -670,6 +706,34 @@
             ]
           },
           {
+            "id": "coach-men-clothing",
+            "label": "Clothes",
+            "sections": [
+              {
+                "id": "shop-by-category",
+                "links": [
+                  {
+                    "id": "coach-men-clothing-view-all",
+                    "label": "View All",
+                    "href": "/shop/men/clothes/view-all"
+                  },
+                  {
+                    "id": "coach-men-clothing-new-arrivals-label",
+                    "label": "New",
+                    "href": "/shop/new/mens-new-arrivals/clothes"
+                  },
+                  {
+                    "id": "coach-men-clothing-apparel",
+                    "label": "Tops & Bottoms",
+                    "href": "/shop/men/clothes/tops-bottoms"
+                  }
+                ],
+                "showEyebrow": false,
+                "eyebrow": "Clothes"
+              }
+            ]
+          },
+          {
             "id": "coach-men-accessories",
             "label": "Accessories",
             "sections": [
@@ -718,30 +782,20 @@
             ]
           },
           {
-            "id": "coach-men-clothing",
-            "label": "Clothes",
+            "id": "coach-men-luxury-accessories",
+            "label": "Luxury Accessories",
             "sections": [
               {
-                "id": "shop-by-category",
+                "id": "shop",
                 "links": [
                   {
-                    "id": "coach-men-clothing-view-all",
-                    "label": "View All",
-                    "href": "/shop/men/clothes/view-all"
-                  },
-                  {
-                    "id": "coach-men-clothing-new-arrivals-label",
-                    "label": "New",
-                    "href": "/shop/new/mens-new-arrivals/clothes"
-                  },
-                  {
-                    "id": "coach-men-clothing-apparel",
-                    "label": "Tops & Bottoms",
-                    "href": "/shop/men/clothes/tops-bottoms"
+                    "id": "coach-men-luxury-accessories",
+                    "label": "Luxury Accessories",
+                    "href": "/shop/men/luxury-accessories"
                   }
                 ],
                 "showEyebrow": false,
-                "eyebrow": "Clothes"
+                "eyebrow": "Luxury Accessories"
               }
             ]
           },
@@ -760,24 +814,6 @@
                 ],
                 "showEyebrow": false,
                 "eyebrow": "Sale"
-              }
-            ]
-          },
-          {
-            "id": "coach-gifts-men-label",
-            "label": "Gifts",
-            "sections": [
-              {
-                "id": "shop",
-                "links": [
-                  {
-                    "id": "coach-gifts-men-label",
-                    "label": "Gifts",
-                    "href": "/shop/gifts/view-all?gender=Men"
-                  }
-                ],
-                "showEyebrow": false,
-                "eyebrow": "Gifts"
               }
             ]
           }

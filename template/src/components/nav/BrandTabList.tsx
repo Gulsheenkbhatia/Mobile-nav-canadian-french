@@ -1,6 +1,8 @@
 import { CoachOutletLogo, CoachRetailLogo } from './CoachLogos'
 import type { BrandId } from './NavSearchExposed'
 
+import { navMessages } from '../../locales'
+
 type BrandTabListProps = {
   activeBrand: BrandId
   onBrandChange: (brand: BrandId) => void
@@ -16,7 +18,7 @@ export function BrandTabList({
   const isCoachActive = activeBrand === 'coach'
 
   return (
-    <div className={className} role="tablist" aria-label="Brand">
+    <div className={className} role="tablist" aria-label={navMessages.brand}>
       <button
         type="button"
         role="tab"

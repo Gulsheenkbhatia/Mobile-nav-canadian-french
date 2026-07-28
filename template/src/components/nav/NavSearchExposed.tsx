@@ -13,6 +13,8 @@ export type NavSearchExposedProps = {
   onBagClick?: () => void
 }
 
+import { navMessages } from '../../locales'
+
 export function NavSearchExposed({
   activeBrand,
   onBrandChange,
@@ -34,7 +36,7 @@ export function NavSearchExposed({
           <button
             type="button"
             className="nav-exposed__icon-btn"
-            aria-label={`Bag, ${bagCount} items`}
+            aria-label={navMessages.bagItems(bagCount)}
             onClick={onBagClick}
           >
             <span className="nav-exposed__bag-wrap">
@@ -47,7 +49,7 @@ export function NavSearchExposed({
           <button
             type="button"
             className="nav-exposed__icon-btn"
-            aria-label="Menu"
+            aria-label={navMessages.menu}
             onClick={onMenuSearchClick}
           >
             <MenuSearchIconV2 />

@@ -5,7 +5,7 @@ import {
 } from '../../../data/navEyebrowVisibility'
 import { filterDuplicateNavLinks } from '../../../utils/navLinkDedup'
 import { isViewAllNavLink } from '../../../utils/navLinkChevron'
-import { toNavHeadlineCase } from '../../../utils/toNavHeadlineCase'
+import { formatNavLabel } from '../../../utils/toNavHeadlineCase'
 import {
   NavEnterGroup,
   getNavLinkEnterPreset,
@@ -95,7 +95,7 @@ export function DrillLinkSections({
                     key={row.key}
                     className="v3-l2__eyebrow-item nav-enter-group__item--static"
                   >
-                    <p className="v3-l2__eyebrow">{toNavHeadlineCase(row.label)}</p>
+                    <p className="v3-l2__eyebrow">{formatNavLabel(row.label)}</p>
                   </li>
                 )
               }
@@ -116,7 +116,7 @@ export function DrillLinkSections({
                     }}
                     className="v1-nav-link block w-full text-left font-extended text-[16px] leading-[1.4] tracking-[0.2px] text-coach-black"
                   >
-                    <span>{toNavHeadlineCase(row.link.label)}</span>
+                    <span>{formatNavLabel(row.link.label, row.link.id)}</span>
                   </button>
                 </li>
               )

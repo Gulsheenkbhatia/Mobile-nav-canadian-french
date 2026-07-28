@@ -1,4 +1,5 @@
 import type { BrandId } from '../components/nav/NavSearchExposed'
+import { localizeMenuCategoryDetail, localizeMenuSubCategory } from '../locales'
 import type { MenuCategoryDetail, MenuSubCategory } from './mobileMenuData'
 import { getCategoryDetail, getSubCategory } from './mobileMenuData'
 import {
@@ -166,10 +167,61 @@ const outletNewV3Detail: MenuCategoryDetail = {
   ],
 }
 
+/** coach-nav.vercel.app V3 Coach Sale — flat L2 matching ca.coach.com/fr Soldes tab. */
+const coachSaleV3Detail: MenuCategoryDetail = {
+  id: 'coach-sale',
+  label: 'Sale',
+  sections: [
+    {
+      id: 'shop-by-category',
+      eyebrow: 'Shop by Category',
+      showEyebrow: false,
+      links: [
+        {
+          id: 'coach-sale-view-all',
+          label: 'View All',
+          href: '/shop/sale/view-all-2',
+        },
+        {
+          id: 'coach-sale-women-bags',
+          label: 'Bags',
+          href: '/shop/sale/womens-sale/bags',
+        },
+        {
+          id: 'coach-sale-women-small-leather-goods',
+          label: 'Wallets & Wristlets',
+          href: '/shop/sale/womens-sale/wallets-wristlets',
+        },
+        {
+          id: 'coach-sale-women-shoes',
+          label: 'Shoes',
+          href: '/shop/sale/womens-sale/shoes',
+        },
+        {
+          id: 'coach-sale-women-ready-to-wear',
+          label: 'Clothes',
+          href: '/shop/sale/womens-sale/clothes',
+        },
+        {
+          id: 'coach-sale-women-accessories',
+          label: 'Accessories',
+          href: '/shop/sale/womens-sale/accessories',
+        },
+        {
+          id: 'coach-sale-men',
+          label: "Men's",
+          href: '/shop/sale/mens-sale/view-all',
+        },
+      ],
+    },
+  ],
+}
+
 const coachV3CategoryFixtures: Record<string, MenuCategoryDetail> = {
   bags: coachBagsV3Detail,
   new: coachNewV3Detail,
   gifts: coachGiftsV3Detail,
+  'coach-sale': coachSaleV3Detail,
 }
 
 const outletBestSellersV3Detail: MenuCategoryDetail = {
@@ -286,8 +338,13 @@ export function resolveV3CategoryDetail(
   id: string,
   brand: BrandId,
 ): MenuCategoryDetail {
-  const detail = getV3CategoryDetail(id, brand) ?? getCategoryDetail(id, brand)
-  return enrichSparseV3CategoryDetail(detail, brand)
+  const fixture = getV3CategoryDetail(id, brand)
+  const detail = fixture
+    ? localizeMenuCategoryDetail(fixture)
+    : getCategoryDetail(id, brand)
+  return localizeMenuCategoryDetail(
+    enrichSparseV3CategoryDetail(detail, brand),
+  )
 }
 
 /** V3 L3 drill — enriches single-link sub-categories with placeholder rows. */
@@ -298,5 +355,5 @@ export function resolveV3SubCategory(
 ): MenuSubCategory | undefined {
   const sub = getSubCategory(categoryId, subCategoryId, brand)
   if (!sub) return undefined
-  return enrichSparseV3SubCategory(sub, brand)
+  return localizeMenuSubCategory(enrichSparseV3SubCategory(sub, brand))
 }

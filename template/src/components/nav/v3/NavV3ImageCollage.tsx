@@ -37,11 +37,17 @@ import {
 } from './NavEnter'
 import { CoachIconMask } from '../../CoachIconMask'
 import { CoachtopiaLogo, isCoachtopiaCategory } from '../CoachLogos'
-import { toNavHeadlineCase } from '../../../utils/toNavHeadlineCase'
+import { formatNavLabel } from '../../../utils/toNavHeadlineCase'
 import { formatDrillTitle } from '../../../utils/navDrillTitle'
 import { shouldShowNavLinkChevron } from '../../../utils/navLinkChevron'
+import { navMessages } from '../../../locales'
 
-const FOOTER_LINKS = ['Track Order', 'Help', '$USD', 'Login'] as const
+const FOOTER_LINKS = [
+  navMessages.trackOrder,
+  navMessages.help,
+  navMessages.currency,
+  navMessages.login,
+] as const
 
 const CHEVRON_RIGHT = '/assets/icons/chevron-right.svg'
 
@@ -88,7 +94,7 @@ function ContentSpotTile({
       <img src={src} alt="" loading="lazy" />
       <div className="v3-content-spots__label">
         <span className="v3-content-spots__label-text">
-          {toNavHeadlineCase(label)}
+          {formatNavLabel(label)}
         </span>
       </div>
     </a>
@@ -149,7 +155,7 @@ function L1CategoryRow({
           <CoachtopiaLogo height={20} />
         ) : (
           <span className="min-w-0 flex-1 truncate font-extended text-[20px] leading-[1.2] tracking-[0.4px] text-coach-black">
-            {toNavHeadlineCase(cat.label)}
+            {formatNavLabel(cat.label)}
           </span>
         )}
         {shouldShowNavLinkChevron(cat.label, cat.id) && (
@@ -203,8 +209,8 @@ function L1Screen({
           <input
             type="search"
             className="invoked-menu__search-input"
-            placeholder="Search"
-            aria-label="Search"
+            placeholder={navMessages.search}
+            aria-label={navMessages.searchAria}
             readOnly
           />
         </label>
@@ -259,7 +265,7 @@ function L1Screen({
         )}
 
         {listsMounted && (
-          <nav className="v3-l1__utility-section" aria-label="Account and support">
+          <nav className="v3-l1__utility-section" aria-label={navMessages.accountAndSupport}>
             <NavEnterGroup
               key={`${listMountKey}-utility`}
               as="ul"
@@ -276,7 +282,7 @@ function L1Screen({
                     type="button"
                     className="v1-utility-link flex items-center font-extended text-[12px] leading-[1.35] tracking-[0.2px]"
                   >
-                    {toNavHeadlineCase(label)}
+                    {formatNavLabel(label)}
                   </button>
                 </li>
               ))}
@@ -338,14 +344,14 @@ function DrillHeader({
       <button
         type="button"
         onClick={onBack}
-        aria-label="Back"
+        aria-label={navMessages.back}
         className="v3-l2__header-back flex size-6 items-center justify-center text-coach-black"
       >
         <ArrowBack />
       </button>
       <h2
         className="v3-l2__header-title v1-nav-link font-extended text-[16px] leading-[1.4] tracking-[0.2px] text-coach-black"
-        title={toNavHeadlineCase(title)}
+        title={formatNavLabel(title)}
       >
         {formatDrillTitle(title)}
       </h2>
@@ -770,7 +776,7 @@ function DrilldownBody({
 /** MVP V3 — Nav + L1/L2 content spots (matches coach-nav.vercel.app V3). */
 export function NavV3ImageCollage({ open, onClose }: NavV3ImageCollageProps) {
   return (
-    <InvokedMenuShell open={open} onClose={onClose} aria-label="Shop navigation">
+    <InvokedMenuShell open={open} onClose={onClose} aria-label={navMessages.shopNavigation}>
       {({ menuBrand, menuBodyRef }) => (
         <DrilldownBody open={open} menuBrand={menuBrand} menuBodyRef={menuBodyRef} />
       )}

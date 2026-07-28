@@ -10,7 +10,7 @@ import {
   shouldDrillNavLink,
   shouldShowNavLinkChevron,
 } from '../../../utils/navLinkChevron'
-import { toNavHeadlineCase } from '../../../utils/toNavHeadlineCase'
+import { formatNavLabel } from '../../../utils/toNavHeadlineCase'
 import {
   NavEnterGroup,
   getNavLinkEnterPreset,
@@ -91,7 +91,7 @@ export function DrillSubCategorySections({
           >
             {eyebrowLabel && (
               <li className="v3-l2__eyebrow-item nav-enter-group__item--static">
-                <p className="v3-l2__eyebrow">{toNavHeadlineCase(eyebrowLabel)}</p>
+                <p className="v3-l2__eyebrow">{formatNavLabel(eyebrowLabel)}</p>
               </li>
             )}
             {section.subCategories.map((sub) => {
@@ -109,7 +109,7 @@ export function DrillSubCategorySections({
                     className="v1-nav-link flex w-full items-center justify-between text-left"
                   >
                     <span className="min-w-0 flex-1 font-extended text-[16px] leading-[1.4] tracking-[0.2px] text-coach-black">
-                      {toNavHeadlineCase(rowLabel)}
+                      {formatNavLabel(rowLabel)}
                     </span>
                     {shouldShowNavLinkChevron(sub.label, sub.id) && (
                       <CoachIconMask src={CHEVRON_RIGHT} size={16} />
