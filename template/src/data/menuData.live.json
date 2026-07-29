@@ -121,9 +121,24 @@
                 "id": "shop",
                 "links": [
                   {
-                    "id": "coach-women-bestsellers",
-                    "label": "Bestsellers",
+                    "id": "coach-women-bestsellers-view-all",
+                    "label": "View All",
                     "href": "/shop/women/bestsellers"
+                  },
+                  {
+                    "id": "coach-women-bestsellers-tabby",
+                    "label": "Tabby",
+                    "href": "/shop/women/bestsellers/tabby"
+                  },
+                  {
+                    "id": "coach-women-bestsellers-brooklyn",
+                    "label": "Brooklyn",
+                    "href": "/shop/women/bestsellers/brooklyn"
+                  },
+                  {
+                    "id": "coach-women-bestsellers-chelsea",
+                    "label": "Chelsea",
+                    "href": "/shop/women/bestsellers/chelsea"
                   }
                 ],
                 "showEyebrow": false,
@@ -581,9 +596,24 @@
                 "id": "shop",
                 "links": [
                   {
-                    "id": "coach-men-bestsellers",
-                    "label": "Bestsellers",
+                    "id": "coach-men-bestsellers-view-all",
+                    "label": "View All",
                     "href": "/shop/men/bestsellers"
+                  },
+                  {
+                    "id": "coach-men-bestsellers-tabby",
+                    "label": "Tabby",
+                    "href": "/shop/men/bestsellers/tabby"
+                  },
+                  {
+                    "id": "coach-men-bestsellers-brooklyn",
+                    "label": "Brooklyn",
+                    "href": "/shop/men/bestsellers/brooklyn"
+                  },
+                  {
+                    "id": "coach-men-bestsellers-chelsea",
+                    "label": "Chelsea",
+                    "href": "/shop/men/bestsellers/chelsea"
                   }
                 ],
                 "showEyebrow": false,

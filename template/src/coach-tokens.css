@@ -130,6 +130,10 @@
   --bg-muted:                var(--color-grey-20);
   --bg-inverse:              var(--color-black);
 
+  /* Mobile nav — grey drawer + returner row highlight (coach.com post-PLP) */
+  --nav-tab-active-bg:       #f0f0f0;
+  --nav-link-returner-bg:    var(--color-white);
+
   /* --------------------------------------------------------
      SEMANTIC — borders
      -------------------------------------------------------- */
