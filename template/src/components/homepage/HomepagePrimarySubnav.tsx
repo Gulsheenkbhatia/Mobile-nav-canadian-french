@@ -1,5 +1,6 @@
 import { CoachtopiaLogo } from '../nav/CoachLogos'
 import type { HomepageLink } from '../../data/homepageContent'
+import { navMessages } from '../../locales'
 
 type HomepagePrimarySubnavProps = {
   links: HomepageLink[]
@@ -9,7 +10,7 @@ type HomepagePrimarySubnavProps = {
 export function HomepagePrimarySubnav({ links }: HomepagePrimarySubnavProps) {
   return (
     <nav
-      aria-label="Primary"
+      aria-label={navMessages.homepagePrimaryNav}
       className="flex items-baseline gap-6 overflow-x-auto border-b border-coach-grey-20 bg-coach-white px-coach-m py-3 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
     >
       {links.map((link) => {

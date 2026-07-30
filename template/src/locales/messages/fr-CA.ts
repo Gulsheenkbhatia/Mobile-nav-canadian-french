@@ -19,4 +19,11 @@ export const frCAMessages: NavUiMessages = {
   viewAll: 'Afficher tout',
   viewAllNamed: (name) => `Afficher tout ${name}`,
   copyGoesHere: 'Texte ici',
+  homepageQuickAdd: 'Ajout rapide au sac',
+  homepagePauseVideo: 'Mettre la vidéo en pause',
+  homepagePlayVideo: 'Lire la vidéo',
+  homepageShopCampaign: 'Magasiner la campagne',
+  homepageBagsFeature: 'Sacs en vedette',
+  homepageEditorial: 'Éditorial',
+  homepagePrimaryNav: 'Navigation principale',
 }

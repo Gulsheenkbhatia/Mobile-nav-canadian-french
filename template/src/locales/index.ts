@@ -93,6 +93,10 @@ export function localizeMenuCategoryDetail(
   }
 }
 
+import { localizeHomepageContent } from './localizeHomepageContent'
+
+export { localizeHomepageContent }
+
 export function localizeNavLabel(
   label: string,
   locale: NavLocale = NAV_LOCALE,

@@ -19,4 +19,11 @@ export const enUSMessages: NavUiMessages = {
   viewAll: 'View All',
   viewAllNamed: (name) => `View All ${name}`,
   copyGoesHere: 'Copy Goes Here',
+  homepageQuickAdd: 'Quick add to bag',
+  homepagePauseVideo: 'Pause video',
+  homepagePlayVideo: 'Play video',
+  homepageShopCampaign: 'Shop the campaign',
+  homepageBagsFeature: 'Bags feature',
+  homepageEditorial: 'Editorial',
+  homepagePrimaryNav: 'Primary',
 }

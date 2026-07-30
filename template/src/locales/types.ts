@@ -19,4 +19,11 @@ export type NavUiMessages = {
   viewAll: string
   viewAllNamed: (name: string) => string
   copyGoesHere: string
+  homepageQuickAdd: string
+  homepagePauseVideo: string
+  homepagePlayVideo: string
+  homepageShopCampaign: string
+  homepageBagsFeature: string
+  homepageEditorial: string
+  homepagePrimaryNav: string
 }

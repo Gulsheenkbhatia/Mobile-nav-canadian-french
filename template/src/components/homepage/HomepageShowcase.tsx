@@ -2,11 +2,13 @@ import { useRef, useState, type MouseEvent } from 'react'
 import type { HomepageShowcaseCard } from '../../data/homepageContent'
 import { getShowcaseColumns } from '../../data/homepageContent'
 
+import { navMessages } from '../../locales'
+
 function QuickAddButton() {
   return (
     <button
       type="button"
-      aria-label="Quick add to bag"
+      aria-label={navMessages.homepageQuickAdd}
       onClick={(e) => e.preventDefault()}
       className="absolute bottom-2 right-2 flex h-7 w-7 items-center justify-center rounded-full bg-coach-white/95 text-coach-black shadow-[0_1px_4px_rgba(0,0,0,0.18)] transition-transform active:scale-95"
     >
@@ -27,7 +29,7 @@ function VideoPlayPause({
   return (
     <button
       type="button"
-      aria-label={playing ? 'Pause video' : 'Play video'}
+      aria-label={playing ? navMessages.homepagePauseVideo : navMessages.homepagePlayVideo}
       aria-pressed={playing}
       onClick={onToggle}
       className="absolute right-2 top-2 flex h-6 w-6 items-center justify-center rounded-full bg-black/35 backdrop-blur-sm transition-colors hover:bg-black/55 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-coach-white"
@@ -131,7 +133,7 @@ export function HomepageShowcase({ cards }: HomepageShowcaseProps) {
   if (left.length === 0 && right.length === 0) return null
 
   return (
-    <section className="mt-coach-m px-coach-xs" aria-label="Shop the campaign">
+    <section className="mt-coach-m px-coach-xs" aria-label={navMessages.homepageShopCampaign}>
       <div className="flex items-start gap-1.5">
         <div className="flex w-1/2 flex-col gap-1.5">
           {left.map((card) => (

@@ -1,4 +1,5 @@
 import type { HomepageCategoryGroup, HomepageLink, HomepageShoulderBags } from '../../data/homepageContent'
+import { navMessages } from '../../locales'
 
 function UnderlinedLink({ label, href }: HomepageLink) {
   return (
@@ -28,7 +29,7 @@ export function HomepageLowerModules({
 
   return (
     <>
-      <section aria-label="Bags feature">
+      <section aria-label={navMessages.homepageBagsFeature}>
         {firstImage && (
           <img src={firstImage.src} alt={firstImage.alt} loading="lazy" className="block w-full" />
         )}
@@ -52,7 +53,7 @@ export function HomepageLowerModules({
         )}
       </section>
 
-      <section aria-label="Shop by category" className="mt-coach-m bg-coach-page py-coach-xl">
+      <section aria-label={navMessages.shopByCategory} className="mt-coach-m bg-coach-page py-coach-xl">
         <ul className="flex flex-col gap-coach-xl text-center">
           {shopByCategory.map((group) => (
             <li key={group.title}>
@@ -67,7 +68,7 @@ export function HomepageLowerModules({
         </ul>
       </section>
 
-      <section aria-label="Editorial" className="px-coach-m py-coach-xl text-center">
+      <section aria-label={navMessages.homepageEditorial} className="px-coach-m py-coach-xl text-center">
         <h2 className="type-title-1 text-coach-black">{storiesSectionTitle}</h2>
       </section>
     </>

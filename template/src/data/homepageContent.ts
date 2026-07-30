@@ -1,4 +1,6 @@
 import liveContent from './homepageContent.live.json'
+import { localizeHomepageContent, NAV_LOCALE } from '../locales'
+import type { NavLocale } from '../locales/types'
 
 export type HomepageMasthead = {
   id: string
@@ -52,7 +54,14 @@ export type HomepageContent = {
 }
 
 /** Live homepage content — synced from coach-nav.vercel.app via npm run sync:homepage */
-export const homepageContent = liveContent as HomepageContent
+const homepageContentEn = liveContent as HomepageContent
+
+export function getHomepageContent(locale: NavLocale = NAV_LOCALE): HomepageContent {
+  return localizeHomepageContent(homepageContentEn, locale)
+}
+
+/** Localized homepage for the default prototype locale (fr-CA). */
+export const homepageContent = getHomepageContent()
 
 export function getShowcaseColumns(cards: HomepageShowcaseCard[]) {
   return {
